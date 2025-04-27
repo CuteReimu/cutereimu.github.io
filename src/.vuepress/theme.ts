@@ -85,5 +85,11 @@ export default hopeTheme({
     icon: {
       assets: "fontawesome",
     },
+
+    copyright: {
+      author: "",
+      global: true,
+      license: "",
+    }
   },
 });
