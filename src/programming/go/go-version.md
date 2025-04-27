@@ -1,0 +1,202 @@
+---
+title: Go版本新特性总结
+icon: b:golang
+order: 1
+category: 编程随笔
+tags: 
+  - Go
+date: 2024-05-21
+toc: false
+---
+
+[[toc]]
+
+## Go 1.22 新特性
+
+参考[https://go.dev/doc/go1.22](https://go.dev/doc/go1.22)
+
+### 语言的变化
+
+Go 1.22 对`for`循环进行了两项更改，和一项实验性功能。
+
+**循环变量的调整**
+
+以前，`for`循环声明的变量只创建一次，并在每次迭代时更新。在 Go 1.22 中，循环的每次迭代都会创建新变量，以避免意外共享错误。举个例子：
+
+```go
+i := 0
+ss := []string{"123", "234", "345"}
+for _, s := range ss {
+    i++
+    go func() {
+        fmt.Println(s)
+    }()
+}
+```
+
+对于以前的版本，上述代码大概率会输出三个"345"，因为在每一遍`for`循环时，`s`是同一个变量，只不过每次循环把它更新成了新值。而使用`go`语句启动协程一般是需要一些时间的，协程真正开始执行会比`for`循环要慢一些的，此时的`s`已经变成了最后一个值"345"，所以三个协程都会输出"345"。
+
+而在 Go 1.22 中，上述代码会将三个字符串各输出一遍，三个字符串的输出顺序会因为协程执行的顺序而不同。
+
+**整数范围循环**
+
+现在，range后面允许是一个整数了，例如：
+
+```go
+for i := range 10 { // 等价于 for i := 0; i < 10; i++ {
+    fmt.Println(i)
+}
+```
+
+**（实验性功能）函数迭代器**
+
+想要使用这个功能，需要在编译时启用环境变量`GOEXPERIMENT=rangefunc`。
+
+```go
+ss := []string{"123", "234", "345"}
+f := func(cb func(int, string) bool) {
+    for i, s := range ss {
+        if !cb(i, s) {
+            return
+        }
+    }
+}
+for i, s := range f {
+    fmt.Println(i, s)
+}
+```
+
+从上述代码中可以看到，`f`是一个函数，它的格式为`func(cb func(xxx) bool)`，其中xxx可以为零到两个参数，两个参数支持任意类型，我们将其称为“函数迭代器”。当我们`for i, s := range f`时，会将for下面的大括号体中的内容作为`cb`函数传入`f`函数中去，然后前面的`i, s := `两个参数对应`cb`的两个形参，并且变量类型和`cb`的形参声明的类型也一致。
+
+通过这种语法，我们可以方便的生成一些迭代器，例如切片的逆序迭代器：
+
+```go :no-collapsed-lines
+func Backward[E any](s []E) func(func(int, E) bool) {
+    return func(yield func(int, E) bool) {
+        for i := len(s)-1; i >= 0; i-- {
+            if !yield(i, s[i]) {
+                return
+            }
+        }
+    }
+}
+
+func main() {
+    s := []string{"hello", "world"}
+    for i, x := range Backward(s) {
+        fmt.Println(i, x)
+    }
+}
+```
+
+### `go vet` 工具
+
+**对循环变量的引用**
+
+由于上文的**函数迭代器**的变化，导致上述代码不会再有类似的风险，所以`vet`工具不再会报告这些错误。
+
+**`append`的新警告**
+
+现在，像`s = append(s)`这样不产生任何效果的`append`代码，会被`vet`工具报告错误。
+
+**在`defer`中错误使用`time`的警告**
+
+参考这样一个例子：
+
+```go
+t := time.Now()
+defer log.Println(time.Since(t)) // 事实上，time.Since并不会在defer的时候才调用。我们实际defer的是log.Println
+tmp := time.Since(t); defer log.Println(tmp) // 同上
+
+defer func() {
+  log.Println(time.Since(t)) // 正确的time.Since写法
+}()
+```
+
+现在，`vet`工具会报告出上述错误的写法。
+
+**对于`log/slog`的警告**
+
+`slog`库的正确用法是`slog.Info(message, key1, v1, key2, v2)`，如果在key的位置填写的既不是一个`string`，又不是一个`slog.Attr`，现在`vet`工具会报告这个错误。
+
+### 核心库
+
+- 新增了`math/rand/v2`包
+- 新增了`go/version`包，用以比较 Go 版本号，例如：`version.Compare("go1.21rc1", "go1.21.0")`
+- `net/http.ServeMux`现在有了更多的支持，已经支持了传入请求方法和通配符
+- 一些库的小变化
+  - `archive/tar`包新增了`Writer.AddFS`方法
+  - `archive/zip`包新增了`Writer.AddFS`方法
+  - `cmp`包新增了`Or`函数，用以返回一系列变量中的第一个非零值变量
+  - `log/slog`包新增了`SetLogLoggerLevel`函数
+  - `net/http`包新增了`ServeFileFS`, `FileServerFS`, `NewFileTransportFS`函数
+  - `reflect`包新增了`Value.IsZero`方法
+  - `slices`包新增了`Concat`函数，用以合并多个切片。`Delete`, `Compact`, `Replace`等函数现在会把切片末尾空出来的位置置为零值。
+  - 还有一些影响不大的变化，就不一一列举了
+
+## Go 1.21 新特性
+
+参考[https://go.dev/doc/go1.21](https://go.dev/doc/go1.21)
+
+### Go版本号的变化
+
+以前，每个版本的第一个发行版的版本编号为"1.20"。从这个版本开始，第一个发行版的版本编号为"1.21.0"。
+
+### 语言的变化
+
+Go 1.21 新增了三个内置函数`min`、`max`、`clear`。其中`clear`用于删除掉一个`map`的所有键值对或者将一个`slice`的所有元素置为零值。
+
+调整了包初始化顺序的算法。
+
+进行了多项改进，提高了类型推断的能力和精度。
+
+### 核心库
+
+- 新增了`log/slog`包
+- 新增了`testing/slogtest`包
+- 新增了`slices`包
+- 新增了`maps`包
+- 新增了`cmp`包
+- 一些库的小变化，就不一一列举了
+
+## Go 1.20 新特性
+
+参考[https://go.dev/doc/go1.20](https://go.dev/doc/go1.20)
+
+**切片转数组**
+
+现在支持将切片转为数组了，例如`*(*[4]byte)(x)`现在可以简写为`[4]byte(x)`。
+
+**`unsafe`包新增函数**
+
+`unsafe`包提供了三个新函数`SliceData`、`String`、`StringData`，这些函数现在提供了构造和解构切片和字符串值的完整功能。例如：
+
+```go
+s := "abc"
+buf := unsafe.Slice(unsafe.StringData(s), len(s))
+```
+
+就可以得到字符串`s`的底层数组。
+
+::: note 注意
+
+但在一般情况下，你可以放心的使用`[]byte(s)`。如果编译器检测到后续不会再用到`s`，也会直接把它的底层数组返回出来，而不是复制一份。
+
+:::
+
+**关于`comparable`约束**
+
+```go
+a := map[string]any{"a": 1, "b": 2.3, "c": "c"}
+b := map[string]any{"a": 1, "b": 2.3, "c": "c"}
+fmt.Println(maps.Equal(a, b)) // 输出 true
+```
+
+我们来看一下`maps.Equal`函数的定义：
+
+```go
+func Equal[M1, M2 ~map[K]V, K, V comparable](m1 M1, m2 M2) bool
+```
+
+在之前的版本，由于`maps.Equal`函数接收的两个`map`要求键与值都是`comparable`，但实际上它是`map[string]any`，`any`并不一定满足`comparable`，所以编译会报错。\
+在Go1.20之后，不会再因此而编译报错。如果出现不能比较的元素，则会在运行时报错：`panic: runtime error: comparing uncomparable type []int`

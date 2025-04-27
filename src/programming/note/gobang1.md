@@ -2,6 +2,8 @@
 title: 五子棋AI算法（1）
 order: 3
 category: 五子棋
+tags:
+  - Java
 icon: chess-board
 date: 2019-10-19
 star: true

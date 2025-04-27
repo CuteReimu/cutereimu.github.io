@@ -5,6 +5,7 @@ order: 1
 date: 2021-09-20
 category: 空洞骑士
 star: true
+toc: false
 ---
 
 <!-- more -->

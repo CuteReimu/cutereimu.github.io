@@ -24,7 +24,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
+    description: "超10年经验的资深服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
     intro: "/intro.html",
     medias: {
       Github: "https://github.com/CuteReimu",
@@ -83,13 +83,17 @@ export default hopeTheme({
     blog: true,
 
     icon: {
-      assets: "fontawesome",
+      assets: "fontawesome-with-brands",
     },
 
     copyright: {
       author: "",
       global: true,
       license: "",
-    }
+    },
+
+    components: {
+      components: ["Share"],
+    },
   },
 });

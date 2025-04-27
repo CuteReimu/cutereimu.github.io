@@ -5,6 +5,5 @@ index: false
 article: false
 pageInfo: false
 redirectTo: speedrun-categories.md
+breadcrumbExclude: true
 ---
-
-<Catalog></Catalog>
