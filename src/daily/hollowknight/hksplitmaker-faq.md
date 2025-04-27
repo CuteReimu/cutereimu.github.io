@@ -6,6 +6,8 @@ order: 4
 category: 空洞骑士
 ---
 
+<!-- more -->
+
 ::: danger 注意
 
 LiveSplit一定要把zip/rar压缩包给解压了再用！\

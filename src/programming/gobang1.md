@@ -5,6 +5,7 @@ category: 五子棋
 icon: chess-board
 date: 2019-10-19
 star: true
+sticky: true
 ---
 
 ::: note 注意
