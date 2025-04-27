@@ -5,6 +5,7 @@ icon: /hollow-knight/hollow-knight.png
 date: 2021-09-10
 category: 空洞骑士
 toc: false
+order: 3
 ---
 
 ::: warning 注意
