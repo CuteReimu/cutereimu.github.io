@@ -33,7 +33,6 @@ export default hopeTheme({
     },
   },
 
-  breadcrumb: false,
   editLink: false,
   lastUpdated: false,
   contributors: false,
@@ -53,6 +52,30 @@ export default hopeTheme({
       type: "shiki",
       collapsedLines: 15,
     },
+
+    stylize: [
+      {
+        matcher: /^./,
+        replacer: ({ tag, attrs, content }) => {
+          if (tag === "em")
+            return {
+              tag: tag,
+              attrs: { ...attrs, style: "color: #777" },
+              content: content,
+            };
+          else if (tag === "s")
+            return {
+              tag: tag,
+              attrs: { ...attrs, style: "color: #999" },
+              content: content,
+            };
+        },
+      },
+    ],
+
+    linksCheck: {
+      build: "error",
+    }
   },
 
   // 在这里配置主题提供的插件
@@ -62,7 +85,5 @@ export default hopeTheme({
     icon: {
       assets: "fontawesome",
     },
-
-    redirect: false,
   },
 });
