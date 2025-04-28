@@ -3,6 +3,7 @@ title: ✨ 关于我
 index: false
 article: false
 pageInfo: false
+lastUpdated: false
 toc: false
 ---
 
