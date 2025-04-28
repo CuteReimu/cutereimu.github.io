@@ -39,7 +39,7 @@ export default hopeTheme({
   print: false,
 
   displayFooter: true,
-  footer: "<a href=\"http://beian.miit.gov.cn/\" rel=\"noopener noreferrer\" target=\"_blank\">鄂ICP备2025110989号</a>",
+  footer: "<a href=\"https://beian.miit.gov.cn/\" rel=\"noopener noreferrer\" target=\"_blank\">鄂ICP备2025110989号</a>",
   license: "MIT",
 
   markdown: {
