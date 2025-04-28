@@ -5,11 +5,81 @@ order: 1
 category: 编程随笔
 tags: 
   - Go
-date: 2024-05-21
+date: 2025-04-28
 toc: false
+star: true
+sticky: 2
 ---
 
 [[toc]]
+
+## Go 1.23 新特性
+
+参考[https://go.dev/doc/go1.23](https://go.dev/doc/go1.23)
+
+### 语言的变化
+
+Go 1.23 版本中，将 Go 1.22 中的关于“函数迭代器”的实验性功能正式发布。
+
+```go :collapsed-lines=2
+func Range0To10(func(int) bool) {
+    for i := 0; i < 10; i++ {
+        if !cb(i) {
+            return
+        }
+    }
+}
+
+func main() {
+    for i := range Range0To10 {
+        fmt.Println(i)
+    }
+}
+```
+
+上面展示的是单参数的函数迭代器的用法，Go 1.23 版本中正式支持了零参数、单参数和双参数的函数迭代器。
+
+<!-- more -->
+
+```go
+func(func() bool)
+func(func(K) bool)
+func(func(K, V) bool)
+```
+
+### 标准库
+
+::: details `time`包的调整
+
+首先，`time.Timer`和`time.Ticker`即使没有调用`Stop`方法，只要不再被引用，都会被自动回收。
+
+其次，`time.Timer`和`time.Ticker`关联的通道现在改为了无缓冲区的通道，在早期的Go版本中，这个通道有一个元素的缓冲区。
+
+:::
+
+::: details 新增了`unique`包
+
+其它编程语言中，除了`map`以外，还有`set`，但Go语言中一直没有`set`的概念，我们只能用`map[K]bool`或`map[K]struct{}`来模拟`set`。直到 Go 1.23 版本中，新增了`unique`包，正式将`set`的功能纳入了标准库，并提供了例如交集、并集等更多的功能。
+
+:::
+
+::: details 迭代器相关包
+
+新增了`iter`包，提供了迭代器对应的定义。
+
+`slices`包和`maps`包也进行了相应的调整，提供了迭代器的功能。
+
+:::
+
+::: details 其它库的调整
+- 补上了`math/rand/v2`包中缺失的`Uint`函数和方法
+- `slices`包新增了`Repeat`函数，用以创建元素重复的切片
+- `sync.Map`新增了`Clear`方法，用以清除其中的所有键值对
+- `sync/atomic`包中新增了`And`和`Or`方法
+- 还有一些影响不大的变化，就不一一列举了
+:::
+
+****
 
 ## Go 1.22 新特性
 
@@ -19,7 +89,7 @@ toc: false
 
 Go 1.22 对`for`循环进行了两项更改，和一项实验性功能。
 
-**循环变量的调整**
+::: details 循环变量的调整
 
 以前，`for`循环声明的变量只创建一次，并在每次迭代时更新。在 Go 1.22 中，循环的每次迭代都会创建新变量，以避免意外共享错误。举个例子：
 
@@ -38,7 +108,9 @@ for _, s := range ss {
 
 而在 Go 1.22 中，上述代码会将三个字符串各输出一遍，三个字符串的输出顺序会因为协程执行的顺序而不同。
 
-**整数范围循环**
+:::
+
+::: details 整数范围循环
 
 现在，range后面允许是一个整数了，例如：
 
@@ -48,7 +120,9 @@ for i := range 10 { // 等价于 for i := 0; i < 10; i++ {
 }
 ```
 
-**（实验性功能）函数迭代器**
+:::
+
+::: details （实验性功能）函数迭代器
 
 想要使用这个功能，需要在编译时启用环境变量`GOEXPERIMENT=rangefunc`。
 
@@ -89,7 +163,11 @@ func main() {
 }
 ```
 
+:::
+
 ### `go vet` 工具
+
+::: details `go vet` 工具的变化
 
 **对循环变量的引用**
 
@@ -118,6 +196,8 @@ defer func() {
 **对于`log/slog`的警告**
 
 `slog`库的正确用法是`slog.Info(message, key1, v1, key2, v2)`，如果在key的位置填写的既不是一个`string`，又不是一个`slog.Attr`，现在`vet`工具会报告这个错误。
+
+:::
 
 ### 核心库
 
@@ -163,11 +243,13 @@ Go 1.21 新增了三个内置函数`min`、`max`、`clear`。其中`clear`用于
 
 参考[https://go.dev/doc/go1.20](https://go.dev/doc/go1.20)
 
-**切片转数组**
+::: details 切片转数组
 
 现在支持将切片转为数组了，例如`*(*[4]byte)(x)`现在可以简写为`[4]byte(x)`。
 
-**`unsafe`包新增函数**
+:::
+
+:::: details `unsafe`包新增函数
 
 `unsafe`包提供了三个新函数`SliceData`、`String`、`StringData`，这些函数现在提供了构造和解构切片和字符串值的完整功能。例如：
 
@@ -184,7 +266,9 @@ buf := unsafe.Slice(unsafe.StringData(s), len(s))
 
 :::
 
-**关于`comparable`约束**
+::::
+
+::: details 关于`comparable`约束
 
 ```go
 a := map[string]any{"a": 1, "b": 2.3, "c": "c"}
@@ -200,3 +284,5 @@ func Equal[M1, M2 ~map[K]V, K, V comparable](m1 M1, m2 M2) bool
 
 在之前的版本，由于`maps.Equal`函数接收的两个`map`要求键与值都是`comparable`，但实际上它是`map[string]any`，`any`并不一定满足`comparable`，所以编译会报错。\
 在Go1.20之后，不会再因此而编译报错。如果出现不能比较的元素，则会在运行时报错：`panic: runtime error: comparing uncomparable type []int`
+
+:::
