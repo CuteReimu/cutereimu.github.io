@@ -1,10 +1,9 @@
 ---
 title: 空洞骑士速通类型科普
 icon: book
-order: 1
+order: 2
 date: 2021-09-20
 category: 空洞骑士
-star: true
 toc: false
 ---
 
