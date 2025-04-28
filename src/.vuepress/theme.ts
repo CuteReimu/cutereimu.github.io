@@ -42,6 +42,8 @@ export default hopeTheme({
     sup: true,
     imgSize: true,
 
+    codeTabs: true,
+
     math: {
       type: "katex",
     },

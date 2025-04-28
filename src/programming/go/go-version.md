@@ -5,10 +5,9 @@ order: 1
 category: 编程随笔
 tags: 
   - Go
-date: 2025-04-28
+date: 2024-05-21
 toc: false
 star: true
-sticky: 2
 ---
 
 [[toc]]
