@@ -51,6 +51,7 @@ export default hopeTheme({
     highlighter: {
       type: "shiki",
       collapsedLines: 15,
+      lineNumbers: 4,
     },
 
     stylize: [
