@@ -7,7 +7,6 @@ tags:
 icon: chess-board
 date: 2019-10-19
 star: true
-sticky: 1
 ---
 
 ::: warning 注意
