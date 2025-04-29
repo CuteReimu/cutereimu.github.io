@@ -56,7 +56,7 @@ flowchart TD
 
 那么代码是怎么写的呢？首先我们拿到[上一章](gobang2.md)的代码过来看一下：
 
-```java
+```java title="RobotPlayer.java"
 // 这里只展示了getMaxEvaluate函数的代码，其他代码在前面的章节中可以找到
 private PointAndValue getMaxEvaluate(int leftStep, int color) {
     Point maxPoint = null;
@@ -93,7 +93,7 @@ private PointAndValue getMaxEvaluate(int leftStep, int color) {
 
 我们把上面的代码稍加修改
 
-```java
+```java title="RobotPlayer.java"
 private PointAndValue getMaxEvaluate(int leftStep, int color, int passValue) {// 这个passValue就是其他节点传过来的值
     Point maxPoint = null;
     int maxValue = -Integer.MAX_VALUE;
@@ -137,7 +137,7 @@ private PointAndValue getMaxEvaluate(int leftStep, int color, int passValue) {//
 
 首先，我们想一下。什么样的点，容易出现上述的“极大值”（或者“极小值”）？显然，那些对胜负至关重要的点，相比那些不重要的点，更容易出现极值。那么，我们在遍历下一层之前，先交换一下遍历的顺序，让重要的点先进行遍历，就更加容易出现之前所说的“运气好”的情况——更容易很快出现极值。那么我们首先需要一个函数，来给每个点一个评估，它到底对胜负是否非常重要，这个函数就被称为“启发式搜索”函数。（这段代码看似很长，其实并无含金量，原本打算不贴出来的，但想了想还是补上了，方便读者节约时间，不在这个问题上浪费太多时间）
 
-```java
+```java title="RobotPlayer.java"
 public int evaluatePoint(Point p, int color) {
 	return evaluatePoint(p, color, 1) + evaluatePoint(p, color, 2);
 }
@@ -284,7 +284,7 @@ private int evaluatePoint(Point p, int me, int plyer) {
 
 然后我们在遍历之前，排个序即可。这里偷点懒，直接用了优先队列`PriorityQueue`。
 
-```java
+```java title="RobotPlayer.java"
 private PointAndValue max(int leftStep, int color, int passValue) {
 	PriorityQueue<PointAndValue> queue = new PriorityQueue<>((obj1, obj2)->Integer.compare(obj2.value, obj1.value));
 	for (int i = 0; i < Constant.MAX_LEN; i++) {

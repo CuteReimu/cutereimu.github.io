@@ -13,15 +13,25 @@ pprof是Go语言的性能分析工具，可以帮助我们分析程序的性能�
 
 通常，我们直接加入如下代码即可开启pprof功能：
 
-```go {3,8}
+```go {4,11-16} title="main.go"
 package main
 
-import _ "runtime/pprof"
+import (
+    _ "runtime/pprof"
+    "log/slog"
+)
 
 func main() {
     // ... 你的代码 ...
     
-	_ = http.ListenAndServe(":6060", nil) // 假设监听端口是6060
+    go func() {
+	    err := http.ListenAndServe(":6060", nil) // 假设监听端口是6060
+	    if err != nil {
+            slog.Error("启动pprof失败", "error", err)
+        }
+	}
+	
+	// ... 你的代码 ...
 }
 ```
 

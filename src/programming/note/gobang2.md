@@ -16,7 +16,7 @@ date: 2019-10-20
 
 回顾一下[上一章](gobang1.md)的内容，我们需要一个`RobotPlayer`类，实现`Player`接口的三个方法：
 
-```java
+```java title="RobotPlayer.java"
 public class RobotPlayer implements Player {
    private final int color; //1-执黑 2-执白
    public RobotPlayer(int color) { this.color = color; }
@@ -68,7 +68,7 @@ public class RobotPlayer implements Player {
 
 根据上述的这些规则和经验，我们可以做一个评估函数的设计，大概是这样的：
 
-```java
+```java title="RobotPlayer.java"
 public class RobotPlayer implements Player {
    private final int color; //1-执黑 2-执白
    /* 此处省略了上文写了的方法 */
@@ -243,9 +243,9 @@ flowchart TD
 
 推广到连续考虑N步棋，我们可以得到这样的代码：
 
-```java
+```java title="PointAndValue.java"
 // 因为下面的算法需要返回这一步棋下在哪里，以及对应这个下法的分数，我就封装了这样一个类
-class PointAndValue {
+public class PointAndValue {
    public final Point point;
    public final int value;
    public PointAndValue(Point point, int value) {
@@ -253,7 +253,9 @@ class PointAndValue {
       this.value = value;
    }
 }
+```
 
+```java title="RobotPlayer.java"
 public class RobotPlayer implements Player {
    private final int color; //1-执黑 2-执白
    /* 此处省略了上文写了的方法 */
@@ -303,7 +305,7 @@ public class RobotPlayer implements Player {
 
 到此为止，我们就可以用`getMaxEvaluate`方法求出一个“最好的策略”了。把这个方法再进一步组合，我们可以得到`play`方法：
 
-```java
+```java title="RobotPlayer.java"
 import java.util.*;
 
 public class RobotPlayer implements Player {

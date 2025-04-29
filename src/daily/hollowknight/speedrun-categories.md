@@ -4,6 +4,8 @@ icon: book
 order: 2
 date: 2021-09-20
 category: 空洞骑士
+tags:
+  - 空洞骑士
 toc: false
 ---
 

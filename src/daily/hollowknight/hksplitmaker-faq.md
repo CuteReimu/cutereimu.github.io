@@ -5,7 +5,8 @@ icon: clock
 order: 1
 category: 空洞骑士
 tags:
-   - LiveSplit
+  - 空洞骑士
+  - LiveSplit
 date: 2022-02-10
 star: true
 ---
