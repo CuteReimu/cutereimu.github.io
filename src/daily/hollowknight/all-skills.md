@@ -4,6 +4,8 @@ shortTitle: 全技能速通路线
 icon: /hollow-knight/hollow-knight.png
 date: 2021-09-10
 category: 空洞骑士
+tags:
+  - 空洞骑士
 toc: false
 order: 3
 ---

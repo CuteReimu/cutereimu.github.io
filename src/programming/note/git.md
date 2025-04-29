@@ -12,6 +12,7 @@ icon: b:git-alt
 因此，我们有时候需要删除文件的所有历史记录。执行以下命令即可：
 
 ```bash
+# [!code word:path-to-file]
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-to-file' --prune-empty --tag-name-filter cat -- --all
 ```
 
