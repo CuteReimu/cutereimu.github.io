@@ -14,4 +14,8 @@ projects:
     desc: 为自己热爱的游卡《风声》桌游整理的民间版规则文档
     link: https://fengsheng.cutereimu.cn
     icon: book
+head:
+- - meta
+  - name: baidu-site-verification
+    content: codeva-TVljOEEV4r
 ---
