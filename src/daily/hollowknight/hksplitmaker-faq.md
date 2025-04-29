@@ -55,8 +55,9 @@ star: true
 :::
 
 第一次使用时，你需要**开启LiveSplit的《空洞骑士》计时插件**。具体方法是：打开**LiveSplit**后，右键 &rarr; Edit Splits，在第一行输入`Hollow Knight`，然后右边三个按钮，有一个`Activate`按钮。
-- 如果`Activate`按钮可以点，就点它，然后按`OK`按钮。
-- 如果`Activate`按钮不在，而是有一个`Deactivate`按钮，说明你已经开启了插件，无需再做额外操作。
+- 如果没有`Activate`按钮，而是有一个`Deactivate`按钮，说明你已经开启了插件，无需再做额外操作。
+- 如果`Activate`按钮可以点，点击它，变成`Deactivate`说明开启成功，然后按`OK`按钮。
+   - 如果点击`Activate`按钮弹出提示`The Auto Splitter could not be activated.（给定关键字不在字典中。）`，采用和下一条一样的处理方式即可。
 - 如果`Activate`按钮是灰色的不能点，首先关掉**LiveSplit**，打开**计时器生成器**，点击右上角的`更新LiveSplit`按钮，接下来自己操作，提示成功之后再重新打开**LiveSplit**，`Activate`按钮就可以点了。
 
 ### 生成模板并导入
@@ -78,6 +79,8 @@ star: true
 
 ## LiveSplit常见问题
 
+### 计时器不生效
+
 关于“开启一个新的游戏存档，但并没有自动开始计时”“完成了一个内容（例如获得白波），但并未自动跳转到下一行”“还没有完成相应内容，计时器就跳转到下一行或提前结束了”相关问题，建议从以下几种可能性进行排查：
 - 有可能你没有开启**LiveSplit**的《空洞骑士》计时插件（[如何开启？](#首次使用)）
 - 请确保使用管理员模式打开**LiveSplit**
@@ -86,4 +89,8 @@ star: true
 - 如果是苦痛之路速通，还有一种可能，你的苦痛存档是用一些方式制造出来的存档，例如已经通关过苦痛的存档用 Debug Mod 把门打开。建议找他人要一个苦痛存档。或者你也可以前往 [speedrun.com 《空洞骑士》版块](https://www.speedrun.com/zh-CN/hollowknight/resources/gzf2t)获取一个苦痛之路速通可用的存档。
 - 如果是愚人斗兽场速通，则可能是因为你没有使用愚人斗兽场的速通专用存档。打开**计时器生成器**，右上角模板里随便找一个愚人斗兽场模板，会有提示是否需要专用存档，放入游戏存档目录即可。或者你也可以前往 [speedrun.com 《空洞骑士》版块](https://www.speedrun.com/zh-CN/hollowknight/resources/y9ops)获取愚人斗兽场速通专用存档。
 
-如果弹出提示`The Auto Splitter could not be activated.（给定关键字不在字典中。）`，优先考虑检查是否开启了**LiveSplit**的《空洞骑士》计时插件（[如何开启？](#首次使用)）
+### 窗口遮挡
+
+在LiveSplit设置中设置了“总在最前”，但游戏全屏了仍然会挡住LiveSplit窗口怎么办？ 
+1. 将游戏切换成窗口模式（按`Alt + Enter`），窗口大小设置为与你的屏幕分辨率相同，就解决了游戏窗口挡住LiveSplit的问题。但窗口会有标题栏和边框，并不美观。
+2. 在 Steam 中找到《空洞骑士》游戏，右键 &rarr; 属性 &rarr; 常规，在启动选项中添加`-popupwindow`。重新启动游戏，会发现窗口的标题栏和边框都消失了。
