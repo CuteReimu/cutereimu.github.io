@@ -4,7 +4,7 @@ layout: BlogHome
 icon: house
 title: 主页
 heroText: 奇葩的灵梦
-tagline: "<div style='text-align: center;'>When the sun is gone,<br/> prepare to watch the stars shine upon.</div>"
+tagline: "<div style='text-align:center;line-height:1.2;'>When the sun is gone,</div><div style='text-align:center;line-height:1.2;'>prepare to watch the stars shine upon.</div>"
 heroImage: https://avatars.githubusercontent.com/CuteReimu?v=4
 bgImage: /cover.jpg
 breadcrumbExclude: true
