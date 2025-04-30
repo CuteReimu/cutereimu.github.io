@@ -6,7 +6,6 @@ category: 编程随笔
 tags: 
   - Go
 toc: false
-star: true
 ---
 
 pprof是Go语言的性能分析工具，可以帮助我们分析程序的性能瓶颈。pprof可以生成CPU、内存、阻塞等多种性能分析报告。

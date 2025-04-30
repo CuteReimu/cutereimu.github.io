@@ -278,8 +278,9 @@ val players = allPlayers.filter { it.alive }. // [!code warning]
 
 ```kotlin
 // val p = 当前回合玩家
+// val allPlayers = 所有玩家
 
-val players = players0.filter { it.alive }.run {
+val players = allPlayers.filter { it.alive }.run {
     // 过滤出所有存活的玩家后，在run作用域内，所有存活的玩家就可以用this来表示
     filter { p.isEnemy(it) }.ifEmpty { this } // this.filter的this.可以省略
 }
@@ -289,8 +290,9 @@ val players = players0.filter { it.alive }.run {
 
 ```kotlin
 // val p = 当前回合玩家
+// val allPlayers = 所有玩家
 
-val players1 = game.players.filter { it.alive }
+val players1 = allPlayers.filter { it.alive }
 
 val players = players1.filter { p.isEnemy(it) }.ifEmpty { players1 }
 // 也可以多声明一个中间变量

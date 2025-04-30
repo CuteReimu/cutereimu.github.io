@@ -33,9 +33,11 @@ export default hopeTheme({
     description: "超10年经验的资深服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
     intro: "/intro.html",
     medias: {
+      Email: "mailto:cutereimu@vip.qq.com",
       Github: "https://github.com/CuteReimu",
       BiliBili: "https://space.bilibili.com/1415334",
-      Email: "mailto:cutereimu@vip.qq.com"
+      CSDN: {link: "https://blog.csdn.net/qq_44732921", icon: "/CSDN.svg"},
+      LeetCode: {link: "https://leetcode.cn/u/FlyingLu/", icon: "/LeetCode.svg"},
     },
   },
 
