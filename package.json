@@ -1,6 +1,6 @@
 {
   "name": "cutereimu.github.io",
-  "description": "奇葩の灵梦的个人空间",
+  "description": "奇葩的灵梦的个人空间",
   "version": "2.0.0",
   "license": "MIT",
   "type": "module",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.21",
+    "dotenv": "^16.5.0",
     "katex": "^0.16.22",
     "mermaid": "^11.6.0",
     "sass-embedded": "^1.86.3",

@@ -3,12 +3,18 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+import dotenv from 'dotenv';
+import * as path2 from "node:path";
+
+dotenv.config({path: path2.resolve(process.cwd(), '.env.local')});
+dotenv.config();
+
 export default hopeTheme({
-  hostname: "https://cutereimu.github.io",
+  hostname: "https://cutereimu.cn",
 
   author: {
-    name: "奇葩の灵梦",
-    url: "https://github.com/CuteReimu",
+    name: "奇葩的灵梦",
+    url: "https://cutereimu.cn",
   },
 
   logo: "https://avatars.githubusercontent.com/CuteReimu?v=4",
@@ -37,6 +43,10 @@ export default hopeTheme({
   lastUpdated: false,
   contributors: false,
   print: false,
+
+  displayFooter: true,
+  footer: process.env.VITE_FOOTER,
+  license: "MIT",
 
   markdown: {
     sup: true,
