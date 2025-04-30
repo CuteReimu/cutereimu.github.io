@@ -270,7 +270,7 @@ val f = with (a) { // 在这个作用域内，a可以用this来表示
 
 val players = allPlayers.filter { it.alive }. // [!code warning]
     filter { p.isEnemy(it) }.ifEmpty {
-        allPlayers.filter { it.alive } // 和上面第4行重复了
+        allPlayers.filter { it.alive } // 和上面第4行重复了 // [!code warning]
     }
 ```
 
@@ -280,9 +280,11 @@ val players = allPlayers.filter { it.alive }. // [!code warning]
 // val p = 当前回合玩家
 // val allPlayers = 所有玩家
 
+// [!code word:run]
+// [!code word:this]
 val players = allPlayers.filter { it.alive }.run {
     // 过滤出所有存活的玩家后，在run作用域内，所有存活的玩家就可以用this来表示
-    filter { p.isEnemy(it) }.ifEmpty { this } // this.filter的this.可以省略
+    this.filter { p.isEnemy(it) }.ifEmpty { this } // 第一个this.可以省略
 }
 ```
 
@@ -292,10 +294,11 @@ val players = allPlayers.filter { it.alive }.run {
 // val p = 当前回合玩家
 // val allPlayers = 所有玩家
 
+// 也可以直接多声明一个中间变量
+// [!code word:players1]
 val players1 = allPlayers.filter { it.alive }
 
 val players = players1.filter { p.isEnemy(it) }.ifEmpty { players1 }
-// 也可以多声明一个中间变量
 ```
 
 :::
