@@ -2,6 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { CSDN, LeetCode } from "./media.js";
 
 import dotenv from 'dotenv';
 import * as path2 from "node:path";
@@ -36,8 +37,8 @@ export default hopeTheme({
       Email: "mailto:cutereimu@vip.qq.com",
       Github: "https://github.com/CuteReimu",
       BiliBili: "https://space.bilibili.com/1415334",
-      CSDN: {link: "https://blog.csdn.net/qq_44732921", icon: "/CSDN.svg"},
-      LeetCode: {link: "https://leetcode.cn/u/FlyingLu/", icon: "/LeetCode.svg"},
+      力扣: {link: "https://leetcode.cn/u/FlyingLu/", icon: LeetCode},
+      CSDN: {link: "https://blog.csdn.net/qq_44732921", icon: CSDN},
     },
   },
 
