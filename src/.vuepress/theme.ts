@@ -68,6 +68,7 @@ export default hopeTheme({
       collapsedLines: 20,
       lineNumbers: 4,
       notationWordHighlight: true,
+      notationErrorLevel: true,
     },
 
     stylize: [
