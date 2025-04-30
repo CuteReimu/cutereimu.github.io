@@ -6,6 +6,7 @@ icon: image
 tags:
   - 算法
   - Go
+date: 2021-12-23
 ---
 
 ## 什么叫图像量化？
