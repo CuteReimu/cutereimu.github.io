@@ -18,7 +18,7 @@ toc: false
   - ![](https://img.shields.io/badge/Go-white?logo=go)
   - ![](https://img.shields.io/badge/Kotlin-white?logo=kotlin)
 
-- **有不错的算法能力，LeetCode周赛历史最佳成绩前十名**
+- **有不错的算法能力，LeetCode周赛历史最佳成绩26名**
 
 - **略懂一些Web开发语言**
   - ![](https://img.shields.io/badge/Vue-white?logo=vuedotjs)
