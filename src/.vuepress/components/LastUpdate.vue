@@ -1,8 +1,8 @@
 <template>
   <div v-if="lastUpdated" class="update-time">
     {{ lastUpdated.locale }}
-    <time :datetime="lastUpdated.iso.substring(0, 10)" data-allow-mismatch>
-      {{ lastUpdated.text.substring(0, 10) }}
+    <time :datetime="lastUpdated.iso.split(' ')[0]" data-allow-mismatch>
+      {{ lastUpdated.text.split(' ')[0] }}
     </time>
   </div>
 </template>
