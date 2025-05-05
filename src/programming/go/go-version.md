@@ -7,7 +7,6 @@ tags:
   - Go
 date: 2024-05-21
 toc: false
-star: true
 ---
 
 [[toc]]
