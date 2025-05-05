@@ -7,7 +7,6 @@ tags:
   - Kotlin
   - Java
 date: 2024-08-29
-star: true
 ---
 
 Kotlin是基于Java虚拟机的一种静态类型编程语言，如果你有Java编程经验，那么学习Kotlin将会非常容易。
