@@ -7,13 +7,13 @@ tags:
   - 算法
   - Java
 date: 2020-08-13
-sticky: 3
+sticky: 1
 star: true
 ---
 
 ::: important 重要
 
-这篇文章是我看完《Neural Networks and Deep Learning》一书后的个人读书笔记。本文的风格更加偏向于对有一定数学基础的人的科普，并非专业文章。如果你是相关专业的学生或者专业人士，在学习和研究过程中应该考虑研读权威书籍，请勿以本文作为参考。
+这篇文章是我看完《Neural Networks and Deep Learning》一书后的个人读书笔记。本文的风格更加偏向于对有一定数学基础的人的科普，并非专业文章。如果你是相关专业的学生或者专业人士，在学习和研究过程中应该考虑研读权威书籍，请勿以本文作为参考。如有理解错误，欢迎指正。
 
 :::
 
@@ -212,7 +212,13 @@ $b^l_j$表示第$l$层第$j$个神经元的偏置，$a^l_{j}$表示第$l$层第$
 
 1. 首先正向推导，得出输出层误差$\delta$
 2. 下一层的误差推倒当前层的误差：$\delta^l = ((w^{l+1})^T\delta^{l+1})\odot\delta^{\prime}(z^l)$
+3. 求出代价函数的梯度：$\frac{\partial C}{\partial w^l_{jk}} = a^{l-1}_k \delta^l_j$ 和 $\frac{\partial C}{\partial b^l_j} = \delta^l_j$
+4. 沿梯度方向按照某一个步长更新权重和偏置
 
----
+为此，我用 Java 实现了这样一个识别手写数字的逻辑：[https://github.com/CuteReimu/MNIST-Template](https://github.com/CuteReimu/MNIST-Template)
 
-未完待续
+::: warning 注意
+
+这个实现是纯手写的，只为检验我对算法的理解。如果真的想要学习神经网络，建议使用 TensorFlow、PyTorch 等深度学习框架。
+
+:::
