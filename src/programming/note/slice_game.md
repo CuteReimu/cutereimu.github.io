@@ -5,6 +5,7 @@ category: 编程随笔
 icon: chess-board
 tags:
   - 算法
+  - Go
   - Erlang
 date: 2023-10-11
 ---
@@ -40,6 +41,129 @@ $$
 现在的数字5所在的位置其实应该是数字4的目标位置，那么数字4从现在的位置到目标位置的曼哈顿距离就是$2+1=3$。我们把每个数字的当前位置和目标位置的曼哈顿距离加起来，就可以作为预估步数$h(n)$的值了。
 
 这样一来，我们就可以用AStar算法来解决这个问题了。下面是一个简单的实现：
+
+::: code-tabs
+
+@tab Go
+
+```go
+package main
+
+import (
+	"cmp"
+	"fmt"
+	"github.com/CuteReimu/goutil"
+	"slices"
+)
+
+func main() {
+	problem := []int{
+		3, 0, 4,
+		5, 2, 8,
+		1, 6, 7,
+	}
+	openSet := goutil.NewPriorityQueue(nil, func(o1, o2 *Problem) int {
+		return cmp.Compare(o1.dist, o2.dist)
+	})
+	openSet.Add(&Problem{
+		hash:    hash(problem),
+		dist:    dist(problem),
+		problem: problem,
+	})
+	closeSet := make(map[int]bool)
+	results := make(map[int]*Result)
+	results[hash(problem)] = &Result{}
+	for openSet.Len() > 0 {
+		p := openSet.Poll()
+		r0 := results[p.hash]
+		if p.hash == 123456780 {
+			displayResult(p.hash, results)
+			break
+		}
+		index0 := slices.Index(p.problem, 0)
+		for _, idx := range directions[index0] {
+			newProblem := slices.Clone(p.problem)
+			newProblem[index0], newProblem[idx] = newProblem[idx], newProblem[index0]
+			p2 := &Problem{
+				hash:    hash(newProblem),
+				dist:    dist(newProblem) + r0.dist + 1,
+				problem: newProblem,
+			}
+			if !closeSet[p2.hash] {
+				openSet.Add(p2)
+			}
+			if r, ok := results[p2.hash]; !(ok && r0.dist+1 >= r.dist) {
+				results[p2.hash] = &Result{
+					lastHash: p.hash,
+					dist:     r0.dist + 1,
+					who:      p.problem[idx],
+					dir:      formatDir[index0-idx],
+				}
+			}
+		}
+		closeSet[p.hash] = true
+	}
+}
+
+func displayResult(h int, results map[int]*Result) {
+	if r := results[h]; r.dist != 0 {
+		displayResult(r.lastHash, results)
+		fmt.Printf("%d move %s\n", r.who, r.dir)
+	}
+}
+
+type Result struct {
+	lastHash int
+	dist     int
+	who      int
+	dir      string
+}
+
+type Problem struct {
+	hash, dist int
+	problem    []int
+}
+
+var (
+	directions = map[int][]int{
+		0: {1, 3},
+		1: {0, 2, 4},
+		2: {1, 5},
+		3: {0, 4, 6},
+		4: {1, 3, 5, 7},
+		5: {2, 4, 8},
+		6: {3, 7},
+		7: {4, 6, 8},
+		8: {5, 7},
+	}
+	formatDir = map[int]string{
+		1:  "right",
+		-1: "left",
+		3:  "down",
+		-3: "up",
+	}
+)
+
+func dist(a []int) (d int) {
+	for i, v := range a {
+		if v != 0 {
+			v--
+			d += max(i%3-v%3, v%3-i%3)
+			d += max(i/3-v/3, v/3-i/3)
+		}
+	}
+	return
+}
+
+func hash(a []int) (h int) {
+	for _, v := range a {
+		h = h*10 + v
+	}
+	return
+}
+```
+
+@tab Erlang
 
 ```erlang
 -module('AStar').
@@ -141,7 +265,9 @@ display_result(Hash, Result) ->
   end.
 ```
 
-算法不难，这里只列举了Erlang的实现，其他语言的实现也大同小异，就不一一展示了。执行一下可以看到输出：
+:::
+
+算法不难，这里只列举了Go和Erlang的实现，其他语言的实现也大同小异，就不一一展示了。执行一下可以看到输出：
 
 ``` :collapsed-lines=2
 2 move up
