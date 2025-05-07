@@ -13,9 +13,9 @@ Kotlin是基于Java虚拟机的一种静态类型编程语言，如果你有Java
 
 本文主要面向有Java编程经验的开发者，将会介绍Kotlin的基本语法和特性。如果你没有Java编程经验，想要直接上手Kotlin，建议直接在网上搜索Kotlin入门的相关文章。
 
-我们用一个小代码片段，对比一下Java和Kotlin：
-
 <!-- more -->
+
+我们用一个小代码片段，对比一下Java和Kotlin：
 
 ::: code-tabs
 
