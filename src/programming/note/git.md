@@ -30,3 +30,9 @@ git push origin --force --tags
 ```
 
 （可选）然后你可以考虑执行`git gc`命令来清理本地的git缓存。
+
+<style scoped>
+.shiki {
+  text-wrap: auto;
+}
+</style>
