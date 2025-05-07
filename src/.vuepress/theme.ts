@@ -49,7 +49,7 @@ export default hopeTheme({
 
   displayFooter: true,
   footer: process.env.VITE_FOOTER,
-  license: "MIT",
+  license: "CC BY-SA 4.0",
 
   markdown: {
     sup: true,
@@ -105,9 +105,7 @@ export default hopeTheme({
     },
 
     copyright: {
-      author: "",
       global: true,
-      license: "",
     },
 
     components: {
