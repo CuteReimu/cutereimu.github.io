@@ -18,8 +18,8 @@ export default hopeTheme({
     url: "https://cutereimu.cn",
   },
 
-  logo: "https://avatars.githubusercontent.com/CuteReimu?v=4",
-  favicon: "https://avatars.githubusercontent.com/CuteReimu?v=4",
+  logo: "/CuteReimu.jpg",
+  favicon: "/CuteReimu.jpg",
 
   darkmode: "toggle",
 
