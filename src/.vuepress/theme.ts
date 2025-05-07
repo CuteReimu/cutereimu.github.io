@@ -106,6 +106,11 @@ export default hopeTheme({
 
     copyright: {
       global: true,
+      locales: {
+        "/": {
+          author: "作者：:author"
+        },
+      }
     },
 
     components: {
