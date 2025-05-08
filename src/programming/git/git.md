@@ -1,6 +1,6 @@
 ---
 title: git如何删除某文件的历史记录
-order: 6
+order: 1
 category: Git
 tags:
   - Git
