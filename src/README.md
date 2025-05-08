@@ -1,8 +1,9 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: house
 title: 主页
+hero: false
 heroText: 奇葩的灵梦
 tagline: "<div style='text-align:center;line-height:1.2;'>When the sun is gone,</div><div style='text-align:center;line-height:1.2;'>prepare to watch the stars shine upon.</div>"
 heroImage: /CuteReimu.jpg

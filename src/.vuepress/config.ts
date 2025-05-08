@@ -6,9 +6,6 @@ import theme from "./theme.js";
 const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
-  alias: {
-    "@theme-hope/components/NormalPage": path.resolve(__dirname, "components/NormalPage.vue"),
-  },
   base: "/",
 
   lang: "zh-CN",

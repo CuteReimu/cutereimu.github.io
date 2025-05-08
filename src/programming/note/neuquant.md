@@ -50,7 +50,7 @@ func main() {
 }
 ```
 
-![neuquant.jpg](/programming/neuquant.jpg =x300)![neuquant.gif](/programming/neuquant.gif =x300)
+![neuquant.jpg =x300](/programming/neuquant.jpg)![neuquant.gif =x300](/programming/neuquant.gif)
 
 可以看出，有一定的失真，但是整体效果还是可以的。
 
@@ -95,4 +95,4 @@ func main() {
 }
 ```
 
-![neuquant_animate.gif](/programming/neuquant_animate.gif =x300)
+![neuquant_animate.gif =x300](/programming/neuquant_animate.gif)

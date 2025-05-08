@@ -16,6 +16,7 @@ export default hopeTheme({
   author: {
     name: "奇葩的灵梦",
     url: "https://cutereimu.cn",
+    email: "cutereimu@vip.qq.com",
   },
 
   logo: "/CuteReimu.jpg",
@@ -112,9 +113,5 @@ export default hopeTheme({
         },
       }
     },
-
-    components: {
-      components: ["Share"],
-    },
   },
-}, { custom: true });
+});
