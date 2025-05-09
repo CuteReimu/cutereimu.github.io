@@ -6,9 +6,8 @@ tags:
   - Git
   - GitHub
 icon: b:github
+excerpt: <ul><li>为提交增加共同作者</li><li>获取提交的补丁文件</li><li>提交自定义信息</li><li>比较提交</li></ul>
 ---
-
-<!-- more -->
 
 ## 为提交增加共同作者
 
