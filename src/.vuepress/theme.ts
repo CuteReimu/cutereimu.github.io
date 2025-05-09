@@ -68,8 +68,13 @@ export default hopeTheme({
       type: "shiki",
       collapsedLines: 20,
       lineNumbers: 4,
+      whitespace: true,
       notationWordHighlight: true,
       notationErrorLevel: true,
+      themes: {
+        light: "github-light-default",
+        dark: "red",
+      }
     },
 
     stylize: [
