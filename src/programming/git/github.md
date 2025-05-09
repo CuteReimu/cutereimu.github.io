@@ -15,8 +15,8 @@ excerpt: <ul><li>为提交增加共同作者</li><li>获取提交的补丁文件
 
 如果要添加多个共同作者，则为每个共同作者增加一行 `Co-authored-by:`，之间不加空行。
 
-``` :no-line-numbers
-提交信息
+```text :no-line-numbers :whitespace=all
+这是一条提交信息
 
 Co-authored-by: name1 <name1@example.com>
 Co-authored-by: name2 <name2@example.com>
