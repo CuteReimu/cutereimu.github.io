@@ -1,6 +1,6 @@
 ---
-title: Kotlin语言相关
-icon: /kotlin.svg
+title: Java、Kotlin语言相关
+icon: b:java
 index: false
 article: false
 pageInfo: false
