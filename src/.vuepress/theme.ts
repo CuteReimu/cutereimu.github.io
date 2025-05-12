@@ -56,6 +56,8 @@ export default hopeTheme({
     sup: true,
     imgSize: true,
 
+    spoiler: true,
+
     codeTabs: true,
 
     math: {
