@@ -271,8 +271,7 @@ display_result(Hash, Result) ->
 
 算法不难，这里只列举了Go和Erlang的实现，其他语言的实现也大同小异，就不一一展示了。执行一下可以看到输出：
 
-```ansi :collapsed-lines=2 :no-line-numbers
-[0;32mcolored foreground[0m
+```text :collapsed-lines=2 :no-line-numbers
 2 move up
 6 move up
 7 move left
