@@ -73,7 +73,7 @@ func check(points []Point, p Point) bool {
 
 ::: tip 那如果是凹多边形怎么办？
 
-把凹多边形切分成几个凸多变型即可。
+把凹多边形切分成几个凸多边形即可。
 
 :::
 
