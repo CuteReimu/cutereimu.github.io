@@ -182,7 +182,7 @@ $$
 \nabla C & = \left(\frac{\partial C}{\partial v_1}, \frac{\partial C}{\partial v_2}\right)^T\\
 \Delta C & \approx \nabla C \cdot \Delta \vec{v}\\
 \Delta \vec{v} & = -\eta \nabla C\\
-\vec{v} \to \vec{v}^{\prime} & = \vec{v} - \eta \nabla C
+\vec{v} \to \vec{v}' & = \vec{v} - \eta \nabla C
 \end{aligned}
 $$
 
@@ -192,9 +192,9 @@ $$
 
 $$
 \begin{aligned}
-\vec{v} \to \vec{v}^{\prime} & = \vec{v} - \eta \nabla C\\
-w_k \to w_k^{\prime} & = w_k - \eta \frac{\partial C}{\partial w_k}\\
-b_k \to b_k^{\prime} & = b_k - \eta \frac{\partial C}{\partial b_k}
+\vec{v} \to \vec{v}' & = \vec{v} - \eta \nabla C\\
+w_k \to w_k' & = w_k - \eta \frac{\partial C}{\partial w_k}\\
+b_k \to b_k' & = b_k - \eta \frac{\partial C}{\partial b_k}
 \end{aligned}
 $$
 
@@ -212,7 +212,7 @@ $b^l_j$表示第$l$层第$j$个神经元的偏置，$a^l_{j}$表示第$l$层第$
 推到过程较为复杂，这里省略，直接给出结论。
 
 1. 首先正向推导，得出输出层误差$\delta$
-2. 下一层的误差推倒当前层的误差：$\delta^l = ((w^{l+1})^T\delta^{l+1})\odot\delta^{\prime}(z^l)$
+2. 下一层的误差推倒当前层的误差：$\delta^l = ((w^{l+1})^T\delta^{l+1})\odot\delta'(z^l)$
 3. 求出代价函数的梯度：$\frac{\partial C}{\partial w^l_{jk}} = a^{l-1}_k \delta^l_j$ 和 $\frac{\partial C}{\partial b^l_j} = \delta^l_j$
 4. 沿梯度方向按照某一个步长更新权重和偏置
 
