@@ -1,7 +1,7 @@
 ---
 title: 五局三胜问题
 icon: '3'
-order: 2
+order: -1
 date: 2019-08-29
 category: 数学
 tags:
