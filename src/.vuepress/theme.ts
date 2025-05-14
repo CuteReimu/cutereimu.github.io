@@ -43,6 +43,14 @@ export default hopeTheme({
     },
   },
 
+  locales: {
+    "/": {
+      metaLocales: {
+        origin: "个人翻译",
+      },
+    },
+  },
+
   editLink: false,
   lastUpdated: false,
   contributors: false,
