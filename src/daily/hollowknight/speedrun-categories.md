@@ -6,6 +6,7 @@ date: 2021-09-20
 category: 空洞骑士
 tags:
   - 空洞骑士
+  - 速通
 ---
 
 本篇主要是科普 [speedrun.com 上面《空洞骑士》游戏](https://www.speedrun.com/zh-CN/hollowknight)的速通分类。
