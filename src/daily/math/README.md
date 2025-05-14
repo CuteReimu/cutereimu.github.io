@@ -7,7 +7,7 @@ dir:
 article: false
 pageInfo: false
 lastUpdated: false
-redirectTo: git.md
+redirectTo: rect.md
 breadcrumbExclude: true
 ---
 
