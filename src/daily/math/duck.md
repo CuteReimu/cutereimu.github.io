@@ -36,7 +36,7 @@ public class Test {
         for (int i = 0; i < 100000000; i++)
             if (check(random(), random(), random(), random()))
                 count++;
-        System.out.println(count / 1000000.0);
+        System.out.println(count);
     }
     private static boolean check(Point a, Point b, Point c, Point d) {
         if (a.x == 0 && a.y == 0 || b.x == 0 && b.y == 0 || c.x == 0 && c.y == 0 || d.x == 0 && d.y == 0)
@@ -60,7 +60,7 @@ public class Test {
 }
 ```
 
-可以看到，我模拟了1亿次，最终共半圆的次数基本在!!4999万到5001万之间，说明概率应该是1/2!!。
+总共模拟了1亿次，最终共半圆的次数基本在!!4999万到5001万之间，说明概率应该是1/2!!。
 
 ## 数学原理
 
