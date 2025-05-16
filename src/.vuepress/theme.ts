@@ -41,6 +41,7 @@ export default hopeTheme({
       力扣: {link: "https://leetcode.cn/u/FlyingLu/", icon: LeetCode},
       CSDN: {link: "https://blog.csdn.net/qq_44732921", icon: CSDN},
     },
+    timeline: "行到水穷处，坐看云起时",
   },
 
   locales: {
