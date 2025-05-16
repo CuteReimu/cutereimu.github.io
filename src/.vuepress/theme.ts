@@ -57,7 +57,6 @@ export default hopeTheme({
   contributors: false,
   print: false,
 
-  displayFooter: true,
   footer: process.env.VITE_FOOTER,
   license: "CC BY-SA 4.0",
 
