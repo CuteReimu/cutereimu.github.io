@@ -21,4 +21,5 @@ head:
 - - meta
   - name: baidu-site-verification
     content: codeva-TVljOEEV4r
+footer: true
 ---
