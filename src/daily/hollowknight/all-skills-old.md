@@ -18,7 +18,7 @@ order: 13
 
 :::
 
-首先贴出speedrun上面当前版本全技能速通(All Skills Current Patch NMG)的规则：
+首先贴出[speedrun.com](https://www.speedrun.com/zh-CN/hollowknight?h=All_Skills-1-4-3-2-nmg&rules=category&x=n2y577zk-38dopp1l.4lxogy4l)上面当前版本全技能速通(All Skills Current Patch NMG)的规则：
 
 > 收集所有的移动技能、骨钉技艺、法术后通关游戏
 >
@@ -55,9 +55,3 @@ order: 13
 21. 击败大黄蜂，获得王之印记。
 22. 回到国王驿站，传送至宫殿广场，进入深渊，获得**暗影披风**和**深渊尖啸**。
 23. 从深渊跳上来，回到宫殿广场，传送至德特茅斯，击败**空洞骑士**。
-
-## 参考资料
-
-1. speedrun上关于All Skills（Current Patch）的规则。
-2. 世界纪录前几名的视频。
-3. speedrun上提供的All Skills（Current Patch）存档里的README文件。
