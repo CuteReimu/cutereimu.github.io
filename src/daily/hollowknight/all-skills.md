@@ -14,6 +14,8 @@ date: 2024-03-15
 
 英文原文链接：[https://pastebin.com/qKynDRaa](https://pastebin.com/qKynDRaa)，请注意发布时间。
 
+路线的.lss文件可以在[计时器生成器](hksplitmaker-faq.md#生成模板并导入)的模板中找到。
+
 ::: note 译者注
 
 本文是最新的全技能速通路线，适合冲击极限的玩家，但对新接触速通的玩家并不友好。如果你是新接触速通的玩家，建议参考[全技能速通路线（旧）](all-skills-old.md)。
