@@ -128,5 +128,9 @@ export default hopeTheme({
         },
       }
     },
+
+    components: {
+      components: ["Badge", "VPCard"],
+    }
   },
 });
