@@ -29,7 +29,7 @@ Anthony H. Dekker 在 1994-08-01 发表的论文 《Kohonen neural networks for 
 
 简单做一个测试，看看失真程度如何：
 
-```go
+```go :no-collapsed-lines
 package main
 
 import (
