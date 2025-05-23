@@ -1,6 +1,6 @@
 ---
-title: "go build 命令的使用技巧"
-shortTitle: "build命令的使用技巧"
+title: go build 命令的使用技巧
+shortTitle: build命令的使用技巧
 icon: b:golang
 order: 3
 category: 编程日记
