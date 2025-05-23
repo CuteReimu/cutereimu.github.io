@@ -7,6 +7,7 @@ tags:
   - 策略问题
   - 信息论
   - TypeScript
+  - Go
 ---
 
 一切的一切，要源于《冒险岛Online》在2018年推出的一个小游戏——名侦探甘迪：
@@ -94,6 +95,10 @@ $$
 
 ### 代码实现
 
+::: code-tabs
+
+@tab TypeScript
+
 ```ts :no-collapsed-lines
 // compare 函数用于比较两个结果的差异，返回○和△值
 const compare = (result1: number[], result2: number[]): [number, number] => {
@@ -152,6 +157,79 @@ for (let a = 1; a <= 9; a++) {
 console.log(maxH);
 console.log(maxHResults);
 ```
+
+@tab Go
+
+```go :no-collapsed-lines
+// compare 函数用于比较两个结果的差异，返回○和△值
+func compare(result1, result2 [3]int) (int, int) {
+	var count1, count2 int
+	for i := range 3 {
+		for j := range 3 {
+			if result1[i] == result2[j] {
+				if i == j {
+					count1++
+				} else {
+					count2++
+				}
+			}
+		}
+	}
+	return count1, count2
+}
+
+func main() {
+	// 首轮猜测1-2-3，反馈1○1△
+	var maybeResult [][3]int
+	for a := 1; a <= 9; a++ {
+		for b := 1; b <= 9; b++ {
+			for c := 1; c <= 9; c++ {
+				if a == b || a == c || b == c {
+					continue
+				}
+				count1, count2 := compare([3]int{1, 2, 3}, [3]int{a, b, c})
+				if count1 == 1 && count2 == 1 {
+					maybeResult = append(maybeResult, [3]int{a, b, c})
+				}
+			}
+		}
+	} // 这时 maybeResult 应该只有36种可能
+
+	var maxH = 0.0           // 最大信息熵
+	var maxHResults [][3]int // 最大信息熵对应的选项
+	// 计算每种猜测的信息熵
+	for a := 1; a <= 9; a++ {
+		for b := 1; b <= 9; b++ {
+			for c := 1; c <= 9; c++ {
+				if a == b || a == c || b == c {
+					continue
+				}
+				counts := make(map[[2]int]int) // 统计每种反馈的出现次数
+				for i := range maybeResult {
+					count1, count2 := compare([3]int{a, b, c}, maybeResult[i])
+					counts[[2]int{count1, count2}]++
+				}
+				var H float64 // 信息熵
+				for i := range counts {
+					var p = float64(counts[i]) / float64(len(maybeResult))
+					H -= p * math.Log2(p)
+				}
+				if math.Abs(H-maxH) < 0.0001 { // 浮点数精度
+					maxHResults = append(maxHResults, [3]int{a, b, c})
+				} else if H > maxH {
+					maxH = H
+					maxHResults = [][3]int{{a, b, c}}
+				}
+			}
+		}
+	}
+
+	fmt.Println(maxH)
+	fmt.Println(maxHResults)
+}
+```
+
+:::
 
 上面的代码可以得到这样的结果：在第一轮得到1○1△的反馈后，只需要固定一个数字作为1○，并从4~9中选择另外两个数字进行猜测，就可以获得最大信息熵，约为2.32。上文列举的1-4-5即为其中之一猜测方案。
 
