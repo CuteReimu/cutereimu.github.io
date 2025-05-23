@@ -15,8 +15,9 @@ excerpt: <ul><li>为提交增加共同作者</li><li>获取提交的补丁文件
 
 如果要添加多个共同作者，则为每个共同作者增加一行 `Co-authored-by:`，之间不加空行。
 
-```text :no-line-numbers :whitespace=all
-这是一条提交信息
+```git-commit :no-line-numbers :whitespace=all
+# 提交信息下面一定要空一行再写共同作者，共同作者之间不空行
+这一行是提交信息
 
 Co-authored-by: name1 <name1@example.com>
 Co-authored-by: name2 <name2@example.com>
