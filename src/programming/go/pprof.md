@@ -2,7 +2,7 @@
 title: pprof工具的使用笔记
 icon: b:golang
 order: 2
-category: 编程随笔
+category: 编程日记
 tags: 
   - Go
 toc: false

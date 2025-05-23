@@ -1,7 +1,7 @@
 ---
 title: git如何删除某文件的历史记录
 order: 1
-category: Git
+category: 编程日记
 tags:
   - Git
 icon: b:git-alt

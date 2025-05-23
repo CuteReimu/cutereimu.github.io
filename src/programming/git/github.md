@@ -1,7 +1,7 @@
 ---
 title: Github小技巧
 order: 2
-category: Github
+category: 编程日记
 tags:
   - Git
   - GitHub
