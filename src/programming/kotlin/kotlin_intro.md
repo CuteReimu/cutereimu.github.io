@@ -96,7 +96,7 @@ if (a < 2) {
 
 其它语言中的`switch`语句在Kotlin中被称为`when`语句：
 
-```kotlin
+```kotlin :no-collapsed-lines
 // 函数式编程，且when后面带参数
 val a = when (b) {
     0, 1 -> "b is 0 or 1"
@@ -179,7 +179,7 @@ doSth(1) {
 
 Kotlin还有很多方便的集合操作，例如：
 
-```kotlin
+```kotlin :no-collapsed-lines
 val list1 = listOf(2, 4, 6, 8, 10) // 快速声明一个不可变列表
 val list2 = List(5) { (it + 1) * 2 } // 和上一行等价
 
@@ -233,7 +233,7 @@ for (i in range) {
 
 Kotlin中有一些特殊的作用域函数，可以简化代码的书写：
 
-```kotlin
+```kotlin :no-collapsed-lines
 val a = 3
 
 val b = a.let { // 在这个作用域内，a可以用it来表示

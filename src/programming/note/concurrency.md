@@ -230,7 +230,7 @@ fib(45)= 1836311903
 
 那如何用多线程来解决这个问题呢？有这样一个思路：每次递归的时候，启动一个新的线程，用新的线程计算递归的值。顺带把上面例子中的线程池用上，可以得到这样的代码：
 
-```java
+```java :no-collipsed-lines
 import java.util.concurrent.*;
 
 public class Test {
