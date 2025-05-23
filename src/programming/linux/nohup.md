@@ -1,7 +1,7 @@
 ---
 title: nohup后台运行与重定向
 order: 1
-category: Linux
+category: 编程日记
 icon: b:linux
 tags:
   - Linux

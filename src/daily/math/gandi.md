@@ -4,7 +4,8 @@ icon: question
 order: 2
 category: 数学
 tags:
-  - 信息熵
+  - 策略问题
+  - 信息论
   - TypeScript
 ---
 
