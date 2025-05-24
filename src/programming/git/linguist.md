@@ -15,7 +15,7 @@ date: 2024-08-08
 
 举个例子：
 
-```gitattributes :no-line-numbers title=".gitattributes"
+```gitattributes :no-line-numbers
 # 将所有的 .rb 文件标记为 Java 语言
 *.rb linguist-language=Java
 
