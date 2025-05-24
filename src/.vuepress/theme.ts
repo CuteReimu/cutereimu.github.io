@@ -3,6 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { CSDN, LeetCode } from "./media.js";
+import { gitAttributesHighlighter } from "./highlighter.js";
 
 import dotenv from 'dotenv';
 import * as path2 from "node:path";
@@ -78,44 +79,7 @@ export default hopeTheme({
 
     highlighter: {
       type: "shiki",
-      langs: [{
-        scopeName: "source.gitattributes",
-        name: "GitAttributes",
-        patterns: [
-          {
-            name: "punctuation.definition.comment.ini",
-            match: "#.*",
-            // 匹配注释（以 # 开头）
-          },
-          {
-            name: "keyword.other.definition.ini",
-            match: "\\b(linguist-[a-zA-Z0-9-]+)\\b",
-            // 匹配属性键（如 'linguist-language'）
-          },
-          {
-            name: "constant.language.boolean.kotlin",
-            match: "\\b(?<=\\s*=)\\b([a-zA-Z0-9-]+)",
-            // 匹配属性值
-          },
-          {
-            name: "punctuation.separator.key-value.ini",
-            match: "[=-]",
-            // 匹配赋值操作符 =-
-          },
-          {
-            name: "entity.name.function.declaration.kotlin",
-            match: "\"(?:\\\\\"|[^\"])*\"",
-            // 匹配双引号字符串值
-          },
-          {
-            name: "entity.name.function.declaration.kotlin",
-            match: "\\S+",
-            // 匹配未加引号的字符串值
-          }
-        ],
-        repository: {},
-        aliases: ['gitattributes'] // 别名
-      }],
+      langs: [gitAttributesHighlighter],
       collapsedLines: 15,
       lineNumbers: 4,
       whitespace: true,
