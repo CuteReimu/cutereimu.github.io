@@ -11,6 +11,8 @@ lastUpdated: true
 
 golangci-lint是一个Go语言的代码静态检查工具集，官网是[https://golangci-lint.run/](https://golangci-lint.run/)，它集成了多个流行的linters，可以帮助我们快速发现代码中的潜在问题。
 
+<!-- more -->
+
 ::: warning 注意
 
 请注意文末的修改时间，以下内容截止`2.1.6`版本。
@@ -28,7 +30,7 @@ golangci-lint --version
 
 运行：
 
-```base
+```bash
 golangci-lint run ./... --default=none -E errcheck --fix
 ```
 
@@ -42,9 +44,29 @@ golangci-lint run ./... --default=none -E errcheck --fix
 - `-D`用以指定要禁用的linters
 - `--fix`表示自动修复代码中的问题（如果对应的linter支持自动修复的话）
 
-以下列出了`golangci-lint`的所有可用的linters，详细使用说明请参考[官方文档](https://golangci-lint.run/usage/linters/)。
+你也可以在项目中创建一个`.golangci.yml`文件来配置，运行`golangci-lint run`时，会自动扫描当前目录以及父目录中的`.golangci.yml`文件，使用其中的配置。配置支持`yml`、`yaml`、`json`、`toml`等格式。
 
-```yml :no-line-numbers :collapsed-lines=7 title=".golangci.yml"
+最重要的配置是`linters`，可以在其中指定要启用或禁用的linters。以下是一个示例配置：
+
+```yml :no-line-numbers title=".golangci.yml"
+version: "2"
+linters:
+  default: none
+  enable:
+    - gosec
+  settings:
+    gosec:
+      excludes:
+        - G115
+        - G204
+```
+
+更详细的示例可以参考[https://golangci-lint.run/usage/configuration/](https://golangci-lint.run/usage/configuration/)
+
+以下列出了`golangci-lint`的所有可用的linters，详细使用说明请参考[https://golangci-lint.run/usage/linters/](https://golangci-lint.run/usage/linters/)
+
+```yml :no-line-numbers :collapsed-lines=8 title=".golangci.yml"
+version: "2"
 linters:
   enable:
     - errcheck # 检查未处理的错误
