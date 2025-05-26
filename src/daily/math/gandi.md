@@ -99,7 +99,7 @@ $$
 
 @tab TypeScript
 
-```ts :no-collapsed-lines
+```ts :no-collapsed-lines {43}
 // compare 函数用于比较两个结果的差异，返回○和△值
 const compare = (result1: number[], result2: number[]): [number, number] => {
     let count1 = 0;
@@ -142,7 +142,7 @@ for (let a = 1; a <= 9; a++) {
             let H = 0; // 信息熵
             for (const i in counts) {
                 const p = counts[i] / maybeResult.length;
-                H -= p * Math.log2(p);
+                H += p * Math.log2(i.startsWith("3") ? 1/p + 10 : 1/p);
             }
             if (Math.abs(H - maxH) < 0.0001) { // 浮点数精度
                 maxHResults.push([a, b, c]);
@@ -160,7 +160,7 @@ console.log(maxHResults);
 
 @tab Go
 
-```go :no-collapsed-lines
+```go :no-collapsed-lines {52-56}
 // compare 函数用于比较两个结果的差异，返回○和△值
 func compare(result1, result2 [3]int) (int, int) {
     var count1, count2 int
@@ -212,7 +212,11 @@ func main() {
                 var H float64 // 信息熵
                 for i := range counts {
                     var p = float64(counts[i]) / float64(len(maybeResult))
-                    H -= p * math.Log2(p)
+                    if i[0] == 3 {
+                        H += p * math.Log2(1/p + 10)
+                    } else {
+                        H += p * math.Log2(1/p)
+                    }
                 }
                 if math.Abs(H-maxH) < 0.0001 { // 浮点数精度
                     maxHResults = append(maxHResults, [3]int{a, b, c})
@@ -231,6 +235,8 @@ func main() {
 
 :::
 
+注意我们代码中的高亮行，如果某个猜测的反馈结果中有3个○，也就是完全正确，我会将它的信息量增加一个固定的值。为什么要这样做呢？因为假设我们的某个猜测尽管不是正确答案，但是在这个猜测之后已经确定了正确答案，我们仍然要浪费1次次数去猜测正确答案，所以理应给直接猜中正确答案增加一些信息量加以奖励。增加的数字`10`是测试之后得到的一个经验值，最终测试次数的数学期望最小。你可以根据实际情况调整这个经验值。
+
 上面的代码可以得到这样的结果：在第一轮得到1○1△的反馈后，只需要固定一个数字作为1○，并从4~9中选择另外两个数字进行猜测，就可以获得最大信息熵，约为2.32。上文列举的1-4-5即为其中之一猜测方案。
 
 接下来，我们每一轮只需要根据反馈缩小可能的范围，再遍历一次找到最大信息熵，这就是**最大化信息熵**的策略。
@@ -240,5 +246,7 @@ func main() {
 ```xy
 x-axis "猜测次数" [1, 2, 3, 4, 5, 6]
 y-axis "概率（%）" 0 --> 65
-bar [0.29, 1.19, 6.15, 24.01, 58.73, 9.72]
+bar [0.20, 1.19, 6.35, 23.81, 59.13, 9.33]
 ```
+
+可以确保在6次之内猜中，大概率在5次之内，数学期望约为4.7次。
