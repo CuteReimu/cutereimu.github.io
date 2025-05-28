@@ -15,11 +15,11 @@ tags:
 
 已知凸多边形的所有顶点的坐标，如何判断一个点是否在这个多边形内？
 
-我们把每条边看做一个向量，$\vec{AB}, \vec{BC}, \vec{CD}, \dots$。我们知道，平面向量叉乘结果的数值正负，取决于两个向量位置关系。
+我们把每条边看做一个向量，$\overrightarrow{AB}, \overrightarrow{BC}, \overrightarrow{CD}, \dots$。我们知道，平面向量叉乘结果的数值正负，取决于两个向量位置关系。
 
 那么我们换个思路来思考，点在凸多边形内，其实就等价于点在每条边决定的向量的同一侧。
 
-这样一来，问题就简单了，我们假设点为 $P$，那么我们只需要判断 $\vec{AB} \times \vec{AP}, \vec{BC} \times \vec{BP}, \vec{CD} \times \vec{CP}, \dots$ 的结果的正负号是否相同即可。当且仅当所有结果的正负号相同，说明点 $P$ 在多边形内；如果有正有负，说明点 $P$ 在多边形外。
+这样一来，问题就简单了，我们假设点为 $P$，那么我们只需要判断 $\overrightarrow{AB} \times \overrightarrow{AP}, \overrightarrow{BC} \times \overrightarrow{BP}, \overrightarrow{CD} \times \overrightarrow{CP}, \dots$ 的结果的正负号是否相同即可。当且仅当所有结果的正负号相同，说明点 $P$ 在多边形内；如果有正有负，说明点 $P$ 在多边形外。
 
 ::: code-tabs
 
@@ -112,9 +112,9 @@ $$
 - 如果点在直线的投影在线段外，那么点到线段的距离就是点到线段两端点的距离的最小值。
 
 用公式描述就是：
-  - 如果 $\vec{AB} \cdot \vec{AP} < 0$ ，说明点 $P$ 在点 $A$ 的投影在线段外靠近点 $A$ 这一侧，距离就是点 $P$ 到点 $A$ 的距离。
-  - 如果 $\vec{AB} \cdot \vec{AP}$ > $||\vec{AB}||^2$，说明点 $P$ 在点 $B$ 的投影在线段外靠近点 $B$ 这一侧，距离就是点 $P$ 到点 $B$ 的距离。
-  - 否则，说明点 $P$ 在点 $A$ 和点 $B$ 之间，距离就是点 $P$ 到线段的垂直距离：$\dfrac{||\vec{AP} \times \vec{AB}||}{||\vec{AB}||}$。
+  - 如果 $\overrightarrow{AB} \cdot \overrightarrow{AP} < 0$ ，说明点 $P$ 在点 $A$ 的投影在线段外靠近点 $A$ 这一侧，距离就是点 $P$ 到点 $A$ 的距离。
+  - 如果 $\overrightarrow{AB} \cdot \overrightarrow{AP}$ > $||\overrightarrow{AB}||^2$，说明点 $P$ 在点 $B$ 的投影在线段外靠近点 $B$ 这一侧，距离就是点 $P$ 到点 $B$ 的距离。
+  - 否则，说明点 $P$ 在点 $A$ 和点 $B$ 之间，距离就是点 $P$ 到线段的垂直距离：$\dfrac{||\overrightarrow{AP} \times \overrightarrow{AB}||}{||\overrightarrow{AB}||}$。
 
 上述三者取最小值，即为点到线段的距离。
 
