@@ -2,7 +2,7 @@
 title: Go语言版本新特性总结
 icon: b:golang
 order: 1
-category: 编程随笔
+category: 编程文章
 tags: 
   - Go
 date: 2024-05-21

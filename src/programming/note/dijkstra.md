@@ -1,7 +1,7 @@
 ---
 title: Dijkstra寻路算法
 order: 3
-category: 编程随笔
+category: 编程文章
 icon: bezier-curve
 tags:
   - 算法

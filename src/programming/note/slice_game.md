@@ -1,7 +1,7 @@
 ---
 title: 用AStar算法解决滑块问题
 order: 9
-category: 编程随笔
+category: 编程文章
 icon: chess-board
 tags:
   - 算法

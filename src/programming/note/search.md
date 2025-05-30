@@ -1,7 +1,7 @@
 ---
 title: 全文搜索算法杂谈
 order: 6
-category: 编程随笔
+category: 编程文章
 icon: search
 tags:
   - 算法
