@@ -121,7 +121,7 @@ export default hopeTheme({
     blog: true,
 
     icon: {
-      assets: "fontawesome-with-brands",
+      assets: "/@fortawesome/fontawesome-free@6/js/all.min.js",
     },
 
     copyright: {
