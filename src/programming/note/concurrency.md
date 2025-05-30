@@ -2,7 +2,7 @@
 title: 并发编程漫谈
 icon: computer
 order: 1
-category: 编程随笔
+category: 编程文章
 tags:
   - Java
 date: 2019-08-31

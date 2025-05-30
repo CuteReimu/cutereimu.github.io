@@ -1,7 +1,7 @@
 ---
 title: 初识神经网络
 order: 8
-category: 编程随笔
+category: 编程文章
 icon: diagram-project
 tags:
   - 算法

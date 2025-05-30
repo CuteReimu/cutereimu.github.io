@@ -2,7 +2,7 @@
 title: 回溯问题的多线程解法
 icon: computer
 order: 2
-category: 编程随笔
+category: 编程文章
 tags:
   - Java
 date: 2019-10-17

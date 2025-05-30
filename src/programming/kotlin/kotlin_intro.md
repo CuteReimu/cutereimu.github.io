@@ -2,7 +2,7 @@
 title: 快速上手Kotlin
 icon: /kotlin.svg
 order: 1
-category: 编程随笔
+category: 编程文章
 tags:
   - Kotlin
   - Java

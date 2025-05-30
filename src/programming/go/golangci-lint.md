@@ -2,7 +2,7 @@
 title: golangci-lint代码检查工具
 icon: b:golang
 order: 5
-category: 编程笔记
+category: 编程日记
 tags: 
   - Go
 toc: false

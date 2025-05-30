@@ -1,7 +1,7 @@
 ---
 title: 一种图像量化算法的分享
 order: 7
-category: 编程随笔
+category: 编程日记
 icon: image
 tags:
   - 算法
