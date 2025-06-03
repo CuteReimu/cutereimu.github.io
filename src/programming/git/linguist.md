@@ -15,7 +15,7 @@ date: 2024-08-08
 
 举个例子：
 
-```gitattributes :no-line-numbers
+```.gitattributes :no-line-numbers
 # 将所有的 .rb 文件标记为 Java 语言
 *.rb linguist-language=Java
 
@@ -42,7 +42,7 @@ date: 2024-08-08
 
 默认情况下，只有类型为 `programming` 或 `markup` 的语言才会计入语言统计。其它类型的语言默认不会被统计为 detectable，因此不会计入语言统计，但可以如下面方式使其计入语言统计：
 
-```gitattributes :no-line-numbers
+```.gitattributes :no-line-numbers
 # 计入统计
 *.kicad_pcb linguist-detectable
 *.sch linguist-detectable
@@ -55,7 +55,7 @@ tools/export_bom.py -linguist-detectable
 
 默认情况下 Linguist 会将文档文件从语言统计中排除。你可以使用 `linguist-documentation` 属性标记或取消标记路径为文档：
 
-```gitattributes :no-line-numbers
+```.gitattributes :no-line-numbers
 # 标记为文档
 project-docs/* linguist-documentation
 ano-dir/** linguist-documentation
@@ -68,7 +68,7 @@ docs/formatter.rb -linguist-documentation
 
 有些文件其实是生成文件，应该将其排除在仓库语言统计之外。此外，这些文件在 diff 中也会被自动隐藏。你可以使用 `linguist-generated` 属性标记或取消标记路径为生成文件：
 
-```gitattributes :no-line-numbers
+```.gitattributes :no-line-numbers
 Api.elm linguist-generated
 ```
 
@@ -76,7 +76,7 @@ Api.elm linguist-generated
 
 有些第三方依赖会虚高项目的语言统计，甚至可能导致项目被误判为另一种语言。你可以使用 `linguist-vendored` 属性标记或取消标记路径为第三方依赖：
 
-```gitattributes :no-line-numbers
+```.gitattributes :no-line-numbers
 # 标记为第三方依赖
 special-vendored-path/* linguist-vendored
 ano-dir/** linguist-vendored
