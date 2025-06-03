@@ -1,34 +1,113 @@
 import {LanguageRegistration} from "@shikijs/types";
 
 export const gitAttributesHighlighter : LanguageRegistration = {
-  name: "gitattributes",
+  name: ".gitattributes",
   scopeName: "source.gitattributes",
   patterns: [
     {
-      name: "comment.line.gitattributes",
-      begin: "#",
-      end: "\\n",
-      beginCaptures: {
-        0: { name: "punctuation.definition.comment.gitattributes" }
-      }
-    },
-    {
-      match: "(-?)(linguist-[a-zA-Z-]+)(=?)([0-9a-zA-Z-]*)",
-      captures: {
-        1: { name: "punctuation.other.negation.gitattributes" },
-        2: { name: "keyword.other.definition.gitattributes" },
-        3: { name: "punctuation.separator.key-value.gitattributes" },
-        4: { name: "variable.parameter.gitattributes" }
-      }
-    },
-    {
-      name: "keyword.operator.wildcard.gitattributes",
-      match: "\\*|\\?|\\[.*?\\]"
-    },
-    {
-      name: "string.unquoted.raw.gitattributes",
-      match: "[^\\s*?]+"
-    },
+      include: "#main"
+    }
   ],
-  repository: {},
+  repository: {
+    attribute: {
+      patterns: [
+        {
+          name: "meta.attribute.gitattributes",
+          match: "([-!](?=\\S))?+([^-A-Za-z0-9_.\\s]\\S*)|([-!])(?=\\s|$)",
+          captures: {
+            1: {
+              patterns: [
+                {
+                  "include": "#attributePrefix"
+                }
+              ]
+            },
+            2: {
+              name: "invalid.illegal.syntax.bad-name.gitattributes"
+            },
+            3: {
+              name: "invalid.illegal.syntax.bad-name.gitattributes"
+            }
+          }
+        },
+        {
+          name: "meta.attribute.gitattributes",
+          match: "(-|!)?([^\\s=]+)(?:(=)([^\\s]*))?",
+          captures: {
+            1: {
+              "patterns": [
+                {
+                  "include": "#attributePrefix"
+                }
+              ]
+            },
+            2: {
+              "name": "variable.parameter.attribute.gitattributes"
+            },
+            3: {
+              "name": "punctuation.definition.assignment.equals-sign.gitattributes"
+            },
+            4: {
+              "name": "constant.language.other.gitattributes"
+            }
+          }
+        }
+      ]
+    },
+    attributePrefix: {
+      patterns: [
+        {
+          name: "keyword.operator.logical.not.negation.gitattributes",
+          match: "-"
+        },
+        {
+          name: "keyword.operator.unset.delete.gitattributes",
+          match: "!"
+        }
+      ]
+    },
+    comment: {
+      name: "comment.line.number-sign.gitattributes",
+      begin: "#",
+      end: "$",
+      beginCaptures: {
+        0: {
+          name: "punctuation.definition.comment.gitattributes"
+        }
+      }
+    },
+    main: {
+      patterns: [
+        {
+          include: "#comment"
+        },
+        {
+          include: "#pattern"
+        },
+        {
+          include: "source.gitignore#escape"
+        }
+      ]
+    },
+    pattern: {
+      name: "meta.pattern.gitattributes",
+      begin: "(?=[^#\\s])",
+      end: "$|(?=#)",
+      patterns: [
+        {
+          include: "source.gitignore#patternInnards"
+        },
+        {
+          name: "meta.attribute-list.gitattributes",
+          begin: "\\s",
+          end: "(?=$)",
+          patterns: [
+            {
+              include: "#attribute"
+            }
+          ]
+        }
+      ]
+    }
+  }
 };
