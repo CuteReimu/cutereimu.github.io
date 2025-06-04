@@ -31,17 +31,17 @@ golangci-lint --version
 运行：
 
 ```bash
-golangci-lint run ./... --default=none -E errcheck --fix
+golangci-lint run ./...
 ```
 
-参数说明：
-- `--default`用以指定默认集，有以下选项：
+支持的参数说明：
+- `--default=none`用以指定默认集，有以下选项：
   - `standard`：只启用默认的linters
   - `none`：不启用任何linters
   - `all`：启用所有linters
   - `fast`：启用所有标注了`fast`的linters，可以使用`golangci-lint help linters`命令查看其后标有`fast`的linters。
-- `-E`用以指定要启用的linters
-- `-D`用以指定要禁用的linters
+- `-E`用以指定要启用的linters，例如`-E errcheck`
+- `-D`用以指定要禁用的linters，例如`-D gosec`
 - `--fix`表示自动修复代码中的问题（如果对应的linter支持自动修复的话）
 
 你也可以在项目中创建一个`.golangci.yml`文件来配置，运行`golangci-lint run`时，会自动扫描当前目录以及父目录中的`.golangci.yml`文件，使用其中的配置。配置支持`yml`、`yaml`、`json`、`toml`等格式。
