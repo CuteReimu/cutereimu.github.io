@@ -9,9 +9,9 @@ tags:
 
 从 Go 1.11 开始，Go 引入了模块化管理，并于 Go 1.16 版本开始正式成为默认构建模式。现在，Go 模块已经成为 Go 语言通用的包管理方式。
 
-在项目根目录下使用`go mod init example/mymodule`就可以初始化一个 Go 模块，并生成一个名为`go.mod`的文件，其中第一行即为`module example.com/mymodule`。
+在项目根目录下使用`go mod init example/mymodule`就可以初始化一个 Go 模块，并生成一个名为 go.mod 的文件，其中第一行即为`module example.com/mymodule`。
 
-`go.mod`文件用于描述模块的依赖关系和版本信息。一个可能的 go.mod 文件可以包含以下内容：
+go.mod 文件用于描述模块的依赖关系和版本信息。一个可能的 go.mod 文件可以包含以下内容：
 
 <!-- more -->
 

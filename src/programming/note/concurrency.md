@@ -290,7 +290,7 @@ public class Test extends RecursiveTask<Integer> {
 }
 ```
 
-Java8这里做了代码上的简化，我们不再需要显式创建一个`ForkJoinPool`。它会自动创建，并且我们调用`RecursiveAction`和`RecursiveTask`的`fork`方法时，它会自动的检测当前线程所在的线程池，结果发现我们并没有使用一个符合要求的线程池，就会把新建的线程放进这个自动创建的`ForkJoinPool`去；调用`join`方法时，如果阻塞了不能立即返回值，则会把当前进程放回线程池的队列中去，换一个新的任务执行。
+Java 8 这里做了代码上的简化，我们不再需要显式创建一个`ForkJoinPool`。它会自动创建，并且我们调用`RecursiveAction`和`RecursiveTask`的`fork`方法时，它会自动的检测当前线程所在的线程池，结果发现我们并没有使用一个符合要求的线程池，就会把新建的线程放进这个自动创建的`ForkJoinPool`去；调用`join`方法时，如果阻塞了不能立即返回值，则会把当前进程放回线程池的队列中去，换一个新的任务执行。
 
 执行了一下试试，发现：
 
