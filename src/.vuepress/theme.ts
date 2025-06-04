@@ -3,7 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { CSDN, LeetCode } from "./media.js";
-import { gitAttributesHighlighter } from "./highlighter.js";
+import langs from "./highlighter.js";
 
 import dotenv from 'dotenv';
 import * as path2 from "node:path";
@@ -79,7 +79,7 @@ export default hopeTheme({
 
     highlighter: {
       type: "shiki",
-      langs: [gitAttributesHighlighter],
+      langs,
       collapsedLines: 15,
       lineNumbers: 4,
       whitespace: true,
