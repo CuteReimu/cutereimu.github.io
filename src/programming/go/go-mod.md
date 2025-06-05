@@ -15,7 +15,7 @@ go.mod 文件用于描述模块的依赖关系和版本信息。一个可能的 
 
 <!-- more -->
 
-```go.mod title="go.mod"
+```go.mod title="go.mod" :no-collapsed-lines
 module example.com/mymodule
 
 go 1.23.1
@@ -46,7 +46,7 @@ retract v1.1.0
 
 在上面的例子中，是这样定义的：`module example.com/mymodule`。假设其下有一个目录`foo`：
 
-```ansi
+```ansi :no-line-numbers
 $ tree .
 .
 ├── go.mod
@@ -109,7 +109,7 @@ import "github.com/CuteReimu/neuquant/v2/foo"
 
 特别要说明的是，如果遇到连续多行，例如：
 
-```go.mod title="go.mod"
+```go.mod
 require example.com/othermodule v1.2.3
 require example.com/thismodule v1.2.3
 require example.com/thatmodule v1.2.3
@@ -117,7 +117,7 @@ require example.com/thatmodule v1.2.3
 
 可以将其简写为：
 
-```go.mod title="go.mod"
+```go.mod :no-line-numbers
 require (
     example.com/othermodule v1.2.3
     example.com/thismodule v1.2.3
@@ -135,7 +135,7 @@ require (
 
 如果你引用的模块并不是在互联网上，而是本地的另一个项目，你可以用`replace`来指定本地路径。例如：
 
-```go.mod title="go.mod"
+```go.mod
 require example.com/othermodule v1.2.5
 
 replace example.com/othermodule v1.2.5 => ../othermodule
@@ -151,7 +151,7 @@ replace example.com/othermodule v1.2.5 => ../othermodule
 
 如果你发现，引用的模块的最新版本有问题，或者并不想使用最新版本，但是在`go get -u`时却会自动更新到该版本，你可以使用`exclude`来排除该版本。例如：
 
-```go.mod title="go.mod"
+```go.mod
 exclude example.com/thismodule v1.3.5
 ```
 
@@ -163,27 +163,29 @@ exclude example.com/thismodule v1.3.5
 
 例如，你发布了一个模块的`v1.1.0`版本，但后来发现这个版本有问题，你可以紧急发布一个`v1.1.1`版本，在其中添加：
 
-```go.mod title="go.mod"
+```go.mod
 // 撤回的原因
 retract v1.1.0
 ```
 
 之后，所有引用了该库的工程应用，执行`go list`就可以看到如下提醒：
 
-```ansi
-[31mgithub.com/example/mymodule v1.1.0 (retracted) [v1.1.1] [0m
+```console
+$ go list -m -u all
+github.com/example/mymodule v1.1.0 (retracted) [v1.1.1]
 ```
 
 在手动执行`go get`时，也会提示：
 
-```ansi
-[31mgo: github.com/example/mymodule v1.1.0: retracted by author: 撤回的原因
-go: to update to a non-retracted version, use "go get github.com/example/mymodule@v1.1.1"[0m
+```console
+$ go get github.com/example/mymodule@v1.1.0
+go: github.com/example/mymodule@v1.1.0: retracted by author: 撤回的原因
+go: to update to a non-retracted version, use "go get github.com/example/mymodule@v1.1.1"
 ```
 
 当然了，你也可以在`v1.1.1`版本中把自己版本也撤回：
 
-```go.mod title="go.mod"
+```go.mod :no-line-numbers
 retract (
     v1.1.0
     v1.1.1
@@ -194,7 +196,7 @@ retract (
 
 `retract`指令不光可以撤回单个版本，也可以撤回一系列版本。例如：
 
-```go.mod title="go.mod"
+```go.mod
 retract [v1.1.0, v1.1.9]
 ```
 
