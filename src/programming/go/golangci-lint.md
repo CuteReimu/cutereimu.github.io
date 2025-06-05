@@ -21,7 +21,7 @@ golangci-lint是一个Go语言的代码静态检查工具集，官网是[https:/
 
 使用以下命令即可安装`golangci-lint`：
 
-```bash
+```bash :no-line-numbers
 # binary will be $(go env GOPATH)/bin/golangci-lint
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin v2.1.6
 
