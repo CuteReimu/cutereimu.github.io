@@ -181,7 +181,7 @@ retract v1.1.0
 go: to update to a non-retracted version, use "go get github.com/example/mymodule@v1.1.1"[0m
 ```
 
-当然了，你也可以把在`v1.1.1`版本中把自己版本也撤回：
+当然了，你也可以在`v1.1.1`版本中把自己版本也撤回：
 
 ```go.mod title="go.mod"
 retract (
