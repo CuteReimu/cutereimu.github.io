@@ -84,13 +84,13 @@ GORACE 支持的常用配置项如下：
 | `exitcode=N`              | 检测到竞态时退出的返回码                             | 66    |
 | `strip_path_prefix=STR`   | 输出日志时去掉文件名前缀 STR                         | ""    |
 | `log_path=PATH`           | 将 race detector 的日志输出到指定文件路径（默认为 stderr） | ""    |
-| `history_size=N`          | 指定 race detector 保存的历史操作数量（影响内存消耗）       | 1<<20 |
+| `history_size=N`          | 指定 race detector 保存的历史操作数量（影响内存消耗）       | 2^20^ |
 | `suppress_equal_stacks=0` | 是否抑制报告相同调用栈上的竞态（1 表示抑制，0 表示不抑制）          | 0     |
 | `atexit_sleep_ms=N`       | 检测到竞态后进程退出前等待 N 毫秒（调试用）                  | 0     |
 
 **设置方式示例：**
 ```bash
-GORACE="halt_on_error=0:log_path=./race.log" go run -race main.go
+GORACE="halt_on_error=0 log_path=./race.log" go run -race main.go
 ```
 
 **参考文档：**
