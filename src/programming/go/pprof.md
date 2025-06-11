@@ -52,6 +52,8 @@ go tool pprof -http=0.0.0.0:8848 http://localhost:6060/debug/pprof/profile?secon
 
 这个就代表获取CPU的性能30秒分析数据，并在8848端口上进行可视化。然后访问`http://localhost:8848`即可查看可视化的结果。`go tool pprof`命令后面的地址可以换成上述任意你想要的功能对应的地址。
 
+如果不加`-http=0.0.0.0:8848`参数，就会在终端中进入pprof的交互模式，你可以在其中输入命令来查看性能数据。
+
 ::: caution 易错点
 
 有一个可能踩坑的地方，执行上述命令时有可能会报错：`zsh: no matches found`。如果你是在zsh终端中执行这个命令，因为命令中url后面恰好含有`?`符号，zsh会将其当作通配符处理，导致出错。将最后的url加个引号就可以解决。
@@ -60,7 +62,7 @@ go tool pprof -http=0.0.0.0:8848 http://localhost:6060/debug/pprof/profile?secon
 
 ::: note 注意
 
-可视化需要一些图形库，例如`graphviz`，如果没有安装，在访问`http://localhost:8848`时会报错：
+可视化需要一些图形库，例如`graphviz`，如果没有安装，访问`http://localhost:8848`时会报错：
 
 ```ansi
 [31mFailed to execute dot. Is Graphviz installed?
@@ -69,6 +71,19 @@ exec: "dot": executable file not found in $PATH[0m
 
 直接使用例如`yum`、`apt`等工具安装即可。
 
-如果只是查看火焰图的话，是不需要安装`graphviz`的，直接访问`http://localhost:8848/ui/flamegraph`即可。
+如果只是查看火焰图，则不需要安装`graphviz`，忽略上面的报错，直接访问`http://localhost:8848/ui/flamegraph`即可。
 
 :::
+
+在执行上述命令后，会有提示：
+
+```ansi
+Fetching profile over HTTP from http://localhost:6060/debug/pprof/profile?seconds=30
+[31mSaved profile in path/to/file[0m
+```
+
+注意红字部分，这个是`path/to/file`保存的文件路径。下次你可以直接使用这个文件，查看当时的性能数据，不再需要重新拉取了：
+
+```bash
+go tool pprof -http=0.0.0.0:8848 path/to/file
+```
