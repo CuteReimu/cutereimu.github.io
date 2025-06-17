@@ -21,7 +21,7 @@ tags:
 
 这样一来，问题就简单了，我们假设点为 $P$，那么我们只需要判断 $\overrightarrow{AB} \times \overrightarrow{AP}, \overrightarrow{BC} \times \overrightarrow{BP}, \overrightarrow{CD} \times \overrightarrow{CP}, \dots$ 的结果的正负号是否相同即可。当且仅当所有结果的正负号相同，说明点 $P$ 在多边形内；如果有正有负，说明点 $P$ 在多边形外。
 
-::: code-tabs
+::: code-tabs#1
 
 @tab Python
 
@@ -120,7 +120,7 @@ $$
 
 那么问题就简单了，遍历多边形的每一条边，计算点到线段的距离，然后取最小值即可。
 
-::: code-tabs
+::: code-tabs#1
 
 @tab Python
 
