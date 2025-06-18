@@ -271,9 +271,53 @@ const goModHighlighter : LanguageRegistration = {
   }
 };
 
+const redisHighlighter: LanguageRegistration = {
+  name: "redis",
+  scopeName: "source.redis",
+  patterns: [
+    {
+      name: "keyword.other.redis",
+      match: "^\\s*\\w+\\b"
+    },
+    {
+      name: "constant.numeric.redis",
+      match: "\\b\\d+\\b"
+    },
+    {
+      name: "keyword.operator.star.redis",
+      match: "\\*"
+    },
+    {
+      name: "keyword.operator.comparison.redis",
+      match: "[!\u003c\u003e]?=|\u003c\u003e|\u003c|\u003e"
+    },
+    {
+      name: "keyword.operator.math.redis",
+      match: "-|\\+|/"
+    },
+    {
+      name: "keyword.operator.concatenator.redis",
+      match: "\\|\\|"
+    },
+    {
+      match: "(\\w+?)\\.(\\w+)",
+      captures: {
+        1: {
+          name: "constant.other.database-name.redis"
+        },
+        2: {
+          name: "constant.other.table-name.redis"
+        }
+      }
+    },
+  ],
+  repository: {}
+}
+
 const highlighters: LanguageRegistration[] = [
   gitAttributesHighlighter,
   goModHighlighter,
+  redisHighlighter,
 ];
 
 export default highlighters;
