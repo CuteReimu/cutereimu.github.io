@@ -79,8 +79,8 @@ date: 2019-02-12
 
 $$
 \begin{aligned}
-d_\text{刚} & \approx 1.260R_\text{木}(\dfrac{\rho_\text{木}}{\rho_\text{地}})^{1/3} \approx 1.260 \times R_\text{木} \times (\dfrac{1330}{5515})^{1/3} \approx 0.784R_\text{木}\\
-d_\text{流} & \approx 2.423R_\text{木}(\dfrac{\rho_\text{木}}{\rho_\text{地}})^{1/3} \approx 2.423 \times R_\text{木} \times (\dfrac{1330}{5515})^{1/3} \approx 1.508R_\text{木}
+d_\text{刚} & \approx 1.260R_\text{木}\left(\dfrac{\rho_\text{木}}{\rho_\text{地}}\right)^{1/3} \approx 1.260 \times R_\text{木} \times \left(\dfrac{1330}{5515}\right)^{1/3} \approx 0.784R_\text{木}\\
+d_\text{流} & \approx 2.423R_\text{木}\left(\dfrac{\rho_\text{木}}{\rho_\text{地}}\right)^{1/3} \approx 2.423 \times R_\text{木} \times \left(\dfrac{1330}{5515}\right)^{1/3} \approx 1.508R_\text{木}
 \end{aligned}
 $$
 
