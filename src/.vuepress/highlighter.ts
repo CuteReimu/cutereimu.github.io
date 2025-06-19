@@ -276,42 +276,125 @@ const redisHighlighter: LanguageRegistration = {
   scopeName: "source.redis",
   patterns: [
     {
-      name: "keyword.other.redis",
-      match: "^\\s*\\w+\\b"
-    },
-    {
-      name: "constant.numeric.redis",
-      match: "\\b\\d+\\b"
-    },
-    {
-      name: "keyword.operator.star.redis",
-      match: "\\*"
-    },
-    {
-      name: "keyword.operator.comparison.redis",
-      match: "[!\u003c\u003e]?=|\u003c\u003e|\u003c|\u003e"
-    },
-    {
-      name: "keyword.operator.math.redis",
-      match: "-|\\+|/"
-    },
-    {
-      name: "keyword.operator.concatenator.redis",
-      match: "\\|\\|"
-    },
-    {
-      match: "(\\w+?)\\.(\\w+)",
-      captures: {
-        1: {
-          name: "constant.other.database-name.redis"
-        },
-        2: {
-          name: "constant.other.table-name.redis"
-        }
-      }
+      include: "#main"
     },
   ],
-  repository: {}
+  repository: {
+    main: {
+      patterns: [
+        {
+          match: "(\\w+)\\s+(.*)",
+          captures: {
+            1: {
+              name: "keyword.redis"
+            },
+            2: {
+              patterns: [
+                {
+                  include: "#arguments"
+                }
+              ]
+            }
+          }
+        },
+      ]
+    },
+    arguments: {
+      patterns: [
+        {
+          name: "keyword.other.redis",
+          match: "\\b(?i:MATCH|NX|EX|XX|PX|WITHSCORES|GET|KEEPTTL|CH|INCR|DECR|LIMIT|BY|STORE|COUNT|AGGREGATE|WEIGHTS|ALPHA|REV|RESETSTAT|RESET|BEFORE|AFTER|COPY|REPLACE|IDLETIME|FREQ|ASC|DESC)\\b"
+        },
+        {
+          name: "constant.numeric.redis",
+          match: "\\b\\d+\\b|\\b(?i:MIN|MAX)\\b|\\B(?i:[+-]?INF)\\b"
+        },
+        {
+          name: "keyword.operator.star.redis",
+          match: "\\*"
+        },
+        {
+          include: "#double_quoted_string"
+        },
+        {
+          include: "#single_quoted_string"
+        },
+        {
+          include: "#unquoted_string"
+        }
+      ]
+    },
+    unquoted_string: { // Unquoted string
+      match: "[^\\s]+",
+      name: "string.unquoted.redis"
+    },
+    double_quoted_string: { // Interpreted string literals
+      begin: "\"",
+      beginCaptures: {
+        0: {
+          name: "punctuation.definition.string.begin.redis"
+        }
+      },
+      end: "\"",
+      endCaptures: {
+        0: {
+          name: "punctuation.definition.string.end.redis"
+        }
+      },
+      name: "string.quoted.single",
+      patterns: [
+        {
+          include: "#string_escaped_char"
+        },
+        {
+          include: "#string_placeholder"
+        }
+      ]
+    },
+    single_quoted_string: { // Interpreted string literals
+      begin: "'",
+      beginCaptures: {
+        0: {
+          name: "punctuation.definition.string.begin.redis"
+        }
+      },
+      end: "'",
+      endCaptures: {
+        0: {
+          name: "punctuation.definition.string.end.redis"
+        }
+      },
+      name: "string.quoted.single",
+      patterns: [
+        {
+          include: "#string_escaped_char"
+        },
+        {
+          include: "#string_placeholder"
+        }
+      ]
+    },
+    string_escaped_char: {
+      patterns: [
+        {
+          match: "\\\\([0-7]{3}|[abfnrtv\\\\'\"]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8})",
+          name: "constant.character.escape.redis"
+        },
+        {
+          match: "\\\\[^0-7xuUabfnrtv\\'\"]",
+          name: "invalid.illegal.unknown-escape.redis"
+        }
+      ]
+    },
+    string_placeholder: {
+      patterns: [
+        {
+          match: "%(\\[\\d+\\])?([\\+#\\-0\\x20]{,2}((\\d+|\\*)?(\\.?(\\d+|\\*|(\\[\\d+\\])\\*?)?(\\[\\d+\\])?)?))?[vT%tbcdoqxXUbeEfFgGsp]",
+          name: "constant.other.placeholder.redis"
+        }
+      ]
+    }
+  },
 }
 
 const highlighters: LanguageRegistration[] = [
