@@ -276,10 +276,69 @@ const redisHighlighter: LanguageRegistration = {
   scopeName: "source.redis",
   patterns: [
     {
+      include: "#comments"
+    },
+    {
       include: "#main"
     },
   ],
   repository: {
+    comments: {
+      patterns: [
+        {
+          begin: "(^[ \\t]+)?(?=--)",
+          end: "(?!\\G)",
+          patterns: [
+            {
+              name: "comment.line.double-dash.redis",
+              begin: "--",
+              end: "\\n",
+              beginCaptures: {
+                0: {
+                  name: "punctuation.definition.comment.redis"
+                }
+              }
+            }
+          ],
+          beginCaptures: {
+            1: {
+              name: "punctuation.whitespace.comment.leading.redis"
+            }
+          }
+        },
+        {
+          begin: "(^[ \\t]+)?(?=#)",
+          end: "(?!\\G)",
+          patterns: [
+            {
+              name: "comment.line.number-sign.redis",
+              begin: "#",
+              end: "\\n",
+              beginCaptures: {
+                0: {
+                  name: "punctuation.definition.comment.redis"
+                }
+              }
+            }
+          ],
+          beginCaptures: {
+            1: {
+              name: "punctuation.whitespace.comment.leading.redis"
+            }
+          }
+        },
+        {
+          name: "comment.block.c",
+          begin: "/\\*",
+          end: "\\*/",
+          captures: {
+            0: {
+              name: "punctuation.definition.comment.redis"
+            }
+          }
+        }
+      ]
+    },
     main: {
       patterns: [
         {
