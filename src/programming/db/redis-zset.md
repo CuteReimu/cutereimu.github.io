@@ -14,6 +14,8 @@ date: 2024-07-01
 
 有序集合（Sorted Set）可以很容易地用来实现排行榜、优先队列等功能。
 
+<!-- more -->
+
 常用的命令有：
 
 ```redis :no-line-numbers :no-collapsed-lines
