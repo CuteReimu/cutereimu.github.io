@@ -82,7 +82,7 @@ Fetching profile over HTTP from http://localhost:6060/debug/pprof/profile?second
 [31mSaved profile in path/to/file[0m
 ```
 
-注意红字部分，这个是`path/to/file`保存的文件路径。下次你可以直接使用这个文件，查看当时的性能数据，不再需要重新拉取了：
+注意红字部分，这个`path/to/file`是保存的文件路径。下次你可以直接使用这个文件，查看当时的性能数据，不再需要重新拉取了：
 
 ```bash
 go tool pprof -http=0.0.0.0:8848 path/to/file
