@@ -33,7 +33,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "超10年经验的资深服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
+    description: "超10年经验的资深游戏服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
     intro: "/intro.html",
     medias: {
       Email: "mailto:cutereimu@vip.qq.com",

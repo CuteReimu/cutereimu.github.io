@@ -40,7 +40,6 @@ commit id:"A"
 commit id:"B"
 commit id:"C"
 branch feature
-checkout feature
 commit id:"D"
 commit id:"E"
 checkout main
