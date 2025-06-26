@@ -2,7 +2,7 @@
 title: 空洞骑士速通相关
 icon: /hollow-knight/hollow-knight.png
 dir:
-  order: -1
+  order: -2
 category: 空洞骑士
 tags:
   - 空洞骑士
