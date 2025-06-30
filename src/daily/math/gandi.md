@@ -8,6 +8,7 @@ tags:
   - 信息论
   - TypeScript
   - Go
+star: true
 ---
 
 一切的一切，要源于《冒险岛Online》在2018年推出的一个小游戏——名侦探甘迪：
