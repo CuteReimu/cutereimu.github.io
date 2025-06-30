@@ -102,6 +102,8 @@ seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR,
 
 ### 一个复杂点的例子
 
+以下awk脚本可以将文本文件的每两行合并成一行：
+
 ```awk :no-line-numbers
 #!/bin/awk -f
 NR%2 {
