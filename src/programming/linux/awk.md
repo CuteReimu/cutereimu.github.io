@@ -71,10 +71,14 @@ END {
 | `NF`            | 当前行的字段数               |
 | `FS`            | 字段分隔符（默认是空格）          |
 | `OFS`           | 输出字段分隔符，默认值与输入字段分隔符一致 |
+| `RS`            | 行分隔符（默认是换行符）          |
+| `ORS`           | 输出行分隔符，默认是换行符         |
 | `FILENAME`      | 当前处理的文件名              |
 | `OFMT`          | 数字的输出格式(默认值是`%.6g`)   |
 
 ## 一些例子
+
+### 过滤逻辑
 
 ```bash :no-line-numbers :no-collapsed-lines
 # 过滤第一列等于2的行
@@ -89,20 +93,38 @@ awk '$2 ~ /th/' log.txt
 # 忽略大小写匹配
 awk 'BEGIN{IGNORECASE=1} /this/' log.txt
 
-# 求和所有文件大小
-ls -l *.txt | awk '{sum+=$5} END {print sum}'
-
 # 从文件中找出长度大于80的行
 awk 'length>80' log.txt
+```
 
-# 打印乘法表
+### 字段处理
+
+```bash :no-line-numbers :no-collapsed-lines
+# 将只有一列的文本转化为一行
+awk 'BEGIN{ORS=" "} 1' file.txt
+
+# 将只有一列的两个文本文件合成一个文件，新文件有两列
+awk '{getline b < "file2.txt"; print $0, b}' file1.txt
+
+# 对第二列求和
+awk '{sum+=$2} END {print sum}' file.txt
+
+# 求第二列的最大值
+awk 'NR==1 || $2>max {max=$2} END {print max}' file.txt
+
+# 求和所有文件大小
+ls -l *.txt | awk '{sum+=$5} END {print sum}'
+```
+
+### 打印乘法表
+
+```bash
 seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR, i*NR, i==NR?"\n":"\t")}'
 ```
 
-
 ### 一个复杂点的例子
 
-以下awk脚本可以将文本文件的每两行合并成一行：
+以下awk脚本可以将文本文件的每两行合并成一行（中间用逗号隔开）：
 
 ```awk :no-line-numbers
 #!/bin/awk -f
@@ -123,3 +145,7 @@ NR%2 {
 ```bash
 awk 'NR%2 {printf "%s, ", $0; next} 1' file.txt
 ```
+
+每三行合并成一行的话，将`NR%2`改为`NR%3`即可。
+
+分隔符如果想用其他符号的话，将`%s`后的逗号空格改为其它符号即可.
