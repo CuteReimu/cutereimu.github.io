@@ -6,10 +6,46 @@ category: 编程文章
 tags: 
   - Go
 date: 2025-07-05
-excerpt: <ul><li>将通道用做计数信号量（counting semaphore）</li><li>尝试接收和尝试发送</li><li>如何优雅地关闭通道</li></ul>
+excerpt: <ul><li>一些通道的基础问题</li><ul><li><code>select</code> 语句</li><li>尝试接收和尝试发送</li></ul><li>将通道用做计数信号量（counting semaphore）</li><li>如何优雅地关闭通道</li><ul><li>M个接收者和一个发送者</li><li>一个接收者和N个发送者</li><li>M个接收者和N个发送者</li></ul></ul>
 toc:
   levels: [2, 3]
 ---
+
+## 一些通道的基础问题
+
+### `select` 语句
+
+```go
+select {
+case <-c:
+case c <- struct{}{}:
+default:
+    fmt.Println("Go here.")
+}
+```
+
+对于一条`select`语句，在有多个`case`分支的情况下，优先级如下：
+1. 优先选择不阻塞的`case`分支执行，如果有多个`case`分支不阻塞，则**随机选择一个执行**，并非从上到下执行。
+2. 如果全部`case`分支都阻塞，则执行`default`分支。
+3. 如果全部`case`分支都阻塞，且没有`default`分支，则会阻塞在`select`语句上，直到有一个`case`分支可以执行。
+
+### 尝试接收和尝试发送
+
+如下代码，只有一个`case`和一个`default`分支的`select`语句，叫做尝试发送/尝试接收语句，编译器对其进行了优化。相较于普通的`select`语句，尝试发送/尝试接收语句的开销非常小。
+
+```go
+select { // 尝试发送
+case ch <- data:
+    doSth()
+default:
+}
+
+select { // 尝试接收
+case data2 := <- ch:
+    doSth2(data2)
+default:
+}
+```
 
 ## 将通道用做计数信号量（counting semaphore）
 
@@ -77,26 +113,6 @@ func main() {
 ```
 
 上述代码将会更高效一些，在程序的生命期内最多只会有10个消费者协程被创建出来。
-
-## 尝试接收和尝试发送
-
-如下代码，只有一个`case`和一个`default`分支的`select`语句，叫做尝试发送/尝试接收语句，编译器对其进行了优化。相较于普通的`select`语句，尝试发送/尝试接收语句的开销非常小。
-
-```go :no-line-numbers
-select {
-    case ch <- data:
-        doSth()
-    default:
-}
-```
-
-```go :no-line-numbers
-select {
-    case data2 := <- ch:
-        doSth2(data2)
-    default:
-}
-```
 
 ## 如何优雅地关闭通道
 
@@ -432,3 +448,10 @@ func main() {
 	log.Println("stopped by", stoppedBy)
 }
 ```
+
+## 参考资料
+
+强烈建议阅读[Go101](https://gfw.go101.org/article/101.html)中的文章：
+- [通道](https://gfw.go101.org/article/channel.html)
+- [通道用例大全](https://gfw.go101.org/article/channel-use-cases.html)
+- [如何优雅地关闭通道](https://gfw.go101.org/article/channel-closing.html)
