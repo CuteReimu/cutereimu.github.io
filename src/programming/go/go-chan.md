@@ -2,29 +2,28 @@
 title: go 通道的使用技巧
 icon: b:golang
 order: 8
-category: 编程日记
+category: 编程文章
 tags: 
   - Go
 date: 2025-07-05
+excerpt: <ul><li>将通道用做计数信号量（counting semaphore）</li><li>尝试接收和尝试发送</li><li>如何优雅地关闭通道</li></ul>
+toc:
+  levels: [2, 3]
 ---
 
 ## 将通道用做计数信号量（counting semaphore）
 
-计数信号量经常被使用于限制最大并发数。缓冲通道可以被用做计数信号量。
+计数信号量经常被使用于限制最大并发数。
 
-<!-- more -->
+::: tip 提示
 
-例如下面这个例子：
+使用通道作为信号量是一个非常简洁的实现方式，但只支持最基本的功能。如果想要使用更复杂的功能，例如**加权控制**、**超时/取消**或**非阻塞尝试**等，可以使用`golang.org/x/sync/semaphore`包。
+
+:::
+
+缓冲通道可以被用做计数信号量。例如下面这个例子：
 
 ```go :no-collapsed-lines
-package main
-
-import (
-    "log"
-    "math/rand/v2"
-    "time"
-)
-
 func main() {
     seats := make(chan int, 10)
     for i := range cap(seats) {
@@ -81,7 +80,7 @@ func main() {
 
 ## 尝试接收和尝试发送
 
-如下代码，只有一个`case`和一个`default`分支的`select`语句，叫做尝试发送/尝试接收语句，编译器对其进行了优化，会有更高的性能。
+如下代码，只有一个`case`和一个`default`分支的`select`语句，叫做尝试发送/尝试接收语句，编译器对其进行了优化。相较于普通的`select`语句，尝试发送/尝试接收语句的开销非常小。
 
 ```go :no-line-numbers
 select {
@@ -124,15 +123,6 @@ select {
 第二个情形中，很显然不能由接收者直接关闭通道，否则发送者会向已关闭的通道发送数据，导致 panic。我们可以使用一个额外的信号通道来通知发送者停止发送数据。
 
 ```go :no-collapsed-lines
-package main
-
-import (
-	"log"
-	"math/rand/v2"
-	"sync"
-	"time"
-)
-
 func main() {
 	const Max = 100000
 	const NumSenders = 1000
@@ -260,16 +250,6 @@ select {
 具体实现如下：
 
 ```go :no-collapsed-lines
-package main
-
-import (
-	"time"
-	"math/rand/v2"
-	"sync"
-	"log"
-	"strconv"
-)
-
 func main() {
 	const Max = 100000
 	const NumReceivers = 10
@@ -348,5 +328,107 @@ func main() {
 
 	wgReceivers.Wait()
 	log.Println("被" + stoppedBy + "终止了")
+}
+```
+
+#### 特殊情况：有时候由于某些原因必须关掉`dataCh`
+
+这种情况，我们只需要加入一个“中间发送者”，就可以转化为M个接收者和一个发送者的最简单的情形了。
+
+```mermaid
+graph LR
+    A[发送者1] --> D[中间发送者]:::green
+    B[发送者2] --> D
+    C[发送者3] --> D
+    D --> E((通道))
+    E --> F[接收者1]
+    E --> G[接收者2]
+    E --> H[接收者3]
+    
+    classDef green fill:#66CC66;
+```
+
+```go :collapsed-lines=40 {11,12,17-40,48,64}
+func main() {
+	const Max = 1000000
+	const NumReceivers = 10
+	const NumSenders = 1000
+	const NumThirdParties = 15
+
+	var wgReceivers sync.WaitGroup
+	wgReceivers.Add(NumReceivers)
+
+	dataCh := make(chan int)   // 将被关闭
+	middleCh := make(chan int) // 不会被关闭
+	closing := make(chan string)
+	closed := make(chan struct{})
+
+	var stoppedBy string
+	
+	go func() { // 中间层
+		exit := func(v int, needSend bool) {
+			close(closed)
+			if needSend {
+				dataCh <- v
+			}
+			close(dataCh)
+		}
+
+		for {
+			select {
+			case stoppedBy = <-closing:
+				exit(0, false)
+				return
+			case v := <- middleCh:
+				select {
+				case stoppedBy = <-closing:
+					exit(v, true)
+					return
+				case dataCh <- v:
+				}
+			}
+		}
+	}()
+	
+	for i := 0; i < NumSenders; i++ { // 发送者
+		go func(id string) {
+			for {
+				value := rand.IntN(Max)
+				if value == 0 {
+                    select {
+                    case closing <- "sender#" + id:
+                        <-closed
+                    case <-closed:
+                    }
+					return
+				}
+
+				select {
+				case <- closed:
+					return
+				default:
+				}
+
+				select {
+				case <- closed:
+					return
+				case middleCh <- value:
+				}
+			}
+		}(strconv.Itoa(i))
+	}
+
+	for range NumReceivers { // 接收者
+		go func() {
+			defer wgReceivers.Done()
+
+			for value := range dataCh {
+				log.Println(value)
+			}
+		}()
+	}
+
+	wgReceivers.Wait()
+	log.Println("stopped by", stoppedBy)
 }
 ```
