@@ -85,6 +85,7 @@ export default hopeTheme({
       whitespace: true,
       notationWordHighlight: true,
       notationErrorLevel: true,
+      notationDiff: true,
       themes: {
         light: "github-light-default",
         dark: "github-dark-default",
