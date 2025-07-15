@@ -65,6 +65,7 @@ export default hopeTheme({
 
   markdown: {
     sup: true,
+    sub: true,
     imgSize: true,
 
     spoiler: true,
