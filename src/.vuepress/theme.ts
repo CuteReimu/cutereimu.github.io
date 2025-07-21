@@ -33,12 +33,12 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "超10年经验的资深游戏服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
+    description: "<p>超10年经验的资深游戏服务端工程师，<br/>Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手</p><p>如果您在浏览过程中遇到任何问题，<br/>欢迎通过下方的邮件或 Bilibili 私信联系我</p>",
     intro: "/intro.html",
     medias: {
       Email: "mailto:cutereimu@vip.qq.com",
-      Github: "https://github.com/CuteReimu",
       BiliBili: "https://space.bilibili.com/1415334",
+      Github: "https://github.com/CuteReimu",
       力扣: {link: "https://leetcode.cn/u/FlyingLu/", icon: LeetCode},
       CSDN: {link: "https://blog.csdn.net/qq_44732921", icon: CSDN},
     },
