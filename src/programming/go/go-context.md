@@ -58,7 +58,7 @@ public class Main {
 
 我们观察代码中的高亮行，第17行调用`interrupt`方法，会给该线程设置一个中断标志，第4行的`isInterrupted`方法会判断这个中断标志，当中断标志被设置了，则会跳出`while`循环。
 
-除此之外，第7行`sleep`阻塞1秒的过程中，如果在另外的协程调用了`interrupt`方法，`sleep`阻塞会立即结束并抛出`InterruptedException`异常，被下一行的`catch`语句捕获住，从而`break`跳出循环。
+除此之外，第7行`sleep`阻塞1秒的过程中，如果调用了`interrupt`方法，`sleep`阻塞会立即结束并抛出`InterruptedException`异常，被下一行的`catch`语句捕获住，从而`break`跳出循环。
 
 而Go语言中是没有`throw`和`catch`的，语言设计层面也不建议使用`panic`和`recover`来处理正常的业务逻辑。于是，Go语言就设计了`context`包来处理这种情况。
 
