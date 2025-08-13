@@ -61,9 +61,9 @@ linters:
         - G204
 ```
 
-更详细的示例可以参考[https://golangci-lint.run/usage/configuration/](https://golangci-lint.run/usage/configuration/)
+更详细的示例可以参考[https://golangci-lint.run/docs/configuration/file/](https://golangci-lint.run/docs/configuration/file/)
 
-以下列出了`golangci-lint`的所有可用的linters，详细使用说明请参考[https://golangci-lint.run/usage/linters/](https://golangci-lint.run/usage/linters/)
+以下列出了`golangci-lint`的所有可用的linters，详细使用说明请参考[https://golangci-lint.run/docs/linters/](https://golangci-lint.run/docs/linters/)
 
 ```yml :no-line-numbers :collapsed-lines=8 title=".golangci.yml"
 version: "2"
