@@ -5,7 +5,9 @@ category: 编程日记
 tags:
   - 前端
   - Vue
+  - NodeJS
   - Javascript
+  - Go
 icon: window-restore
 date: 2025-04-24
 toc: false
@@ -41,7 +43,7 @@ flowchart TD
   D -.->|访问并保存页面| B -.-> D
 ```
 
-## 具体步骤
+## NodeJs 实现
 
 首先，新建一个node项目，并安装依赖：
 
@@ -143,3 +145,49 @@ node generate-pdf.mjs
 }
 ```
 :::
+
+## Go 实现
+
+这里也贴一个Go语言的实现，使用了`github.com/go-rod/rod`这个第三方库：
+
+```go :no-collapsed-lines {32} title="main.go"
+package main
+
+import (
+    "github.com/go-rod/rod"
+    "github.com/go-rod/rod/lib/launcher"
+    "github.com/go-rod/rod/lib/utils"
+    "image"
+    "image/png"
+    "time"
+)
+
+func main() {
+    // 创建浏览器
+    browser := rod.New().Sleeper(func() utils.Sleeper {
+        return utils.EachSleepers(rod.DefaultSleeper(), utils.CountSleeper(30))
+    }).ControlURL(launcher.New().
+        Headless(true). // 强制无头模式
+        NoSandbox(true). // 禁用沙箱
+        Set("disable-gpu", ""). // 禁用 GPU 加速
+        MustLaunch()).
+        MustConnect()
+
+    // 打开页面
+    page := browser.MustPage("https://xxx.com/xxx.html")
+    if page == nil {
+        slog.Error("获取页面失败")
+        return
+    }
+    defer page.MustClose()
+
+    // 等待页面加载
+    time.Sleep(time.Second)
+    // 截图
+    page.MustScreenshotFullPage("screenshot.png")
+}
+```
+
+这里只简单展示了对一个页面进行截图并保存，可以稍加修改，依次截图每个页面并合并为一个PDF文件。同样地，代码中的高亮行也应当替换为一个自定义等待逻辑，确保页面已经完全加载完毕。
+
+使用方法同上，先运行你的Vue项目，再运行此Go代码即可。
