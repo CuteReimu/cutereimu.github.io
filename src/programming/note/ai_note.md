@@ -32,14 +32,14 @@ AI告知我：
 
 ---
 
-于是我进一步询问：
+为了看看AI能不能及时发现错误，我进一步询问：
 
 > 1. Yes? You mean it will panic when trying to iterate over nil slice?
 
 结果AI回答：
 
 > ### **1. Yes, iterating over nil slice will panic**
-> ```go
+> ```go :no-line-numbers
 > var items []*Item  // nil slice
 > for _, item := range items {  // This will panic: "runtime error: invalid memory address or nil pointer dereference" [!code error]
 >     // ...
@@ -52,7 +52,7 @@ AI告知我：
 
 ---
 
-于是我进一步提问：
+于是我指出AI的错误：
 
 > You need to update you knowledge. In Go, it won't panic when iterate over nil slice, neither nil map.
 
@@ -115,7 +115,7 @@ AI这次回答对了：
 
 ---
 
-我尝试继续混淆AI：
+我继续尝试混淆AI：
 
 > Why did you say it would? Which one is correct?
 
@@ -152,7 +152,7 @@ AI回答：
 
 ---
 
-继续尝试：
+把最开始的问题重新问一遍：
 
 > You mean it will panic when trying to iterate over nil slice?
 
@@ -187,7 +187,7 @@ AI这次变聪明了：
 
 ---
 
-再尝试一次：
+故意说错，看看AI能不能修正：
 
 > Yes, it will.
 
