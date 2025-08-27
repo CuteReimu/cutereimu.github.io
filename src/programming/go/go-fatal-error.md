@@ -124,7 +124,7 @@ var Golang = "Golang"                                   // 在静态存储区，
 
 func main() {
 	var goland = String2ByteSlice(Golang)
-	goland[5] = 'd' // fatal error: unexpected fault address
+	goland[5] = 'd' // fatal error: unexpected fault address // [!code error]
 	fmt.Printf("%s\n", goland)
 }
 ```
@@ -149,11 +149,11 @@ func memoryLeaking() {
 	var x, y T
 
 	// 此SetFinalizer函数调用将使x逃逸到堆上。
-	runtime.SetFinalizer(&x, finalizer)
+	runtime.SetFinalizer(&x, finalizer) // [!code warning]
 
 	// 下面这行将形成一个包含x和y的循环引用值组。
 	// 这有可能造成x和y不可回收。
-	x.t, y.t = &y, &x // y也逃逸到了堆上。
+	x.t, y.t = &y, &x // y也逃逸到了堆上。 // [!code warning]
 }
 ```
 
