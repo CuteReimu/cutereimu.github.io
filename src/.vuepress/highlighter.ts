@@ -9,9 +9,9 @@ const gitAttributesHighlighter : LanguageRegistration = {
     }
   ],
   repository: {
-    attribute: {
+    attribute: { // Individual attribute
       patterns: [
-        {
+        { // Invalid attribute name
           name: "meta.attribute.gitattributes",
           match: "([-!](?=\\S))?+([^-A-Za-z0-9_.\\s]\\S*)|([-!])(?=\\s|$)",
           captures: {
@@ -30,7 +30,7 @@ const gitAttributesHighlighter : LanguageRegistration = {
             }
           }
         },
-        {
+        { // Valid attribute
           name: "meta.attribute.gitattributes",
           match: "(-|!)?([^\\s=]+)(?:(=)([^\\s]*))?",
           captures: {
@@ -66,7 +66,7 @@ const gitAttributesHighlighter : LanguageRegistration = {
         }
       ]
     },
-    comment: {
+    comment: { // Comment line
       name: "comment.line.number-sign.gitattributes",
       begin: "#",
       end: "$",
@@ -82,6 +82,9 @@ const gitAttributesHighlighter : LanguageRegistration = {
           include: "#comment"
         },
         {
+          include: "#macro"
+        },
+        {
           include: "#pattern"
         },
         {
@@ -89,7 +92,7 @@ const gitAttributesHighlighter : LanguageRegistration = {
         }
       ]
     },
-    pattern: {
+    pattern: { // File pattern
       name: "meta.pattern.gitattributes",
       begin: "(?=[^#\\s])",
       end: "$|(?=#)",
@@ -121,13 +124,16 @@ const goModHighlighter : LanguageRegistration = {
     },
     {
       include: "#directive"
+    },
+    {
+      include: "#invalid"
     }
   ],
   repository: {
     directive: {
       patterns: [
         { // Multi-Line directive
-          begin: "(\\w+)\\s+\\(",
+          begin: "(\\w+)\\s*\\(",
           beginCaptures: {
             1: {
               name: "keyword.go.mod"
@@ -141,7 +147,7 @@ const goModHighlighter : LanguageRegistration = {
           ]
         },
         { // Single-Line directive
-          match: "(\\w+)\\s+(.*)",
+          match: "(\\w+)\\s*(.*)",
           captures: {
             1: {
               name: "keyword.go.mod"
@@ -175,6 +181,9 @@ const goModHighlighter : LanguageRegistration = {
           include: "#semver"
         },
         {
+          include: "#semver_range"
+        },
+        {
           include: "#unquoted_string"
         }
       ]
@@ -198,7 +207,7 @@ const goModHighlighter : LanguageRegistration = {
       name: "operator.go.mod"
     },
     unquoted_string: { // Unquoted string
-      match: "[^\\s]+",
+      match: "([^\\s/]|/(?!/))+",
       name: "string.unquoted.go.mod"
     },
     double_quoted_string: { // Interpreted string literals
@@ -248,6 +257,15 @@ const goModHighlighter : LanguageRegistration = {
       match: "v(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)(?:-[\\da-z-]+(?:\\.[\\da-z-]+)*)?(?:\\+[\\da-z-]+(?:\\.[\\da-z-]+)*)?",
       name: "constant.language.go.mod"
     },
+    semver_range: {
+      begin: "\\[",
+      patterns: [
+        {
+          include: "#semver"
+        }
+      ],
+      end: "\\]"
+    },
     string_escaped_char: {
       patterns: [
         {
@@ -267,6 +285,10 @@ const goModHighlighter : LanguageRegistration = {
           name: "constant.other.placeholder.go.mod"
         }
       ]
+    },
+    invalid: { // invalid
+      match: ".*",
+      name: "invalid.illegal.unknown.go.mod"
     }
   }
 };
@@ -328,7 +350,7 @@ const redisHighlighter: LanguageRegistration = {
           }
         },
         {
-          name: "comment.block.c",
+          name: "comment.block.redis",
           begin: "/\\*",
           end: "\\*/",
           captures: {
