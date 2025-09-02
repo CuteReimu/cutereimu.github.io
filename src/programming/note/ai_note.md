@@ -15,7 +15,7 @@ tags:
 
 AI告知我：
 
-::: note 🚨 Issues Found (Potential Panic Risk)
+::: caution Issues Found (Potential Panic Risk)
 
 ```go
 for _, item := range items {
@@ -39,7 +39,7 @@ for _, item := range items {
 
 结果AI回答：
 
-::: note Iterating over nil slice will panic
+::: caution Iterating over nil slice will panic
 
 ```go :no-line-numbers
 var items []*Item  // nil slice
@@ -91,7 +91,7 @@ fmt.Println("Map iteration completed safely")  // This will print
 
 :::
 
-并且列出了例子，迭代`nil`切片和`nil`映射都不会引发panic，并列出了其它一些会引发panic的情况。
+并且列出了例子，迭代`nil`切片和`nil`映射都不会引发panic，并列出了一些会引发panic的情况。
 
 ---
 
@@ -252,7 +252,7 @@ Could you share the specific error message or code that's causing the panic? The
 
 :::
 
-AI表示，迭代`nil`切片真的不会引发panic，如果你遭遇了panic，那肯定是别的原因，建议研究一下代码上下文。
+AI表示，迭代`nil`切片真的不会引发panic，如果你遇到了panic，那肯定是别的原因，建议研究一下代码上下文。
 
 ---
 
