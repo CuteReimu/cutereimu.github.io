@@ -33,7 +33,7 @@ END:VCARD
 
 可以看出，.vcf 文件是由多个`BEGIN:VCARD`及`END:VCARD`块组成的，每个块表示一个联系人。中间的每一行都是`key:value`的形式。我们对几个特殊的`key`简单介绍一下：
 - `VERSION`：表示 VCard 的版本号。
-- `N`：表示联系人的名字，格式为一个长度为5的字符串数组（中间用逗号分隔），依次是 Last Name（姓）、First Name（名）、Additional Name（附加名）、Prefix（前缀）、Suffix（后缀）。
+- `N`：表示联系人的名字，是一个包含5个字符串的数组（中间用分号分隔），依次是 Last Name（姓）、First Name（名）、Additional Name（附加名）、Prefix（前缀）、Suffix（后缀）。
 - `FN`：表示联系人的全名（Full Name）。
 - `TEL`：表示联系人的电话号码，可以有多个，后面可以跟上`;CELL`（手机）、`;WORK`（工作电话）、`;HOME`（家庭电话）等。
 - `EMAIL`：表示联系人的电子邮件地址，和`TEL`类似，可以有多个。
@@ -43,7 +43,7 @@ END:VCARD
 首先安装依赖：
 
 ```bash
-npm install vobject
+pip install vobject
 ```
 
 以下是一段生成 .vcf 文件的示例代码：
