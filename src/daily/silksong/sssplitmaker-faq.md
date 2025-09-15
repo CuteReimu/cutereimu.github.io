@@ -68,16 +68,16 @@ date: 2025-09-15
 :::
 
 1. 打开LiveSplit后，右键 &rarr; Edit Layout，然后按照你自己喜欢的方式调整计时器窗口的布局，调整好后按`OK`按钮。（如果不会调整，可以跳过这一步）
-2. 激活自动分割插件，可以参考[这篇文章](../hollowknight/wasm.md)，其中所需的 `.wasm` 文件可以这样获取：
-   - 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮。
-3. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）文件保存下来。
-4. 右键 &rarr; Edit Splits，按照你喜欢的方式编辑分段，编辑好后按`OK`按钮。
-5. 右键 &rarr; Edit Splits As...，将分段文件（*.lss）保存下来。
-6. 打开丝之歌**计时器生成器**，你可以点击上方的`打开lss文件`和`打开lsl文件`按钮，打开刚刚保存的两个文件进行编辑。（你也可以直接把这两个文件**依次**拖入窗口）
-7. 如下图所示，左边一列是分段名称（对应你在 Edit Splits 中编辑的内容），右边一列是触发事件。编辑右边这一列，编辑好之后点击下方的`另存为`按钮保存成新的*.lsl文件。
-8. 回到**LiveSplit**，右键 &rarr; Open Layout &rarr; From File...，选择上一步保存的*.lsl文件即可。
-9. 右键 &rarr; Edit Layout，双击 Auto Splitting Runtime，简单检查一下内容是否正确即可。
-10. 至此，你就可以愉快地使用**LiveSplit**进行《丝之歌》速通了。
+2. 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮，把这个文件保存到本地。
+3. 回到LiveSplit，右键点击 &rarr; Edit Layout，在打开的布局编辑器中，其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，点击 Layout Settings -> Auto Splitting Runtime，在 Script Path 旁点击 Browse...，然后找到并选择前面保存的 `.wasm` 文件。看到正常加载后，点击OK按钮关闭此界面即可。
+4. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）文件保存下来。
+5. 右键 &rarr; Edit Splits，按照你喜欢的方式编辑分段，编辑好后按`OK`按钮。
+6. 右键 &rarr; Edit Splits As...，将分段文件（*.lss）保存下来。
+7. 打开丝之歌**计时器生成器**，你可以点击上方的`打开lss文件`和`打开lsl文件`按钮，打开刚刚保存的两个文件进行编辑。（你也可以直接把这两个文件**依次**拖入窗口）
+8. 如下图所示，左边一列是分段名称（对应你在 Edit Splits 中编辑的内容），右边一列是触发事件。编辑右边这一列，编辑好之后点击下方的`另存为`按钮保存成新的*.lsl文件。
+9. 回到**LiveSplit**，右键 &rarr; Open Layout &rarr; From File...，选择上一步保存的*.lsl文件即可。
+10. 右键 &rarr; Edit Layout，双击 Auto Splitting Runtime，简单检查一下内容是否正确即可。
+11. 至此，你就可以愉快地使用**LiveSplit**进行《丝之歌》速通了。
 
 ![sssplitmaker.png](/hollow-knight/sssplitmaker.png)
 
