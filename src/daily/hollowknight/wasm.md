@@ -19,7 +19,7 @@ wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者�
 
 如果在Windows电脑速通空洞骑士，还是强烈建议直接使用 LiveSplit，具体参考[我的另一篇文章](hksplitmaker-faq.md)。
 
-不过，目前丝之歌只有wasm版计时器。
+不过，目前丝之歌只有wasm版计时器，并且其**尚在开发阶段，难免有很多bug**，使用时应当注意。
 
 :::
 
