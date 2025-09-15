@@ -7,6 +7,7 @@ order: 4
 category: 空洞骑士
 tags:
   - 空洞骑士
+  - 丝之歌
   - 速通
 date: 2023-06-15
 lastUpdate: true
