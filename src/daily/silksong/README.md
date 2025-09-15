@@ -7,7 +7,7 @@ dir:
 article: false
 pageInfo: false
 lastUpdated: false
-redirectTo: rect.md
+redirectTo: sssplitmaker-faq.md
 breadcrumbExclude: true
 ---
 
