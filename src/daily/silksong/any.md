@@ -1,6 +1,6 @@
 ---
-title: Any%速通路线（超冲线）
-icon: /hollow-knight/hollow-knight.png
+title: 丝之歌Any%速通路线
+icon: s
 order: 7
 category: 丝之歌
 tags:
@@ -8,6 +8,8 @@ tags:
   - 速通
 date: 2025-09-15
 ---
+
+<!-- more -->
 
 ::: warning 注意
 
@@ -17,8 +19,9 @@ date: 2025-09-15
 
 ```mermaid
 flowchart TD
-  A[苔藓之母<br/>丝之矛<br/>钟道兽<br/>冲刺<br/>蕾丝] --> F[披风] --> G[灰沼<br/>爬墙<br/>黑寡妇]
-  A --> W[5只跳蚤] --> G --> J[迷雾<br/>幽影<br/>进入第二幕<br/>机枢舞者<br/>织针升级<br/>特罗比奥<br/>飞针冲刺]
+  A[苔藓之母<br/>丝之矛<br/>钟道兽<br/>冲刺<br/>蕾丝] --> F[披风<br/>荒沼翼主] --> H[爬墙<br/>黑寡妇]
+  A --> W[5只跳蚤<br/>进入灰沼] --> G[爬墙<br/>黑寡妇]
+  H ---> J[迷雾<br/>幽影<br/>进入第二幕<br/>机枢舞者<br/>织针升级<br/>特罗比奥<br/>飞针冲刺]
   G --> Y[收割者的纹章] --> J
   J --> Q[管理员的旋律<br/>建筑师的旋律<br/>高庭竞技场<br/>指挥家的旋律<br/>蕾丝2<br/>苍白之母]
 ```
