@@ -8,6 +8,8 @@ tags:
   - 丝之歌
   - LiveSplit
 date: 2025-09-15
+toc:
+  levels: 2
 ---
 
 ::: warning 注意
@@ -18,7 +20,7 @@ date: 2025-09-15
 
 <!-- more -->
 
-::: info 为什么要使用LiveSplit？
+::: details 为什么要使用LiveSplit？
 
 在《空洞骑士》速通过程中，考虑到不同玩家的电脑配置不同，speedrun.com 上的空洞骑士排行榜规定：速通耗时的统计应当使用**排除了游戏加载时间的耗时（LRT，Load Removed Time）**，玩家应当将计时器全程放在视频中清晰可见的位置，否则会按照真实耗时进行统计。其中，**LiveSplit** 是 speedrun.com 《空洞骑士》排行榜中最推荐使用的计时器软件，其中的《空洞骑士》计时插件支持排除游戏加载时间的功能。
 
@@ -67,17 +69,31 @@ date: 2025-09-15
 
 :::
 
-1. 打开LiveSplit后，右键 &rarr; Edit Layout，然后按照你自己喜欢的方式调整计时器窗口的布局，调整好后按`OK`按钮。（如果不会调整，可以跳过这一步）
-2. 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮，把这个文件保存到本地。（最好记住旁边的这个版本号，如果**计时器生成器**更新后这个版本号变了，强烈建议你重新获取这个文件。）
-3. 回到LiveSplit，右键点击 &rarr; Edit Layout，在打开的布局编辑器中，其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，点击 Layout Settings -> Auto Splitting Runtime，在 Script Path 旁点击 Browse...，然后找到并选择前面保存的 `.wasm` 文件。看到正常加载后，点击OK按钮关闭此界面即可。
-4. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）文件保存下来。
-5. 右键 &rarr; Edit Splits，按照你喜欢的方式编辑分段，编辑好后按`OK`按钮。
+**计时器生成器**的思路就是，首先编辑**LiveSplit**的**布局**和**分段**，分别得到布局文件（\*.lsl）和分段文件（*.lss），将其导入**计时器生成器**中，对布局文件（\*.lsl）进行编辑并重新导入到**LiveSplit**中。请按照下文步骤依次操作：
+
+#### 编辑LiveSplit的布局，得到布局文件（\*.lsl）
+
+1. 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮，把这个文件保存到本地。（最好记住旁边的这个版本号，如果**计时器生成器**更新后这个版本号变了，强烈建议你重新获取这个文件。）
+2. 打开**LiveSplit**后，右键 &rarr; Edit Layout，会弹出一个布局编辑器，按照你自己喜欢的方式调整计时器窗口的布局。（如果不会调整，可以跳过这一步）
+3. （**重要**）继续在上一步的这个布局编辑器中，你可以看到其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，点击 Layout Settings -> Auto Splitting Runtime，在 Script Path 旁点击 Browse...，然后找到并选择第1步保存的 `.wasm` 文件。看到正常加载后，即可点击OK按钮关闭此界面。
+4. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）保存下来。
+
+#### 编辑LiveSplit的分段，得到分段文件（*.lss）
+
+5. 在**LiveSplit**中，右键 &rarr; Edit Splits，按照你喜欢的方式编辑分段。在这里需要注意一下，**如果你之前开启过空洞骑士的计时器插件，需要将其关掉**，具体操作是点击`Deactivate`按钮，或者干脆直接把第一行游戏改成`Hollow Knight: Silksong`。编辑好后按`OK`按钮。
 6. 右键 &rarr; Edit Splits As...，将分段文件（*.lss）保存下来。
+
+#### 将上述两个文件在计时器生成器中打开，重新编辑布局文件（\*.lsl）
+
 7. 打开丝之歌**计时器生成器**，你可以点击上方的`打开lss文件`和`打开lsl文件`按钮，打开刚刚保存的两个文件进行编辑。（你也可以直接把这两个文件**依次**拖入窗口）
-8. 如下图所示，左边一列是分段名称（对应你在 Edit Splits 中编辑的内容），右边一列是触发事件。编辑右边这一列，编辑好之后点击下方的`另存为`按钮保存成新的*.lsl文件。
-9. 回到**LiveSplit**，右键 &rarr; Open Layout &rarr; From File...，选择上一步保存的*.lsl文件即可。
+8. 如下图所示，左边一列是分段名称（对应你在 Edit Splits 中编辑的内容），右边一列是触发事件。编辑右边这一列，编辑好之后点击下方的`另存为`按钮保存成新的布局文件（*.lsl）。
+
+#### 将分段文件（*.lss）重新导入到LiveSplit中
+
+9. 回到**LiveSplit**，右键 &rarr; Open Layout &rarr; From File...，选择上一步保存的布局文件（*.lsl）即可。
 10. 右键 &rarr; Edit Layout，双击 Auto Splitting Runtime，简单检查一下内容是否正确即可。
-11. 至此，你就可以愉快地使用**LiveSplit**进行《丝之歌》速通了。
+11. 别忘了**设置LiveSplit在游戏加载过程中不计时**：右键 &rarr; Compare Against &rarr; Game Time。
+12. 至此，你就可以愉快地使用**LiveSplit**进行《丝之歌》速通了。
 
 ![sssplitmaker.png](/hollow-knight/sssplitmaker.png)
 
