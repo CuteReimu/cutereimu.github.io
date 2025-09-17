@@ -9,6 +9,10 @@ heroImage: /CuteReimu.jpg
 bgImage: /cover.jpg
 breadcrumbExclude: true
 projects:
+  - name: sssplitmaker
+    desc: 为国内《丝之歌》速通玩家开发的针对LiveSplit计时器的中文版小工具
+    link: daily/silksong/sssplitmaker-faq.md
+    icon: s
   - name: hksplitmaker
     desc: 为国内《空洞骑士》速通玩家开发的针对LiveSplit计时器的中文版小工具
     link: daily/hollowknight/hksplitmaker-faq.md
