@@ -37,6 +37,9 @@ toc:
 - **LiveSplit**：指的是 speedrun.com 《空洞骑士》排行榜推荐使用的计时器软件；
 - **计时器生成器**：指的是我开发的用来快速编辑**LiveSplit**自动分割插件的配置的小工具。
 
+[::b:bilibili =20 /#FE7398:: 点击跳转到B站视频讲解](https://www.bilibili.com/video/BV1LKpmzPEFf)
+
+
 ## 下载方式
 
 ::: important 声明
