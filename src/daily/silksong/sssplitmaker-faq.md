@@ -78,7 +78,7 @@ toc:
 
 1. 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮，把这个文件保存到本地。（最好记住旁边的这个版本号，如果**计时器生成器**更新后这个版本号变了，强烈建议你重新获取这个文件。）
 2. 打开**LiveSplit**后，右键 &rarr; Edit Layout，会弹出一个布局编辑器，按照你自己喜欢的方式调整计时器窗口的布局。（如果不会调整，可以跳过这一步）
-3. （**重要**）继续在上一步的这个布局编辑器中，你可以看到其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，点击 Layout Settings -> Auto Splitting Runtime，在 Script Path 旁点击 Browse...，然后找到并选择第1步保存的 `.wasm` 文件。看到正常加载后，即可点击OK按钮关闭此界面。
+3. （**重要**）继续在上一步的这个布局编辑器中，你可以看到其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，双击多出来的这一行 Auto Splitting Runtime，点击右上角的 Browse...，然后找到并选择第1步保存的 `.wasm` 文件。看到正常加载后，即可点击OK按钮关闭此界面。
 4. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）保存下来。
 
 #### 编辑LiveSplit的分段，得到分段文件（*.lss）
