@@ -145,7 +145,7 @@ article: false
 | Met Green Prince Cogwork (NPC) | 绿王子-圣堡工厂（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |
 | Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |
 | Faydown Cloak (Skill) | 二段跳（技能） | Splits when you obtain Double Jump | FaydownCloak |
-| Silk Soar (Skill) | 灵丝升腾 | Splits when you obtain Super Jump | SilkSoar |
+| Silk Soar (Skill) | 灵丝升腾（技能） | Splits when you obtain Super Jump | SilkSoar |
 | Nyleth's Heart (Item) | 尼莱斯之心（道具） | Splits when you obtain Nyleth's Heart | CollectedHeartNyleth |
 | Khann's Heart (Item) | 卡汗之心（道具） | Splits when you obtain Khann's Heart | CollectedHeartKhann |
 | Karmelita's Heart (Item) | 卡梅莉塔之心（道具） | Splits when you obtain Karmelita's Heart | CollectedHeartKarmelita |
