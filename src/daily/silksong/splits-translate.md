@@ -138,7 +138,7 @@ article: false
 | Rescued Flea Choral Chambers Wind (Flea) | 救跳蚤-圣咏殿-风（跳蚤） | Splits after rescuing flea in Song_11 | SavedFleaChoralChambersWind |
 | Rescued Flea Choral Chambers Cage (Flea) | 救跳蚤-圣咏殿-笼子（跳蚤） | Splits after rescuing flea in Song_14 | SavedFleaChoralChambersCage |
 | Rescued Flea Underworks Explosions (Flea) | 救跳蚤-圣堡工厂-爆炸怪（跳蚤） | Splits after rescuing flea in Under_21 | SavedFleaUnderworksExplosions |
-| Rescued Flea Underworks Wisp Thicket (Flea) | 救跳蚤-火灵竹丛-爆炸怪（跳蚤） | Splits after rescuing flea in Under_23 | SavedFleaUnderworksWispThicket |
+| Rescued Flea Underworks Wisp Thicket (Flea) | 救跳蚤-圣堡工厂-火灵竹丛（跳蚤） | Splits after rescuing flea in Under_23 | SavedFleaUnderworksWispThicket |
 | Defeated Giant Flea (Flea) | 击败大跳蚤（跳蚤） | Splits after defeating Giant Flea | SavedFleaGiantFlea |
 | Met Vog (Flea) | 沃格（跳蚤） | Splits after talking to Vog | SavedFleaVog |
 | Freed Kratt (Flea) | 救跳蚤-灰沼-克拉特（跳蚤） | Splits after freeing Kratt | SavedFleaKratt |
