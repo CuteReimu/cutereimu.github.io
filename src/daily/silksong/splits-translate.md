@@ -100,7 +100,7 @@ article: false
 | Underworks (Ventrica) | 圣脉枢管-圣堡工厂（圣脉枢管） | Splits after unlocking Underworks Ventrica | UnderworksTube |
 | Grand Bellway (Ventrica) | 圣脉枢管-圣堡钟道（圣脉枢管） | Splits after unlocking Grand Bellway Ventrica | CityBellwayTube |
 | High Halls (Ventrica) | 圣脉枢管-高庭（圣脉枢管） | Splits after unlocking High Halls Ventrica | HighHallsTube |
-| Songclave (Ventrica) | 圣脉枢管-圣歌盟地（圣脉枢管） | Splits after unlocking Songclave Ventrica | SongclaveTube |
+| Songclave (Ventrica) | 圣脉枢管-始源钟殿（圣脉枢管） | Splits after unlocking Songclave Ventrica | SongclaveTube |
 | Memorium (Ventrica) | 圣脉枢管-忆廊（圣脉枢管） | Splits after unlocking Memorium Ventrica | MemoriumTube |
 | Whispering Vaults Gauntlet (Mini Boss) | 低语书库遭遇战（小Boss） | Splits when completing the Whispering Vaults Gauntlet | WhisperingVaultsGauntlet |
 | High Halls Gauntlet (Mini Boss) | 高庭遭遇战（小Boss） | Splits when completing the High Halls Gauntlet | HighHallsGauntlet |
