@@ -143,14 +143,14 @@ article: false
 | Met Sherma Enclave (NPC) | 谢尔玛-圣歌盟地（NPC） | Splits after talking to Sherma in Songclave | MetShermaEnclave |
 | Unlock Prince Cage (Event) | 绿王子-罪途（事件） | Splits when you unlock Green Prince's Cage in Sinner's Road | UnlockedPrinceCage |
 | Met Green Prince Cogwork (NPC) | 绿王子-圣堡工厂（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |
-| Seen Fleatopia Empty (Event) | 骚托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |
+| Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |
 | Faydown Cloak (Skill) | 二段跳（技能） | Splits when you obtain Double Jump | FaydownCloak |
 | Silk Soar (Skill) | 灵丝升腾 | Splits when you obtain Super Jump | SilkSoar |
 | Nyleth's Heart (Item) | 尼莱斯之心（道具） | Splits when you obtain Nyleth's Heart | CollectedHeartNyleth |
 | Khann's Heart (Item) | 卡汗之心（道具） | Splits when you obtain Khann's Heart | CollectedHeartKhann |
 | Karmelita's Heart (Item) | 卡梅莉塔之心（道具） | Splits when you obtain Karmelita's Heart | CollectedHeartKarmelita |
 | Clover Dancer's Heart (Item) | 双生之心（道具） | Split when you obtain Conjoined Heart | CollectedHeartClover |
-| Red Memory (Event) | 赤红忆境（道具） | Splits on completing Red Memory | CompletedRedMemory |
+| Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | CompletedRedMemory |
 | Pavo Bellhome Key (NPC) | 钟居钥匙（NPC） | Splits when obtaining Bellhome Key from Pavo | BellhouseKeyConversation |
 
 <style scoped>
