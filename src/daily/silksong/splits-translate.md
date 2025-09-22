@@ -71,7 +71,7 @@ article: false
 | Act 2 Started (Event) | 第二幕开始（事件） | Splits when starting Act 2 | Act2Started |
 | Unlock Threefold Melody Lift (Event) | 解锁三重旋律电梯（事件） | Splits when unlocking the Threefold Melody Lift | UnlockedMelodyLift |
 | Unlock Prince Cage (Event) | 绿王子-罪途（事件） | Splits when you unlock Green Prince's Cage in Sinner's Road | UnlockedPrinceCage |
-| Met Green Prince Cogwork (NPC) | 绿王子-圣堡工厂（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |
+| Met Green Prince Cogwork (NPC) | 绿王子-机枢核心（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |
 | Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |
 | Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | CompletedRedMemory |
 | Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |
