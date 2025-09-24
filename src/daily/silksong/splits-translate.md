@@ -88,7 +88,7 @@ article: false
 | Leave The Mist (Transition) | 离开迷雾（切图） | Splits when leaving The Mist | LeaveMist |
 | Trobbio (Transition) | 特罗比奥（切图） | Splits on the transition after killing Trobbio | TrobbioTrans |
 | Enter High Halls (Transition) | 进入高庭（切图） | Splits when entering High Halls | EnterHighHalls |
-| Enter High Halls Gauntlet (Transition) | 进入高庭遭遇战（切图） | Splits when entering the High Halls Gauntlet room | EnterHighHallsGauntlet |
+| Enter High Halls Arena (Transition) | 进入高庭遭遇战（切图） | Splits when entering the High Halls Arena room | EnterHighHallsArena |
 | Vaultkeepers Melody (Transition) | 管理员旋律（切图） | Splits on the transition after learning Vaultkeepers Melody | VaultkeepersMelodyTrans |
 | Architects Melody (Transition) | 建筑师旋律（切图） | Splits on the transition after learning Architects Melody | ArchitectsMelodyTrans |
 | Conductors Melody (Transition) | 指挥家旋律（切图） | Splits on the transition after learning Conductors Melody | ConductorsMelodyTrans |
@@ -102,8 +102,8 @@ article: false
 | High Halls (Ventrica) | 圣脉枢管-高庭（圣脉枢管） | Splits after unlocking High Halls Ventrica | HighHallsTube |
 | Songclave (Ventrica) | 圣脉枢管-始源钟殿（圣脉枢管） | Splits after unlocking Songclave Ventrica | SongclaveTube |
 | Memorium (Ventrica) | 圣脉枢管-忆廊（圣脉枢管） | Splits after unlocking Memorium Ventrica | MemoriumTube |
-| Whispering Vaults Gauntlet (Mini Boss) | 低语书库遭遇战（小Boss） | Splits when completing the Whispering Vaults Gauntlet | WhisperingVaultsGauntlet |
-| High Halls Gauntlet (Mini Boss) | 高庭遭遇战（小Boss） | Splits when completing the High Halls Gauntlet | HighHallsGauntlet |
+| Whispering Vaults Arena (Mini Boss) | 低语书库遭遇战（小Boss） | Splits when completing the Whispering Vaults Arena | WhisperingVaultsArena |
+| High Halls Arena (Mini Boss) | 高庭遭遇战（小Boss） | Splits when completing the High Halls Arena | HighHallsArena |
 | Silk Spear (Skill) | 丝之矛（技能） | Splits when obtaining Silk Spear | SilkSpear |
 | Swift Step (Skill) | 冲刺（技能） | Splits when obtaining Swift Step (Dash/Sprint) | SwiftStep |
 | Drifter's Cloak (Skill) | 斗篷（技能） | Splits when obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloak |
