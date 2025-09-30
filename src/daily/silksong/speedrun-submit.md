@@ -29,9 +29,46 @@ copy: false
 
 <!-- more -->
 
+[[toc]]
+
+## 规则决议
+
+<VPPreview title="规则决议">
+<template #code>
+
+```md :no-line-numbers
+- Downpatching to any official release is allowed.
+    - Please note that patches on the `public-beta` branch remain banned - we will only accept official releases once Speedrun.com boards open.
+- We will not be splitting boards by patch at this time.
+    - You may use Speedrun.com's filtering capability with the mandatory Patch variable to see the boards as if they were split by patch.
+    - We may have a board split in the future, but we chose this option so we can gauge runner preferences.
+- Breaks will follow the Hollow Knight ruleset; Runs that enter ||Act 3|| may take 2x 10min breaks in the first 3 hours, and then unlimited breaks afterwards. See the game rules for more information.
+- Float Sprint is banned in No Major Glitches.
+- Bind Dash Refresh is currently allowed in No Major Glitches.
+    - This may be reconsidered once all usages are made clear.
+- We will likely allow starting from an Act1Started autosave once we finalize some of the timing details; for now please continue to start runs normally.
+```
+
+</template>
+<template #content>
+
+- 允许降级至任何官方发布版本。
+  - 请注意，基于`public-beta`的版本仍被禁止———我们只接受官方发布版本。
+- 我们目前不会按游戏补丁版本划分独立的排行榜。
+  - 您可以使用 Speedrun.com 的筛选功能，指定“补丁版本”，来查看特定版本下的排行榜数据。
+    - 未来我们可能会进行版块划分，但当前选择此方案是为了更好地评估玩家们的偏好。
+- 暂停规则将遵循《空洞骑士》的规则体系；任何进入!!第三幕!!的速通，在前三小时内可进行两次10分钟的暂停，三小时之后暂停次数无限制。更多信息请查阅[空洞骑士的中途暂停说明](../hollowknight/speedrun-submit.md#关于中途暂停)。
+- 在NMG规则下，“浮空冲刺”（见下文[禁止的邪道](#禁止的邪道)）被禁止使用。
+- 在NMG规则下，“缚丝冲刺刷新”（见下文[允许的邪道](#允许的邪道)）目前允许使用。
+  - 此决定待其所有应用场景被明确后，可能会被重新评估。
+- 一旦我们最终确定部分计时细节，很可能会允许从`Act1Started`的自动存档点开始速通；但目前请仍以正常方式开始运行。
+
+</template>
+</VPPreview>
+
 ## 速通投稿
 
-速通投稿相关目前参照[空洞骑士速通投稿](../hollowknight/speedrun-submit.md#速通投稿)即可，仅中途暂停规则有一些区别：仅限进入第三幕的速通项目允许暂停，前三小时允许2次不超过10分钟的暂停，如何暂停请参照[空洞骑士的中途暂停说明](../hollowknight/speedrun-submit.md#关于中途暂停)，这里就不再进行翻译了。
+速通投稿相关目前参照[空洞骑士速通投稿](../hollowknight/speedrun-submit.md#速通投稿)即可，这里就不再进行翻译了。
 
 ## 关于NMG
 
@@ -83,7 +120,7 @@ Any accidentally performed major glitch that does not save time may be allowed b
   - 跳跃 &rarr; 下劈 &rarr; 松开方向键（不输入任何方向），在落地前完成。此技巧能消除猎手纹章下劈攻击的落地后摇，从而让你能更早开始移动。
 - 野兽蓄力斩
   - 使用野兽纹章时，在上升阶段释放蓄力斩。这能让你在向前突进的同时，获得显著的高度提升。
-  - 如果你在下降阶段释放蓄力斩，则会获得让你的蓄力斩的高度显著降低。*并且你会保持这个糟糕的蓄力斩，直到使用一次地面蓄力斩或者SL之后*。
+  - 如果你在下降阶段释放蓄力斩，则会导致蓄力斩的高度显著降低。*并且你会保持这个糟糕的蓄力斩，直到使用一次地面蓄力斩或者SL之后*。
 - 缚丝冲刺刷新
   - 缚丝 &rarr; 缓冲输入冲刺。通过缓冲输入冲刺指令，即使你在空中已经用过了冲刺，也还能进行空中冲刺。
   - 注意：此技巧的实用性尚待进一步研究，我们将在后续对其重新评估。
