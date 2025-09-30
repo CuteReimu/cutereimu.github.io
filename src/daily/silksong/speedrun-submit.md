@@ -92,7 +92,7 @@ Any accidentally performed major glitch that does not save time may be allowed b
 
 若某项邪道未列入此列表，则默认禁止使用，直至其被正式收录。您可在Discord频道咨询管理员，或于论坛发帖确认。
 
-任何意外触发且未缩短通关时间的主要邪道，可根据审核人员的酌情判断予以豁免。
+任何意外触发且没有受益的主要邪道，可根据审核人员的判断酌情予以豁免。
 
 </template>
 </VPPreview>
