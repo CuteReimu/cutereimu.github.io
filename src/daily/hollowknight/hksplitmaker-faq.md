@@ -33,7 +33,7 @@ star: true
 ::: important 声明
 
 - 工具适用说明：**LiveSplit**是开源免费软件，**计时器生成器**是针对**LiveSplit**的一个小工具，不含任何破解、盗版或其它侵权内容；
-- 兼容性提示：**计时器生成器**使用Go语言开发，仅在 Windows 10 系统进行过基础测试，不保证其他环境下的稳定性；
+- 兼容性提示：**计时器生成器**使用Go语言开发，仅在 Windows 11 系统进行过基础测试，不保证其他环境下的稳定性；
 - 责任声明：使用者应自行测试并承担使用、修改或分发代码产生的全部风险；
 - 开源性质：本项目为个人开源工具，作者无义务提供更新或技术支持，改进建议可通过仓库 Issues 提交，但无法承诺响应时效；
 - 交流群组：如需讨论，可自愿加入QQ群：901564850，群内须遵守法律法规，违规内容将被清理。
@@ -57,7 +57,7 @@ star: true
 第一次使用时，你需要**开启LiveSplit的《空洞骑士》计时插件**。具体方法是：打开**LiveSplit**后，右键 &rarr; Edit Splits，在第一行输入`Hollow Knight`，然后右边三个按钮，有一个`Activate`按钮。
 - 如果没有`Activate`按钮，而是有一个`Deactivate`按钮，说明你已经开启了插件，无需再做额外操作。
 - 如果`Activate`按钮可以点，点击它，变成`Deactivate`说明开启成功，然后按`OK`按钮。
-   - 如果点击`Activate`按钮弹出提示`The Auto Splitter could not be activated.（给定关键字不在字典中。）`，采用和下一条一样的处理方式即可。
+   - 如果点击`Activate`按钮弹出提示`The Auto Splitter could not be activated.`，采用和下一条一样的处理方式即可。
 - 如果`Activate`按钮是灰色的不能点，首先关掉**LiveSplit**，打开**计时器生成器**，点击右上角的`更新LiveSplit`按钮，接下来自己操作，提示成功之后再重新打开**LiveSplit**，`Activate`按钮就可以点了。
 
 ### 生成模板并导入
