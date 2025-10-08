@@ -67,6 +67,12 @@ toc:
     - 如果点击`Activate`按钮弹出提示`The Auto Splitter could not be activated.`，采用和下一条一样的处理方式即可。
 - 如果`Activate`按钮是灰色的不能点，首先关掉**LiveSplit**，打开**计时器生成器**，点击右上角的`更新LiveSplit`按钮，接下来自己操作，提示成功之后再重新打开**LiveSplit**，`Activate`按钮就可以点了。
 
+::: warning 注意
+
+如果你曾经使用过旧版手动加载wasm的方式，在**LiveSplit** &rarr; 右键 &rarr; Edit Layout 中添加过 `Auto Splitting Runtime` 组件，请务必将其删除，以免和新的方式产生冲突。
+
+:::
+
 ### 生成模板并导入
 
 ![sssplitmaker-new.png](/hollow-knight/sssplitmaker-new.png)
@@ -78,7 +84,7 @@ toc:
         1. 点击右侧的加号和删除可以增加或者删除一行
         2. 第一列的文本框里填写自己想要显示的片段名称，第二列的下拉框用来选择在游戏中会自动分割的触发事件。
 3. 全部设置好以后，点击下方的`另存为`按钮，即可保存成`*.lss`文件。
-4. 打开**LiveSplit** -> 右键 -> Open Splits -> From File... ，选择刚刚保存的文件即可。
+4. 打开**LiveSplit** &rarr; 右键 &rarr; Open Splits &rarr; From File... ，选择刚刚保存的文件即可。
 
 ## LiveSplit常见问题
 
@@ -116,7 +122,7 @@ toc:
 
 1. 打开丝之歌**计时器生成器**，点击右上角的`获取wasm文件`按钮，把这个文件保存到本地。（最好记住旁边的这个版本号，如果**计时器生成器**更新后这个版本号变了，强烈建议你重新获取这个文件。）
 2. 打开**LiveSplit**后，右键 &rarr; Edit Layout，会弹出一个布局编辑器，按照你自己喜欢的方式调整计时器窗口的布局。（如果不会调整，可以跳过这一步）
-3. （**重要**）继续在上一步的这个布局编辑器中，你可以看到其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 -> Control -> Auto Splitting Runtime 进行添加。添加后，双击多出来的这一行 Auto Splitting Runtime，点击右上角的 Browse...，然后找到并选择第1步保存的 `.wasm` 文件。看到正常加载后，即可点击OK按钮关闭此界面。
+3. （**重要**）继续在上一步的这个布局编辑器中，你可以看到其中包含如 Title、Splits、Timer 等组件。若其中没有名为 Auto Splitting Runtime 的组件，请通过 `+` 添加按钮 &rarr; Control &rarr; Auto Splitting Runtime 进行添加。添加后，双击多出来的这一行 Auto Splitting Runtime，点击右上角的 Browse...，然后找到并选择第1步保存的 `.wasm` 文件。看到正常加载后，即可点击OK按钮关闭此界面。
 4. 右键 &rarr; Save Layout As...，将布局文件（\*.lsl）保存下来。
 
 **编辑LiveSplit的分段，得到分段文件（*.lss）**

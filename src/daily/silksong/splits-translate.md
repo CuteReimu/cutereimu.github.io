@@ -36,17 +36,26 @@ article: false
 | Clover Dancer's Heart (Item) | 双生之心（道具） | Split when you obtain Conjoined Heart | HeartClover | CollectedHeartClover |
 | Nyleth's Heart (Item) | 尼莱斯之心（道具） | Splits when you obtain Nyleth's Heart | HeartNyleth | CollectedHeartNyleth |
 | Collected WhiteWard Key (Item) | 白愈钥匙（道具） | Splits when you collect the WhiteWard Key | CollectedWhiteWardKey |  |
-| Pavo Time Passed (Event) | 与帕沃对话后休息（坐椅子） | Splits after meeting the Belltown Greeter and time has passed | PavoTimePassed |  |
-| Silk Spear (Transition) | 丝之矛（切图） | Splits on the transition after obtaining Silk Spear | SilkSpearTrans |  |
-| Silk Spear (Skill) | 丝之矛（技能） | Splits when obtaining Silk Spear | SilkSpear |  |
-| Main Menu (Menu) | 主菜单（菜单） | Splits on the main menu | Menu |  |
-| Faydown Cloak (Skill) | 二段跳（技能） | Splits when you obtain Double Jump | FaydownCloak |  |
-| Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |  |
+| Bone Bottom Simple Key (Item) | 骸底镇简单钥匙（道具） | Splits when buying the Bone Bottom simple key from Pebb | BoneBottomSimpleKey |  |
 | Voltvyrm (Boss) | 伏特维姆（Boss） | Splits after defeating Voltvyrm | Voltvyrm |  |
-| Whispering Vaults Arena (Mini Boss) | 低语书库遭遇战（小Boss） | Splits when completing the Whispering Vaults Arena | WhisperingVaultsArena | WhisperingVaultsGauntlet |
-| Swift Step (Transition) | 冲刺（切图） | Splits on the transition after obtaining Swift Step (Dash/Sprint) | SwiftStepTrans |  |
-| Swift Step (Skill) | 冲刺（技能） | Splits when obtaining Swift Step (Dash/Sprint) | SwiftStep |  |
-| Rescued Giant Flea (Flea) | 击败大跳蚤（跳蚤） | Splits after defeating Giant Flea | SavedFleaGiantFlea |  |
+| Conchflies 1 (Boss) | 巨型螺蝇1（Boss） | Splits after defeating Conchflies 1 | Conchflies1 |  |
+| Phantom (Boss) | 幽影（Boss） | Splits when killing Phantom | Phantom |  |
+| Savage Beastfly 2 (Boss) | 暴怒的兽蝇2（Boss） | Splits after completing the Beastfly in Far Fields | SavageBeastfly2 |  |
+| Last Judge (Boss) | 末代裁决者（Boss） | Splits when killing Last Judge | LastJudge |  |
+| Cogwork Dancers (Boss) | 机枢舞者（Boss） | Splits when killing Cogwork Dancers | CogworkDancers |  |
+| Groal (Boss) | 格洛（Boss） | Splits after defeating Groal | Groal |  |
+| Savage Beastfly 1 (Boss) | 残暴的兽蝇1（Boss） | Splits after defeating the Beastfly in the Chapel | SavageBeastfly1 |  |
+| Trobbio (Boss) | 特罗比奥（Boss） | Splits when killing Trobbio | Trobbio |  |
+| Forebrothers (Boss) | 监工兄弟（Boss） | Splits after defeating the Forebrothers | Forebrothers |  |
+| Fourth Chorus (Boss) | 第四圣咏团（Boss） | Splits when killing Fourth Chorus | FourthChorus |  |
+| Moss Mother (Boss) | 苔藓之母（Boss） | Splits when killing Moss Mother | MossMother |  |
+| Moorwing (Boss) | 荒沼翼主（Boss） | Splits when killing Moorwing | Moorwing |  |
+| Lace 2 (Boss) | 蕾丝2（Boss） | Splits when defeating Lace 2 in TheCradle | Lace2 |  |
+| Lace 1 (Boss) | 蕾丝（Boss） | Splits when defeating Lace 1 in DeepDocks | Lace1 |  |
+| Seth (Boss) | 赛斯（Boss） | Splits after defeating Seth | Seth |  |
+| Bell Beast (Boss) | 钟道兽（Boss） | Splits when defeating the Bell Beast | BellBeast |  |
+| Skull Tyrant (Boss) | 骷髅暴君1（Boss） | Splits after defeating the Skull Tyrant | SkullTyrant1 |  |
+| Widow (Boss) | 黑寡妇（Boss） | Splits when killing Widow | Widow |  |
 | Seen Shakra Sands of Karak (NPC) | 制图师-卡拉卡沙川（NPC） | Splits after seeing Shakra in Sands of Karak | SeenShakraSandsOfKarak |  |
 | Seen Shakra Wormways (NPC) | 制图师-沙噬虫道（NPC） | Splits after seeing Shakra in Wormways | SeenShakraWormways |  |
 | Seen Shakra Deep Docks (NPC) | 制图师-深坞（NPC） | Splits after seeing Shakra in Deep Docks | SeenShakraDeepDocks |  |
@@ -61,21 +70,155 @@ article: false
 | Seen Shakra Bellhart (NPC) | 制图师-钟心镇（NPC） | Splits after seeing Shakra in Bellhart | SeenShakraBellhart |  |
 | Seen Shakra Bonebottom (NPC) | 制图师-骸底镇（NPC） | Splits after seeing Shakra in Bonebottom | SeenShakraBonebottom |  |
 | Seen Shakra Marrow (NPC) | 制图师-髓骨洞窟（NPC） | Splits after seeing Shakra in Marrow | SeenShakraMarrow |  |
+| Met Merchant Enclave (NPC) | 朱比拉娜-圣歌盟地（NPC） | Splits after talking to Jubilana in Songclave | MetJubilanaEnclave |  |
+| Met Sherma Enclave (NPC) | 谢尔玛-圣歌盟地（NPC） | Splits after talking to Sherma in Songclave | MetShermaEnclave |  |
+| Sherma Returned (NPC) | 谢尔玛归来（NPC） | Splits when Sherma is rescued and time passes | ShermaReturned |  |
+| Pavo Bellhome Key (NPC) | 钟居钥匙（NPC） | Splits when obtaining Bellhome Key from Pavo | BellhouseKeyConversation |  |
 | Scrounge Relic Sold (Event) | 卖古董（事件） | Splits after selling the first relic to Scrounge | SoldRelic |  |
+| Ballow Moved (Event) | 巴洛前往潜钟（事件） | Splits when Ballow moves to the Diving Bell | BallowMoved |  |
+| Jubilana Rescued Choral Chambers (Event) | 救朱比拉娜-圣咏殿（事件） | Splits after saving the Jubilana in Choral Chambers | JubilanaRescuedChoralChambers |  |
+| Jubilana Rescued Memorium (Event) | 救朱比拉娜-忆廊（事件） | Splits after saving the Jubilana in Memorium | JubilanaRescuedMemorium |  |
+| Songclave Bell (Event) | 敲钟-圣歌盟地（事件） | Splits when ringing the Songclave Bell Shrine | SongclaveBell |  |
+| Deep Docks Bell (Event) | 敲钟-深坞（事件） | Splits when ringing the Deep Docks Bell Shrine | DeepDocksBell |  |
+| Greymoor Bell (Event) | 敲钟-灰沼（事件） | Splits when ringing the Greymoor Bell Shrine | GreymoorBell |  |
+| Shellwood Bell (Event) | 敲钟-甲木林（事件） | Splits when ringing the Shellwood Bell Shrine | ShellwoodBell |  |
+| Bellhart Bell (Event) | 敲钟-钟心镇（事件） | Splits when ringing the Bellhart Bell Shrine | BellhartBell |  |
+| Marrow Bell (Event) | 敲钟-髓骨洞窟（事件） | Splits when ringing the Marrow Bell Shrine | MarrowBell |  |
+| Death (Event) | 死亡（事件） | Splits when player HP is 0 | PlayerDeath |  |
+| Completed Abyss Escape (Event) | 深渊逃脱完成（事件） | Splits after completing the Abyss Escape | AbyssEscape |  |
+| Silk and Soul Offered (Event) | 灵丝与灵魂前置达成（事件） | Splits when the Caretaker offers the Silk and Soul quest | SilkAndSoulOffered |  |
+| Soul Snare Ready (Event) | 灵丝陷阱就绪（事件） | Splits when the Soul Snare becomes ready | SoulSnareReady |  |
+| Act 3 Start (Event) | 第三幕开始（事件） | Splits upon entering Act 3 | Act3Started |  |
+| Act 2 Started (Event) | 第二幕开始（事件） | Splits when starting Act 2 | Act2Started |  |
+| Met Green Prince Cogwork (NPC) | 绿王子-机枢核心（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |  |
+| Unlock Prince Cage (Event) | 绿王子-罪途（事件） | Splits when you unlock Green Prince's Cage in Sinner's Road | UnlockedPrinceCage |  |
+| Verdania Lake Fountain Orbs (Event) | 翠庭-喷泉（事件） | Splits when the orbs appear after activating the shrine in the Verdania lake | VerdaniaLakeFountainOrbs |  |
+| Verdania Orbs (Event) | 翠庭球收集完成（事件） | Splits when you reach the required number of Verdania Orbs | VerdaniaOrbsCollected |  |
+| Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |  |
+| Unlock Threefold Melody Lift (Event) | 解锁三重旋律电梯（事件） | Splits when unlocking the Threefold Melody Lift | UnlockedMelodyLift |  |
+| Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | RedMemory | CompletedRedMemory |
+| Caravan Troupe Greymoor (Event) | 跳蚤剧团移动-灰沼（事件） | Splits when the Caravan Troupe moves to Greymoor | CaravanTroupeGreymoor |  |
+| Caravan Troupe Fleatopia (Event) | 跳蚤剧团移动-蚤托邦（事件） | Splits when the Caravan Troupe moves to Fleatopia | CaravanTroupeFleatopia |  |
+| Silk Spear (Transition) | 丝之矛（切图） | Splits on the transition after obtaining Silk Spear | SilkSpearTrans |  |
+| Sharpdart (Transition) | 丝刃镖（切图） | Splits on the transition after obtaining Sharpdart | SharpdartTrans |  |
+| Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |  |
+| Swift Step (Transition) | 冲刺（切图） | Splits on the transition after obtaining Swift Step (Dash/Sprint) | SwiftStepTrans |  |
+| Cross Stitch (Transition) | 十字缝（切图） | Splits on the transition after obtaining Cross Stitch | CrossStitchTrans |  |
+| Architects Melody (Transition) | 建筑师旋律（切图） | Splits on the transition after learning Architects Melody | ArchitectsMelodyTrans |  |
+| Architect Crest (Transition) | 建筑师纹章（切图） | Splits when leaving the room with the Architect Crest unlocked | ArchitectCrestTrans |  |
+| Conductors Melody (Transition) | 指挥家旋律（切图） | Splits on the transition after learning Conductors Melody | ConductorsMelodyTrans |  |
+| Reaper Crest (Transition) | 收割者纹章（切图） | Splits when leaving the church with the Reaper Crest unlocked | ReaperCrestTrans |  |
+| Drifter's Cloak (Transition) | 斗篷（切图） | Splits on the transition after obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloakTrans |  |
+| Wanderer Crest (Transition) | 漫游者纹章（切图） | Splits when leaving the chapel with the Wanderer Crest unlocked | WandererCrestTrans |  |
+| Thread Storm (Transition) | 灵丝风暴（切图） | Splits on the transition after obtaining Thread Storm | ThreadStormTrans |  |
+| Cling Grip (Transition) | 爬墙（切图） | Splits on the transition after obtaining Cling Grip (Wall Jump) | ClingGripTrans |  |
+| Trobbio (Transition) | 特罗比奥（切图） | Splits on the transition after killing Trobbio | TrobbioTrans |  |
+| Leave The Mist (Transition) | 离开迷雾（切图） | Splits when leaving The Mist | LeaveMist |  |
+| Rune Rage (Transition) | 符文之怒（切图） | Splits on the transition after obtaining Rune Rage | RuneRageTrans |  |
+| Vaultkeepers Melody (Transition) | 管理员旋律（切图） | Splits on the transition after learning Vaultkeepers Melody | VaultkeepersMelodyTrans |  |
+| Pale Nails (Transition) | 苍白之爪（切图） | Splits on the transition after obtaining Pale Nails | PaleNailsTrans |  |
+| Moss Mother (Transition) | 苔藓之母（切图） | Splits on the transition after killing Moss Mother | MossMotherTrans |  |
+| Moorwing (Transition) | 荒沼翼主（切图） | Splits on the transition after killing Moorwing | MoorwingTrans |  |
+| Shaman Crest (Transition) | 萨满纹章（切图） | Splits when leaving the room with the Shaman Crest unlocked | ShamanCrestTrans |  |
+| Lace 1 (Transition) | 蕾丝（切图） | Splits on the transition after defeating Lace 1 in DeepDocks | Lace1Trans |  |
+| Enter Karmelita Memory (Transition) | 进入卡梅莉塔记忆（切图） | Splits when entering Karmelita's memory | EnterKarmelitaMemory |  |
+| Enter Khann Memory | 进入卡汗记忆（切图） | Splits when entering Khann's Coral Tower memory | EnterKhannMemory |  |
+| Enter Nyleth Memory (Transition) | 进入尼莱斯记忆（切图） | Splits when entering Nyleth's memory | EnterNylethMemory |  |
+| Enter Exhaust Organ (Transition) | 进入废鸣管风琴（切图） | Splits when entering the Exhaust Organ from Bilewater | EnterExhaustOrgan |  |
+| Enter Memorium | 进入忆廊（切图） | Splits when entering the Memorium | EnterMemorium |  |
+| Enter Last Judge (Transition) | 进入末日裁决者（切图） | Splits when entering the Last Judge boss arena from the Blasted Steps | EnterLastJudge |  |
+| Enter Upper Wormways (Transition) | 进入沙噬虫道上层（切图） | Splits on entering the vertical transition to the upper portion of Wormways (Crawl_03) | EnterUpperWormways |  |
+| Enter Wormways (Transition) | 进入沙噬虫道（切图） | Splits on entering Wormways | EnterWormways |  |
+| Enter Greymoor (Transition) | 进入灰沼（切图） | Splits when entering Greymoor | EnterGreymoor |  |
+| Hunter's March - Post-Middle Arena (Transition) | 进入猎者小径-中间遭遇战（切图） | Splits on transition to the room after the middle arena in Hunter's March | HuntersMarchPostMiddleArenaTransition |  |
+| Enter Hunter's March (Transition) | 进入猎者小径（切图） | Splits on entering Hunter's March in the room after the Skarrguard encounter | EnterHuntersMarch |  |
+| Enter Shellwood (Transition) | 进入甲木林（切图） | Splits when entering Shellwood | EnterShellwood |  |
+| Enter Sinner's Road (Transition) | 进入罪途（切图） | Splits when entering Sinner's Road from Greymoor | EnterSinnersRoad |  |
+| Enter Verdania Castle (Transition) | 进入翠庭城堡（切图） | Splits when entering the room containing the Clover Dancers boss | EnterVerdaniaCastle |  |
+| Enter Verdania Memory (Transition) | 进入翠庭记忆（切图） | Splits when entering the Verdania Memory | EnterVerdaniaMemory |  |
+| Enter Bilewater (Transition) | 进入腐汁泽（切图） | Splits when entering Bilewater from Sinner's Road or Whispering Vaults | EnterBilewater |  |
+| Enter Mosshome (Transition) | 进入苔栖乡（切图） | Splits when entering Mosshome (Mosstown_01) | EnterMosshome |  |
+| Enter Blasted Steps (Transition) | 进入蚀阶（切图） | Splits when entering the Blasted Steps from Shellwood, where the area text appears | EnterBlastedSteps |  |
+| Enter Seth (Transition) | 进入赛斯战斗（切图） | Splits when entering Seth's boss arena | EnterSeth |  |
+| Enter Far Fields (Transition) | 进入远野（切图） | Splits when entering Far Fields | EnterFarFields |  |
+| Enter The Mist (Transition) | 进入迷雾（切图） | Splits when entering The Mist | EnterMist |  |
+| Enter Bellhart (Transition) | 进入钟心镇（切图） | Splits when entering Bellhart | EnterBellhart |  |
+| Enter Bell Eater (Transition) | 进入食钟者（切图） | Splits when entering the Bell Eater's arena | EnterBellEater |  |
+| Enter High Halls Arena (Transition) | 进入高庭遭遇战（切图） | Splits when entering the High Halls Arena room | EnterHighHallsArena | EnterHighHallsGauntlet |
+| Enter High Halls (Transition) | 进入高庭（切图） | Splits when entering High Halls | EnterHighHalls |  |
+| Beast Crest (Transition) | 野兽纹章（切图） | Splits when leaving the room with the Beast Crest unlocked | BeastCrestTrans |  |
+| Bell Beast (Transition) | 钟道兽（切图） | Splits on the transition after defeating the Bell Beast | BellBeastTrans |  |
+| Needle 1 (Upgrade) | 织针升级1（升级） | Splits when upgrading to Sharpened Needle | NeedleUpgrade1 |  |
+| Needle 2 (Upgrade) | 织针升级2（升级） | Splits when upgrading to Shining Needle | NeedleUpgrade2 |  |
+| Needle 3 (Upgrade) | 织针升级3（升级） | Splits when upgrading to Hivesteel Needle | NeedleUpgrade3 |  |
+| Needle 4 (Upgrade) | 织针升级4（升级） | Splits when upgrading to Pale Steel Needle | NeedleUpgrade4 |  |
 | Choral Chambers (Ventrica) | 圣脉枢管-圣咏殿（圣脉枢管） | Splits after unlocking Choral Chambers Ventrica | ChoralChambersTube |  |
 | Underworks (Ventrica) | 圣脉枢管-圣堡工厂（圣脉枢管） | Splits after unlocking Underworks Ventrica | UnderworksTube |  |
 | Grand Bellway (Ventrica) | 圣脉枢管-圣堡钟道（圣脉枢管） | Splits after unlocking Grand Bellway Ventrica | GrandBellwayTube | CityBellwayTube |
 | Songclave (Ventrica) | 圣脉枢管-始源钟殿（圣脉枢管） | Splits after unlocking Songclave Ventrica | SongclaveTube |  |
 | Memorium (Ventrica) | 圣脉枢管-忆廊（圣脉枢管） | Splits after unlocking Memorium Ventrica | MemoriumTube |  |
 | High Halls (Ventrica) | 圣脉枢管-高庭（圣脉枢管） | Splits after unlocking High Halls Ventrica | HighHallsTube |  |
-| Conchflies 1 (Boss) | 巨型螺蝇1（Boss） | Splits after defeating Conchflies 1 | Conchflies1 |  |
-| Ballow Moved (Event) | 巴洛前往潜钟（事件） | Splits when Ballow moves to the Diving Bell | BallowMoved |  |
-| Phantom (Boss) | 幽影（Boss） | Splits when killing Phantom | Phantom |  |
-| Architects Melody (Transition) | 建筑师旋律（切图） | Splits on the transition after learning Architects Melody | ArchitectsMelodyTrans |  |
-| Conductors Melody (Transition) | 指挥家旋律（切图） | Splits on the transition after learning Conductors Melody | ConductorsMelodyTrans |  |
-| Reaper Crest (Transition) | 收割者纹章（切图） | Splits when leaving the church with the Reaper Crest unlocked | ReaperCrestTrans |  |
-| Jubilana Rescued Choral Chambers (Event) | 救朱比拉娜-圣咏殿（事件） | Splits after saving the Jubilana in Choral Chambers | JubilanaRescuedChoralChambers |  |
-| Jubilana Rescued Memorium (Event) | 救朱比拉娜-忆廊（事件） | Splits after saving the Jubilana in Memorium | JubilanaRescuedMemorium |  |
+| Pavo Time Passed (Event) | 与帕沃对话后休息（坐椅子） | Splits after meeting the Belltown Greeter and time has passed | PavoTimePassed |  |
+| Whispering Vaults Arena (Mini Boss) | 低语书库遭遇战（小Boss） | Splits when completing the Whispering Vaults Arena | WhisperingVaultsArena | WhisperingVaultsGauntlet |
+| High Halls Arena (Mini Boss) | 高庭遭遇战（小Boss） | Splits when completing the High Halls Arena | HighHallsArena | HighHallsGauntlet |
+| Silk Spear (Skill) | 丝之矛（技能） | Splits when obtaining Silk Spear | SilkSpear |  |
+| Sharpdart (Skill) | 丝刃镖（技能） | Splits when obtaining Sharpdart | Sharpdart |  |
+| Faydown Cloak (Skill) | 二段跳（技能） | Splits when you obtain Double Jump | FaydownCloak |  |
+| Swift Step (Skill) | 冲刺（技能） | Splits when obtaining Swift Step (Dash/Sprint) | SwiftStep |  |
+| Cross Stitch (Skill) | 十字缝（技能） | Splits when obtaining Cross Stitch | CrossStitch |  |
+| Beastling Call (Skill) | 唤兽曲（技能） | Splits when obtaining Beastling Call | BeastlingCall |  |
+| Drifter's Cloak (Skill) | 斗篷（技能） | Splits when obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloak |  |
+| Silk Soar (Skill) | 灵丝升腾（技能） | Splits when you obtain Super Jump | SilkSoar |  |
+| Thread Storm (Skill) | 灵丝风暴（技能） | Splits when obtaining Thread Storm | ThreadStorm |  |
+| Cling Grip (Skill) | 爬墙（技能） | Splits when obtaining Cling Grip (Wall Jump) | ClingGrip |  |
+| Rune Rage (Skill) | 符文之怒（技能） | Splits when obtaining Rune Rage | RuneRage |  |
+| Pale Nails (Skill) | 苍白之爪（技能） | Splits when obtaining Pale Nails | PaleNails |  |
+| Clawline (Skill) | 飞针冲刺（技能） | Splits when obtaining Clawline (Harpoon Dash) | Clawline |  |
+| Spool Upgrade 10 (Upgrade) | 丝之轴碎片10（碎片） | Splits when getting 5 extra Spool Extension (14 base silk) | Spool5 |  |
+| Spool Fragment 11 (Fragment) | 丝之轴碎片11（碎片） | Splits when getting 11th Spool Fragment | SpoolFragment11 |  |
+| Spool Upgrade 12 (Upgrade) | 丝之轴碎片12（碎片） | Splits when getting 6 extra Spool Extension (15 base silk) | Spool6 |  |
+| Spool Fragment 13 (Fragment) | 丝之轴碎片13（碎片） | Splits when getting 13th Spool Fragment | SpoolFragment13 |  |
+| Spool Upgrade 14 (Upgrade) | 丝之轴碎片14（碎片） | Splits when getting 7 extra Spool Extension (16 base silk) | Spool7 |  |
+| Spool Fragment 15 (Fragment) | 丝之轴碎片15（碎片） | Splits when getting 15th Spool Fragment | SpoolFragment15 |  |
+| Spool Upgrade 16 (Upgrade) | 丝之轴碎片16（碎片） | Splits when getting 8 extra Spool Extension (17 base silk) | Spool8 |  |
+| Spool Fragment 17 (Fragment) | 丝之轴碎片17（碎片） | Splits when getting 17th Spool Fragment | SpoolFragment17 |  |
+| Spool Upgrade 18 (Upgrade) | 丝之轴碎片18（碎片） | Splits when getting 9 extra Spool Extension (18 base silk) | Spool9 |  |
+| Spool Fragment 1 (Fragment) | 丝之轴碎片1（碎片） | Splits when getting 1st Spool Fragment | SpoolFragment1 |  |
+| Spool Upgrade 2 (Upgrade) | 丝之轴碎片2（碎片） | Splits when getting 1 extra Spool Extension (10 base silk) | Spool1 |  |
+| Spool Fragment 3 (Fragment) | 丝之轴碎片3（碎片） | Splits when getting 3rd Spool Fragment | SpoolFragment3 |  |
+| Spool Upgrade 4 (Upgrade) | 丝之轴碎片4（碎片） | Splits when getting 2 extra Spool Extension (11 base silk) | Spool2 |  |
+| Spool Fragment 5 (Fragment) | 丝之轴碎片5（碎片） | Splits when getting 5th Spool Fragment | SpoolFragment5 |  |
+| Spool Upgrade 6 (Upgrade) | 丝之轴碎片6（碎片） | Splits when getting 3 extra Spool Extension (12 base silk) | Spool3 |  |
+| Spool Fragment 7 (Fragment) | 丝之轴碎片7（碎片） | Splits when getting 7th Spool Fragment | SpoolFragment7 |  |
+| Spool Upgrade 8 (Upgrade) | 丝之轴碎片8（碎片） | Splits when getting 4 extra Spool Extension (13 base silk) | Spool4 |  |
+| Spool Fragment 9 (Fragment) | 丝之轴碎片9（碎片） | Splits when getting 9th Spool Fragment | SpoolFragment9 |  |
+| Mask Shard 10 (Fragment) | 面具碎片10（碎片） | Splits when getting 10th Mask Shard | MaskShard10 |  |
+| Mask Shard 11 (Fragment) | 面具碎片11（碎片） | Splits when getting 11th Mask Shard | MaskShard11 |  |
+| Mask Upgrade 12 (Upgrade) | 面具碎片12（碎片） | Splits when getting 3 extra Masks (8 base HP) | Mask3 |  |
+| Mask Shard 13 (Fragment) | 面具碎片13（碎片） | Splits when getting 13th Mask Shard | MaskShard13 |  |
+| Mask Shard 14 (Fragment) | 面具碎片14（碎片） | Splits when getting 14th Mask Shard | MaskShard14 |  |
+| Mask Shard 15 (Fragment) | 面具碎片15（碎片） | Splits when getting 15th Mask Shard | MaskShard15 |  |
+| Mask Upgrade 16 (Upgrade) | 面具碎片16（碎片） | Splits when getting 4 extra Masks (9 base HP) | Mask4 |  |
+| Mask Shard 17 (Fragment) | 面具碎片17（碎片） | Splits when getting 17th Mask Shard | MaskShard17 |  |
+| Mask Shard 18 (Fragment) | 面具碎片18（碎片） | Splits when getting 18th Mask Shard | MaskShard18 |  |
+| Mask Shard 19 (Fragment) | 面具碎片19（碎片） | Splits when getting 19th Mask Shard | MaskShard19 |  |
+| Mask Shard 1 (Fragment) | 面具碎片1（碎片） | Splits when getting 1st Mask Shard | MaskShard1 |  |
+| Mask Upgrade 20 (Upgrade) | 面具碎片20（碎片） | Splits when getting 5 extra Masks (10 base HP) | Mask5 |  |
+| Mask Shard 2 (Fragment) | 面具碎片2（碎片） | Splits when getting 2nd Mask Shard | MaskShard2 |  |
+| Mask Shard 3 (Fragment) | 面具碎片3（碎片） | Splits when getting 3rd Mask Shard | MaskShard3 |  |
+| Mask Upgrade 4 (Upgrade) | 面具碎片4（碎片） | Splits when getting 1 extra Masks (6 base HP) | Mask1 |  |
+| Mask Shard 5 (Fragment) | 面具碎片5（碎片） | Splits when getting 5th Mask Shard | MaskShard5 |  |
+| Mask Shard 6 (Fragment) | 面具碎片6（碎片） | Splits when getting 6th Mask Shard | MaskShard6 |  |
+| Mask Shard 7 (Fragment) | 面具碎片7（碎片） | Splits when getting 7th Mask Shard | MaskShard7 |  |
+| Mask Upgrade 8 (Upgrade) | 面具碎片8（碎片） | Splits when getting 2 extra Masks (7 base HP) | Mask2 |  |
+| Mask Shard 9 (Fragment) | 面具碎片9（碎片） | Splits when getting 9th Mask Shard | MaskShard9 |  |
+| Architect Crest (Crest) | 建筑师纹章（纹章） | Splits when the Architect Crest is unlocked | ArchitectCrest |  |
+| Reaper Crest (Crest) | 收割者纹章（纹章） | Splits when the Reaper Crest is unlocked | ReaperCrest |  |
+| Wanderer Crest (Crest) | 漫游者纹章（纹章） | Splits when the Wanderer Crest is unlocked | WandererCrest |  |
+| Shaman Crest (Crest) | 萨满纹章（纹章） | Splits when the Shaman Crest is unlocked | ShamanCrest |  |
+| Beast Crest (Crest) | 野兽纹章（纹章） | Splits when the Beast Crest is unlocked | BeastCrest |  |
+| Main Menu (Menu) | 主菜单（菜单） | Splits on the main menu | Menu |  |
+| Rescued Giant Flea (Flea) | 击败大跳蚤（跳蚤） | Splits after defeating Giant Flea | SavedFleaGiantFlea |  |
 | Rescued Flea Songclave (Flea) | 救跳蚤-低语书库-圣歌盟地（跳蚤） | Splits after rescuing flea in Library_09 | SavedFleaSongclave |  |
 | Rescued Flea Whispering Vaults (Flea) | 救跳蚤-低语书库（跳蚤） | Splits after rescuing flea in Library_01 | SavedFleaWhisperingVaults |  |
 | Rescued Flea Blasted Steps (Flea) | 救跳蚤-卡拉卡沙川-蚀阶（跳蚤） | Splits after rescuing flea in Coral_35 | SavedFleaBlastedSteps |  |
@@ -104,67 +247,7 @@ article: false
 | Rescued Flea Far Fields Trap (Flea) | 救跳蚤-远野-陷阱（跳蚤） | Splits after rescuing flea in Bone_East_17b | SavedFleaFarFieldsTrap |  |
 | Rescued Flea Bellhart (Flea) | 救跳蚤-钟心镇（跳蚤） | Splits after rescuing flea in Belltown_04 | SavedFleaBellhart |  |
 | Rescued Flea Marrow (Flea) | 救跳蚤-髓骨洞窟（跳蚤） | Splits after rescuing flea in Bone_06 | SavedFleaMarrow |  |
-| Songclave Bell (Event) | 敲钟-圣歌盟地（事件） | Splits when ringing the Songclave Bell Shrine | SongclaveBell |  |
-| Deep Docks Bell (Event) | 敲钟-深坞（事件） | Splits when ringing the Deep Docks Bell Shrine | DeepDocksBell |  |
-| Greymoor Bell (Event) | 敲钟-灰沼（事件） | Splits when ringing the Greymoor Bell Shrine | GreymoorBell |  |
-| Shellwood Bell (Event) | 敲钟-甲木林（事件） | Splits when ringing the Shellwood Bell Shrine | ShellwoodBell |  |
-| Bellhart Bell (Event) | 敲钟-钟心镇（事件） | Splits when ringing the Bellhart Bell Shrine | BellhartBell |  |
-| Marrow Bell (Event) | 敲钟-髓骨洞窟（事件） | Splits when ringing the Marrow Bell Shrine | MarrowBell |  |
-| Drifter's Cloak (Transition) | 斗篷（切图） | Splits on the transition after obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloakTrans |  |
-| Drifter's Cloak (Skill) | 斗篷（技能） | Splits when obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloak |  |
-| Savage Beastfly 2 (Boss)) | 暴怒的兽蝇2（Boss） | Splits after completing the Beastfly in Far Fields | SavageBeastfly2 |  |
-| Last Judge (Boss) | 末代裁决者（Boss） | Splits when killing Last Judge | LastJudge |  |
-| Met Merchant Enclave (NPC) | 朱比拉娜-圣歌盟地（NPC） | Splits after talking to Jubilana in Songclave | MetJubilanaEnclave |  |
-| Cogwork Dancers (Boss) | 机枢舞者（Boss） | Splits when killing Cogwork Dancers | CogworkDancers |  |
-| Groal (Boss) | 格洛（Boss） | Splits after defeating Groal | Groal |  |
-| Death (Event) | 死亡（事件） | Splits when player HP is 0 | PlayerDeath |  |
-| Savage Beastfly 1 (Boss) | 残暴的兽蝇1（Boss） | Splits after defeating the Beastfly in the Chapel | SavageBeastfly1 |  |
 | Rescued Vog (Flea) | 沃格（跳蚤） | Splits after talking to Vog | SavedFleaVog |  |
-| Completed Abyss Escape (Event) | 深渊逃脱完成（事件） | Splits after completing the Abyss Escape | AbyssEscape |  |
-| Silk and Soul Offered (Event) | 灵丝与灵魂前置达成（事件） | Splits when the Caretaker offers the Silk and Soul quest | SilkAndSoulOffered |  |
-| Silk Soar (Skill) | 灵丝升腾（技能） | Splits when you obtain Super Jump | SilkSoar |  |
-| Soul Snare Ready (Event) | 灵丝陷阱就绪（事件） | Splits when the Soul Snare becomes ready | SoulSnareReady |  |
-| Cling Grip (Transition) | 爬墙（切图） | Splits on the transition after obtaining Cling Grip (Wall Jump) | ClingGripTrans |  |
-| Cling Grip (Skill) | 爬墙（技能） | Splits when obtaining Cling Grip (Wall Jump) | ClingGrip |  |
-| Trobbio (Boss) | 特罗比奥（Boss） | Splits when killing Trobbio | Trobbio |  |
-| Trobbio (Transition) | 特罗比奥（切图） | Splits on the transition after killing Trobbio | TrobbioTrans |  |
-| Forebrothers (Boss) | 监工兄弟（Boss） | Splits after defeating the Forebrothers | Forebrothers |  |
-| Leave The Mist (Transition) | 离开迷雾（切图） | Splits when leaving The Mist | LeaveMist |  |
-| Act 3 Start (Event) | 第三幕开始（事件） | Splits upon entering Act 3 | Act3Started |  |
-| Act 2 Started (Event) | 第二幕开始（事件） | Splits when starting Act 2 | Act2Started |  |
-| Fourth Chorus (Boss) | 第四圣咏团（Boss） | Splits when killing Fourth Chorus | FourthChorus |  |
-| Vaultkeepers Melody (Transition) | 管理员旋律（切图） | Splits on the transition after learning Vaultkeepers Melody | VaultkeepersMelodyTrans |  |
-| Needle 1 (Upgrade) | 织针升级1（升级） | Splits when upgrading to Sharpened Needle | NeedleUpgrade1 |  |
-| Needle 2 (Upgrade) | 织针升级2（升级） | Splits when upgrading to Shining Needle | NeedleUpgrade2 |  |
-| Needle 3 (Upgrade) | 织针升级3（升级） | Splits when upgrading to Hivesteel Needle | NeedleUpgrade3 |  |
-| Needle 4 (Upgrade) | 织针升级4（升级） | Splits when upgrading to Pale Steel Needle | NeedleUpgrade4 |  |
-| Met Green Prince Cogwork (NPC) | 绿王子-机枢核心（事件） | Splits when you talk to Green Prince in Cogwork Dancer's arena | GreenPrinceInVerdania |  |
-| Unlock Prince Cage (Event) | 绿王子-罪途（事件） | Splits when you unlock Green Prince's Cage in Sinner's Road | UnlockedPrinceCage |  |
-| Verdania Orbs (Event) | 翠庭球收集完成（事件） | Splits when you reach the required number of Verdania Orbs | VerdaniaOrbsCollected |  |
-| Moss Mother (Boss) | 苔藓之母（Boss） | Splits when killing Moss Mother | MossMother |  |
-| Moss Mother (Transition) | 苔藓之母（切图） | Splits on the transition after killing Moss Mother | MossMotherTrans |  |
-| Moorwing (Boss) | 荒沼翼主（Boss） | Splits when killing Moorwing | Moorwing |  |
-| Moorwing (Transition) | 荒沼翼主（切图） | Splits on the transition after killing Moorwing | MoorwingTrans |  |
-| Lace 2 (Boss) | 蕾丝2（Boss） | Splits when defeating Lace 2 in TheCradle | Lace2 |  |
-| Lace 1 (Boss) | 蕾丝（Boss） | Splits when defeating Lace 1 in DeepDocks | Lace1 |  |
-| Lace 1 (Transition) | 蕾丝（切图） | Splits on the transition after defeating Lace 1 in DeepDocks | Lace1Trans |  |
-| Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |  |
-| Unlock Threefold Melody Lift (Event) | 解锁三重旋律电梯（事件） | Splits when unlocking the Threefold Melody Lift | UnlockedMelodyLift |  |
-| Met Sherma Enclave (NPC) | 谢尔玛-圣歌盟地（NPC） | Splits after talking to Sherma in Songclave | MetShermaEnclave |  |
-| Sherma Returned(NPC) | 谢尔玛归来（NPC） | Splits when Sherma is rescued and time passes | ShermaReturned |  |
-| Seth (Boss) | 赛斯（Boss） | Splits after defeating Seth | Seth |  |
-| Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | RedMemory | CompletedRedMemory |
-| Caravan Troupe Greymoor (Event) | 跳蚤剧团移动-灰沼（事件） | Splits when the Caravan Troupe moves to Greymoor | CaravanTroupeGreymoor |  |
-| Caravan Troupe Fleatopia (Event) | 跳蚤剧团移动-蚤托邦（事件） | Splits when the Caravan Troupe moves to Fleatopia | CaravanTroupeFleatopia |  |
-| Enter Wormways (Transition) | 进入沙噬虫道（切图） | Splits on entering Wormways | EnterWormways |  |
-| Enter Greymoor (Transition) | 进入灰沼（切图） | Splits when entering Greymoor | EnterGreymoor |  |
-| Enter Shellwood (Transition) | 进入甲木林（切图） | Splits when entering Shellwood | EnterShellwood |  |
-| Enter Far Fields (Transition) | 进入远野（切图） | Splits when entering Far Fields | EnterFarFields |  |
-| Enter The Mist (Transition) | 进入迷雾（切图） | Splits when entering The Mist | EnterMist |  |
-| Enter Bellhart (Transition) | 进入钟心镇（切图） | Splits when entering Bellhart | EnterBellhart |  |
-| Enter High Halls Arena (Transition) | 进入高庭遭遇战（切图） | Splits when entering the High Halls Arena room | EnterHighHallsArena | EnterHighHallsGauntlet |
-| Enter High Halls (Transition) | 进入高庭（切图） | Splits when entering High Halls | EnterHighHalls |  |
-| Pavo Bellhome Key (NPC) | 钟居钥匙（NPC） | Splits when obtaining Bellhome Key from Pavo | BellhouseKeyConversation |  |
 | Grand Bellway (Bellway) | 钟道-圣堡钟道（钟道） | Splits after unlocking Grand Bellway | GrandBellwayStation |  |
 | Deep Docks (Bellway) | 钟道-深坞（钟道） | Splits after unlocking Deep Docks Bellway | DeepDocksStation |  |
 | Greymoor (Bellway) | 钟道-灰沼（钟道） | Splits after unlocking Greymoor Bellway | GreymoorStation |  |
@@ -175,12 +258,6 @@ article: false
 | Blasted Steps (Bellway) | 钟道-蚀阶（钟道） | Splits after unlocking Blasted Steps Bellway | BlastedStepsStation |  |
 | Far Fields (Bellway) | 钟道-远野（钟道） | Splits after unlocking Far Fields Bellway | FarFieldsStation |  |
 | Bellhart (Bellway) | 钟道-钟心镇（钟道） | Splits after unlocking Bellhart Bellway | BellhartStation |  |
-| Bell Beast (Boss) | 钟道兽（Boss） | Splits when defeating the Bell Beast | BellBeast |  |
-| Bell Beast (Transition) | 钟道兽（切图） | Splits on the transition after defeating the Bell Beast | BellBeastTrans |  |
-| Clawline (Skill) | 飞针冲刺（技能） | Splits when obtaining Clawline (Harpoon Dash) | Clawline |  |
-| Skull Tyrant (Boss) | 骷髅暴君1（Boss） | Splits after defeating the Skull Tyrant | SkullTyrant1 |  |
-| High Halls Arena (Mini Boss) | 高庭遭遇战（小Boss） | Splits when completing the High Halls Arena | HighHallsArena | HighHallsGauntlet |
-| Widow (Boss) | 黑寡妇（Boss） | Splits when killing Widow | Widow |  |
 
 <style scoped>
 table {
