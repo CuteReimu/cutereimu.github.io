@@ -34,13 +34,13 @@ wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者�
 
 LiveSplit 通过布局文件 (`.lsl`) 连接此自动切分器及其设置。请确保为此自动切分器使用的每一个不同的分段文件都配置一个独立的布局副本。
 
-右键点击 -> `Edit Layout...`，您将看到布局编辑器，其中包含如 `Title`、`Splits`、`Timer` 等组件。若其中没有名为 `Auto Splitting Runtime` 的组件，请通过 `+` 添加按钮 -> `Control` -> `Auto Splitting Runtime` 进行添加。添加后，点击 `Layout Settings` -> `Auto Splitting Runtime`，在 `Script Path` 旁点击 `Browse...`，然后找到并选择前面下载的 `.wasm` 文件。随后点击 `Import Splits` 并选择您的分段文件。
+右键点击 &rarr; `Edit Layout...`，您将看到布局编辑器，其中包含如 `Title`、`Splits`、`Timer` 等组件。若其中没有名为 `Auto Splitting Runtime` 的组件，请通过 `+` 添加按钮 &rarr; `Control` &rarr; `Auto Splitting Runtime` 进行添加。添加后，点击 `Layout Settings` &rarr; `Auto Splitting Runtime`，在 `Script Path` 旁点击 `Browse...`，然后找到并选择前面下载的 `.wasm` 文件。随后点击 `Import Splits` 并选择您的分段文件。
 
 点击 `Ok`，并通过 `Save Layout As...` 保存此布局，为其命名时应体现您正在运行的具体分段内容。
 
-停用现有的 Hollow Knight 自动切分器：右键点击 -> `Edit Splits...`，在 `Configurable Load Remover / Auto Splitter. (By DevilSquirrel)` 旁点击 `Deactivate`。
+停用现有的 Hollow Knight 自动切分器：右键点击 &rarr; `Edit Splits...`，在 `Configurable Load Remover / Auto Splitter. (By DevilSquirrel)` 旁点击 `Deactivate`。
 
-然后通过您刚才保存的布局文件添加此自动切分器。在同一个分段编辑器（通过右键点击 -> `Edit Splits...` 打开）中，在原来显示 `Configurable Load Remover / Auto Splitter. (By DevilSquirrel)` 的位置下方，勾选 `Use Layout` 复选框，点击旁边的 `Browse`，找到并选择之前的布局文件。选择后点击 `Ok`。
+然后通过您刚才保存的布局文件添加此自动切分器。在同一个分段编辑器（通过右键点击 &rarr; `Edit Splits...` 打开）中，在原来显示 `Configurable Load Remover / Auto Splitter. (By DevilSquirrel)` 的位置下方，勾选 `Use Layout` 复选框，点击旁边的 `Browse`，找到并选择之前的布局文件。选择后点击 `Ok`。
 
 最后，在使用此自动切分器运行时，请勿手动切分或跳过，除非该节点明确标记为 `ManualSplit` 或是最终节点。在任何其他情况下，请不要手动切分、跳过或撤销分段。自动切分器将无法感知您的这些操作，其状态会与 LiveSplit 的状态失去同步。
 
