@@ -1,6 +1,6 @@
 ---
 title: 丝之歌迷瘴地图机制
-icon: s
+icon: /hollow-knight/Hornet.png
 order: 30
 category: 丝之歌
 tags:

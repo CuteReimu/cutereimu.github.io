@@ -1,6 +1,6 @@
 ---
 title: 丝之歌Any%速通路线
-icon: s
+icon: /hollow-knight/Hornet.png
 order: 7
 category: 丝之歌
 tags:

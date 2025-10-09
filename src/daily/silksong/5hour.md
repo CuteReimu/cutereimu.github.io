@@ -1,6 +1,6 @@
 ---
 title: 丝之歌5小时成就路线
-icon: s
+icon: /hollow-knight/Hornet.png
 order: 99
 category: 丝之歌
 tags:
