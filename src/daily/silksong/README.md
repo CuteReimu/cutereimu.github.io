@@ -1,6 +1,6 @@
 ---
 title: 丝之歌速通相关
-icon: s
+icon: /hollow-knight/Hornet.png
 index: false
 dir:
   order: -3
