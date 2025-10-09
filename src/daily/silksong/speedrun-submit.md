@@ -70,6 +70,29 @@ copy: false
 
 速通投稿相关目前参照[空洞骑士速通投稿](../hollowknight/speedrun-submit.md#速通投稿)即可，这里就不再进行翻译了。
 
+帧率方面倒是有个值得注意的要求：
+
+<VPPreview title="帧率要求">
+<template #code>
+
+```md :no-line-numbers
+- If you change either the VSync or Frame Rate Cap setting during the run, you must have a clearly visible FPS display in your recording.
+```
+
+</template>
+<template #content>
+
+- 如果你在速通期间调整了垂直同步或者帧率限制的设置，你必须将FPS清晰地显示在你的录像中。
+
+</template>
+</VPPreview>
+
+还有一些值得一提的内容，我列在这里：
+- 不能使用beta版本
+- 不能安装任何Mod
+- 一定要用新版的计时器，旧的wasm过图时会在屏幕还未完全变黑的情况下就暂停计时了
+- Judgement（末日裁决者）速通类别**不是以打完末日裁决者作为结束**，而是应当在进入第二幕的过场动画后，弹出“任务目标变更”时结束
+
 ## 关于NMG
 
 ::: info 关于邪道
