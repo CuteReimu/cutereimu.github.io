@@ -102,8 +102,8 @@ article: false
 | Caravan Troupe Fleatopia (Event) | 跳蚤剧团移动-蚤托邦（事件） | Splits when the Caravan Troupe moves to Fleatopia | CaravanTroupeFleatopia |  |
 | Silk Spear (Transition) | 丝之矛（切图） | Splits on the transition after obtaining Silk Spear | SilkSpearTrans |  |
 | Sharpdart (Transition) | 丝刃镖（切图） | Splits on the transition after obtaining Sharpdart | SharpdartTrans |  |
+| Transition excluding discontinuities (Transition) | 任意切图不含非连续（切图） | Splits when entering a transition (excludes discontinuities including save states and deaths) | TransitionExcludingDiscontinuities |  |
 | Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |  |
-| Transition excluding discontinuities (Transition) | 任意切图（切图） | Splits when entering a transition (excludes discontinuities including save states and deaths) | TransitionExcludingDiscontinuities |  |
 | Swift Step (Transition) | 冲刺（切图） | Splits on the transition after obtaining Swift Step (Dash/Sprint) | SwiftStepTrans |  |
 | Cross Stitch (Transition) | 十字缝（切图） | Splits on the transition after obtaining Cross Stitch | CrossStitchTrans |  |
 | Witch Crest (Transition) | 巫妪纹章（切图） | Splits when leaving Yarnaby's room after the Witch Crest is obtained | WitchCrestTrans |  |
