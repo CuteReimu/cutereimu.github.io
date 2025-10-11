@@ -1,4 +1,9 @@
 <template>
+  <div>
+    <button @click="play" :disabled="!isRendered || isPlaying" class="play-btn">
+      {{ isPlaying ? '播放中...' : '播放' }}
+    </button>
+  </div>
   <div class="abc-container" ref="scoreContainer"></div>
 </template>
 
@@ -21,7 +26,8 @@ const props = defineProps({
 });
 
 const scoreContainer = ref(null);
-let isRendered = false;
+const isRendered = ref(false);
+const isPlaying = ref(false);
 
 // 检查 abcjs 是否已加载
 const checkAbcjsLoaded = () => {
@@ -75,7 +81,7 @@ const waitForAbcjs = () => {
 };
 
 const renderScore = async () => {
-  if (!scoreContainer.value || isRendered) return;
+  if (!scoreContainer.value || isRendered.value) return;
 
   try {
     // 等待 abcjs 加载完成
@@ -103,12 +109,47 @@ const renderScore = async () => {
       }
     });
 
-    isRendered = true;
+    isRendered.value = true;
   } catch (error) {
     console.error('ABCJS 渲染失败:', error);
     if (scoreContainer.value) {
       scoreContainer.value.innerHTML = `<p style="color: red;">乐谱渲染失败: ${error.message}</p>`;
     }
+  }
+};
+
+
+const play = async () => {
+  if (!isRendered.value || isPlaying.value) return;
+
+  try {
+    isPlaying.value = true;
+
+    // 创建音频上下文（必须在用户交互内）
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // 获取abcjs库对象
+    const abcjsLib = getAbcjsLib();
+    if (!abcjsLib) {
+      throw new Error('无法获取abcjs库对象');
+    }
+
+    // 渲染乐谱对象
+    const visualObj = abcjsLib.renderAbc(scoreContainer.value, props.notation)[0];
+
+    const synth = new abcjsLib.synth.CreateSynth();
+    await synth.init({
+      audioContext: audioContext,
+      visualObj: visualObj
+    });
+    await synth.prime();
+    await synth.start();
+    setTimeout(() => {
+      isPlaying.value = false;
+    }, 1000)
+  } catch (error) {
+    console.error('播放失败:', error);
+    isPlaying.value = false;
   }
 };
 
@@ -124,14 +165,14 @@ onMounted(() => {
 
 // 监听属性变化，重新渲染
 watch(() => props.notation, () => {
-  isRendered = false;
+  isRendered.value = false;
   nextTick(() => {
     renderScore();
   });
 });
 
 watch(() => props.measuresPerLine, () => {
-  isRendered = false;
+  isRendered.value = false;
   nextTick(() => {
     renderScore();
   });
@@ -142,5 +183,24 @@ watch(() => props.measuresPerLine, () => {
 .abc-container {
   overflow-x: auto;
   min-height: 120px;
+}
+
+.play-btn {
+  padding: 8px 16px;
+  background: #42b883;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.play-btn:hover:not(:disabled) {
+  background: #359c6d;
+}
+
+.play-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
 }
 </style>
