@@ -30,7 +30,7 @@ notation: |
   (c2 c2 de | d6) | (cG A2 GF | G6) | (c2 c2 de | f6) |
   (ge dc B2 | c6) | z8 | ([Cc]2 [Cc]2 [Dd][Ee] | [Dd]6) |
   ([Cc][G,G] [A,A]2 [G,G][F,F] | [G,G]6) | ([Cc]2 [Cc]2 [Dd][Ee] | [Ff]4) z ([Gg]/2[Aa]/2 | [Gg]2 [Ee]3 [B,B] |
-  [Cc]2 [B,B]3 F | G2) C4 | ([g']6 | [g']2) (G4 | G4) z (=B |
+  [Cc]2 [B,B]3 F | G2) C4 | [g']6- | [g']2 G4- | G4 z (=B |
   =B6 | c4 (3zde | f6) | g4 Hb2 | [Hc']6 |]
   V:2
   CG A4 | CF G4 | CE F4 | CD ED [B,]2 | CG A4 | B,G F4 |
