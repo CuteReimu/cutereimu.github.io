@@ -154,8 +154,6 @@ const play = async () => {
 };
 
 onMounted(() => {
-  console.log(props.notation)
-  // 在VuePress环境中，可能需要额外的延迟
   setTimeout(() => {
     nextTick(() => {
       renderScore();
