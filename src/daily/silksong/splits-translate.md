@@ -37,6 +37,7 @@ article: false
 | Nyleth's Heart (Item) | 尼莱斯之心（道具） | Splits when you obtain Nyleth's Heart | HeartNyleth | CollectedHeartNyleth |
 | Collected WhiteWard Key (Item) | 白愈钥匙（道具） | Splits when you collect the WhiteWard Key | CollectedWhiteWardKey |  |
 | Bone Bottom Simple Key (Item) | 骸底镇简单钥匙（道具） | Splits when buying the Bone Bottom simple key from Pebb | BoneBottomSimpleKey |  |
+| Transition excluding discontinuities (Transition) |  | Splits when entering a transition (excludes discontinuities including save states and deaths) | TransitionExcludingDiscontinuities |  |
 | Voltvyrm (Boss) | 伏特维姆（Boss） | Splits after defeating Voltvyrm | Voltvyrm |  |
 | Conchflies 1 (Boss) | 巨型螺蝇1（Boss） | Splits after defeating Conchflies 1 | Conchflies1 |  |
 | Phantom (Boss) | 幽影（Boss） | Splits when killing Phantom | Phantom |  |
@@ -95,6 +96,7 @@ article: false
 | Verdania Lake Fountain Orbs (Event) | 翠庭-喷泉（事件） | Splits when the orbs appear after activating the shrine in the Verdania lake | VerdaniaLakeFountainOrbs |  |
 | Verdania Orbs (Event) | 翠庭球收集完成（事件） | Splits when you reach the required number of Verdania Orbs | VerdaniaOrbsCollected |  |
 | Seen Fleatopia Empty (Event) | 蚤托邦（事件） | Splits when you find Fleatopias location | SeenFleatopiaEmpty |  |
+| Gained Curse (Event) | 被寄生（事件） | Splits when Hornet first gains control after breaking out of the Curse Crest tree | GainedCurse |  |
 | Unlock Threefold Melody Lift (Event) | 解锁三重旋律电梯（事件） | Splits when unlocking the Threefold Melody Lift | UnlockedMelodyLift |  |
 | Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | RedMemory | CompletedRedMemory |
 | Caravan Troupe Greymoor (Event) | 跳蚤剧团移动-灰沼（事件） | Splits when the Caravan Troupe moves to Greymoor | CaravanTroupeGreymoor |  |
@@ -104,6 +106,7 @@ article: false
 | Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |  |
 | Swift Step (Transition) | 冲刺（切图） | Splits on the transition after obtaining Swift Step (Dash/Sprint) | SwiftStepTrans |  |
 | Cross Stitch (Transition) | 十字缝（切图） | Splits on the transition after obtaining Cross Stitch | CrossStitchTrans |  |
+| Witch Crest (Transition) | 巫妪纹章（切图） | Splits when leaving Yarnaby's room after the Witch Crest is obtained | WitchCrestTrans |  |
 | Architects Melody (Transition) | 建筑师旋律（切图） | Splits on the transition after learning Architects Melody | ArchitectsMelodyTrans |  |
 | Architect Crest (Transition) | 建筑师纹章（切图） | Splits when leaving the room with the Architect Crest unlocked | ArchitectCrestTrans |  |
 | Conductors Melody (Transition) | 指挥家旋律（切图） | Splits on the transition after learning Conductors Melody | ConductorsMelodyTrans |  |
@@ -120,12 +123,15 @@ article: false
 | Moss Mother (Transition) | 苔藓之母（切图） | Splits on the transition after killing Moss Mother | MossMotherTrans |  |
 | Moorwing (Transition) | 荒沼翼主（切图） | Splits on the transition after killing Moorwing | MoorwingTrans |  |
 | Shaman Crest (Transition) | 萨满纹章（切图） | Splits when leaving the room with the Shaman Crest unlocked | ShamanCrestTrans |  |
+| Needle Strike (Transition) | 蓄力斩（切图） | Splits on the transition after obtaining Needle Strike (Charge Slash) | NeedleStrikeTrans |  |
 | Lace 1 (Transition) | 蕾丝（切图） | Splits on the transition after defeating Lace 1 in DeepDocks | Lace1Trans |  |
+| Enter Whispering Vaults (Transition) | 进入低语书库（切图） | Splits when entering the rooms where the Whispering Vaults area text appears, past the arena or from Songclave | EnterWhisperingVaults |  |
 | Enter Karmelita Memory (Transition) | 进入卡梅莉塔记忆（切图） | Splits when entering Karmelita's memory | EnterKarmelitaMemory |  |
 | Enter Khann Memory | 进入卡汗记忆（切图） | Splits when entering Khann's Coral Tower memory | EnterKhannMemory |  |
+| Enter Citadel Front Gate (Transition) | 进入圣堡正门（切图） | Splits when entering the Citadel past the Last Judge arena | EnterCitadelFrontGate |  |
 | Enter Nyleth Memory (Transition) | 进入尼莱斯记忆（切图） | Splits when entering Nyleth's memory | EnterNylethMemory |  |
 | Enter Exhaust Organ (Transition) | 进入废鸣管风琴（切图） | Splits when entering the Exhaust Organ from Bilewater | EnterExhaustOrgan |  |
-| Enter Memorium | 进入忆廊（切图） | Splits when entering the Memorium | EnterMemorium |  |
+| Enter Memorium (Transition) | 进入忆廊（切图） | Splits when entering the Memorium | EnterMemorium |  |
 | Enter Last Judge (Transition) | 进入末日裁决者（切图） | Splits when entering the Last Judge boss arena from the Blasted Steps | EnterLastJudge |  |
 | Enter Upper Wormways (Transition) | 进入沙噬虫道上层（切图） | Splits on entering the vertical transition to the upper portion of Wormways (Crawl_03) | EnterUpperWormways |  |
 | Enter Wormways (Transition) | 进入沙噬虫道（切图） | Splits on entering Wormways | EnterWormways |  |
@@ -136,6 +142,7 @@ article: false
 | Enter Sinner's Road (Transition) | 进入罪途（切图） | Splits when entering Sinner's Road from Greymoor | EnterSinnersRoad |  |
 | Enter Verdania Castle (Transition) | 进入翠庭城堡（切图） | Splits when entering the room containing the Clover Dancers boss | EnterVerdaniaCastle |  |
 | Enter Verdania Memory (Transition) | 进入翠庭记忆（切图） | Splits when entering the Verdania Memory | EnterVerdaniaMemory |  |
+| Enter Putrified Ducts (Transition) | 进入腐殖渠（切图） | Splits when entering the Putrified Ducts | EnterPutrifiedDucts |  |
 | Enter Bilewater (Transition) | 进入腐汁泽（切图） | Splits when entering Bilewater from Sinner's Road or Whispering Vaults | EnterBilewater |  |
 | Enter Mosshome (Transition) | 进入苔栖乡（切图） | Splits when entering Mosshome (Mosstown_01) | EnterMosshome |  |
 | Enter Blasted Steps (Transition) | 进入蚀阶（切图） | Splits when entering the Blasted Steps from Shellwood, where the area text appears | EnterBlastedSteps |  |
@@ -144,10 +151,20 @@ article: false
 | Enter The Mist (Transition) | 进入迷雾（切图） | Splits when entering The Mist | EnterMist |  |
 | Enter Bellhart (Transition) | 进入钟心镇（切图） | Splits when entering Bellhart | EnterBellhart |  |
 | Enter Bell Eater (Transition) | 进入食钟者（切图） | Splits when entering the Bell Eater's arena | EnterBellEater |  |
+| Enter Bone Bottom (Transition) | 进入骸底镇（切图） | Splits when entering Bone Bottom | EnterBoneBottom |  |
 | Enter High Halls Arena (Transition) | 进入高庭遭遇战（切图） | Splits when entering the High Halls Arena room | EnterHighHallsArena | EnterHighHallsGauntlet |
 | Enter High Halls (Transition) | 进入高庭（切图） | Splits when entering High Halls | EnterHighHalls |  |
 | Beast Crest (Transition) | 野兽纹章（切图） | Splits when leaving the room with the Beast Crest unlocked | BeastCrestTrans |  |
 | Bell Beast (Transition) | 钟道兽（切图） | Splits on the transition after defeating the Bell Beast | BellBeastTrans |  |
+| Sylphsong (Transition) | 风灵谣（切图） | Splits when leaving the room after obtaining Sylphsong | SylphsongTrans |  |
+| Crafting Kit Level 1 (Upgrade) | 制作匣1（升级） | Splits when getting the 1st crafting kit damage upgrade | CraftingKit1 |  |
+| Crafting Kit Level 2 (Upgrade) | 制作匣2（升级） | Splits when getting the 2nd crafting kit damage upgrade | CraftingKit2 |  |
+| Crafting Kit Level 3 (Upgrade) | 制作匣3（升级） | Splits when getting the 3rd crafting kit damage upgrade | CraftingKit3 |  |
+| Crafting Kit Level 4 (Upgrade) | 制作匣4（升级） | Splits when getting the 4th crafting kit damage upgrade | CraftingKit4 |  |
+| Tool Pouch Level 1 (Upgrade) | 工具袋1（升级） | Splits when getting the 1st tool pouch capacity upgrade | ToolPouch1 |  |
+| Tool Pouch Level 2 (Upgrade) | 工具袋2（升级） | Splits when getting the 2nd tool pouch capacity upgrade | ToolPouch2 |  |
+| Tool Pouch Level 3 (Upgrade) | 工具袋3（升级） | Splits when getting the 3rd tool pouch capacity upgrade | ToolPouch3 |  |
+| Tool Pouch Level 4 (Upgrade) | 工具袋4（升级） | Splits when getting the 4th tool pouch capacity upgrade | ToolPouch4 |  |
 | Needle 1 (Upgrade) | 织针升级1（升级） | Splits when upgrading to Sharpened Needle | NeedleUpgrade1 |  |
 | Needle 2 (Upgrade) | 织针升级2（升级） | Splits when upgrading to Shining Needle | NeedleUpgrade2 |  |
 | Needle 3 (Upgrade) | 织针升级3（升级） | Splits when upgrading to Hivesteel Needle | NeedleUpgrade3 |  |
@@ -168,30 +185,33 @@ article: false
 | Cross Stitch (Skill) | 十字缝（技能） | Splits when obtaining Cross Stitch | CrossStitch |  |
 | Beastling Call (Skill) | 唤兽曲（技能） | Splits when obtaining Beastling Call | BeastlingCall |  |
 | Drifter's Cloak (Skill) | 斗篷（技能） | Splits when obtaining Drifter's Cloak (Umbrella/Float) | DriftersCloak |  |
+| Elegy of the Deep (Skill) | 深邃挽歌（技能） | Splits when obtaining Elegy of the Deep | ElegyOfTheDeep |  |
 | Silk Soar (Skill) | 灵丝升腾（技能） | Splits when you obtain Super Jump | SilkSoar |  |
 | Thread Storm (Skill) | 灵丝风暴（技能） | Splits when obtaining Thread Storm | ThreadStorm |  |
 | Cling Grip (Skill) | 爬墙（技能） | Splits when obtaining Cling Grip (Wall Jump) | ClingGrip |  |
 | Rune Rage (Skill) | 符文之怒（技能） | Splits when obtaining Rune Rage | RuneRage |  |
 | Pale Nails (Skill) | 苍白之爪（技能） | Splits when obtaining Pale Nails | PaleNails |  |
+| Needle Strike (Skill) | 蓄力斩（技能） | Splits when obtaining Needle Strike (Charge Slash) | NeedleStrike |  |
+| Sylphsong (Skill) | 风灵谣（技能） | Splits when obtaining Sylphsong after binding Eva | Sylphsong |  |
 | Clawline (Skill) | 飞针冲刺（技能） | Splits when obtaining Clawline (Harpoon Dash) | Clawline |  |
-| Spool Upgrade 10 (Upgrade) | 丝之轴碎片10（碎片） | Splits when getting 5 extra Spool Extension (14 base silk) | Spool5 |  |
-| Spool Fragment 11 (Fragment) | 丝之轴碎片11（碎片） | Splits when getting 11th Spool Fragment | SpoolFragment11 |  |
-| Spool Upgrade 12 (Upgrade) | 丝之轴碎片12（碎片） | Splits when getting 6 extra Spool Extension (15 base silk) | Spool6 |  |
-| Spool Fragment 13 (Fragment) | 丝之轴碎片13（碎片） | Splits when getting 13th Spool Fragment | SpoolFragment13 |  |
-| Spool Upgrade 14 (Upgrade) | 丝之轴碎片14（碎片） | Splits when getting 7 extra Spool Extension (16 base silk) | Spool7 |  |
-| Spool Fragment 15 (Fragment) | 丝之轴碎片15（碎片） | Splits when getting 15th Spool Fragment | SpoolFragment15 |  |
-| Spool Upgrade 16 (Upgrade) | 丝之轴碎片16（碎片） | Splits when getting 8 extra Spool Extension (17 base silk) | Spool8 |  |
-| Spool Fragment 17 (Fragment) | 丝之轴碎片17（碎片） | Splits when getting 17th Spool Fragment | SpoolFragment17 |  |
-| Spool Upgrade 18 (Upgrade) | 丝之轴碎片18（碎片） | Splits when getting 9 extra Spool Extension (18 base silk) | Spool9 |  |
-| Spool Fragment 1 (Fragment) | 丝之轴碎片1（碎片） | Splits when getting 1st Spool Fragment | SpoolFragment1 |  |
-| Spool Upgrade 2 (Upgrade) | 丝之轴碎片2（碎片） | Splits when getting 1 extra Spool Extension (10 base silk) | Spool1 |  |
-| Spool Fragment 3 (Fragment) | 丝之轴碎片3（碎片） | Splits when getting 3rd Spool Fragment | SpoolFragment3 |  |
-| Spool Upgrade 4 (Upgrade) | 丝之轴碎片4（碎片） | Splits when getting 2 extra Spool Extension (11 base silk) | Spool2 |  |
-| Spool Fragment 5 (Fragment) | 丝之轴碎片5（碎片） | Splits when getting 5th Spool Fragment | SpoolFragment5 |  |
-| Spool Upgrade 6 (Upgrade) | 丝之轴碎片6（碎片） | Splits when getting 3 extra Spool Extension (12 base silk) | Spool3 |  |
-| Spool Fragment 7 (Fragment) | 丝之轴碎片7（碎片） | Splits when getting 7th Spool Fragment | SpoolFragment7 |  |
-| Spool Upgrade 8 (Upgrade) | 丝之轴碎片8（碎片） | Splits when getting 4 extra Spool Extension (13 base silk) | Spool4 |  |
-| Spool Fragment 9 (Fragment) | 丝之轴碎片9（碎片） | Splits when getting 9th Spool Fragment | SpoolFragment9 |  |
+| Spool Upgrade 10 (Upgrade) | 灵丝轴碎片10（碎片） | Splits when getting 5 extra Spool Extension (14 base silk) | Spool5 |  |
+| Spool Fragment 11 (Fragment) | 灵丝轴碎片11（碎片） | Splits when getting 11th Spool Fragment | SpoolFragment11 |  |
+| Spool Upgrade 12 (Upgrade) | 灵丝轴碎片12（碎片） | Splits when getting 6 extra Spool Extension (15 base silk) | Spool6 |  |
+| Spool Fragment 13 (Fragment) | 灵丝轴碎片13（碎片） | Splits when getting 13th Spool Fragment | SpoolFragment13 |  |
+| Spool Upgrade 14 (Upgrade) | 灵丝轴碎片14（碎片） | Splits when getting 7 extra Spool Extension (16 base silk) | Spool7 |  |
+| Spool Fragment 15 (Fragment) | 灵丝轴碎片15（碎片） | Splits when getting 15th Spool Fragment | SpoolFragment15 |  |
+| Spool Upgrade 16 (Upgrade) | 灵丝轴碎片16（碎片） | Splits when getting 8 extra Spool Extension (17 base silk) | Spool8 |  |
+| Spool Fragment 17 (Fragment) | 灵丝轴碎片17（碎片） | Splits when getting 17th Spool Fragment | SpoolFragment17 |  |
+| Spool Upgrade 18 (Upgrade) | 灵丝轴碎片18（碎片） | Splits when getting 9 extra Spool Extension (18 base silk) | Spool9 |  |
+| Spool Fragment 1 (Fragment) | 灵丝轴碎片1（碎片） | Splits when getting 1st Spool Fragment | SpoolFragment1 |  |
+| Spool Upgrade 2 (Upgrade) | 灵丝轴碎片2（碎片） | Splits when getting 1 extra Spool Extension (10 base silk) | Spool1 |  |
+| Spool Fragment 3 (Fragment) | 灵丝轴碎片3（碎片） | Splits when getting 3rd Spool Fragment | SpoolFragment3 |  |
+| Spool Upgrade 4 (Upgrade) | 灵丝轴碎片4（碎片） | Splits when getting 2 extra Spool Extension (11 base silk) | Spool2 |  |
+| Spool Fragment 5 (Fragment) | 灵丝轴碎片5（碎片） | Splits when getting 5th Spool Fragment | SpoolFragment5 |  |
+| Spool Upgrade 6 (Upgrade) | 灵丝轴碎片6（碎片） | Splits when getting 3 extra Spool Extension (12 base silk) | Spool3 |  |
+| Spool Fragment 7 (Fragment) | 灵丝轴碎片7（碎片） | Splits when getting 7th Spool Fragment | SpoolFragment7 |  |
+| Spool Upgrade 8 (Upgrade) | 灵丝轴碎片8（碎片） | Splits when getting 4 extra Spool Extension (13 base silk) | Spool4 |  |
+| Spool Fragment 9 (Fragment) | 灵丝轴碎片9（碎片） | Splits when getting 9th Spool Fragment | SpoolFragment9 |  |
 | Mask Shard 10 (Fragment) | 面具碎片10（碎片） | Splits when getting 10th Mask Shard | MaskShard10 |  |
 | Mask Shard 11 (Fragment) | 面具碎片11（碎片） | Splits when getting 11th Mask Shard | MaskShard11 |  |
 | Mask Upgrade 12 (Upgrade) | 面具碎片12（碎片） | Splits when getting 3 extra Masks (8 base HP) | Mask3 |  |
@@ -212,10 +232,12 @@ article: false
 | Mask Shard 7 (Fragment) | 面具碎片7（碎片） | Splits when getting 7th Mask Shard | MaskShard7 |  |
 | Mask Upgrade 8 (Upgrade) | 面具碎片8（碎片） | Splits when getting 2 extra Masks (7 base HP) | Mask2 |  |
 | Mask Shard 9 (Fragment) | 面具碎片9（碎片） | Splits when getting 9th Mask Shard | MaskShard9 |  |
+| Witch Crest (Crest) | 巫妪纹章（纹章） | Splits when the Cursed Crest is transformed into the Witch Crest | WitchCrest |  |
 | Architect Crest (Crest) | 建筑师纹章（纹章） | Splits when the Architect Crest is unlocked | ArchitectCrest |  |
 | Reaper Crest (Crest) | 收割者纹章（纹章） | Splits when the Reaper Crest is unlocked | ReaperCrest |  |
 | Wanderer Crest (Crest) | 漫游者纹章（纹章） | Splits when the Wanderer Crest is unlocked | WandererCrest |  |
 | Shaman Crest (Crest) | 萨满纹章（纹章） | Splits when the Shaman Crest is unlocked | ShamanCrest |  |
+| Curse Crest (Crest) | 被寄生（纹章） | Splits when the Curse crest is applied | CurseCrest |  |
 | Beast Crest (Crest) | 野兽纹章（纹章） | Splits when the Beast Crest is unlocked | BeastCrest |  |
 | Main Menu (Menu) | 主菜单（菜单） | Splits on the main menu | Menu |  |
 | Rescued Giant Flea (Flea) | 击败大跳蚤（跳蚤） | Splits after defeating Giant Flea | SavedFleaGiantFlea |  |
