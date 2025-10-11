@@ -37,7 +37,6 @@ article: false
 | Nyleth's Heart (Item) | 尼莱斯之心（道具） | Splits when you obtain Nyleth's Heart | HeartNyleth | CollectedHeartNyleth |
 | Collected WhiteWard Key (Item) | 白愈钥匙（道具） | Splits when you collect the WhiteWard Key | CollectedWhiteWardKey |  |
 | Bone Bottom Simple Key (Item) | 骸底镇简单钥匙（道具） | Splits when buying the Bone Bottom simple key from Pebb | BoneBottomSimpleKey |  |
-| Transition excluding discontinuities (Transition) |  | Splits when entering a transition (excludes discontinuities including save states and deaths) | TransitionExcludingDiscontinuities |  |
 | Voltvyrm (Boss) | 伏特维姆（Boss） | Splits after defeating Voltvyrm | Voltvyrm |  |
 | Conchflies 1 (Boss) | 巨型螺蝇1（Boss） | Splits after defeating Conchflies 1 | Conchflies1 |  |
 | Phantom (Boss) | 幽影（Boss） | Splits when killing Phantom | Phantom |  |
@@ -104,6 +103,7 @@ article: false
 | Silk Spear (Transition) | 丝之矛（切图） | Splits on the transition after obtaining Silk Spear | SilkSpearTrans |  |
 | Sharpdart (Transition) | 丝刃镖（切图） | Splits on the transition after obtaining Sharpdart | SharpdartTrans |  |
 | Any Transition (Transition) | 任意切图（切图） | Splits when entering a transition (only one will split per transition) | AnyTransition |  |
+| Transition excluding discontinuities (Transition) | 任意切图（切图） | Splits when entering a transition (excludes discontinuities including save states and deaths) | TransitionExcludingDiscontinuities |  |
 | Swift Step (Transition) | 冲刺（切图） | Splits on the transition after obtaining Swift Step (Dash/Sprint) | SwiftStepTrans |  |
 | Cross Stitch (Transition) | 十字缝（切图） | Splits on the transition after obtaining Cross Stitch | CrossStitchTrans |  |
 | Witch Crest (Transition) | 巫妪纹章（切图） | Splits when leaving Yarnaby's room after the Witch Crest is obtained | WitchCrestTrans |  |
