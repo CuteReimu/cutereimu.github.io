@@ -74,6 +74,7 @@ export default hopeTheme({
       type: "katex",
     },
 
+    component: true,
     mermaid: true,
 
     highlighter: {
