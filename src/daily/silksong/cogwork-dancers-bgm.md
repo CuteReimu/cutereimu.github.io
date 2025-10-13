@@ -35,7 +35,7 @@ notation: |
   [V:2] C  [Gce]  [Gce]  [Gce] | C [A=Bd] [ABd] [ABd] | C [Gce] [Gce] [Gce] | =B, [FAd] [FAd] [FAd] |
   [V:1] g   B     e     g     | b2)       (b    a/g/  | a  c     f     a     | [c']2    c'    b/=a/) |
   [V:2] _B, [GBe] [GBe] [GBe] | B, [FB_d] [FBd] [FBd] | A, [FAc] [FAc] [FAc] | G, [EGc] [EGc] [EGc]  |
-  [V:1] (b d     g  =b   | [egd'] [egc']/=b/ [egc']  a/f/) | [=Bdfg] z [DFB] z || [Q:1/4=350] !f! [Gg] [Cc] [Dd] [Ee] |
+  [V:1] (b d     g  =b   | [egd'] [egc']/=b/ [egc']  a/f/) | [=Bdfg] z [DFB] z || [Q:1/4=150] !f! [Gg] [Cc] [Dd] [Ee] |
   [V:2] G, [EGB] F, [DG] | E      D          (C/B,/) A,    | G,      z G,    z ||             !mf!C,   [EG] [EG] [EG] | 
   [V:1] [Ff]2    [Ff] [Gg]/[Aa]/ | [Gg] [Cc] [Dd] [Ee] | [Ff]2    [Ff] [Gg]/[Aa]/ | [Gg] [B,B] [Ee] [Gg] |
   [V:2] =B, [DF] [DF] [DF]       | C    [EG] [EG] [EG] | =B, [DF] [DF] [DF]       | B,   [EG]  [EG] [EG] |
