@@ -139,5 +139,11 @@ export default hopeTheme({
     },
 
     photoSwipe: false,
+
+    redirect: {
+      config: {
+        "/daily/hollowknight/ss-tools.html": "/daily/silksong/ss-tools.html",
+      },
+    }
   },
 });
