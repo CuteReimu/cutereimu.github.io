@@ -11,7 +11,7 @@
     "docs:update-package": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
     "abcjs": "^6.5.2",
     "dotenv": "^17.2.1",
     "katex": "^0.16.22",
