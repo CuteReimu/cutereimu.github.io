@@ -7,7 +7,7 @@ category: 音乐
 tags:
   - 音乐
 prev: false
-isArticle: false
+article: false
 head:
   - - script
     - src: https://unpkg.com/abcjs@6.5.2/dist/abcjs-basic-min.js
