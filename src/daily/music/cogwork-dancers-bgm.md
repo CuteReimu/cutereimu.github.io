@@ -6,6 +6,7 @@ date: 2025-10-11
 category: 丝之歌
 tags:
   - 丝之歌
+  - 音乐
 head:
   - - script
     - src: https://unpkg.com/abcjs@6.5.2/dist/abcjs-basic-min.js

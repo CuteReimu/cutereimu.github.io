@@ -6,6 +6,7 @@ date: 2025-10-11
 category: 空洞骑士
 tags:
   - 空洞骑士
+  - 音乐
 head:
   - - script
     - src: https://unpkg.com/abcjs@6.5.2/dist/abcjs-basic-min.js
