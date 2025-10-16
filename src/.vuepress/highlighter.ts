@@ -543,11 +543,52 @@ const vcardHighlighter: LanguageRegistration = {
   }
 };
 
+const abcHighlighter: LanguageRegistration = {
+  name: "abc",
+  scopeName: "text.abcnotation",
+  fileTypes: ["abc"],
+  patterns: [{ // Comments
+    match: "%.*",
+    name: "comment.line"
+    },
+    { // Bar lines
+      match: "[\\[:]*[|:][|\\]:]*(\\[?[0-9]+)?|(\\[[0-9]+)",
+      name: "keyword.operator"
+    },
+    { // Header lines
+      match: "^[A-Za-z]:([^%\\\\]*)",
+      name: "entity.name.function",
+      captures: { 1: { name: "string.unquoted" } }
+    },
+    { // Inline fields
+      match: "\\[([A-Z]:)(.*?)\\]",
+      captures: {
+        1: { name: "entity.name.function" },
+        2: { name: "string.unquoted" }
+      }
+    },
+    { // Notes
+      match: "([\\^=_]*)([A-Ga-gz][,']*)([0-9]*/*[><0-9]*)",
+      captures: {
+        1: { name: "constant.language" },
+        2: { name: "constant.character" },
+        3: { name: "constant.numeric" }
+      }
+    },
+    { // Chord names + other annotations
+      match: "[\\\"!].*?[\\\"!]",
+      name: "string.quoted"
+    }
+  ],
+  repository: {},
+};
+
 const highlighters: LanguageRegistration[] = [
   gitAttributesHighlighter,
   goModHighlighter,
   redisHighlighter,
   vcardHighlighter,
+  abcHighlighter,
 ];
 
 export default highlighters;
