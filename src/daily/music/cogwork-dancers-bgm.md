@@ -1,6 +1,6 @@
 ---
-title: 机枢舞者主题曲
-icon: music
+title: 丝之歌机枢舞者BGM
+icon: /hollow-knight/Hornet.png
 order: -100
 date: 2025-10-11
 category: 丝之歌
