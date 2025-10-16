@@ -45,7 +45,7 @@ notation: |
   [V:1] [bb']2 [fd'f'] [gc'g'] | [fbd'f']2 [ee']/[ff']/[ee']/[dd']/ | [eae'] [dgd'] [eac'] [dbd'] | [Bgb] G/B/ [Ee]/[Gg]/[Ee]/[Cc]/ |
   [V:2] [E,,E,] [GBe]/[GBe]/ [GBe] [GBe] | [B,,B,] [FBd]/[FBd]/ [FBd] [FBd] | [A,,A,] [EAc]/[EAc]/ [EAc] [EAc] | [G,,G,] [B,E]/[B,E]/ [B,E] z |
   [V:1] [Ff] [Gg] [Aa] [cc'] | [ee']2 [d']/[e']//[d']//[c']/[d']/ | [ee'] f/g/a/b/[c']/[d']/ | e' [Gg] [Aa] [Bb] |
-  [V:2] [F,,F,] [A,CF]/[A,CF]/ [A,CF] [A,CF] | [B,,B,] [F,B,D]/[F,B,D]/ [F,B,D] [F,B,D] | [E,,E,] [B,EG]/[B,EG]/ [B,EG] [B,EG] | [B,EG] !<(!z//[E,,]//[B,,]//[E,]// [G,]//[A,]//[B,]//C//D//E//F//G//!<)! |
+  [V:2] [F,,F,] [A,CF]/[A,CF]/ [A,CF] [A,CF] | [B,,B,] [F,B,D]/[F,B,D]/ [F,B,D] [F,B,D] | [E,,E,] [B,EG]/[B,EG]/ [B,EG] [B,EG] | [B,EG] !mp!z//[E,,]//[B,,]//[E,]// [G,]//[A,]//[B,]//C//D//E//F//G// |
   [V:1] [cc'] [gg']2 [ff'] | [=B=b] [gg']2 [ff'] | [Bb] [ff']2 [ee'] | [Bb]3 [Gg] |
   [V:2] !pp! [A,EA] e g z | [A,A] e/f/ g z | [G,EG] e/f/ g z | [^F,E^F] e/f/ ^f z |
   [V:1] [Aa] [ee']2 [dd'] | [cc'] [ee'] [dd'] [ff'] | [Bb]4- | [Bb] [Gg] [Aa] [Bb] |
