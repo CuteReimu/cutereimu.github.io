@@ -1,6 +1,6 @@
 ---
 title: 空洞骑士主题曲
-icon: music
+icon: /hollow-knight/hollow-knight.png
 order: -200
 date: 2025-10-11
 category: 空洞骑士
