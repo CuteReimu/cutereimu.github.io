@@ -59,15 +59,17 @@ def generate_length_prefixed_string(length):
 
 ---
 
-再接下来是使用ECB（Electronic Code Book）模式的AES加密，关于AES加密很复杂，这里就不详细讲解了，各大主流语言都有标准库或第三方库支持AES加密算法，直接调用即可。
+再接下来是加密后的存档内容。
+
+空洞骑士和丝之歌的存档内容本身是可读性非常好的json格式，将其使用ECB（Electronic Code Book）模式的AES加密，关于AES加密很复杂，这里就不详细讲解了，各大主流语言都有标准库或第三方库支持AES加密算法，直接调用即可。
 
 密钥是固定的`UKu52ePUBwetZ9wNX88o54dnfKRu0T1l`，空洞骑士和丝之歌都是这个密钥。
 
 AES加密算法是以每16个字节为一个块，如果总长度不是16的整数倍，就需要进行填充，使最终的总长度变为16的整数倍。这里采用的是pkcs7规则进行填充，这个规则很简单，就是比如还差3个字节才能凑齐16的倍数，就填上3个`"\x03"`，还差4个字节就填上4个`"\x04"`，还差12个字节就填上12个`"\x0C"`，以此类推。对于恰好是16的倍数的情况下，为了避免混淆，就规定这种情况也要进行填充，类似地也填充16个`"\x10"`。
 
-然后把填充好的数据进行ECB模式的AES加密，加密后对其进行base64编码。
+我们把填充好的数据进行ECB模式的AES加密，加密后对其进行base64编码后，填入到固定头和内容长度之后。
 
-我们以Python为例，首先安装依赖：
+关于加密算法，我们以Python为例，首先安装依赖：
 
 ```bash
 pip install pycryptodome
@@ -80,6 +82,7 @@ import base64
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 
+KEY = 'UKu52ePUBwetZ9wNX88o54dnfKRu0T1l'
 cipher = AES.new(KEY, AES.MODE_ECB)
 padded = pad(data, AES.block_size)
 encrypted = cipher.encrypt(padded)
@@ -92,6 +95,6 @@ encoded = base64.b64encode(encrypted)
 
 ---
 
-以上是存档文件加密的算法，将加密算法反过来操作，就是解密算法。
+以上是存档文件加密的算法。想要解密，我们只需要将加密算法反过来操作，去掉固定头、内容长度、固定字符结尾后，用相同的密钥进行解密，就可以得到可读性很好的json格式的存档内容。
 
 我用Python将其进行了实现，放在了[https://github.com/CuteReimu/hollow_user_data](https://github.com/CuteReimu/hollow_user_data)，欢迎自取。
