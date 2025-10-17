@@ -1,5 +1,5 @@
 ---
-title: 扒谱（猜猜是什么歌）
+title: 冒险岛-蘑菇城堡
 icon: music
 order: 2
 category: 音乐
