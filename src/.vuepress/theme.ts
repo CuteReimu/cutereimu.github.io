@@ -143,6 +143,9 @@ export default hopeTheme({
     redirect: {
       config: {
         "/daily/hollowknight/ss-tools.html": "/daily/silksong/ss-tools.html",
+        "/daily/hollowknight/theme-bgm.html": "/daily/music/hollow-knight-theme-bgm.html",
+        "/daily/silksong/cogwork-dancers-bgm.html": "/daily/music/cogwork-dancers-bgm.html",
+        "/daily/music/unknown.html": "/daily/music/maplestory-mushroom-castle.html",
       },
     }
   },
