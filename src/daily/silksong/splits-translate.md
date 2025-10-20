@@ -153,7 +153,7 @@ article: false
 | Lace 1 (Transition) | 蕾丝（切图） | Splits on the transition after defeating Lace 1 in DeepDocks | Lace1Trans |  |
 | Upper Mount Fay (Transition) | 费耶山-上层（切图） | Splits when entering the upper portion of Mount Fay on the right | UpperMountFayTrans |  |
 | Halfway Basement (Transition) | 进入中途酒馆地下室（切图） | Splits after entering the basement in Halfway Home | EnterHalfwayHomeBasement |  |
-| Enter Voltnest (Transition) | 进入伏特巢穴（切图） | Splits when entering the Voltnest subregion | EnterVoltnest |  |
+| Enter Voltnest (Transition) | 进入电荷巢穴（切图） | Splits when entering the Voltnest subregion | EnterVoltnest |  |
 | Enter Whispering Vaults (Transition) | 进入低语书库（切图） | Splits when entering the rooms where the Whispering Vaults area text appears, past the arena or from Songclave | EnterWhisperingVaults |  |
 | Enter Brightvein (Transition) | 进入冰晶脉窟（切图） | Splits when entering the Brightvein sub-area | EnterBrightvein |  |
 | Enter Sands of Karak (Transition) | 进入卡拉卡沙川（切图） | Splits when entering Sands of Karak | EnterSandsOfKarak |  |
