@@ -2,7 +2,7 @@
 title: 开源协议简介
 icon: file
 order: 10
-category: 编程随笔
+category: 编程日记
 tags:
   - 开源协议
 ---
