@@ -8,7 +8,6 @@ tags:
   - 丝之歌
   - Python
 date: 2025-09-25
-article: false
 redirectTo: ../hollowknight/user-data.md
 ---
 

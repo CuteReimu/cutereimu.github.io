@@ -7,6 +7,7 @@ tags:
   - 空洞骑士
   - 丝之歌
   - Python
+article: false
 date: 2025-09-24
 ---
 
@@ -61,7 +62,7 @@ def generate_length_prefixed_string(length):
 
 再接下来是加密后的存档内容。
 
-空洞骑士和丝之歌的存档内容本身是可读性非常好的json格式，将其使用ECB（Electronic Code Book）模式的AES加密，关于AES加密很复杂，这里就不详细讲解了，各大主流语言都有标准库或第三方库支持AES加密算法，直接调用即可。
+空洞骑士和丝之歌的存档内容本身是可读性非常好的json格式，将其使用ECB（Electronic Code Book）模式的AES加密。关于AES加密很复杂，这里就不详细讲解了，各大主流语言都有标准库或第三方库支持AES加密算法，直接调用即可。
 
 密钥是固定的`UKu52ePUBwetZ9wNX88o54dnfKRu0T1l`，空洞骑士和丝之歌都是这个密钥。
 
