@@ -41,21 +41,30 @@ article: false
 | Key of Indolent (Item) | 懒惰之钥（道具） | Splits when you obtain the Indolent slab key | SlabKeyIndolent |  |
 | Collected Whiteward Key (Item) | 白愈钥匙（道具） | Splits when you collect the Whiteward Key | CollectedWhitewardKey | CollectedWhiteWardKey |
 | Bone Bottom Simple Key (Item) | 骸底镇简单钥匙（道具） | Splits when buying the Bone Bottom simple key from Pebb | BoneBottomSimpleKey |  |
+| Nyleth (Boss) | 尼莱斯（Boss) | Splits when Nyleth is defeated | Nyleth |  |
+| Clover Dancers Encountered (Boss) | 三叶草舞者-遭遇（Boss） | Splits when the Clover Dancers boss fight begins for the first time | CloverDancersEncountered |  |
+| Clover Dancers (Boss) | 三叶草舞者（Boss） | Splits when the Clover Dancers boss is defeated | CloverDancers |  |
 | Voltvyrm (Boss) | 伏特维姆（Boss） | Splits after defeating Voltvyrm | Voltvyrm |  |
 | First Sinner Encountered (Boss) | 原罪者-遭遇（Boss） | Splits when the First Sinner boss is activated the first time after binding | FirstSinnerEncountered |  |
 | First Sinner (Boss) | 原罪者（Boss） | Splits when defeating the First Sinner, after the memory sequence | FirstSinner |  |
+| Khann Encountered (Boss) | 壳王卡汗-遭遇（Boss） | Splits when Khann is first met at the top of the Coral Tower memory | KhannEncountered |  |
+| Crust King Khann (Boss) | 壳王卡汗（Boss） | Splits when Crust King Khann is defeated | CrustKingKhann |  |
 | Lost Lace Encountered (Boss) | 失心蕾丝-遭遇（Boss） | Splits when Lost Lace is encountered in the Abyss Cocoon | LostLaceEncountered |  |
 | Lugoli (Boss) | 失格大厨（Boss） | Splits after defeating Lugoli | Lugoli |  |
+| Nyleth Encountered (Boss) | 尼莱斯-遭遇（Boss） | Splits when Nyleth is encountered for the first time | NylethEncountered |  |
 | Great Conchflies (Boss) | 巨型螺蝇（Boss） | Splits after defeating the Great Conchflies (two-enemy encounter) boss | GreatConchflies | Conchflies1 |
 | Phantom (Boss) | 幽影（Boss） | Splits when killing Phantom | Phantom |  |
 | The Unravelled Encountered (Boss) | 散茧魂渊-遭遇（Boss） | Splits when The Unravelled boss first appears | TheUnravelledEncountered |  |
 | The Unravelled (Boss) | 散茧魂渊（Boss） | Splits when The Unravelled is defeated | TheUnravelled |  |
+| Skarrsinger Karmelita (Boss) | 斯卡尔歌后卡梅莉塔（Boss） | Splits when Skarrsinger Karmelita is defeated | SkarrsingerKarmelita |  |
 | Savage Beastfly 2 (Boss) | 暴怒的兽蝇2（Boss） | Splits after completing the Beastfly in Far Fields | SavageBeastfly2 |  |
 | Last Judge (Boss) | 末代裁决者（Boss） | Splits when killing Last Judge | LastJudge |  |
 | Last Judge Encountered (Boss) | 末日裁决者-遭遇（Boss） | Splits after the Last Judge boss fight is first encountered, post-needolin | LastJudgeEncountered |  |
 | Cogwork Dancers Encountered (Boss) | 机枢舞者-遭遇（Boss） | Splits when first encountering the Cogwork Dancers boss | CogworkDancersEncountered |  |
 | Cogwork Dancers (Boss) | 机枢舞者（Boss） | Splits when killing Cogwork Dancers | CogworkDancers |  |
 | Groal (Boss) | 格洛（Boss） | Splits after defeating Groal | Groal |  |
+| Second Sentinel Encountered (Boss) | 次席戍卫-遭遇（Boss） | Splits when the Second Sentinel boss encounter begins the first time | SecondSentinelBossEncountered |  |
+| Second Sentinel (Boss) | 次席戍卫（Boss） | Splits when Second Sentinel is defeated | SecondSentinel |  |
 | Savage Beastfly 1 (Boss) | 残暴的兽蝇1（Boss） | Splits after defeating the Beastfly in the Chapel | SavageBeastfly1 |  |
 | Father of the Flame (Boss) | 炽焰之父（Boss） | Splits when defeating Father of the Flame | FatherOfTheFlame |  |
 | Trobbio (Boss) | 特罗比奥（Boss） | Splits when killing Trobbio | Trobbio |  |
@@ -63,6 +72,7 @@ article: false
 | Forebrothers (Boss) | 监工兄弟（Boss） | Splits after defeating the Forebrothers | Forebrothers |  |
 | Fourth Chorus (Boss) | 第四圣咏团（Boss） | Splits when killing Fourth Chorus | FourthChorus |  |
 | Broodmother (Boss) | 育母（Boss） | Splits after defeating the Broodmother | Broodmother |  |
+| Palestag (Boss) | 苍白苜鹿（Boss） | Splits when the Palestag boss is defeated | Palestag |  |
 | Moss Mother (Boss) | 苔藓之母（Boss） | Splits when killing Moss Mother | MossMother |  |
 | Moorwing (Boss) | 荒沼翼主（Boss） | Splits when killing Moorwing | Moorwing |  |
 | Lace 2 (Boss) | 蕾丝2（Boss） | Splits when defeating Lace 2 in TheCradle | Lace2 |  |
@@ -94,6 +104,7 @@ article: false
 | Sherma Returned (NPC) | 谢尔玛归来（NPC） | Splits when Sherma is rescued and time passes | ShermaReturned |  |
 | Pavo Bellhome Key (NPC) | 钟居钥匙（NPC） | Splits when obtaining Bellhome Key from Pavo | BellhouseKeyConversation |  |
 | Scrounge Relic Sold (Event) | 卖古董（事件） | Splits after selling the first relic to Scrounge | SoldRelic |  |
+| Second Sentinel Awoken (Event) | 唤醒次席戍卫（事件） | Splits when using the Cogheart to activate Second Sentinel | SecondSentinelAwoken |  |
 | Ballow Moved (Event) | 巴洛前往潜钟（事件） | Splits when Ballow moves to the Diving Bell | BallowMoved |  |
 | Jubilana Rescued Choral Chambers (Event) | 救朱比拉娜-圣咏殿（事件） | Splits after saving the Jubilana in Choral Chambers | JubilanaRescuedChoralChambers |  |
 | Jubilana Rescued Memorium (Event) | 救朱比拉娜-忆廊（事件） | Splits after saving the Jubilana in Memorium | JubilanaRescuedMemorium |  |
@@ -119,6 +130,8 @@ article: false
 | Red Memory (Event) | 赤红忆境（事件） | Splits on completing Red Memory | RedMemory | CompletedRedMemory |
 | Caravan Troupe Greymoor (Event) | 跳蚤剧团移动-灰沼（事件） | Splits when the Caravan Troupe moves to Greymoor | CaravanTroupeGreymoor |  |
 | Caravan Troupe Fleatopia (Event) | 跳蚤剧团移动-蚤托邦（事件） | Splits when the Caravan Troupe moves to Fleatopia | CaravanTroupeFleatopia |  |
+| Flea Festival Begin (Event) | 跳蚤庆典开始（事件） | Splits when starting the Flea Festival in Fleatopia | FleaFestivalBegin |  |
+| Flea Festival End (Event) | 跳蚤庆典结束（事件） | Splits when the Flea Festival has ended | FleaFestivalEnd |  |
 | Given Courier's Rasher (Event) | 送货员熏肉交付（事件） | Splits after giving the Courier's Rasher to Loyal Mergwin | GivenCouriersRasher |  |
 | Silk Spear (Transition) | 丝之矛（切图） | Splits on the transition after obtaining Silk Spear | SilkSpearTrans |  |
 | Sharpdart (Transition) | 丝刃镖（切图） | Splits on the transition after obtaining Sharpdart | SharpdartTrans |  |
@@ -153,7 +166,6 @@ article: false
 | Lace 1 (Transition) | 蕾丝（切图） | Splits on the transition after defeating Lace 1 in DeepDocks | Lace1Trans |  |
 | Upper Mount Fay (Transition) | 费耶山-上层（切图） | Splits when entering the upper portion of Mount Fay on the right | UpperMountFayTrans |  |
 | Halfway Basement (Transition) | 进入中途酒馆地下室（切图） | Splits after entering the basement in Halfway Home | EnterHalfwayHomeBasement |  |
-| Enter Voltnest (Transition) | 进入电荷巢穴（切图） | Splits when entering the Voltnest subregion | EnterVoltnest |  |
 | Enter Whispering Vaults (Transition) | 进入低语书库（切图） | Splits when entering the rooms where the Whispering Vaults area text appears, past the arena or from Songclave | EnterWhisperingVaults |  |
 | Enter Brightvein (Transition) | 进入冰晶脉窟（切图） | Splits when entering the Brightvein sub-area | EnterBrightvein |  |
 | Enter Sands of Karak (Transition) | 进入卡拉卡沙川（切图） | Splits when entering Sands of Karak | EnterSandsOfKarak |  |
@@ -168,6 +180,7 @@ article: false
 | Enter Memorium (Transition) | 进入忆廊（切图） | Splits when entering the Memorium | EnterMemorium |  |
 | Enter Last Judge (Transition) | 进入末日裁决者（切图） | Splits when entering the Last Judge boss arena from the Blasted Steps | EnterLastJudge |  |
 | Enter Cogwork Dancers (Transition) | 进入机枢舞者（切图） | Splits when entering the Cogwork Dancers boss arena | EnterCogworkDancers |  |
+| Enter Second Sentinel (Transition) | 进入次席戍卫（切图） | Splits when entering the arena for the Second Sentinel boss fight | EnterSecondSentinel |  |
 | Enter Upper Wormways (Transition) | 进入沙噬虫道上层（切图） | Splits on entering the vertical transition to the upper portion of Wormways (Crawl_03) | EnterUpperWormways |  |
 | Enter Wormways (Transition) | 进入沙噬虫道（切图） | Splits on entering Wormways | EnterWormways |  |
 | Diving Bell Abyss Entry (Transition) | 进入深渊-潜钟（切图） | Splits when the Diving Bell enters the Abyss | DivingBellAbyssTrans |  |
@@ -178,6 +191,7 @@ article: false
 | Hunter's March - Post-Middle Arena (Transition) | 进入猎者小径-中间遭遇战（切图） | Splits on transition to the room after the middle arena in Hunter's March | HuntersMarchPostMiddleArenaTransition |  |
 | Enter Hunter's March (Transition) | 进入猎者小径（切图） | Splits on entering a Hunter's March transition with area text (includes post-Skarrguard room and tall room) | EnterHuntersMarch |  |
 | Enter Shellwood (Transition) | 进入甲木林（切图） | Splits when entering Shellwood | EnterShellwood |  |
+| Enter Voltnest (Transition) | 进入电荷巢穴（切图） | Splits when entering the Voltnest subregion | EnterVoltnest |  |
 | Enter Whiteward (Transition) | 进入白愈厅（切图） | Splits when entering the upper portion of Whiteward from the Choral Chambers | EnterWhiteward |  |
 | Enter The Slab (Transition) | 进入罪石牢狱-正门（切图） | Splits when entering the Slab's front entrance | EnterTheSlab |  |
 | Enter Sinner's Road (Transition) | 进入罪途（切图） | Splits when entering Sinner's Road from Greymoor | EnterSinnersRoad |  |
