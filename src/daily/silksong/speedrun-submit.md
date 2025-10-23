@@ -15,7 +15,7 @@ copy: false
 
 本篇主要介绍 [speedrun.com 上面《丝之歌》游戏](https://www.speedrun.com/zh-CN/silksong)的投稿问题和NMG规则。
 
-丝之歌排行榜的投稿将于2025年10月1日正式开放。
+丝之歌排行榜的投稿于2025年10月1日正式开放。
 
 ::: warning 注意
 
