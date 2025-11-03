@@ -19,6 +19,10 @@ export default hopeTheme({
     email: "cutereimu@vip.qq.com",
   },
 
+  repo: "https://github.com/CuteReimu/cutereimu.github.io",
+  docsBranch: "master",
+  docsDir: "src",
+
   logo: "/CuteReimu.jpg",
   favicon: "/CuteReimu.jpg",
 
@@ -32,7 +36,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "<p>超10年经验的资深游戏服务端工程师，<br/>Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手</p><p>如果您在浏览过程中遇到任何问题，<br/>欢迎通过下方的邮件或 Bilibili 私信联系我</p>",
+    description: "<p>超10年经验的资深游戏服务端工程师，<br/>Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手</p><p>如果您在浏览过程中遇到任何问题，<br/>欢迎通过下方邮件或 Bilibili 私信联系我，<br/>也可以进入本页面的Github仓库提出Issue</p>",
     intro: "/intro.html",
     medias: {
       Email: "mailto:cutereimu@vip.qq.com",
@@ -46,11 +50,11 @@ export default hopeTheme({
     "/": {
       metaLocales: {
         origin: "个人翻译",
+        editLink: "在Github上编辑此页",
       },
     },
   },
 
-  editLink: false,
   lastUpdated: false,
   contributors: false,
   print: false,
