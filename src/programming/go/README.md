@@ -6,7 +6,6 @@ dir:
   order: 2
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: go-version.md
 breadcrumbExclude: true
 ---

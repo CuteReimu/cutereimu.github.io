@@ -6,7 +6,6 @@ dir:
   order: 5
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: redis-blpop.md
 breadcrumbExclude: true
 ---

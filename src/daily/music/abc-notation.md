@@ -13,6 +13,7 @@ head:
     - rel: stylesheet
       type: text/css
       href: https://unpkg.com/abcjs@6.5.2/abcjs-audio.css
+date: 2025-10-16
 ---
 
 本篇主要介绍如何在网页上显示五线谱。这就要用到上个世纪一直延续至今的一种记谱法：**ABC记谱法**。首先我们来看一个例子：

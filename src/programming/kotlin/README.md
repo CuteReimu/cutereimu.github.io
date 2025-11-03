@@ -6,7 +6,6 @@ dir:
   order: 3
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: kotlin_intro.md
 breadcrumbExclude: true
 ---

@@ -7,14 +7,13 @@ category: 空洞骑士
 tags:
   - 空洞骑士
   - 速通
-lastUpdated: true
 ---
 
 本篇主要是科普 [speedrun.com 上面《空洞骑士》游戏](https://www.speedrun.com/zh-CN/hollowknight)的速通分类。
 
 ::: warning 注意
 
-《空洞骑士》的速通榜一直在增加新的榜单，本文不保证永远保持最新，请注意文末的最后修改时间。想要了解最新内容，可以前往 [speedrun.com 的《空洞骑士》板块](https://www.speedrun.com/zh-CN/hollowknight)。
+《空洞骑士》的速通榜一直在增加新的榜单，本文不保证永远保持最新。想要了解最新内容，可以前往 [speedrun.com 的《空洞骑士》板块](https://www.speedrun.com/zh-CN/hollowknight)。
 
 :::
 

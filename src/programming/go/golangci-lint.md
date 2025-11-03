@@ -6,7 +6,7 @@ category: 编程日记
 tags: 
   - Go
 toc: false
-lastUpdated: true
+date: 2025-05-24
 ---
 
 golangci-lint是一个Go语言的代码静态检查工具集，官网是[https://golangci-lint.run/](https://golangci-lint.run/)，它集成了多个流行的linters，可以帮助我们快速发现代码中的潜在问题。
@@ -15,7 +15,7 @@ golangci-lint是一个Go语言的代码静态检查工具集，官网是[https:/
 
 ::: warning 注意
 
-请注意文末的修改时间，以下内容截止`2.1.6`版本。
+以下内容截止golangci-lint的`2.1.6`版本。
 
 :::
 

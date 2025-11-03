@@ -6,7 +6,6 @@ dir:
   order: -3
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: sssplitmaker-faq.md
 breadcrumbExclude: true
 ---

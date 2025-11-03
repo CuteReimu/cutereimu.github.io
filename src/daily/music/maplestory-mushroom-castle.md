@@ -13,6 +13,7 @@ head:
     - rel: stylesheet
       type: text/css
       href: https://unpkg.com/abcjs@6.5.2/abcjs-audio.css
+date: 2025-10-17
 ---
 
 ```component AbcNonation

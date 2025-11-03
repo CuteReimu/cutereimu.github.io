@@ -9,6 +9,7 @@ tags:
   - TypeScript
   - Go
 star: true
+date: 2025-05-20
 ---
 
 一切的一切，要源于《冒险岛Online》在2018年推出的一个小游戏——名侦探甘迪：

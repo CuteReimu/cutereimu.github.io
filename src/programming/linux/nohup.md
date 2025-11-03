@@ -5,6 +5,7 @@ category: 编程日记
 icon: b:linux
 tags:
   - Linux
+date: 2025-05-12
 ---
 
 ## 输出重定向
