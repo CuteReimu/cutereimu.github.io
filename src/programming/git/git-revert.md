@@ -5,6 +5,7 @@ category: 编程日记
 tags:
   - Git
 icon: b:git-alt
+date: 2025-06-24
 ---
 
 在 Git 中，`git revert -m` 命令中的 `-m` 选项（全称 `--mainline`）用于指定撤销合并提交时要保留的主线分支。这个选项**仅在撤销合并提交（merge commit）时**需要用到。

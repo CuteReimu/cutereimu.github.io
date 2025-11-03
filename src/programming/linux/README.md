@@ -6,7 +6,6 @@ dir:
   order: 4
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: nohup.md
 breadcrumbExclude: true
 ---

@@ -7,7 +7,6 @@ category: 丝之歌
 tags:
   - 丝之歌
   - 速通
-lastUpdated: true
 toc: false
 isOriginal: true
 copy: false

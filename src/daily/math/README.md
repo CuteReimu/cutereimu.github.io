@@ -6,7 +6,6 @@ dir:
   order: 1
 article: false
 pageInfo: false
-lastUpdated: false
 redirectTo: rect.md
 breadcrumbExclude: true
 ---
