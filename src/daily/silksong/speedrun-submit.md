@@ -30,58 +30,6 @@ copy: false
 
 [[toc]]
 
-::: info 更新内容
-
-最新的投票更新了一些新的规则限制，包含以下内容：
-- 在NMG规则中：
-  - [缚丝冲刺刷新](#允许的邪道)仍然保持被**允许**；
-  - 从错误的方向击破单向墙是**禁止**的（伟大的格洛skip）
-  - 从错误的方向攻击低语书库的单向箱子是**禁止**的（特罗比奥skip）
-  - 隔墙开开关和隔墙开宝箱仍然保持被**允许**。
-  - The Deep Docks Bridge hazard respawn is now **banned**.
-- 禁止使用宽高比大于 2:1 的超宽屏幕分辨率。
-- 新增了全boss榜单。但其它类型的全boss不单独区分，100%全boss目前是100%的一个子榜单，而钢魂全boss和100%钢魂全boss目前不打算开放新榜单。
-
-
-考虑到规则文档尚未稳定，因此**下文还没有对这些新增的规则进行翻译**。
-
-:::
-
-## 规则决议
-
-<VPPreview title="规则决议">
-<template #code>
-
-```md :no-line-numbers
-- Downpatching to any official release is allowed.
-    - Please note that patches on the `public-beta` branch remain banned - we will only accept official releases once Speedrun.com boards open.
-- We will not be splitting boards by patch at this time.
-    - You may use Speedrun.com's filtering capability with the mandatory Patch variable to see the boards as if they were split by patch.
-    - We may have a board split in the future, but we chose this option so we can gauge runner preferences.
-- Breaks will follow the Hollow Knight ruleset; Runs that enter ||Act 3|| may take 2x 10min breaks in the first 3 hours, and then unlimited breaks afterwards. See the game rules for more information.
-- Float Sprint is banned in No Major Glitches.
-- Bind Dash Refresh is currently allowed in No Major Glitches.
-    - This may be reconsidered once all usages are made clear.
-- We will likely allow starting from an Act1Started autosave once we finalize some of the timing details; for now please continue to start runs normally.
-```
-
-</template>
-<template #content>
-
-- 允许降级至任何官方发布版本。
-  - 请注意，基于`public-beta`的版本仍被禁止———我们只接受官方发布版本。
-- 我们目前不会按游戏补丁版本划分独立的排行榜。
-  - 您可以使用 Speedrun.com 的筛选功能，指定“补丁版本”，来查看特定版本下的排行榜数据。
-    - 未来我们可能会进行版块划分，但当前选择此方案是为了更好地评估玩家们的偏好。
-- 暂停规则将遵循《空洞骑士》的规则体系；任何进入!!第三幕!!的速通，在前三小时内可进行两次10分钟的暂停，三小时之后暂停次数无限制。更多信息请查阅[空洞骑士的中途暂停说明](../hollowknight/speedrun-submit.md#关于中途暂停)。
-- 在NMG规则下，“浮空冲刺”（见下文[禁止的邪道](#禁止的邪道)）被禁止使用。
-- 在NMG规则下，“缚丝冲刺刷新”（见下文[允许的邪道](#允许的邪道)）目前允许使用。
-  - 此决定待其所有应用场景被明确后，可能会被重新评估。
-- 一旦我们最终确定部分计时细节，很可能会允许从`Act1Started`的自动存档点开始速通；但目前请仍以正常方式开始运行。
-
-</template>
-</VPPreview>
-
 ## 速通投稿
 
 速通投稿相关目前参照[空洞骑士速通投稿](../hollowknight/speedrun-submit.md#速通投稿)即可，这里就不再进行翻译了。
@@ -104,8 +52,9 @@ copy: false
 </VPPreview>
 
 还有一些值得一提的内容，我列在这里：
-- 不能使用beta版本
+- 允许降级至任何官方发布版本，但基于`public-beta`的版本仍被禁止
 - 不能安装任何Mod
+- **不能使用屏幕分辨率超过 2:1 的超宽屏，并且你的整个游戏窗口都应当在你的录像中，不能进行裁剪**
 - 一定要用新版的计时器，旧的wasm过图时会在屏幕还未完全变黑的情况下就暂停计时了
 - Judgement（末日裁决者）速通类别**不是以打完末日裁决者作为结束**，而是应当在进入第二幕的过场动画后，弹出“任务目标变更”时结束
 
@@ -150,6 +99,10 @@ Any accidentally performed major glitch that does not save time may be allowed b
 - Bind Dash Refresh
   - Bind -> Buffered Dash. Buffering a dash input allows you to dash even if you have exhausted your midair dash.
   - NB: this will revisited on at a later time, once we understand the extent of its utility.
+- Tool Pogos (Drill/Snare w/ Voltvessels & others)
+  - Throw Voltvessels > Use Delver's Drill above them
+  - Delver's Drill allows you to pogo off your own Voltvessels. You can upslash the Voltvessel before it detonates to reposition it favourably.
+- Lever Skips (including hitting chests through walls)
 ```
     
 </template>
@@ -163,45 +116,35 @@ Any accidentally performed major glitch that does not save time may be allowed b
 - 缚丝冲刺刷新
   - 缚丝 &rarr; 缓冲输入冲刺。通过缓冲输入冲刺指令，即使你在空中已经用过了冲刺，也还能进行空中冲刺。
   - 注意：此技巧的实用性尚待进一步研究，我们将在后续对其重新评估。
+- 工具下劈（掘洞钻/陷阱 + 电枢球，以及其它工具）
+  - 投掷电枢球 &rarr; 在电枢球上方使用掘洞钻
+  - 掘洞钻允许你在自己的电枢球上进行下劈跳跃。你可以在电枢球爆炸前使用上劈攻击电枢球，使其移动到更好的位置
+- 隔墙打开开关（包括隔墙打开宝箱）
 
 </template>
 </VPPreview>
 
 ### 禁止的邪道
 
-<VPPreview title="投票后被禁止的邪道">
+<VPPreview title="禁止的邪道">
 <template #code>
 
-```md :no-line-numbers
+```md :no-line-numbers :no-collapsed-lines
+- Deep Docks Bridge Hazard Respawn
+- Voltvessel One-way Wallbreak @ Bilewater->Ducts shortcut 
+  - The damage from Voltvessels can hit the backside of one-way breakable walls.
+- Fourth Chorus Skip Skip
+  - Hand in Flexile Spines quest -> Press pause immediately after finishing the dialogue
+  - Avoids the hardsave when obtaining Drifter's Cloak, allowing you to save&quit to a bench before Fourth Chorus while keeping Drifter's Cloak.
+- Trobbio Skips
+  - Trobbio Skip - Silkspear Storage
+  - Trobbio Skip - Rune Rage
 - Triple Jump
   - Inputting wings at a specific time after pogoing, dependent on crest, gives 2 wings refreshes instead of one.
   - If accidental, a 2s penalty may be applied instead of rejection.
 - Scuttlebrace Jump Reset
 - Float Sprint
   - Float -> Cancel float & immediately dash. Allows you to airdash without sprint.
-- Volt Vessel Skips
-  - NB: this will be revisited at a later time.
-```
-
-</template>
-<template #content>
-
-- 三段跳
-  - 在下劈后的一个特定时间（取决于不同纹章）使用二段跳，会刷新两次二段跳，下劈本应该只刷新一次二段跳。
-  - 如果无意中触发，不会被直接拒绝，而是给一个2秒的时间惩罚。
-- 舷窗支架跳跃重置
-- 浮空冲刺
-  - 浮空后立即取消浮空，然后冲刺。你就可以在没有获得冲刺的情况下使用冲刺。
-- 电枢球skip
-  - 注意：这个邪道会在将来重新评估。
-
-</template>
-</VPPreview>
-
-<VPPreview title="显然被禁止的邪道">
-<template #code>
-
-```md :no-line-numbers
 - Silkspear Storage
   - Get hit by a 'hard' hazard on a specific frame of the Silkspear animation. Walk (todo: required?) to the block & stand around x=46.00, then cast again. Block gets hit the wrong way.
 - Any glitch that results in going Out of Bounds.
@@ -214,6 +157,22 @@ Any accidentally performed major glitch that does not save time may be allowed b
 </template>
 <template #content>
 
+- Deep Docks Bridge Hazard Respawn（不懂）
+- 电枢球开启单向墙———从腐汁泽到管风琴的捷径
+  - 电枢球的伤害可以击中单向墙的背面
+- 通过以下方式跳过第四咏唱团
+  - 完成披风任务 &rarr; 立即按ESC退出重进
+  - 完成披风任务本应该进行一次自动存档，在自动存档前退出游戏重进，就回到了上一个椅子（如果你没在披风任务处坐椅子）。
+- 特罗比奥skip，这里列举了两种不同的方式
+  - 利用丝之矛存储进行特罗比奥skip（*下文有详细解释*）
+  - 符文怒吼skip
+  - *文档中没有提到护佑钟skip，但已确定在最新的NMG规则禁止使用*
+- 三段跳
+  - 在下劈后的一个特定时间（取决于不同纹章）使用二段跳，会刷新两次二段跳，下劈本应该只刷新一次二段跳。
+  - 如果无意中触发，不会被直接拒绝，而是给一个2秒的时间惩罚。
+- Scuttlebrace Jump Reset（不懂）
+- 浮空冲刺
+  - 浮空后立即取消浮空，然后冲刺。你就可以在没有获得冲刺的情况下使用冲刺。
 - 丝之矛存储（用于特罗比奥skip）
   - 在施展"丝之矛"技能的特定帧数，故意让一个"高伤害"陷阱击中自己。然后行走（待确认：是否必须行走？）至障碍物旁，大致站在 x=46.00 的位置，再次施展技能。此时，障碍物会受到错误方向的攻击判定。
 - 任何导致出界的邪道
