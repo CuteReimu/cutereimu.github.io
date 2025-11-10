@@ -11,7 +11,50 @@ toc: false
 
 [[toc]]
 
+## Go 1.25 新特性
+
+参考[https://go.dev/doc/go1.25](https://go.dev/doc/go1.25)
+
+### 语言的变化
+
+- 泛型的优化：移除了“核心类型”概念，回归类型集本质。
+
+```go :no-line-numbers
+// 从 Go 1.25 开始，以下语法可以编译通过
+type Constraint interface { ~[]byte | ~string }
+func Slice[T Constraint](s T) T {
+    return s[1:3] // 合法：切片操作对 []byte 和 string 均有效
+}
+```
+
+### 工具链与开发体验
+- `go build -asan` 默认开启 CGo 内存泄漏检测，提高安全性。
+- `go.mod` 新增 `ignore` 指令：可忽略部分目录，方便大型多语言仓库管理。
+- `go doc -http` 可直接启动本地文档服务器并自动打开浏览器。
+- `go version -m -json`：以 JSON 格式输出构建信息，更适合自动化分析。
+- 仓库子目录可作为模块根路径，多模块仓库更灵活。
+- `go vet` 新增 `hostport`、`waitgroup` 分析器，提高静态检查能力。
+
+### 标准库
+- 新增 `testing/synctest` 并发测试包，支持虚拟时钟模拟、协程编排。
+- 实验性特性：`encoding/json/v2` ，性能更优，通过环境变量显式启用。
+- 加密、文件系统、网络接口等多项优化。
+- `sync.WaitGroup.Run` 方法，代替原先的 `Add(1)` + `defer Done()` 的写法，简化并发任务管理。
+
+### 运行时与 GC
+
+- `GOMAXPROCS` 将会自动适配容器 CPU 限制，对于容器环境将会更友好，支持动态调整。
+- 实验性特性：`greenteagc` 垃圾回收器，**针对小对象**，大幅度降低 GC 开销。
+- `panic`优化：输出更整洁。
+
+### 编译器和链接器
+
+- DWARF 5 调试信息默认开启，内联和逃逸分析进一步优化，编译更快、体积更小，大型项目尤为显著。
+- 放弃 macOS 的 10.15/11 支持，Windows arm32 将在下个版本终止支持。
+
 ## Go 1.24 新特性
+
+参考[https://go.dev/doc/go1.24](https://go.dev/doc/go1.24)
 
 Go 1.24 没有太多的新特性，因此这里简单提及一些比较值得关注的变化。
 
