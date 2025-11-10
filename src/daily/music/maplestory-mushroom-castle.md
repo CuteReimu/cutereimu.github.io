@@ -23,13 +23,13 @@ notation: |
   L:1/4
   K:Eb
   %%score{ V:1 V:2 }
-  [V:1] !mp! .[Bb] .[Bb]/.[Aa]/ .[Gg] .[Bb] | [ee']3 .[ee'] | .[dd'] {e'd'}.c' .[dd'] .[ee'] | [ee']3 .[ee'] |
+  [V:1] !mp! [Bb] .[Bb]/.[Aa]/ .[Gg] .[Bb] | [ee']3 .[ee'] | [dd'] {e'd'}c' .[dd'] .[ee'] | [ee']3 .[ee'] |
   [V:2] !pp! .[G,B,E] .[G,B,E] .[G,B,E] .[G,B,E] & [E,]4 | .[CEA] .[CEA] .[CEA] .[CEA] & [A,]4 | .[DF] .[DF] .[DF] .[DF] & [B,]4 | .[EG] .[EG] .[EG] .[EG] & C4 |
-  [V:1] .[Bb] .[bb'] .[aa'] .[gg'] | .[ff'] .[ee'] .[dd'] .[cc'] | .[dd'] {e'd'}.c' .[dd'] .[ee'] | [ee']4 |
+  [V:1] [Bb] .[bb'] .[aa'] .[gg'] | [ff'] .[ee'] .[dd'] .[cc'] | [dd'] {e'd'}c' .[dd'] .[ee'] | [ee']4 |
   [V:2] .[B,EG] .[B,EG] .[B,EG] .[B,EG] & [G,]4 | .[CEA] .[CEA] .[CEA] .[CEA] & [A,]4 | .[DF] .[DF] .[DF] .[DF] & [B,]4 | .[G,B,E] .[G,B,E] .[G,B,E] .[G,B,E] & [E,]4 |
-  [V:1] .[Bb] .[Bb]/.[Aa]/ .[Gg] .[Bb] | [e']3 .e' & .e .e/.f/ .g .e | .[dd'] {e'd'}.c' .[dd'] .[ee'] | [e']3 .e' & .e .e/.f/ .g .e |
+  [V:1] [Bb] .[Bb]/.[Aa]/ .[Gg] .[Bb] | [e']3 .e' & e .e/.f/ .g .e | [dd'] {e'd'}.c' .[dd'] .[ee'] | [e']3 .e' & e .e/.f/ .g .e |
   [V:2] .[G,B,E] .[G,B,E] .[G,B,E] .[G,B,E] & [E,]4 |. [CEA] .[CEA] .[CEA] .[CEA] & [A,]4 | .[DF] .[DF] .[DF] .[DF] & [B,]4 | .[EG] .[EG] .[EG] .[EG] & C4 |
-  [V:1] .[Bb] .[bb'] .[aa'] .[ff']/.[gg']/ | .[ff'] .[ee'] .[dd']/.f/ .[cc'] | .[dd'] {e'd'}.c' .[dd'] .[ee'] | .[ae'] .g .f/.b/ z ||
+  [V:1] [Bb] .[bb'] .[aa'] .[ff']/.[gg']/ | [ff'] .[ee'] .[dd']/.f/ .[cc'] | [dd'] {e'd'}c' .[dd'] .[ee'] | [ae'] .g .f/.b/ z ||
   [V:2] .[B,EG] .[B,EG] .[B,EG] .[B,EG] & [G,]4 | .[CEA] .[CEA] .[CEA] .[CEA] & [A,]4 | .[DF] .[DF] .[DF] .[DF] & [B,]4 | .[G,B,E] .[G,B,E] .[G,B,E] B & [E,]4 ||
   [V:1] !f! [e']2 f' g' | [f']2 e' d' | e' d' c' d' | b3 g |
   [V:2] !pp! z [GBe] [GBe] [GBe] & E4 | B, [FBd] [FBd] [FBd] | A, [EAc] [EAc] [EAc] | G, [EGB] [EGB] [EGB] |
