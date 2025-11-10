@@ -34,6 +34,8 @@ require (
 
 replace example.com/thatmodule => ../thatmodule
 
+ignore ./node_modules
+
 exclude example.com/thismodule v1.3.0
 
 retract v1.1.0
@@ -147,6 +149,26 @@ replace example.com/othermodule v1.2.5 => ../othermodule
 ## tool
 
 `tool`是 Go 1.24 引入的一个新特性，用于管理工具。详细用法可以参考[官方文档](https://go.dev/doc/modules/managing-dependencies#tools)。
+
+## ignore
+
+`ignore`可以让所有 Go 命令都忽略指定的目录，这在大型多语言仓库中非常有用。
+
+例如你有一个 NodeJS 和 Go 混合的大型项目，`node_modules`目录下有上千个js的第三方库，Go工具每次都会去遍历，大大拖慢了效率。这时，你就可以使用`ignore`来忽略Go工具对特定目录的遍历。
+
+下面给出一个示例：
+
+```go.mod :no-line-numbers
+ignore ./node_modules
+
+ignore (
+    static
+    content/html
+    ./third_party/javascript
+)
+```
+
+所有指定的目录及其子目录都会被忽略。如果目录是以`./`开头的，则该目录将会相对于项目根目录进行解析。否则，项目中任意位置的该目录及其子目录都会被忽略。
 
 ## exclude
 
