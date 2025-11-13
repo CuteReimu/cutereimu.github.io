@@ -18,9 +18,8 @@ toc: false
 
 ## 降版本方法
 
-1. 按 `Win+R` 打开 `cmd` 窗口
-2. 输入 `steam://open/console` 并确定
-3. 进入 steam 控制台，在下方输入
+1. 按 `Win + R` ，在弹出的窗口中输入 `steam://open/console` 并确定
+2. 进入 steam 控制台，在下方输入
 
 ```bash
 download_depot 1030300 版本补丁号
@@ -32,24 +31,23 @@ download_depot 1030300 版本补丁号
 download_depot 1030300 1030301 3229726349000518284
 ```
 
-4. 回车，等待下载
-5. 完成后在控制台上找到显示的文件地址，并打开
-6. 在 `depot_1030301` 文件夹中创建一个空白文本文件 `steam_appid.txt` ，并写入：
+3. 回车，等待下载
+4. 下载完成后，在 steam 控制台上找到输出的文件路径，在电脑中打开这个路径
+5. 在 `depot_1030301` 文件夹中创建一个空白文本文件 `steam_appid.txt` ，并写入：
 
 ```text title="steam_appid.txt"
 1030300
 ```
 
-7. 在 steam 中找到 `添加非steam游戏`
-8. 浏览
-9. 选中 `depot_103031` 文件夹中带有丝之歌图标的 `Hollow Knight Silksong.exe`
-10. 以上步骤结束后就可以在 steam 里使用旧版本了
+6. 在 steam 中找到 `添加非steam游戏` ，在弹出的窗口中点击 `浏览` 按钮，选中 `depot_103031` 文件夹中带有丝之歌图标的 `Hollow Knight Silksong.exe`
+
+以上步骤结束后就可以在 steam 里使用旧版本了
 
 ## 目前已发布版本
 
 ### 1.0.28324
 
-AKA Release Patch.
+最初的发布版本。
 
 - Windows: `1030301 3229726349000518284`
 - MacOS: `1030302 1365730835793684614`
@@ -87,7 +85,7 @@ AKA Release Patch.
 
 ### 1.0.29242
 
-AKA Latest Patch. This is the currently live version on Steam.
+steam 上最新的发布版本。
 
 - Windows: `1030301 426651197780377263`
 - MacOS: `1030302 2058007571598677908`
