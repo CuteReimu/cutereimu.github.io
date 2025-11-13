@@ -7,7 +7,7 @@ tags:
   - 丝之歌
 article: false
 author:
-  - name: 奇葩の灵梦
+  - name: 奇葩的灵梦
     url: https://cutereimu.cn
   - name: Sunchy321
     url: https://space.bilibili.com/5950607
