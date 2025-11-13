@@ -8,7 +8,7 @@ tags:
 date: 2025-11-13
 article: false
 author:
-  - SclicheD
+  - Green_Yogurt
   - name: hk-speedrunning
     url: https://github.com/hk-speedrunning
   - name: 奇葩的灵梦
