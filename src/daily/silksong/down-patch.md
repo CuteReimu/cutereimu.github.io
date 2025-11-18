@@ -35,7 +35,7 @@ toc: false
 4. 下载完成后，在 steam 控制台上找到输出的文件路径，在电脑中打开这个路径
 5. 在 `depot_1030301` 文件夹中创建一个空白文本文件 `steam_appid.txt` ，并写入：
 
-    ```text title="steam_appid.txt"
+    ```text
     1030300
     ```
 
@@ -45,7 +45,7 @@ toc: false
 
    :::
 
-6. 在 steam 中找到 `添加非steam游戏` ，在弹出的窗口中点击 `浏览` 按钮，选中 `depot_103031` 文件夹中带有丝之歌图标的 `Hollow Knight Silksong.exe`
+6. 在 steam 中找到 `添加非steam游戏` ，在弹出的窗口中点击 `浏览` 按钮，选中 `depot_1030301` 文件夹中带有丝之歌图标的 `Hollow Knight Silksong.exe`
 
 以上步骤结束后就可以在 steam 里使用旧版本了
 
