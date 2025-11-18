@@ -21,23 +21,29 @@ toc: false
 1. 按 `Win + R` ，在弹出的窗口中输入 `steam://open/console` 并确定
 2. 进入 steam 控制台，在下方输入
 
-```bash
-download_depot 1030300 版本补丁号
-```
-
-比如要下载1.0.28324版本，那就输入
-
-```bash
-download_depot 1030300 1030301 3229726349000518284
-```
+    ```bash
+    download_depot 1030300 版本补丁号
+    ```
+    
+    比如要下载1.0.28324版本，那就输入
+    
+    ```bash
+    download_depot 1030300 1030301 3229726349000518284
+    ```
 
 3. 回车，等待下载
 4. 下载完成后，在 steam 控制台上找到输出的文件路径，在电脑中打开这个路径
 5. 在 `depot_1030301` 文件夹中创建一个空白文本文件 `steam_appid.txt` ，并写入：
 
-```text title="steam_appid.txt"
-1030300
-```
+    ```text title="steam_appid.txt"
+    1030300
+    ```
+
+   ::: note 注意
+
+   **编辑完了别忘了保存**
+
+   :::
 
 6. 在 steam 中找到 `添加非steam游戏` ，在弹出的窗口中点击 `浏览` 按钮，选中 `depot_103031` 文件夹中带有丝之歌图标的 `Hollow Knight Silksong.exe`
 
