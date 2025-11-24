@@ -95,3 +95,17 @@ star: true
 在LiveSplit设置中设置了“总在最前”，但游戏全屏了仍然会挡住LiveSplit窗口怎么办？ 
 1. 将游戏切换成窗口模式（按`Alt + Enter`），窗口大小设置为与你的屏幕分辨率相同，就解决了游戏窗口挡住LiveSplit的问题。但窗口会有标题栏和边框，并不美观。
 2. 在 Steam 中找到《空洞骑士》游戏，右键 &rarr; 属性 &rarr; 常规，在启动选项中添加`-popupwindow`。重新启动游戏，会发现窗口的标题栏和边框都消失了。
+
+### LiveSplit每次开启都很慢
+
+在防火墙中设置禁止LiveSplit联网即可。
+
+::: details Windows如何禁止某个应用程序联网？
+
+1. 在控制面板中找到 Windows Defender 防火墙的设置页面，点击`高级设置`。\
+   ![](/hollow-knight/windows-defender-1.png)
+2. 在`出站规则`中，点击`新建规则`。\
+   ![](/hollow-knight/windows-defender-2.png)
+3. 勾选`程序` &rarr; 下一步 &rarr; 选择程序的路径 &rarr; 下一步 &rarr; 勾选`阻止连接` &rarr; 后面一直点下一步即可。
+
+:::
