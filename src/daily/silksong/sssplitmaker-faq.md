@@ -8,8 +8,6 @@ tags:
   - 丝之歌
   - LiveSplit
 date: 2025-09-15
-toc:
-  levels: 2
 ---
 
 ::: info 为什么要使用LiveSplit？
