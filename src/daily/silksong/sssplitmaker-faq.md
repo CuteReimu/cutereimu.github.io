@@ -118,7 +118,7 @@ date: 2025-09-15
 
 ### LiveSplit每次开启都很慢
 
-在防火墙中设置禁止LiveSplit联网即可。
+在防火墙中设置禁止 `LiveSplit.exe` 联网即可。
 
 ::: details Windows如何禁止某个应用程序联网？
 
