@@ -8,7 +8,8 @@ tags:
 date: 2025-11-13
 article: false
 author:
-  - Green_Yogurt
+  - name: Cuber鲫鱼绿奶
+    url: https://space.bilibili.com/360628040
   - name: hk-speedrunning
     url: https://github.com/hk-speedrunning
   - name: 奇葩的灵梦
