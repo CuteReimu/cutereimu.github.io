@@ -36,8 +36,9 @@ copy: false
 
 现在，允许使用 autosave 跳过开场动画。你需要遵循以下操作：
 
-- 将你的第一个节点的触发条件从 `开始新游戏（开始）`（`Start New Game (Start)`）改为`第一幕开始（开始）`（`Act 1 Start (Start)`）。
-- 打开LiveSplit &rarr; 右键 &rarr; Edit Splits &rarr; 将 `Start Timer at:` 从 `0.000` 改为 `21.760` ，如下图所示。
+- 将开始计时的触发条件从 `Start New Game (Start)` 改为 `Act 1 Start (Start)` 。
+  - 译者注：你可以使用计时器生成器打开你原来的板子（.lss文件），把开始计时的触发条件从 `开始新游戏（开始）` 改为 `第一幕开始（开始）`，另存为后，重新用 **LiveSplit** 打开即可。
+- 打开 **LiveSplit** &rarr; 右键 &rarr; Edit Splits &rarr; 将 `Start Timer at:` 从 `0.000` 改为 `21.760` ，如下图所示。
     ![skip-cutscene.png](/hollow-knight/skip-cutscene.png)
 - 后续会考虑在[计时器生成器](sssplitmaker-faq.md)中支持一键设置
 
