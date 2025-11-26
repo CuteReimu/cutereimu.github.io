@@ -30,6 +30,24 @@ copy: false
 
 [[toc]]
 
+## 新规则：允许跳过开场动画
+
+*翻译自速通社区公告*
+
+现在，允许使用 autosave 跳过开场动画。你需要遵循以下操作：
+
+- 将你的第一个节点的触发条件从 `开始新游戏（开始）`（`Start New Game (Start)`）改为`第一幕开始（开始）`（`Act 1 Start (Start)`）。
+- 打开LiveSplit &rarr; 右键 &rarr; Edit Splits &rarr; 将 `Start Timer at:` 从 `0.000` 改为 `21.760` ，如下图所示。
+    ![skip-cutscene.png](/hollow-knight/skip-cutscene.png)
+- 后续会考虑在[计时器生成器](sssplitmaker-faq.md)中支持一键设置
+
+::: note 说明
+
+- 为什么是 `21.760` 这个时间？因为这个就是按照TAS计算可以开始移动的时间（如果你开局向左走）。如果你开局向右走的话，TAS还会在这个基础上快 0.6 秒。
+- 这个规则可能会变动，因为将来可能会禁止使用 autosave ，改为用另外的方案代替。不过，在规则修改之前提交的记录都会保留在排行榜上。
+
+:::
+
 ## 速通投稿
 
 速通投稿相关目前参照[空洞骑士速通投稿](../hollowknight/speedrun-submit.md#速通投稿)即可，这里就不再进行翻译了。
