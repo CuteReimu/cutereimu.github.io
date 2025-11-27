@@ -7,6 +7,11 @@ category: 空洞骑士
 tags:
   - 空洞骑士
   - 速通
+author:
+  - name: 奇葩的灵梦
+    url: https://cutereimu.cn
+  - name: liusyflat_ab
+    url: https://space.bilibili.com/23076479
 ---
 
 本篇主要是科普 [speedrun.com 上面《空洞骑士》游戏](https://www.speedrun.com/zh-CN/hollowknight)的速通分类。
@@ -25,6 +30,14 @@ tags:
 
 :::
 
+::: tip 如何降版本
+
+Steam上下载的空洞骑士默认是最新版本，如果你想要降到1.4.3.2或1.2.2.1，直接对Steam中的空洞骑士右键-属性，选择测试版，再选择想要降到的版本即可。（注意：此方法会覆盖原来的空洞版本，如果想要多版本共存请参考下述降版本教程）
+
+如果你想要降到任意版本，请参考：[::b:bilibili =20 /#FE7398:: Steam降版本教程](https://www.bilibili.com/video/BV1Sv411v7Ho?p=2)
+
+:::
+
 如果你是一个想要入门速通的玩家，没有任何速通经验，打算进行全流程速通，只建议从[Any%](#any)超冲线/黑波线和[全技能](#全技能)旧路线开始入手。当然，如果你喜欢[非流程通关类](#非流程通关类)，例如苦痛之路、万神殿竞速等，也可以根据自己的喜好去尝试。
 
 ## 不同结局通关
@@ -38,26 +51,32 @@ tags:
 如果你喜欢火爆的项目，可以尝试一下。
 
 <VPCard
-title="酸泪线"
+title="CP酸泪线"
 desc="Any%新路线"
 logo="/hollow-knight/hollow-knight.png"
 link="any-isma.md"
 background="rgba(253, 230, 138, 0.15)"
 />
 <VPCard
-title="超冲线"
+title="CP超冲线"
 desc="Any%旧路线"
 logo="/hollow-knight/hollow-knight.png"
 link="any.md"
 background="rgba(253, 230, 138, 0.15)"
 />
 <VPCard
-title="黑波线"
+title="CP黑波线"
 desc="新手入门路线"
 logo="/hollow-knight/hollow-knight.png"
 link="any-shade-soul.md"
 background="rgba(253, 230, 138, 0.15)"
 />
+
+其它参考资料：
+- [::b:bilibili =20 /#FE7398:: 当前版本Any%路线讲解视频](https://www.bilibili.com/video/BV18q4y137jd) 作者：奇葩の灵梦
+- [<VPIcon icon="/tencent-doc.svg" /> 零钉白波路线提要](https://docs.qq.com/doc/DS3piem1sY05wUGRE) 作者：liusyflat_ab
+- [::b:bilibili =20 /#FE7398:: 1.2.2.1版本路线讲解视频](https://www.bilibili.com/video/BV1AL411J72w) 作者：liusyflat_ab
+- [::b:bilibili =20 /#FE7398:: 1.2.2.1版本视频教程](https://www.bilibili.com/video/BV1Sv411v7Ho) 作者：fireb0rn，由岩窟翻译组翻译
 
 ### True Ending
 
@@ -66,6 +85,9 @@ background="rgba(253, 230, 138, 0.15)"
 必须收集1800精华觉醒梦之钉，进入白色宫殿，获取国王之魂的右半部分，拼成国王之魂，并转化为虚空之心，才能触发黑卵战斗中途的大黄蜂加入的剧情，使用梦之钉攻击空洞骑士，进入辐光战斗。
 
 如果你喜欢在黑卵打辐光，可以尝试这个项目。
+
+参考资料：
+- [<VPIcon icon="/tencent-doc.svg" /> 黑波路线提要（1.2.2.1版本适用）](https://docs.qq.com/doc/DS0xhUkxhU2JqVWhl) 作者：liusyflat_ab
 
 ### 神居结局
 
@@ -82,19 +104,23 @@ background="rgba(253, 230, 138, 0.15)"
 如果你想入门速通，可以尝试一下这个项目的旧路线。
 
 <VPCard
-title="新路线"
+title="CP新路线"
 desc="先获取白吼"
 logo="/hollow-knight/hollow-knight.png"
 link="all-skills.md"
 background="rgba(253, 230, 138, 0.15)"
 />
 <VPCard
-title="旧路线"
+title="CP旧路线"
 desc="最适合入门"
 logo="/hollow-knight/hollow-knight.png"
 link="all-skills-old.md"
 background="rgba(253, 230, 138, 0.15)"
 />
+
+其它参考资料：
+- [<VPIcon icon="/tencent-doc.svg" /> 1.2.2.1版本路线提要](https://docs.qq.com/doc/DS0laeFRzRG91dU9P) 作者：liusyflat_ab
+- [::b:bilibili =20 /#FE7398:: 当前版本全技能路线讲解视频](https://www.bilibili.com/video/BV1634y197YA) 作者：奇葩の灵梦
 
 ## Low% 和 钢魂Any%
 
@@ -108,6 +134,10 @@ Low%分为NMG、CP NMG、NMMS、允许任何邪道。由于路线基本一样，
 
 如果你喜欢摸黑深巢，可以选择这两项速通。
 
+参考资料：
+- [<VPIcon icon="/tencent-doc.svg" /> Low%完成度补充说明](https://docs.qq.com/doc/DS0ZIeGpLck9FQklC) 作者：liusyflat_ab
+- [<VPIcon icon="/tencent-doc.svg" /> 1.2.2.1版本Low%路线提要](https://docs.qq.com/doc/DS2hlUGt5Wk5XRXJp) 作者：liusyflat_ab
+
 ## 全完成度类
 
 由于每个DLC都包含了新的完成度，因此全完成度类的速通项目也分为不同版本。由于是固定了版本，因此除100% TE之外都只分为NMG和允许任何邪道。以下是目前的分类：
@@ -118,6 +148,9 @@ Low%分为NMG、CP NMG、NMMS、允许任何邪道。由于路线基本一样，
 - 100% TE：使用1.1.1.8或更早的版本（相比1.2.2.1少了格林剧团DLC，其中包含4%护符完成度和两个格林剧团的Boss），100%完成度，最终在黑卵击败辐光通关。分为NMG、NMMS和允许任何邪道。
 
 如果你喜欢耗时很久的速通项目，可以尝试这些。
+
+参考资料：
+- [<VPIcon icon="/tencent-doc.svg" /> 106% TE黑波路线提要](https://docs.qq.com/sheet/DS0pndWdiR0psUE5v) 作者：liusyflat_ab
 
 ::: note 补充
 
