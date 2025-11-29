@@ -71,8 +71,8 @@ export default hopeTheme({
 
     spoiler: true,
 
+    tabs: true,
     codeTabs: true,
-    preview: true,
 
     math: {
       type: "katex",
