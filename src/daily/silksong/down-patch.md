@@ -52,6 +52,8 @@ toc: false
 
 ## 目前已发布版本
 
+以下内容来自 [::b:github =20 /black:: https://github.com/hk-speedrunning/Silksong-Resources](https://github.com/hk-speedrunning/Silksong-Resources/blob/main/manifests.md)
+
 ### 1.0.28324
 
 最初的发布版本。
