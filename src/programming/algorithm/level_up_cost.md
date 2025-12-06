@@ -1,7 +1,7 @@
 ---
 title: 动态规划计算累计概率问题
 order: 10
-category: 编程文章
+category: 编程日记
 icon: arrow-up-9-1
 tags:
   - 算法
