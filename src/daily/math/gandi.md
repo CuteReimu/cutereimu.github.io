@@ -245,10 +245,50 @@ func main() {
 
 这种策略的预期猜测次数如下图所示：
 
-```xy
-x-axis "猜测次数" [1, 2, 3, 4, 5, 6]
-y-axis "概率（%）" 0 --> 65
-bar [0.20, 1.19, 6.35, 23.81, 59.13, 9.33]
+
+::: chartjs
+
+```json
+{
+  "type": "bar",
+  "data": {
+    "labels": ["1", "2", "3", "4", "5", "6"],
+    "datasets": [
+      {
+        "label": "概率分布（‰）",
+        "data": [0.20, 1.19, 6.35, 23.81, 59.13, 9.33]
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "x": {
+        "title": {
+          "display": true,
+          "text": "猜测次数"
+        },
+        "grid": {
+          "display": false
+        }
+      },
+      "y": {
+        "title": {
+          "display": true,
+          "text": "概率（％）"
+        },
+        "beginAtZero": true,
+        "border": {
+          "display": false
+        }
+      }
+    },
+    "plugins": {
+      "legend": {
+        "display": false
+      }
+    }
+  }
+}
 ```
 
 可以确保在6次之内猜中，大概率在5次之内，数学期望约为4.7次。
