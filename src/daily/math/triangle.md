@@ -4,7 +4,7 @@ icon: shapes
 order: 3
 category: 数学
 tags:
-  - 几何问题
+  - 几何
 date: 2025-02-28
 ---
 
