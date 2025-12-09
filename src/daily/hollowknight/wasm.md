@@ -16,11 +16,9 @@ toc: false
 
 wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者以及本文的原作者为[AlexKnauth](https://github.com/AlexKnauth)，本文中的“我”均指代文章原作者。你可以[点击这里跳转到原文](https://github.com/AlexKnauth/hollowknight-autosplit-wasm/blob/1.5.0/README.md) 。
 
-::: note 注意
+::: warning 注意
 
-如果在Windows电脑速通空洞骑士，还是强烈建议直接使用 LiveSplit，具体参考[我的另一篇文章](hksplitmaker-faq.md)。
-
-不过，目前丝之歌只有wasm版计时器，并且其**尚在开发阶段，难免有很多bug**，使用时应当注意。
+如果在Windows电脑速通空洞骑士和丝之歌，还是强烈建议直接使用 LiveSplit，具体参考[空洞骑士计时器生成器FAQ](hksplitmaker-faq.md)、[丝之歌计时器生成器FAQ](../silksong/sssplitmaker-faq.md)。
 
 :::
 
