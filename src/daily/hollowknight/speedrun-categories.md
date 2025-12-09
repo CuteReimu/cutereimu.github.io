@@ -86,7 +86,7 @@ background="rgba(253, 230, 138, 0.15)"
 
 如果你喜欢在黑卵打辐光，可以尝试这个项目。
 
-参考资料：
+其它参考资料：
 - [<VPIcon icon="/tencent-doc.svg" /> 黑波路线提要（1.2.2.1版本适用）](https://docs.qq.com/doc/DS0xhUkxhU2JqVWhl) 作者：liusyflat_ab
 
 ### 神居结局
@@ -134,7 +134,7 @@ Low%分为NMG、CP NMG、NMMS、允许任何邪道。由于路线基本一样，
 
 如果你喜欢摸黑深巢，可以选择这两项速通。
 
-参考资料：
+其它参考资料：
 - [<VPIcon icon="/tencent-doc.svg" /> Low%完成度补充说明](https://docs.qq.com/doc/DS0ZIeGpLck9FQklC) 作者：liusyflat_ab
 - [<VPIcon icon="/tencent-doc.svg" /> 1.2.2.1版本Low%路线提要](https://docs.qq.com/doc/DS2hlUGt5Wk5XRXJp) 作者：liusyflat_ab
 
@@ -149,7 +149,7 @@ Low%分为NMG、CP NMG、NMMS、允许任何邪道。由于路线基本一样，
 
 如果你喜欢耗时很久的速通项目，可以尝试这些。
 
-参考资料：
+其它参考资料：
 - [<VPIcon icon="/tencent-doc.svg" /> 106% TE黑波路线提要](https://docs.qq.com/sheet/DS0pndWdiR0psUE5v) 作者：liusyflat_ab
 
 ::: note 补充
