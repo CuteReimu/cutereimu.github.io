@@ -44,7 +44,7 @@ copy: false
 
 同时你需要对计时器做出以下改动：
 
-::: note 译者注
+::: info 译者注
 
 以下步骤已经集成入[计时器生成器](sssplitmaker-faq.md)（v1.17.0版本开始）中，你可以使用[计时器生成器](sssplitmaker-faq.md)打开你原来的板子（.lss文件），勾选`跳过开局动画`后，另存为，重新用 **LiveSplit** 打开即可。
 
@@ -54,7 +54,7 @@ copy: false
 - 打开 **LiveSplit** &rarr; 右键 &rarr; Edit Splits &rarr; 将 `Start Timer at:` 从 `0.000` 改为 `21.760` ，如下图所示。\
     ![skip-cutscene.png](/hollow-knight/skip-cutscene.png)
 
-::: info 说明
+::: note 说明
 
 - 为什么是 `21.760` 这个时间？因为这个就是按照TAS计算可以开始移动的时间（如果你开局向左走）。如果你开局向右走的话，TAS还会在这个基础上快 0.6 秒（但按照目前规则，即使你开局向右走你也必须填 `21.760` 这个时间）。
 - 这个规则可能会变动，因为将来可能会禁止使用回档功能，改为用另外的方案代替。不过，在规则修改之前提交的记录都会保留在排行榜上。
