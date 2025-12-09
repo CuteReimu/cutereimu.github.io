@@ -6,7 +6,7 @@ tags:
   - 前端
   - Vue
   - NodeJS
-  - Javascript
+  - JavaScript
   - Go
 icon: window-restore
 date: 2025-04-24
