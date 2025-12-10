@@ -152,7 +152,7 @@ replace example.com/othermodule v1.2.5 => ../othermodule
 
 ## ignore
 
-`ignore`可以让所有 Go 命令都忽略指定的目录，这在大型多语言仓库中非常有用。
+`ignore`是 Go 1.25 引入的一个新特性，可以让所有 Go 命令都忽略指定的目录，这在大型多语言仓库中非常有用。
 
 例如你有一个 NodeJS 和 Go 混合的大型项目，`node_modules`目录下有上千个js的第三方库，Go工具每次都会去遍历，大大拖慢了效率。这时，你就可以使用`ignore`来忽略Go工具对特定目录的遍历。
 
