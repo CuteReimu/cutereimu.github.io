@@ -7,7 +7,6 @@ category: 丝之歌
 tags:
   - 丝之歌
   - 速通
-toc: false
 isOriginal: true
 copy: false
 ---
@@ -27,8 +26,6 @@ copy: false
 :::
 
 <!-- more -->
-
-[[toc]]
 
 ## 新规则：允许跳过开场动画
 
