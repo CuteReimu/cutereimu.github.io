@@ -11,7 +11,6 @@ tags:
   - 速通
 date: 2023-06-15
 lastUpdate: true
-toc: false
 ---
 
 wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者以及本文的原作者为[AlexKnauth](https://github.com/AlexKnauth)，本文中的“我”均指代文章原作者。你可以[点击这里跳转到原文](https://github.com/AlexKnauth/hollowknight-autosplit-wasm/blob/1.5.0/README.md) 。
@@ -23,8 +22,6 @@ wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者�
 :::
 
 你可以前往[空洞骑士wasm版计时器的Github下载页](https://github.com/AlexKnauth/hollowknight-autosplit-wasm/releases/latest)、[丝之歌wasm版计时器的Github下载页](https://github.com/AlexKnauth/silksong-autosplit-wasm/releases/latest)下载 `.wasm` 文件。保存好这个 `.wasm` 文件，在下文中会被使用。
-
-[[toc]]
 
 ## LiveSplit Windows 版使用说明
 
