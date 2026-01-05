@@ -57,8 +57,8 @@ notation: |
   [V:2] [A,CA] e z e | z [Ace] [Ace] [Ace] & F4 | D B f F | B, F G/B/ z |
   [V:1] [cc'] [gg']2 [ff'] | [=B=b] [gg']2 [ff'] | [Bb] [ff']2 [ee'] | [Bb] b' a' [Gg] |
   [V:2] [A,EA] e g z | [A,A] e/f/ g z | [G,EG] e/f/ g z | [^F,E^F] e/f/ ^f z |
-  [V:1] [Aa] [ee']2 [dd'] | [cc'] [ee'] [dd'] [ff'] | [Bb]4- | [Bb] [Gg] [Aa] [Bb] |
-  [V:2] [F,CF]4 | [B,FB]4 | [E,,B,,E,] [G,B,E] [G,B,E] [G,B,E]/G/ | z [G,B,_D] [G,B,_D] [G,B,_D] & E3 E |
+  [V:1] [Aa] [ee'] a [dd'] | [cc'] [ee'] [dd'] [ff'] | [Bb]4- | [Bb] [eg] [fa] [gb] |
+  [V:2] [F,CF]4 | [B,FB]4 | [E,B,E]2 [A,A] F | [B,B] [B,_DEG] [B,DEG] [B,DEG] |
   [V:1] [cc'] [gg']2 [ff'] | [=B=b] [gg']2 [ff'] | [bb'] [gg']2 [ff'] | [ee']3 [ee'] |
   [V:2] [A,EA] e g z | [A,A] e/f/ g z | [G,EG] e/f/ g z | [^F,E^F] e/f/ ^f z |
   [V:1] [bb']2 [aa']2- | [aa'] [gg'] [aa'] [bb']- | [bb']4 | B2 .E/.F/.G/.A/ ||
