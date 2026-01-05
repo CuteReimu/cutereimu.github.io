@@ -36,12 +36,11 @@ V:1 treble
 V:2 bass octave=-1
 [L:1/8] !mf! .D.A.d.A .C.A.d.A | .B,.G.A.G .D.A.c.A | .G.A.d.A .A.e.A.D | (FDEF GFED) |
 .G.[_Bde] G2 .G.[deg] G2 | (FAce gf^d=B) | (GB=dB) [ce]3 .G | (FAce) (Bfaf) |
-M:6/4
 L:1/4
 V:1 treble
-=c' g/a/ a z z2 |
+=c' g/a/ a z |
 V:2 bass octave=0
-(A,/=C/E/A/) [DF] z z2 |
+(A,/=C/E/A/) [DF] z |
 ```
 
 对应以下这个曲谱：
@@ -65,12 +64,11 @@ notation: |
   V:2 bass octave=-1
   [L:1/8] !mf! .D.A.d.A .C.A.d.A | .B,.G.A.G .D.A.c.A | .G.A.d.A .A.e.A.D | (FDEF GFED) |
   .G.[_Bde] G2 .G.[deg] G2 | (FAce gf^d=B) | (GB=dB) [ce]3 .G | (FAce) (Bfaf) |
-  M:6/4
   L:1/4
   V:1 treble
-  =c' g/a/ a z z2 |
+  =c' g/a/ a z |
   V:2 bass octave=0
-  (A,/=C/E/A/) [DF] z z2 |
+  (A,/=C/E/A/) [DF] z |
 ```
 
 我们后续会花一些篇幅来详细介绍**ABC记谱法**。
