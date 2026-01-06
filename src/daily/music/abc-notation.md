@@ -19,7 +19,7 @@ date: 2025-10-16
 本篇主要介绍如何在网页上显示五线谱。这就要用到上个世纪一直延续至今的一种记谱法：**ABC记谱法**。首先我们来看一个例子：
 
 ```abc :no-line-numbers :no-collapsed-lines
-Q:1/4=140
+Q:1/4=105
 M:4/4
 L:1/4
 K:D
@@ -36,7 +36,7 @@ V:2
 
 ```component AbcNonation
 notation: |
-  Q:1/4=140
+  Q:1/4=105
   M:4/4
   L:1/4
   K:D
