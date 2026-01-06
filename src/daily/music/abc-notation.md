@@ -29,18 +29,7 @@ V:1
 .B .a (c3/2 e///d///c///B///) | (A e !<(!^d3/2) e//f//!<)! | !mf! .Lg3/2 (g//f//) .=d .e | .d z z2 |
 V:2
 !p! A .D [Ac] .D | [DGA] .A, [DF] .A, [K:bass] | E, .[B,E] A, ([EA]/.A,/) | .D, .D, .E, .F, |
-.G, .[DG] G, ([EA]/.G,/) | F, ([CE]/.F,/) ([B,A]/^D/ .F) | .L[F,G,B,=D] z .[A,CE] .[A,EG] | .[D,F,A,D] .A,, .D,,/(A,,/G,,/A,,/) | 
-V:1 treble
-.d .a .e .a | (g3/2 (3f//e//)d// .f .A | .G .f .c/.d/.e/.c/ | .A z/ ([DF]/ !<(![EG] [FA])!<)! |
-!mf! (G _B/d/) (e f/g/) | (a/g/f/A/ =c/d//c// =B) | (g d/e/ [_Bf] g | [cda] f [dfd'] a) |
-V:2 bass octave=-1
-[L:1/8] !mf! .D.A.d.A .C.A.d.A | .B,.G.A.G .D.A.c.A | .G.A.d.A .A.e.A.D | (FDEF GFED) |
-.G.[_Bde] G2 .G.[deg] G2 | (FAce gf^d=B) | (GB=dB) [ce]3 .G | (FAce) (Bfaf) |
-L:1/4
-V:1 treble
-=c' g/a/ a z |
-V:2 bass octave=0
-(A,/=C/E/A/) [DF] z |
+.G, .[DG] G, ([EA]/.G,/) | F, ([CE]/.F,/) ([B,A]/^D/ .F) | .L[F,G,B,=D] z .[A,CE] .[A,EG] | .[D,F,A,D] .A,, .D,, z | 
 ```
 
 对应以下这个曲谱：
@@ -57,18 +46,7 @@ notation: |
   .B .a (c3/2 e///d///c///B///) | (A e !<(!^d3/2) e//f//!<)! | !mf! .Lg3/2 (g//f//) .=d .e | .d z z2 |
   V:2
   !p! A .D [Ac] .D | [DGA] .A, [DF] .A, [K:bass] | E, .[B,E] A, ([EA]/.A,/) | .D, .D, .E, .F, |
-  .G, .[DG] G, ([EA]/.G,/) | F, ([CE]/.F,/) ([B,A]/^D/ .F) | .L[F,G,B,=D] z .[A,CE] .[A,EG] | .[D,F,A,D] .A,, .D,,/(A,,/G,,/A,,/) | 
-  V:1 treble
-  .d .a .e .a | (g3/2 (3f//e//)d// .f .A | .G .f .c/.d/.e/.c/ | .A z/ ([DF]/ !<(![EG] [FA])!<)! |
-  !mf! (G _B/d/) (e f/g/) | (a/g/f/A/ =c/d//c// =B) | (g d/e/ [_Bf] g | [cda] f [dfd'] a) |
-  V:2 bass octave=-1
-  [L:1/8] !mf! .D.A.d.A .C.A.d.A | .B,.G.A.G .D.A.c.A | .G.A.d.A .A.e.A.D | (FDEF GFED) |
-  .G.[_Bde] G2 .G.[deg] G2 | (FAce gf^d=B) | (GB=dB) [ce]3 .G | (FAce) (Bfaf) |
-  L:1/4
-  V:1 treble
-  =c' g/a/ a z |
-  V:2 bass octave=0
-  (A,/=C/E/A/) [DF] z |
+  .G, .[DG] G, ([EA]/.G,/) | F, ([CE]/.F,/) ([B,A]/^D/ .F) | .L[F,G,B,=D] z .[A,CE] .[A,EG] | .[D,F,A,D] .A,, .D,, z | 
 ```
 
 我们后续会花一些篇幅来详细介绍**ABC记谱法**。
