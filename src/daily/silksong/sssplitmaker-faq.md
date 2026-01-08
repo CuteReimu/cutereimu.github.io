@@ -119,7 +119,7 @@ date: 2025-09-15
 1. 首先在**LiveSplit**中加载好你的计时板子，然后右键**LiveSplit** &rarr; Edit Splits
 2. 在弹出的窗口里点击 Settings 按钮
 3. 在弹出的窗口中，确保已经勾选上了 Hit Counter（受击次数计数器）
-4. 剩下的步骤参考上文的[如何显示完成度](#如何在liveSplit上显示丝之歌的完成度)，其中第4步的 Custom Variable Name 改为填上 `hits` 即可
+4. 剩下的步骤参考上文的[如何显示完成度](#如何在livesplit上显示丝之歌的完成度)，其中第4步的 Custom Variable Name 改为填上 `hits` 即可
 
 ### 计时器不生效
 
