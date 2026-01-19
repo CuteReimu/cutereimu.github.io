@@ -9,7 +9,7 @@ tags:
   - LiveSplit
 ---
 
-本文主要收录了一些LiveSplit在使用过程中为了美化计时器所涉及的常见问题。有关于计时器怎么用、怎么生成、怎么自动计时等基础问题，请参考[空洞骑士计时器生成器FAQ](../hollowknight/hksplitmaker-faq.md)和[丝之歌计时器生成器FAQ](sssplitmaker-faq.md)。
+本文主要收录了一些LiveSplit在使用过程中一些常见的进阶问题。有关于计时器怎么用、怎么自动计时等基础问题，请参考[空洞骑士计时器生成器FAQ](../hollowknight/hksplitmaker-faq.md)和[丝之歌计时器生成器FAQ](sssplitmaker-faq.md)。
 
 ## 如何设置对比目标
 
@@ -19,7 +19,7 @@ tags:
    - Real Time：全程计时
 - 对比目标：
    - Personal Best：和个人PB对比
-   - Best Segments：和各分段最佳对比（各分段最佳加起来就是SOB：sum of best）
+   - Best Segments：和各分段最佳对比（注：各分段最佳加起来就是SOB：sum of best）
    - Average Segments：和各分段平均值对比
 
 ## 如何在LiveSplit上显示丝之歌完成度和受击次数
@@ -28,12 +28,12 @@ tags:
 1. 打开**LiveSplit** &rarr; 右键 &rarr; Edit Layout
 2. 点击加号 &rarr; Information &rarr; Text ，这将会增加一个 Text 组件
 3. 根据你的喜好调整组件的顺序
-4. 双击 Text ，打开它的设置界面，勾选 Custom Variable ，在 Custom Variable Name 中填上 `percent` 就可以显示完成度，填上 `hits` 就可以显示受击次数。如果你想同时显示完成度和受击次数，可以新建两个 Text 组件。
+4. 双击 Text ，打开它的设置界面，勾选 Custom Variable ，在 Custom Variable Name 中填上 `percent` 就可以显示完成度，填上 `hits` 就可以显示受击次数。如果你想同时显示完成度和受击次数，可以增加两个 Text 组件
 5. 一切设置完成后，按`OK`按钮关闭界面，右键**LiveSplit** &rarr; Save Layout 保存你的设置
 
 值得一提的是，完成度并不是绝对地实时更新，只会在特定的时候（例如SL、游戏中触发某个事件）才会更新。
 
-默认情况下，计时插件的完成度计数功能是开启的，而**受击次数并没有默认开启**，你需要手动在插件设置中开启它，方法如下：
+计时插件的完成度统计是默认开启的，而**受击次数计数并没有默认开启**，你需要手动在插件设置中开启它，方法如下：
 1. 首先在**LiveSplit**中加载好你的计时板子，然后右键**LiveSplit** &rarr; Edit Splits
 2. 在弹出的窗口里点击 Settings 按钮
 3. 在弹出的窗口中，确保已经勾选上了 Hit Counter（受击次数计数器）
