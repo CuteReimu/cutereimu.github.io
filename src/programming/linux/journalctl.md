@@ -21,7 +21,9 @@ sudo journalctl
 
 ## 查看指定服务的日志（最常用）
 
-这是排查某个服务问题时最核心的命令。
+我们知道，服务是通过 systemd 管理的，而 systemd 的配置文件放置于 `/usr/lib/systemd/system/` 或 `/etc/systemd/system/` 目录内。配置好服务后，只需要执行 `systemctl start <服务名>` 等命令，就可以对服务进行一系列操作（例如启动、停止等）。
+
+如果我们要查看某一个服务的日志，可以使用 `journalctl` 的 `-u` 参数来指定服务名。
 
 ```bash :no-line-numbers
 # 基本语法
