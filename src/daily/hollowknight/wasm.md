@@ -13,7 +13,7 @@ date: 2023-06-15
 lastUpdate: true
 ---
 
-wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者以及本文的原作者为[AlexKnauth](https://github.com/AlexKnauth)，本文中的“我”均指代文章原作者。你可以[点击这里跳转到原文](https://github.com/AlexKnauth/hollowknight-autosplit-wasm/blob/1.5.0/README.md) 。
+wasm版计时器支持Windows、Mac、Linux等多个平台运行，其开发者以及本文的原作者为[AlexKnauth](https://github.com/AlexKnauth)，本文中的“我”均指代文章原作者。你可以[点击这里跳转到原文](https://github.com/AlexKnauth/hollowknight-autosplit-wasm/blob/master/README.md) 。
 
 ::: warning 注意
 
