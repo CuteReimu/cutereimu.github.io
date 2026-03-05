@@ -44,8 +44,8 @@ func main() {
 
 使用`-race`参数运行时，就会输出类似以下的错误信息：
 
-```ansi :collapsed-lines=12 :no-line-numbers
-[31m==================
+``` :collapsed-lines=12 :no-line-numbers
+==================
 WARNING: DATA RACE
 Write at 0x00c000090000 by goroutine 8:
   runtime.mapassign_fast32()
@@ -67,7 +67,7 @@ Goroutine 5 (running) created at:
   main.main()
       /root/MyTest/main.go:14 +0x34
 ==================
-fatal error: concurrent map writes[0m
+fatal error: concurrent map writes
 ```
 
 可以通过修改`GORACE`环境变量来控制数据竞争检测的行为，例如：

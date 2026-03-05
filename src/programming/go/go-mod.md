@@ -49,12 +49,12 @@ retract v1.1.0
 
 在上面的例子中，是这样定义的：`module example.com/mymodule`。假设其下有一个目录`foo`：
 
-```ansi :no-line-numbers
+```console :no-line-numbers
 $ tree .
 .
 ├── go.mod
 ├── go.sum
-└── [34mfoo[0m
+└── foo
     └── bar.go
 ```
 
