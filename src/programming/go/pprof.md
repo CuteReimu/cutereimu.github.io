@@ -65,7 +65,7 @@ go tool pprof -http=0.0.0.0:8848 http://localhost:6060/debug/pprof/profile?secon
 
 可视化需要一些图形库，例如`graphviz`，如果没有安装，访问`http://localhost:8848`时会报错：
 
-```
+```console
 Failed to execute dot. Is Graphviz installed?
 exec: "dot": executable file not found in $PATH
 ```
@@ -78,12 +78,13 @@ exec: "dot": executable file not found in $PATH
 
 在执行上述命令后，会有提示：
 
-```
+```console
+// [!code word:path/to/file]
 Fetching profile over HTTP from http://localhost:6060/debug/pprof/profile?seconds=30
 Saved profile in path/to/file
 ```
 
-注意红字部分，这个`path/to/file`是保存的文件路径。下次你可以直接使用这个文件，查看当时的性能数据，不再需要重新拉取了：
+注意，这个`path/to/file`是保存的文件路径。下次你可以直接使用这个文件，查看当时的性能数据，不再需要重新拉取了：
 
 ```bash
 go tool pprof -http=0.0.0.0:8848 path/to/file

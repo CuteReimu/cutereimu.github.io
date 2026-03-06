@@ -44,7 +44,7 @@ func main() {
 
 使用`-race`参数运行时，就会输出类似以下的错误信息：
 
-``` :collapsed-lines=12 :no-line-numbers
+```console :collapsed-lines=12 :no-line-numbers
 ==================
 WARNING: DATA RACE
 Write at 0x00c000090000 by goroutine 8:
