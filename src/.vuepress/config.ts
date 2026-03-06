@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
+import { markdownFileTreePlugin } from "@vuepress/plugin-markdown-file-tree";
 
 import theme from "./theme.js";
 
@@ -16,4 +17,6 @@ export default defineUserConfig({
   description: "超10年经验的资深游戏服务端工程师，Go / Java / Kotlin / Erlang / C++ / Python / TypeScript / Vue 苦手",
 
   theme,
+
+  plugins: [markdownFileTreePlugin()],
 });

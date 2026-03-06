@@ -34,7 +34,7 @@ date: 2025-08-10
 
 那么，对于这样的需求，我们应当怎么实现呢？Java也提供了一个合适的方案：
 
-```java {4,6-10,17}
+```java {4,6-10,17} title="Main.java"
 public class Main {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
@@ -66,7 +66,7 @@ public class Main {
 
 对于上文中的这个例子，我们使用Go语言来实现就是这样的：
 
-```go {9-13,15-19,25}
+```go {9-13,15-19,25} title="main.go"
 package main
 
 import "context"

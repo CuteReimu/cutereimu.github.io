@@ -49,14 +49,13 @@ retract v1.1.0
 
 在上面的例子中，是这样定义的：`module example.com/mymodule`。假设其下有一个目录`foo`：
 
-```console :no-line-numbers
-$ tree .
-.
-├── go.mod
-├── go.sum
-└── foo
-    └── bar.go
-```
+::: file-tree
+- example.go
+- go.mod
+- go.sum
+- foo
+  - bar.go
+:::
 
 我们想要导入该包，应该使用这样的路径：
 
