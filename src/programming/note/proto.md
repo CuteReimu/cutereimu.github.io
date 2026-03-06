@@ -69,7 +69,7 @@ console.log(a[1].name)
 
 当然，你也可以针对自己的业务逻辑自创一个序列化方式，例如金融行业非常喜欢使用的类FIX报文格式：
 
-``` :no-line-numbers
+```text :no-line-numbers
 |id|name|age|
 |1|Alice|30|
 |2|Bob|25|
