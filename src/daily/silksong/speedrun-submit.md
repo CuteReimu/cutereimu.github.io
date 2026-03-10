@@ -140,9 +140,11 @@ Any accidentally performed major glitch that does not save time may be allowed b
   - 缚丝 &rarr; 缓冲输入冲刺。通过缓冲输入冲刺指令，即使你在空中已经用过了冲刺，也还能进行空中冲刺。
   - 注意：此技巧的实用性尚待进一步研究，我们将在后续对其重新评估。
 - 工具下劈（掘洞钻/陷阱 + 电枢球，以及其它工具）
+  - Including Pin Pogos (_excluding_ pogoing infinitely spinning pins)（不懂）
   - 投掷电枢球 &rarr; 在电枢球上方使用掘洞钻
   - 掘洞钻允许你在自己的电枢球上进行下劈跳跃。你可以在电枢球爆炸前使用上劈攻击电枢球，使其移动到更好的位置
 - 隔墙打开开关（包括隔墙打开宝箱）
+- Queued Walljump Interrupts, including when Queued Walljump Interrupt Storage is incidentally gained.（不懂）
 
 @tab 英文原文
 
@@ -155,9 +157,11 @@ Any accidentally performed major glitch that does not save time may be allowed b
     - Bind -> Buffered Dash. Buffering a dash input allows you to dash even if you have exhausted your midair dash.
     - NB: this will revisited on at a later time, once we understand the extent of its utility.
 - Tool Pogos (Drill/Snare w/ Voltvessels & others)
+    - Including Pin Pogos (_excluding_ pogoing infinitely spinning pins)
     - Throw Voltvessels > Use Delver's Drill above them
     - Delver's Drill allows you to pogo off your own Voltvessels. You can upslash the Voltvessel before it detonates to reposition it favourably.
 - Lever Skips (including hitting chests through walls)
+- Queued Walljump Interrupts, including when Queued Walljump Interrupt Storage is incidentally gained.
 
 :::
 
@@ -167,6 +171,7 @@ Any accidentally performed major glitch that does not save time may be allowed b
 
 @tab 个人翻译
 
+- Queued Walljump Interrupt Storage（不懂）
 - Deep Docks Bridge Hazard Respawn（不懂）
 - 电枢球开启单向墙———从腐汁泽到管风琴的捷径
   - 电枢球的伤害可以击中单向墙的背面
@@ -193,6 +198,9 @@ Any accidentally performed major glitch that does not save time may be allowed b
 
 @tab 英文原文
 
+- Queued Walljump Interrupt Storage, when either:
+  - The storage is prolonged through other movement, such as sprint or clawline.
+  - The stored interrupt activates on NonSlider geometry.
 - Deep Docks Bridge Hazard Respawn
 - Voltvessel One-way Wallbreak @ Bilewater->Ducts shortcut
     - The damage from Voltvessels can hit the backside of one-way breakable walls.
