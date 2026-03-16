@@ -52,7 +52,7 @@ func algo[A Adder[A]](x, y A) A {
 
 ### 工具链与开发体验
 
-- `go fix` 工具重新设计，集成了数十个代码现代化修复器，支持`//go:fix inline`指令进行源码级内联。
+- [`go fix` 工具，用以优化代码](go-fix.md)。
 - `go mod init` 默认使用更低的 Go 版本：版本`1.N.X`会创建`go 1.(N-1).0`的`go.mod`。
 - `pprof` 的 Web UI（`-http`模式）默认展示火焰图视图。
 
