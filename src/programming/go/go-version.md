@@ -6,10 +6,91 @@ category: 编程文章
 tags: 
   - Go
 date: 2024-05-21
-toc: false
+toc:
+  levels: 2
 ---
 
-[[toc]]
+## Go 1.26 新特性
+
+参考[https://go.dev/doc/go1.26](https://go.dev/doc/go1.26)
+
+### 语言的变化
+
+::: details `new`函数增强
+
+`new`函数现在可以接受一个表达式来指定初始值。这在序列化包（如`encoding/json`和`protobuf`）中处理指针字段时尤为实用。
+
+```go :no-line-numbers
+type Person struct {
+    Name string `json:"name"`
+    Age  *int   `json:"age"`
+}
+
+p := Person{
+    Name: "Alice",
+    Age:  new(30), // 以前需要先声明一个变量再取地址
+}
+```
+
+:::
+
+::: details 自引用泛型类型
+
+泛型类型现在可以在其类型参数列表中引用自身：
+
+```go :no-line-numbers
+type Adder[A Adder[A]] interface {
+    Add(A) A
+}
+
+func algo[A Adder[A]](x, y A) A {
+    return x.Add(y)
+}
+```
+
+:::
+
+### 工具链与开发体验
+
+- `go fix` 工具重新设计，集成了数十个代码现代化修复器，支持`//go:fix inline`指令进行源码级内联。
+- `go mod init` 默认使用更低的 Go 版本：版本`1.N.X`会创建`go 1.(N-1).0`的`go.mod`。
+- `pprof` 的 Web UI（`-http`模式）默认展示火焰图视图。
+
+### 运行时与 GC
+
+- `greenteagc` 垃圾回收器现在默认开启（Go 1.25 中还是实验性特性），在实际程序中可减少 10%~40% 的 GC 开销，在较新的 amd64 CPU 上额外改进约 10%。可通过`GOEXPERIMENT=nogreenteagc`关闭。
+- cgo 调用的基线运行时开销降低约 30%。
+- 64 位平台启动时随机化堆基地址，增强安全性。可通过`GOEXPERIMENT=norandomizedheapbase64`关闭。
+- 实验性特性：`goroutineleak` profile，可检测泄漏的 goroutine，通过`GOEXPERIMENT=goroutineleakprofile`启用。
+
+### 编译器和链接器
+
+- 编译器现在可以将更多的切片后备存储分配到栈上，提升性能。
+- 64 位 ARM Windows 上的链接器支持 cgo 程序的内部链接模式。
+- 移除了 32 位`windows/arm`端口；`linux/riscv64`现在支持竞态检测器。
+
+### 标准库
+
+::: details 新增`crypto/hpke`包
+实现了混合公钥加密（RFC 9180），支持后量子混合密钥封装。
+:::
+
+::: details 实验性特性：`simd/archsimd`包
+通过`GOEXPERIMENT=simd`启用，提供架构特定的 SIMD 操作，目前支持 amd64 平台上的 128 位、256 位、512 位向量运算。
+:::
+
+::: details 其它库的变化
+- `errors`包新增泛型函数`AsType()`
+- `io.ReadAll()`性能约提升 2 倍，内存占用减少一半
+- `bytes.Buffer`新增`Peek()`方法
+- `reflect`包新增迭代器方法：`Fields()`、`Methods()`、`Ins()`、`Outs()`
+- `log/slog`新增`NewMultiHandler()`
+- `net`包的`Dialer`新增`DialIP`、`DialTCP`、`DialUDP`、`DialUnix`方法
+- `testing`新增`ArtifactDir()`方法和`-artifacts`命令行参数
+- TLS 默认启用后量子混合密钥交换（`SecP256r1MLKEM768`、`SecP384r1MLKEM1024`）
+- 加密模块中的随机参数现在始终使用安全源，忽略自定义随机源
+- 还有一些影响不大的变化，就不一一列举了
+:::
 
 ## Go 1.25 新特性
 
@@ -79,7 +160,7 @@ type set[P comparable] = map[P]bool
 
 Go 1.23 版本中，将 Go 1.22 中的关于“函数迭代器”的实验性功能正式发布。
 
-```go :collapsed-lines=2
+```go :no-line-numbers :collapsed-lines=2
 func Range0To10(func(int) bool) {
     for i := 0; i < 10; i++ {
         if !cb(i) {
