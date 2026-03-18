@@ -19,9 +19,23 @@ toc: false
 
 它们在模式匹配方式、性能和易用性上有显著区别。接下来我们会分别介绍。
 
+我们将以这个仓库[https://github.com/CuteReimu/fengsheng-doc](https://github.com/CuteReimu/fengsheng-doc)为例进行介绍，其目录结构如下：
+
+::: file-tree
+- .github/
+- docs
+  - .vuepress/
+  - document/
+  - README.md
+- .gitignore
+- LICENSE
+- README.md
+- …
+:::
+
 ### 锥形模式（Cone Mode）
 
-我们以这个仓库[https://github.com/CuteReimu/fengsheng-doc.git](https://github.com/CuteReimu/fengsheng-doc.git)为例，介绍如何只检出其中的`docs/document`目录：
+先介绍如何只检出其中的`docs/document`目录：
 
 ::: code-tabs#1
 
