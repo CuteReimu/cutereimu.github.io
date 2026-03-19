@@ -26,5 +26,11 @@ article: false
 
 peekawoo! 大佬表示，此 Mod 只是做了简单的测试，希望大家在使用前多多测试。此 Mod 只支持在 Windows 系统使用。
 
+::: warning 注意
+
+公告发布于2025年底，以下`Assembly-CSharp.dll`文件也取于当时。由于本文不一定会持续更新，不排除以下文件可能会过时。
+
+:::
+
 [::file:: 对应游戏1.4.3.2版本的`Assembly-CSharp.dll`](/dl/assembly1432/Assembly-CSharp.dll)\
 [::file:: 对应游戏1.5.7.8版本的`Assembly-CSharp.dll`](/dl/assembly1578/Assembly-CSharp.dll)
