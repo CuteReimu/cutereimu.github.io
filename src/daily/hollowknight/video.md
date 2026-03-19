@@ -41,6 +41,6 @@ article: false
 
 ### 空洞骑士杂谈
 
-- [2021-08-30 【空洞骑士】112%完成度包含哪些（17万播放）](https://www.bilibili.com/video/BV1Cy4y1G7Yy)
-- [2021-09-15 纯粹萌新都能学会的空洞骑士流程BOSS攻略（持续更新中）](https://www.bilibili.com/video/BV1oM4y1G7LW)
+- [2021-08-30 【空洞骑士】112%完成度包含哪些（近30万播放）](https://www.bilibili.com/video/BV1Cy4y1G7Yy)
+- [2021-09-15 纯粹萌新都能学会的空洞骑士流程BOSS攻略](https://www.bilibili.com/video/BV1oM4y1G7LW)
 - [2021-10-27 来看看空洞新版本的丝滑设置吧](https://www.bilibili.com/video/BV1JF411a7o2)
