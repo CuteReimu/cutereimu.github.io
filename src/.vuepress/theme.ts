@@ -85,6 +85,9 @@ export default hopeTheme({
 
     highlighter: {
       type: "shiki",
+      langAlias: {
+        "claude": "bash",
+      },
       langs,
       collapsedLines: 28,
       lineNumbers: 10,
