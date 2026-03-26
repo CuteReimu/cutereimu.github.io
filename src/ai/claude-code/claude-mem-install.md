@@ -6,7 +6,7 @@ category: AI
 tags:
   - AI
   - Claude Code
-order: 3
+order: 2
 toc: false
 ---
 
