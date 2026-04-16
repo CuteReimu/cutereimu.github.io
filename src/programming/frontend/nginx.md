@@ -199,6 +199,27 @@ http {
 }
 ```
 
+::: tip 举个例子
+
+我们以腾讯云为例，申请好证书后，下载 Nginx 版证书，会得到一个`xxxxxx.com_nginx.zip`压缩包，然后执行以下步骤：
+
+```bash :no-line-numbers
+# 放入上述nginx配置中指定的路径
+mv xxxxxx.com_nginx.zip /etc/nginx/ssl/
+cd /etc/nginx/ssl/
+
+# 解压缩，参数 -j 表示所有文件都解压到当前目录下，不保留原有的目录结构，参数 -o 表示强制覆盖同名文件
+unzip -jo xxxxxx.com_nginx.zip
+
+# 确认无误后删除压缩包
+rm -f xxxxxx.com_nginx.zip
+
+# 将解压得到的文件的权限设置为600
+chmod 600 *
+```
+
+:::
+
 如果需要将 HTTP 自动跳转到 HTTPS，可以加一个 80 端口的重定向：
 
 ```nginx :no-line-numbers
