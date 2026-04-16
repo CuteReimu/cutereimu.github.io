@@ -204,7 +204,7 @@ http {
 我们以腾讯云为例，申请好证书后，下载 Nginx 版证书，会得到一个`xxxxxx.com_nginx.zip`压缩包，然后执行以下步骤：
 
 ```bash :no-line-numbers
-# 放入上述nginx配置中指定的路径
+# 放入上述 Nginx 配置中指定的路径
 mv xxxxxx.com_nginx.zip /etc/nginx/ssl/
 cd /etc/nginx/ssl/
 
@@ -216,6 +216,9 @@ rm -f xxxxxx.com_nginx.zip
 
 # 将解压得到的文件的权限设置为600
 chmod 600 *
+
+# 重新加载 Nginx 配置
+nginx -s reload
 ```
 
 :::
