@@ -65,6 +65,7 @@ export default hopeTheme({
   copyright: '© 2025 奇葩的灵梦 | 基于 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a> 共享',
 
   markdown: {
+    layout: true,
     chartjs: true,
 
     sup: true,
