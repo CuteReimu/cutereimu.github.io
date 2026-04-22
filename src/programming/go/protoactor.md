@@ -52,7 +52,7 @@ func (ctx *actorContext) defaultReceive() {
 
 我们比较常用的停止Actor的方法就是`Poison`，也就是通知Actor停止。这个`Poison`其实就是往队列里发一个消息，它是这个框架预定义的一个消息类型，叫做`PoisonPill`，属于`UserMessage`。当处理到`PoisonPill`消息时，会调用`Stop`方法，这个方法会发一条`Stop`消息，这个`Stop`消息属于`SystemMessage`，所以它会被“插队”到前面去处理。
 
-然后接下来就有个问题，按照正常的逻辑，`Stop`执行的时候应该就已经停止了，不能再继续处理`UserMessage`队列剩余的消息了。protoactor-go的实现是，不走`run`轮询了，直接调用上面所说的**`InvokeUserMessage`**，传入一个`Stopping`消息，供用户处理。我们来看一下源码：
+然后接下来就有个问题，按照正常的逻辑，`Stop`执行的时候应该就已经停止了，不能再继续处理`UserMessage`队列剩余的消息了。protoactor-go的实现是，**不走`run`轮询了，直接调用上面所说的`InvokeUserMessage`，传入一个`*Stopping`消息供用户处理**。我们来看一下源码：
 
 ```go {20}
 // 这个 InvokeSystemMessage 方式用来处理 SystemMessage 队列里的消息
@@ -108,8 +108,45 @@ func (ctx *actorContext) finalizeStop() {
 }
 ```
 
-可以看到，**它再次不走`run`轮询，直接调用`InvokeUserMessage`，传入一个`Stopped`消息供用户处理**，之后又将状态改成`stateStopped`。我们再回顾一下上面的第一个代码段开头，`InvokeUserMessage`方法里有个检查状态的逻辑，如果状态是`stateStopped`，就直接返回了，不会继续处理了。
+可以看到，**它再次不走`run`轮询，直接调用`InvokeUserMessage`，传入一个`*Stopped`消息供用户处理**，之后又将状态改成`stateStopped`。我们再回顾一下上面的第一个代码段开头，`InvokeUserMessage`方法里有个检查状态的逻辑，如果状态是`stateStopped`，就直接返回了，不会继续处理了。
 
-总结一下就是，在protoactor-go中，处理到`PoisonPill`消息的时候，就会依次把`Stopping`和`Stopped`消息直接传入用户实现的 `Receive` 方法去处理了，接下来不会再继续处理`UserMessage`队列里剩余的消息了。
+总结一下就是：
+1. 当我们`Poison`了这个Actor时，会往`UserMessage`队列里发一个`PoisonPill`消息。此时Actor还未真正停止，还在持续接收新的消息。
+2. 轮询处理到`PoisonPill`消息的时候，会修改Actor状态，并依次把`*Stopping`和`*Stopped`消息直接调用用户实现的 `Receive` 方法去处理。
+3. 因为处理完上一步后，Actor状态已经标记为`stateStopped`，因此接下来不会再继续处理`UserMessage`队列里剩余的消息了。
 
-听起来似乎很正确，但这会引发另一个问题。对于同步请求，我们会调用`RequestFuture`方法，它依赖于我们在`Receive`方法里调用`Respond`方法来回复消息，如果没有调用`Respond`方法，那么这个请求就会一直等待下去，直到超时了才会返回错误。但根据我们上述分析，如果中途`Poison`了这个Actor，比`Poison`消息晚进入队列的消息，此时还未标记为`stateStopped`，所以判断不是`deadletter`。但根据上面的分析，这些消息实际上不会被处理，也就是永远不会调用`Respond`方法，所以这些消息就会一直等待下去，直到超时了才会返回错误。
+听起来似乎很正确，但这会引发另一个问题。对于同步请求，我们会调用`RequestFuture`方法，它依赖于我们在`Receive`方法里调用`Respond`方法来回复消息，如下：
+
+```go :line-numbers
+func (myActor *MyActor) Receive(ctx actor.Context) {
+    switch msg := ctx.Message().(type) {
+    case *SomeRequstMessage:
+        result := doSth(msg) // 处理请求得到结果
+        ctx.Respond(result) // 这里调用 Respond 方法回复消息
+    }
+}
+```
+
+如果没有调用`Respond`方法，那么这个请求就会一直等待下去，直到超时了才会返回错误。但根据我们上述分析，如果中途`Poison`了这个Actor，比`Poison`消息晚进入队列的消息，此时还未标记为`stateStopped`，所以判断不是`deadletter`。但根据上面的分析，这些消息实际上不会被处理，也就是永远不会调用`Respond`方法，所以这些消息就会一直等待下去，直到超时了才会返回错误。
+
+那么这个问题有办法解决吗？有一个方案，就是使用`Send`方法发送异步消息，利用Go语言的`chan`来自己实现等待操作，不用`RequestFuture`方法了，例如：
+
+```go
+func RequestSync(myActor *actor.PID, msg interface{}) error {
+    m := &ActorMessage{
+		Msg:  msg,
+		Done: make(chan interface{}, 1),
+	}
+    actorSystem.Root.Send(myActor.pid, m)
+    select {
+    case <-m.Done:
+        return nil
+    case <-time.After(5 * time.Second):
+        return actor.ErrTimeout
+    case <-myActor.stopping:
+        return actor.ErrDeadLetter
+    }
+}
+```
+
+我们把`m.Done`一并传进去，在`Receive`处理完后，把结果从`m.Done`这个`chan`里发回调用方即可。对于`Poison`了这个Actor的情况，直接在`Receive`处理`*Stopping`消息时，直接`close(myActor.stopping)`关掉`chan`，这样调用方就能知道这个Actor已经停止了，不会再继续等待了。这就完美利用了`select`语句的特性。此外，由于往`m.Done`中写内容和`close(myActor.stopping)`都是在`Receive`方法中，一定有先后顺序，不可能并行，因此也不会有时序性问题。
