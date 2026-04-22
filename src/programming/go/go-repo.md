@@ -32,7 +32,7 @@ date: 2025-05-30
 
 - [**davyxu/cellnet**](https://github.com/davyxu/cellnet)相比较而言，这并不是一个比较知名的库，可靠性和稳定性可能有缺陷，并且年久失修。但其作者是国内的，并且项目的文档主要是中文文档，非常简单易用。如果对项目的稳定性要求并不是特别高，仅仅是想快速搭建一个 TCP/UDP/WebSocket/HTTP 服务器的话，可以考虑使用这个库。我针对这个库还开发了一些[扩展](https://github.com/CuteReimu/cellnet-plus)，使其支持KCP，以及不同格式的TCP、UDP包。
 
-- [**protoactor**](https://proto.actor/)是一个基于 Actor 模型的 Go 服务端框架，提供了高性能的并发处理能力。它的设计灵感来自 Erlang 的 Actor 模型，适合用于构建分布式系统和微服务架构。对于我这种有 Erlang 基础的开发者来说，Actor 模型的编程模型非常熟悉，使用起来也非常顺手。protoactor 是跨语言的，支持 Go 和 C#，并且支持多节点。尽管目前只是预发布版本，不排除接口会有变动，但稳定性和可靠性还是不错的。
+- [**protoactor**](https://proto.actor/)是一个基于 Actor 模型的 Go 服务端框架，提供了高性能的并发处理能力。它的设计灵感来自 Erlang 的 Actor 模型，适合用于构建分布式系统和微服务架构。对于我这种有 Erlang 基础的开发者来说，Actor 模型的编程模型非常熟悉，使用起来也非常顺手。protoactor 是跨语言的，支持 Go 和 C#，并且支持多节点。尽管目前只是预发布版本，不排除接口会有变动，但稳定性和可靠性还是不错的。但它在用作 User Actor 时，涉及到 Actor 过期和再次创建的时序问题时有一些问题，可以参考我的[另一篇文章](protoactor.md)。
 
 **数据库**
 
