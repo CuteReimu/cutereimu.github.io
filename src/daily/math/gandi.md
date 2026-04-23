@@ -291,7 +291,11 @@ func main() {
 }
 ```
 
+:::
+
 可以确保在6次之内猜中，大概率在5次之内，数学期望约为4.7次。
+
+完整的代码实现可以参考这里：[https://github.com/CuteReimu/maple-bingo](https://github.com/CuteReimu/maple-bingo)
 
 ## 拓展问题
 
