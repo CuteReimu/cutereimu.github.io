@@ -4,7 +4,7 @@ layout: Blog
 icon: house
 title: 主页
 heroText: 奇葩的灵梦
-tagline: "<div style='text-align:center;line-height:1.2;'>When the sun is gone,</div><div style='text-align:center;line-height:1.2;'>prepare to watch the stars shine upon.</div>"
+tagline: "<div style='text-align:center;line-height:1.2;'>修行以行制性，悟者以性施行</div><div style='text-align:center;line-height:1.2;'>觉者由心生律，修者以律制心</div>"
 heroImage: /CuteReimu.jpg
 bgImage: /cover.jpg
 breadcrumbExclude: true
