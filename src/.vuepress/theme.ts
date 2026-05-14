@@ -76,6 +76,7 @@ export default hopeTheme({
 
     tabs: true,
     codeTabs: true,
+    tasklist: true,
 
     math: {
       type: "katex",
