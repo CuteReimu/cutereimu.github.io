@@ -14,7 +14,7 @@
     "@vuepress/bundler-vite": "^2.0.0-rc.28",
     "@vuepress/plugin-markdown-file-tree": "^2.0.0-rc.128",
     "chart.js": "^4.5.1",
-    "dotenv": "^17.4.1",
+    "dotenv": "^17.4.2",
     "katex": "^0.16.45",
     "mermaid": "^11.14.0",
     "sass-embedded": "^1.99.0",
