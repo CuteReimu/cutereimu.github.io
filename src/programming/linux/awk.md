@@ -133,8 +133,8 @@ ls -l *.txt | awk '{sum+=$5} END {print sum}'
 
 ### 打印乘法表
 
-```console
-$ seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR, i*NR, i==NR?"\n":"\t")}'
+```bash
+seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR, i*NR, i==NR?"\n":"\t")}'
 ```
 
 输出：
