@@ -95,11 +95,46 @@ Starting runs from the new-game wakeup autosave is now legal, provided you are u
 
 还有一些值得一提的内容，我列在这里：
 - 允许降级至任何官方发布版本，但基于`public-beta`的版本仍被禁止
-- 暂停规则将遵循《空洞骑士》的规则体系；任何进入第三幕的速通，在前三小时内可进行两次10分钟的暂停，三小时之后暂停次数无限制。更多信息请查阅[空洞骑士的中途暂停说明](../hollowknight/speedrun-submit.md#关于中途暂停)
 - 不能安装任何Mod
 - **不能使用屏幕分辨率超过 2:1 的超宽屏，并且你的整个游戏窗口都应当在你的录像中，不能进行裁剪**
 - 一定要用新版的计时器，旧的wasm过图时会在屏幕还未完全变黑的情况下就暂停计时了
 - Judgement（末日裁决者）速通类别**不是以打完末日裁决者作为结束**，而是应当在进入第二幕的过场动画后，弹出“任务目标变更”时结束
+
+## 中途暂停
+
+::: tabs
+
+@tab 个人翻译
+
+- 首次连续游戏30分钟后，可休息10分钟
+- 之后每满1小时速通时长，可额外休息10分钟
+- 休息时间可叠加使用（例如连续游戏1小时后可休息20分钟）
+- 游戏时长超过3小时后，仍可享有合理范围内的无限次休息权
+- 所有休息时段**必须**在速通录像简介中标注时间节点
+
+必须遵循以下规则：
+
+- 只能在存档选择菜单进行暂停：
+  - 当进入存档选择菜单时暂停，选择一个存档开始游戏时取消暂停。
+- 如果不遵守暂停规则，可能导致审核不通过。
+- 暂停期间屏幕全程必须保持在存档选择菜单，切屏会导致审核不通过。
+
+@tab 英文原文
+
+- After your first 30 minutes of gameplay, you may take a 10 minute break.
+- Additionally, for every hour of run length, you may take a 10 minute break.
+- Breaks may be combined; for example, taking a 20 minute break after playing for 1 hour.
+- Unlimited (within reason) breaks after 3 hours.
+- Breaks **must** be timestamped in the description of your run.
+
+Breaks must be taken as follows:
+
+- Breaks must be taken on the File Select screen on the menu:
+  - The timer should pause upon opening the file select menu, and continue after loading into your selected your file.
+- Verifiers may reject your run if they determine it to be abusing the break system.
+- The recording must be left on the file select screen - switching to a different scene will result in a rejection.
+
+:::
 
 ## 关于NMG
 
