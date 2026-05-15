@@ -171,7 +171,7 @@ speedrun.com 官方提供了 [Speedrun API](https://github.com/speedruncomorg/ap
 完整的地址如下：\
 [https://www.speedrun.com/api/v1/leaderboards/y65r7g81/category/zd39j4nd?var-ylq4yvzn=qzne828q&var-rn1kmmvl=10vzvmol&embed=players&top=5](https://www.speedrun.com/api/v1/leaderboards/y65r7g81/category/zd39j4nd?var-ylq4yvzn=qzne828q&var-rn1kmmvl=10vzvmol&embed=players&top=5)
 
-得到的数据自行解析即可，这里就不花篇幅讲解了。下面给一个代码示例，可以参考。
+得到的数据自行解析即可，这里就不花篇幅讲解了。下面给一个代码示例，仅供参考。（示例中的有些分类后续可能被速通社区修改，因此这些地址不一定永远正确，使用时请注意）
 
 ```python
 import requests
