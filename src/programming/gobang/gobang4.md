@@ -51,7 +51,7 @@ for ( int i = 0; i < Constant.MAX_LEN; i++ ) {
 
 既然有“算杀”，自然也有“防杀”：
 
-```java :collapsed-lines=12
+```java :line-numbers
 for ( int i = 0; i < Constant.MAX_LEN; i++ ) {
     for ( int j = 0; j < Constant.MAX_LEN; j++ ) {
         // if ( 下完这步棋之后，对方算杀，结果找到了一种杀招 ) {
@@ -93,7 +93,7 @@ for ( int i = 0; i < Constant.MAX_LEN; i++ ) {
 
 首先我们需要将每个格子赋值一个随机数，黑子和白子都需要分别赋值一个随机数：
 
-```java
+```java :line-numbers
 int hash_value = random.nextInt();
 int[][] white_hash = new int[Constant.MAX_LEN][Constant.MAX_LEN];
 int[][] black_hash = new int[Constant.MAX_LEN][Constant.MAX_LEN];
@@ -107,7 +107,7 @@ for (int i = 0; i < Constant.MAX_LEN; i++) {
 
 每下一步棋，我执行一次下面的操作：
 
-```java
+```java :line-numbers
 if (whose_turn == Constant.BLACK)
     hash_value ^= black_hash[x][y];
 else

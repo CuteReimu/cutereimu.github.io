@@ -52,7 +52,7 @@ classDiagram
 
 其中，棋盘是一个`Object`，存放当前的棋局情况，通知每个`Player`“轮到你下棋了”、“对方下了什么棋”、“游戏结束，XXX获胜”等消息，并且从每个`Player`那里获取他下了什么棋。两个`Player`分别是人类玩家和AI。`Player`的基类应该是一个`interface`，里面只有三个方法。人类玩家和AI是它的子类，分别实现这三个方法。
 
-```java title="Player.java"
+```java title="Player.java" :line-numbers
 public interface Player {
    Point play();
    void display(Point p);
@@ -85,7 +85,7 @@ public final class Point {
 
 接下来就是我们的棋盘：
 
-```java title="Constant.java"
+```java title="Constant.java" :line-numbers
 public abstract class Constant {
    public static int MAX_LEN = 15;
 }

@@ -250,7 +250,7 @@ flowchart TD
 
 推广到连续考虑N步棋，我们可以得到这样的代码：
 
-```java title="PointAndValue.java"
+```java title="PointAndValue.java" :line-numbers
 // 因为下面的算法需要返回这一步棋下在哪里，以及对应这个下法的分数，我就封装了这样一个类
 public class PointAndValue {
    public final Point point;
