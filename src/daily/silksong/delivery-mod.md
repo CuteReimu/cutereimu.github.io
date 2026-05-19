@@ -23,6 +23,6 @@ author:
 该 Mod 不可与 BepInEx 共存，所以如果需要同时使用 Debug Mod 进行练习，建议自行安装两个不同版本的丝之歌，一个用于安装 Debug Mod 进行练习，另一个用于安装此 Mod 进行速通。
 
 具体步骤：
-1. [点击这里下载【快递补丁beta.zip】](/dl/快递补丁beta.zip)，然后将其解压
+1. <a href="/dl/快递补丁beta.zip" download>点击这里下载::file-zipper::快递补丁beta.zip</a>，然后将其解压
 2. 在 Steam 中右键丝之歌 &rarr; 管理 &rarr; 浏览本地文件，打开游戏目录。将上述解压后的文件拖进游戏根目录，然后启动游戏，之后你会看到左上角显示 speedpatchV0.10
 3. 回到游戏的文件夹找到`hksr_patches.json`然后把`CourierRNGFix`改成`true`

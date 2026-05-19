@@ -23,8 +23,8 @@ article: false
 考虑到劈魂上蓝湖对于普通玩家也有点难度，本路线依据是否劈魂上蓝湖分为两个不同的分支，其中不劈魂上蓝湖的路线不需要主动死亡，因此也适用于钢魂模式。
 
 点击下面文字可以下载对应路线的.lss文件：
-- <Badge text="通常路线" type="note" vertical="baseline" /> <a href="/dl/any_ddark.lss" download>劈魂上蓝湖路线</a>
-- <Badge text="钢魂路线" type="info" vertical="baseline" /> <a href="/dl/steel_soul_ddark.lss" download>不劈魂上蓝湖路线</a>
+- <Badge text="通常路线" type="note" vertical="baseline" /> <a href="/dl/any_ddark.lss" download>::file::劈魂上蓝湖路线</a>
+- <Badge text="钢魂路线" type="info" vertical="baseline" /> <a href="/dl/steel_soul_ddark.lss" download>::file::不劈魂上蓝湖路线</a>
 
 这两个路线的极限速度分别比对应的 <Badge text="通常路线" type="note" vertical="baseline" /> [Any%速通路线（超冲线）](any.md)和 <Badge text="钢魂路线" type="info" vertical="baseline" /> 钢魂Any%速通路线慢10分钟之内，普通玩家加以练习可以在50分钟内通关。有黑暗降临（黑砸）降低战斗难度，只有水晶山峰需要摸黑（非常容易，搜索相关视频2分钟就能学会），多余的时间可以额外收集一些能力以进一步减少战斗难度（例如强化一下骨钉、获取伊思玛的眼泪和帝王之翼、收集几个面具碎片、收集几个容易获得的护符），想要达成5小时内通关还是非常容易的。
 
