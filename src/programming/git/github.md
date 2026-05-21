@@ -34,6 +34,12 @@ Co-authored-by: name2 <name2@example.com>
 git commit --author="example <example@example.com>" --date="Mon, 02 Jan 2006 15:04:05 +0800"
 ```
 
+这个`--author`参数用来指定提交的**作者（author）**，并不会影响提交的**提交者（committer）**。如果你想要指定**提交者**，可以使用`GIT_COMMITTER_NAME`和`GIT_COMMITTER_EMAIL`环境变量来设置**提交者**的信息。例如：
+
+```bash
+GIT_COMMITTER_NAME="提交者姓名" GIT_COMMITTER_EMAIL="提交者邮箱" git commit -m "提交信息"
+```
+
 ## 比较提交
 
 链接是：`https://github.com/:name/:repo/compare/:aaa...:bbb`，表示比较`:aaa`到`:bbb`的差异。
