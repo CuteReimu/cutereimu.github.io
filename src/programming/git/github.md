@@ -40,6 +40,8 @@ git commit --author="example <example@example.com>" --date="Mon, 02 Jan 2006 15:
 GIT_COMMITTER_NAME="提交者姓名" GIT_COMMITTER_EMAIL="提交者邮箱" git commit -m "提交信息"
 ```
 
+同理`--date`参数用来指定**编写时间**，想要指定**提交时间**则可以使用`GIT_COMMITTER_DATE`环境变量。
+
 ## 比较提交
 
 链接是：`https://github.com/:name/:repo/compare/:aaa...:bbb`，表示比较`:aaa`到`:bbb`的差异。
