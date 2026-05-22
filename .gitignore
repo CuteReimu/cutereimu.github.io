@@ -1,5 +1,6 @@
 *.local
 
+/hk-split-maker/
 .idea/
 .vscode/
 
