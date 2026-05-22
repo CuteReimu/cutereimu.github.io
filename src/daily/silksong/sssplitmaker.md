@@ -1,7 +1,7 @@
 ---
 title: 丝之歌计时器生成器
 icon: clock
-order: 2
+order: 1
 category: 丝之歌
 tags:
   - 丝之歌
@@ -17,7 +17,9 @@ date: 2026-05-22
 
 **较大的分割模板（例如100%）加载耗时会较长**，请耐心等待。
 
-点击右边的按钮切换成深色模式可以更好地看清图标背景：<ColorModeSwitch></ColorModeSwitch>
+感谢 AlexKnauth 大佬编写的丝之歌 AutoSplitter： [https://github.com/AlexKnauth/silksong-autosplit-wasm](https://github.com/AlexKnauth/silksong-autosplit-wasm)
+
+默认模板和图标来自： [https://github.com/slaurent22/hk-split-maker](https://github.com/slaurent22/hk-split-maker)
 
 :::
 
@@ -25,5 +27,4 @@ date: 2026-05-22
 
 <script setup>
 import SSSplitmaker from "@SSSplitmaker";
-import { ColorModeSwitch } from "vuepress-theme-hope/client";
 </script>

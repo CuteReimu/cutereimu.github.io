@@ -2,7 +2,7 @@
 title: 丝之歌计时器生成器FAQ
 shortTitle: 计时器生成器FAQ
 icon: clock
-order: 1
+order: 2
 category: 丝之歌
 tags:
   - 丝之歌
