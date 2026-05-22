@@ -17,10 +17,13 @@ date: 2026-05-22
 
 **较大的分割模板（例如100%）加载耗时会较长**，请耐心等待。
 
+点击右边的按钮切换成深色模式可以更好地看清图标背景：<ColorModeSwitch></ColorModeSwitch>
+
 :::
 
 <SSSplitmaker></SSSplitmaker>
 
 <script setup>
 import SSSplitmaker from "@SSSplitmaker";
+import { ColorModeSwitch } from "vuepress-theme-hope/client";
 </script>

@@ -133,15 +133,16 @@
   <el-checkbox v-model="includeTimeRecords" size="large">
     保留*.lss文件中原本的时间记录（如果有）
   </el-checkbox>
-
-  <el-button
-      type="primary"
-      @click="submit"
-      style="align-self: flex-start;"
-      :disabled="disableSubmit"
-  >
-    另存为
-  </el-button>
+  <div>
+    <el-button
+        type="primary"
+        @click="submit"
+        style="align-self: flex-start;"
+        :disabled="disableSubmit"
+    >
+      另存为
+    </el-button>
+  </div>
 </template>
 
 <script setup>
