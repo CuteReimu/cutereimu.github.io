@@ -1,0 +1,40 @@
+{
+    "categoryName": "Glutton%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "MoorwingTrans",
+        "ClingGripTrans",
+        "Widow",
+        "ShellwoodBell",
+        "Act2Started",
+        "MetMergwin",
+        "CollectedWhitewardKey",
+        "Clawline",
+        "ManualSplit",
+        "BeastCrest",
+        "ManualSplit",
+        "ManualSplit",
+        "ManualSplit",
+        "DeliveredCouriersRasher",
+        "GreatTasteReward"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Crustnut (%s)",
+            "Mossberry Stew (%s)",
+            "Vintage Nectar (%s)",
+            "Pickled Muckmaggot (%s)"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Glutton% Subcategory": "No Major Glitches"
+    }
+}

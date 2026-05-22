@@ -1,0 +1,34 @@
+{
+    "categoryName": "Dapper Slapper",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "MoorwingTrans",
+        "ClingGripTrans",
+        "Widow",
+        "ShellwoodBell",
+        "Act2Started",
+        "ManualSplit",
+        "CogworkDancers",
+        "WhisperingVaultsArena",
+        "TrobbioTrans",
+        "Clawline",
+        "ManualSplit",
+        "GainedCurse",
+        "ManualSplit",
+        "YarnabySlap"
+    ],
+    "names": {
+        "ManualSplit": ["Grindle Slap", "Twisted Bud", "Nuu Slap"]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Dapper Slapper Subcategory": "No Major Glitches"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "categoryName": "Act 1",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "MoorwingTrans",
+        "ClingGripTrans",
+        "BellhartBell",
+        "ShellwoodBell",
+        "Act2Started"
+    ],
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Act 1 Route": "Judgement",
+        "Act 1 Subcategory": "No Major Glitches"
+    }
+}

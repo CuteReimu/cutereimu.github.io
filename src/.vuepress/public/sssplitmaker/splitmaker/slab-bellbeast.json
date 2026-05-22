@@ -1,0 +1,21 @@
+{
+    "categoryName": "Slab%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "EnterWormways",
+        "ClingGripTrans",
+        "WardenflyCaptureTrans",
+        "SlabKeyIndolent",
+        "SlabKeyHeretic",
+        "SlabStation"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Slab% Subcategory": "No Major Glitches",
+        "Jail?": "Bellbeast"
+    }
+}

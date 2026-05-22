@@ -1,0 +1,46 @@
+{
+    "categoryName": "Sylphsong%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "FarFieldsStation",
+        "CaravanTroupeGreymoor",
+        "ClingGripTrans",
+        "Widow",
+        "DriftersCloakTrans",
+        "GreymoorStation",
+        "EnterMist",
+        "GrandBellwayStation",
+        "NeedleStrike",
+        "WandererCrestTrans",
+        "BeastCrestTrans",
+        "DeepDocksStation",
+        "Weavelight",
+        "Voltvessels",
+        "CogworkDancers",
+        "Menu",
+        "Trobbio",
+        "Clawline",
+        "ArchitectCrestTrans",
+        "EnterBilewater",
+        "Menu",
+        "GainedCurse",
+        "WitchCrestTrans",
+        "ReaperCrestTrans",
+        "Sylphsong"
+    ],
+    "names": {
+        "Menu": [
+            "Left Citadel Rosaries (Quitout)",
+            "Upper Bilewater Locket (Quitout)"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Sylphsong% Subcategory": "No Major Glitches"
+    }
+}

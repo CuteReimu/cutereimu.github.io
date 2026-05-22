@@ -1,7 +1,7 @@
 ---
 title: 丝之歌速通投稿问题
 icon: book
-order: 3
+order: 4
 date: 2025-09-27
 category: 丝之歌
 tags:

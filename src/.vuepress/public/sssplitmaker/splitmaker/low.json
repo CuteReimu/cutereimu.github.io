@@ -1,0 +1,38 @@
+{
+    "categoryName": "Low%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "EnterMosshome",
+        "BoneBottomSimpleKey",
+        "EnterUpperWormways",
+        "EnterShellwood",
+        "ClingGripTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "EnterBellhart",
+        "BellhartBell",
+        "EnterSinnersRoad",
+        "EnterExhaustOrgan",
+        "PhantomTrans",
+        "EnterCogworkDancers",
+        "EnterCogworkCore",
+        "EnterWhisperingVaults",
+        "TrobbioTrans",
+        "Clawline",
+        "VaultkeepersMelodyTrans",
+        "ArchitectsMelodyTrans",
+        "EnterHighHallsArena",
+        "HighHallsArena",
+        "EnterLace2",
+        "PostLace2ArenaTrans",
+        "EndingSplit"
+    ],
+    "names": {
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Low% Subcategory": "No Major Glitches"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "categoryName": "Bath%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStep",
+        "SavedFleaDeepDocksSprint",
+        "Lace1Trans",
+        "SavedFleaFarFieldsTrap",
+        "DeepDocksStation",
+        "SavedFleaDeepDocksBellway",
+        "SavedFleaHuntersMarch",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "ClingGrip",
+        "SavedFleaKratt",
+        "MaggotsRemoved"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Bath% Subcategory": "No Major Glitches"
+    }
+}

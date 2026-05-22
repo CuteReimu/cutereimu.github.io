@@ -1,0 +1,18 @@
+{
+    "categoryName": "5 Tools",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "Compass",
+        "SilkSpear",
+        "DruidsEye",
+        "BellBeast",
+        "ShardPendant",
+        "StraightPin",
+        "MagnetiteBrooch"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "5 Tools Subcategory": "No Major Glitches"
+    }
+}
