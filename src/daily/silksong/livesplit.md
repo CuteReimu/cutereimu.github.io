@@ -1,7 +1,7 @@
 ---
 title: LiveSplit 常见问题
 icon: clock
-order: 2
+order: 3
 date: 2025-09-29
 category: LiveSplit
 tags:

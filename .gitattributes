@@ -1,4 +1,5 @@
-docs/** -linguist-documentation
-docs/.vuepress/** -linguist-documentation
+src/** -linguist-documentation
+src/.vuepress/** -linguist-documentation
 
+src/.vuepress/plugins/*.csv linguist-detectable
 *.md linguist-detectable

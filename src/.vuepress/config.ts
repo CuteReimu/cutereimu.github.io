@@ -1,6 +1,8 @@
 import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import { getDirname, path } from "vuepress/utils";
 import { markdownFileTreePlugin } from "@vuepress/plugin-markdown-file-tree";
+import { sssplitmakerPlugin } from "./plugins/sssplitmaker.js";
 
 import theme from "./theme.js";
 
@@ -9,6 +11,7 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   alias: {
     "@AbcNonation": path.resolve(__dirname, "components/AbcNonation.vue"),
+    "@SSSplitmaker": path.resolve(__dirname, "components/SSSplitmaker.vue"),
   },
   base: "/",
 
@@ -19,4 +22,10 @@ export default defineUserConfig({
   theme,
 
   plugins: [markdownFileTreePlugin()],
+
+  bundler: viteBundler({
+    viteOptions: {
+      plugins: [sssplitmakerPlugin()],
+    }
+  }),
 });
