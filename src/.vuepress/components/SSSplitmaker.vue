@@ -152,7 +152,8 @@ import {
   ElInput, ElButton, ElTable, ElTableColumn, ElCheckbox, ElSwitch, ElText,
 } from 'element-plus';
 import { Plus, Minus, Top, Bottom, UploadFilled } from '@element-plus/icons-vue';
-import { saveAs } from 'file-saver';
+import pkg from 'file-saver';
+const { saveAs } = pkg;
 import options from 'virtual:sss-options';
 import iconMap from 'virtual:sss-icon-map';
 import templates from 'virtual:sss-templates';
