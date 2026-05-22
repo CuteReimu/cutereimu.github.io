@@ -75,7 +75,7 @@ date: 2025-09-15
 
 ### 生成模板并导入
 
-![sssplitmaker-new.png](/hollow-knight/sssplitmaker-new.png)
+![sssplitmaker.png](/hollow-knight/sssplitmaker.png)
 
 1. 运行**计时器生成器**
 2. 你可以选择一个已有的模板或者打开一个`*.lss`文件，也可以自己从头开始编辑
