@@ -3,7 +3,7 @@
       v-model="currentTemplate"
       filterable
       placeholder="你可以选择现有模板"
-      style="width: 500px"
+      style="max-width: 500px"
       @change="selectTemplate"
   >
     <el-option
@@ -37,7 +37,7 @@
       @change="onFileChange"
   />
 
-  <div style="display: flex; gap: 8px;">
+  <div style="gap: 8px;">
     <el-button type="success" @click="fillIcons">一键填充所有未填充的图标</el-button>
     <el-button type="danger" @click="resetIcons">一键清空所有图标</el-button>
   </div>
@@ -57,7 +57,7 @@
   </div>
 
   <el-table :data="tableData" style="width: 100%;">
-    <el-table-column label="图标" width="60px">
+    <el-table-column label="图标" :width="60" align="center">
       <template #default="scope">
         <el-image
             v-if="scope.row.icon"
@@ -68,7 +68,7 @@
       </template>
     </el-table-column>
 
-    <el-table-column label="节点名称" :width="310">
+    <el-table-column label="节点名称">
       <template #default="scope">
         <el-input
             v-if="scope.$index > 0 && scope.$index < tableData.length - 1"
@@ -78,7 +78,7 @@
       </template>
     </el-table-column>
 
-    <el-table-column label="触发事件" :width="310">
+    <el-table-column label="触发事件">
       <template #default="scope">
         <el-select
             v-if="scope.$index < tableData.length - 1"
