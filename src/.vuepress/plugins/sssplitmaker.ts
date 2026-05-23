@@ -101,8 +101,18 @@ export function sssplitmakerPlugin(): Plugin {
             }
 
             if (raw.names && raw.names[id]) {
-              const customName = raw.names[id]
-              if (typeof customName === 'string') name = customName
+              let customName = raw.names[id]
+              if (typeof customName === 'string') {
+                if (customName.includes("%s")) {
+                  const opt = splitsCache.find(o => o.id === resolvedId);
+                  if (opt) {
+                    const label = opt.label;
+                    const pos = label.lastIndexOf('（');
+                    customName = customName.replaceAll("%s", pos === -1 ? label : label.slice(0, pos));
+                  }
+                }
+                name = customName
+              }
             }
 
             let icon = ''
