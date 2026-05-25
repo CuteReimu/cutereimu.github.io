@@ -6,7 +6,6 @@ category: 丝之歌
 tags:
   - 丝之歌
 date: 2025-11-13
-article: false
 author:
   - name: Cuber鲫鱼绿奶
     url: https://space.bilibili.com/360628040

@@ -5,7 +5,6 @@ order: -10
 category: 丝之歌
 tags:
   - 丝之歌
-article: false
 author:
   - name: 奇葩的灵梦
     url: https://cutereimu.cn
