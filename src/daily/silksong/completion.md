@@ -15,8 +15,8 @@ author: []
 
 **工具（51%，不含陷阱设置器）**
 
-@grids grid-flow-row
-@grid
+@flexs gap-20 flex-wrap
+@flex
 
 直针
 
@@ -54,7 +54,7 @@ author: []
 
 生质液瓶
 
-@grid
+@flex
 
 德鲁伊之眼/双瞳
 
@@ -98,7 +98,7 @@ author: []
 
 针徽
 
-@grid
+@flex
 
 罗盘
 
