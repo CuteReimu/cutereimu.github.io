@@ -136,11 +136,6 @@ export default hopeTheme({
       assets: "/@fortawesome/fontawesome-free@6/js/all.min.js",
     },
 
-    slimsearch: {
-      indexContent: true,
-      suggestion: false,
-    },
-
     copyright: {
       global: true,
       locales: {

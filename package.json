@@ -14,7 +14,6 @@
     "@element-plus/icons-vue": "^2.3.2",
     "@vuepress/bundler-vite": "^2.0.0-rc.30",
     "@vuepress/plugin-markdown-file-tree": "^2.0.0-rc.130",
-    "@vuepress/plugin-slimsearch": "^2.0.0-rc.130",
     "chart.js": "^4.5.1",
     "dotenv": "^17.4.2",
     "element-plus": "^2.14.0",
