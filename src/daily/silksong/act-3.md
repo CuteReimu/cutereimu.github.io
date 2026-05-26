@@ -40,7 +40,7 @@ author: []
 
 **1分祈愿**
 
-@flexs gap-15 flex-wrap
+@flexs gap-x-15 flex-wrap
 @flex
 
 **骸底镇**
@@ -91,7 +91,7 @@ author: []
 
 **1分祈愿**
 
-@flexs gap-15 flex-wrap
+@flexs gap-x-15 flex-wrap
 @flex
 
 **骸底镇**
