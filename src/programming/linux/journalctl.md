@@ -96,7 +96,7 @@ sudo journalctl -u nginx --since="2024-01-01 00:00:00" --until="2024-01-01 12:00
 sudo journalctl --since="yesterday" --until="today"
 ```
 
-## 按日志级别（优先级）筛选
+### 按日志级别（优先级）筛选
 
 只显示错误、警告等特定级别的信息，可以帮助你快速定位问题。
 
@@ -118,16 +118,21 @@ sudo journalctl -u nginx -p warning
 - `info` (6)
 - `debug` (7)
 
+### 输出成文本
+
+默认情况下，使用 `journalctl` 命令会进入 less 分页器查看日志，但有的时候我们想要直接按照文本的方式输出，只要加上 `--no-pager` 参数即可。
+
 ## 组合使用
 
 假设你的 `myapp.service` 在昨天下午3点后启动失败，你可以这样查：
 
 ```bash :no-line-numbers
-# 查看该服务昨天下午3点至今的所有错误和警告信息
+# 查看该服务昨天下午3点至今的所有错误和警告信息，不要使用分页器查看
 sudo journalctl -u myapp \
   --since="yesterday 15:00:00" \
   --until="today" \
-  -p warning
+  -p warning \
+  --no-pager
 ```
 
 ## 配合 `systemctl status` 使用
