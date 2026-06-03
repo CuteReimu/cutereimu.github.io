@@ -2,4 +2,4 @@ src/** -linguist-documentation
 src/.vuepress/** -linguist-documentation
 
 src/.vuepress/plugins/*.csv linguist-detectable
-*.md linguist-detectable
+*.md linguist-language=MDX
