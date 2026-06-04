@@ -28,19 +28,7 @@ toc: false
 ## 核心思路
 
 ```mermaid
-flowchart TD
-  subgraph 你的Vue项目
-  A[启动Vue项目]
-  B[等待请求]
-  end
-  subgraph 自动化脚本
-  C[启动无头浏览器]
-  D[访问]
-  E[生成PDF]
-  end
-  A --> B
-  C ---> D --> E
-  D -.->|访问并保存页面| B -.-> D
+<!-- @include: headless-browser.mermaid -->
 ```
 
 ## NodeJs 实现

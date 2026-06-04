@@ -78,6 +78,8 @@ export default hopeTheme({
     codeTabs: true,
     tasklist: true,
 
+    include: true,
+
     math: {
       type: "katex",
     },

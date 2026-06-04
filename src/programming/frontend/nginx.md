@@ -429,14 +429,7 @@ Nginx 的 `location` 匹配遵循一个清晰的优先级层次结构。**记住
 Nginx 处理一个请求时，选择 location 的逻辑流程可以简化为以下步骤：
 
 ```mermaid
-flowchart TD
-A[收到请求URI] --> B{检查所有<br>前缀location}
-B -- 找到精确匹配「=」 --> C[立即使用该location<br>处理请求]
-B -- 找到最长普通前缀匹配<br>并记录 --> D{是否存在「^~」匹配？}
-D -- 是 --> E[使用该「^~」location<br>（停止正则检查）]
-D -- 否 --> F[按顺序检查所有<br>正则location「\~」「~*」]
-F -- 找到第一个匹配的正则 --> G[使用该正则location]
-F -- 所有正则都不匹配 --> H[使用之前记录的<br>最长普通前缀location]
+<!-- @include: nginx.mermaid -->
 ```
 
 ### 示例详解

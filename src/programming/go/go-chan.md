@@ -352,16 +352,7 @@ func main() {
 这种情况，我们只需要加入一个“中间发送者”，就可以转化为M个接收者和一个发送者的最简单的情形了。
 
 ```mermaid
-graph LR
-    A[发送者1] --> D[中间发送者]:::green
-    B[发送者2] --> D
-    C[发送者3] --> D
-    D --> E((通道))
-    E --> F[接收者1]
-    E --> G[接收者2]
-    E --> H[接收者3]
-    
-    classDef green fill:#66CC66;
+<!-- @include: go-chan.mermaid -->
 ```
 
 ```go :collapsed-lines=40 {11,12,17-40,48,64}

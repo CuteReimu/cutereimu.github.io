@@ -23,15 +23,7 @@ star: true
 ## 感知器
 
 ```mermaid
-graph LR
-    D(( )):::bigCircle
-    A((x₁)):::noShape --> |w₁| D
-    B((x₂)):::noShape --> |w₂| D
-    C((x₃)):::noShape --> |w₃| D
-    D --> E((output)):::noShape
-    
-    classDef bigCircle stroke:#333,stroke-width:2,r:50;
-    classDef noShape fill:transparent,stroke:transparent;
+<!-- @include: nndl_1.mermaid -->
 ```
 
 $$
@@ -95,14 +87,7 @@ $$
 我们来讨论一种特殊的感知器：
 
 ```mermaid
-graph LR
-    D((3)):::bigCircle
-    A((x₁)):::noShape --> |-2| D
-    B((x₂)):::noShape --> |-2| D
-    D --> E(( )):::noShape
-    
-    classDef bigCircle stroke:#333,stroke-width:2,r:50;
-    classDef noShape fill:transparent,stroke:transparent;
+<!-- @include: nndl_2.mermaid -->
 ```
 
 - 输入$x_1=1$、$x_2=1$，则$\vec{w}\cdot\vec{x} + b=-2-2+3<0$，输出$0$

@@ -1,0 +1,10 @@
+graph LR
+    A[发送者1] --> D[中间发送者]:::green
+    B[发送者2] --> D
+    C[发送者3] --> D
+    D --> E((通道))
+    E --> F[接收者1]
+    E --> G[接收者2]
+    E --> H[接收者3]
+    
+    classDef green fill:#66CC66;

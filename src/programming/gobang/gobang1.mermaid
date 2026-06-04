@@ -1,0 +1,18 @@
+classDiagram
+  direction LR
+  class 棋盘 {
+    byte[][] board
+    玩家 玩家1
+    玩家 玩家2
+    void play()
+    bool checkForWin()
+  }
+  棋盘 *-- 玩家
+  class 玩家 {
+    <<interface>>
+    Point play()
+    void display(Point p)
+    void notifyWinner(int color)
+  }
+  玩家 <|-- HumanPlayer
+  玩家 <|-- RobotPlayer

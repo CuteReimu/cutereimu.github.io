@@ -31,9 +31,7 @@ date: 2025-09-16
 [::b:bilibili =20 /#FE7398:: 点击跳转到B站视频讲解](https://www.bilibili.com/video/BV1H5pUzmEiD)
 
 ```mermaid
-flowchart LR
-  A[图1] --> B[图2] --> C[图3] --> D[一字路口] --> E[图4] --> F[图5] --> G[最终房间]
-  F -.->|可能| H[图6] -.-> G
+<!-- @include: mist.mermaid -->
 ```
 
 1. 图与图从物理上是连通的，从前一张图的左侧出口出去，就会从后一张图的右侧进来，这叫做**物理连通性**。
