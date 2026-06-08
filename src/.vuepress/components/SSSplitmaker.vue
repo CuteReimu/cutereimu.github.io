@@ -80,20 +80,15 @@
 
     <el-table-column label="触发事件">
       <template #default="scope">
-        <el-select
+        <el-select-v2
             v-if="scope.$index < tableData.length - 1"
             v-model="scope.row.event"
             filterable
             placeholder="触发事件"
             @change="onEventChange(scope.$index)"
+            :options="options"
         >
-          <el-option
-              v-for="item in options"
-              :key="item.id"
-              :label="item.label"
-              :value="item.id"
-          />
-        </el-select>
+        </el-select-v2>
       </template>
     </el-table-column>
 
@@ -148,7 +143,7 @@
 <script setup>
 import { ref, reactive, computed } from 'vue';
 import {
-  ElMessage, ElSelect, ElOption, ElIcon, ElImage,
+  ElMessage, ElSelect, ElSelectV2, ElOption, ElIcon, ElImage,
   ElInput, ElButton, ElTable, ElTableColumn, ElCheckbox, ElSwitch, ElText,
 } from 'element-plus';
 import { Plus, Minus, Top, Bottom, UploadFilled } from '@element-plus/icons-vue';
@@ -229,7 +224,7 @@ const onEventChange = function(idx) {
   const eventValue = tableData[idx].event;
   if (idx === 0) refreshStartAnimationChange(eventValue);
 
-  const opt = options.find(o => o.id === eventValue);
+  const opt = options.find(o => o.value === eventValue);
   if (opt) {
     const label = opt.label;
     const pos = label.lastIndexOf('（');

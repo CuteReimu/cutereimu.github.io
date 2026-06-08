@@ -64,7 +64,10 @@ export function sssplitmakerPlugin(): Plugin {
     load(id) {
       if (id === '\0' + VIRTUAL_OPTIONS) {
         const { splitsCache } = parseSplitsCache()
-        return `export default ${JSON.stringify(splitsCache)}`
+        const splitsCache2 = splitsCache.map(({id, label}) => {
+          return {value: id, label}
+        });
+        return `export default ${JSON.stringify(splitsCache2)}`
       }
 
       if (id === '\0' + VIRTUAL_ICON_MAP) {
