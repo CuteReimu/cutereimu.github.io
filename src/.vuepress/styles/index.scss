@@ -9,3 +9,51 @@
 .vp-nav-logo {
   border-radius: 50%;
 }
+
+.vp-article-list {
+  column-count: 2;
+  column-gap: 16px;
+}
+
+.vp-article-item {
+  break-inside: avoid;
+  border-radius: 20px;
+}
+
+.vp-blog-info-wrapper {
+  display: none;
+}
+
+.vp-blog-main {
+  max-width: 1160px;
+  padding-bottom: 50px;
+}
+
+.vp-article-title {
+  font-weight: bold;
+}
+
+.vp-pagination-list {
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;        /* 左右都设为 0，配合 margin auto 居中 */
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 487px) {
+  .vp-pagination-list {
+    bottom: -90px;
+  }
+
+  .vp-blog-main {
+    padding-bottom: 95px;
+  }
+}
+
+@media (min-width: 612px) {
+  .vp-project-card {
+    width: max(calc(16.6% - 40px), 150px);
+  }
+}
