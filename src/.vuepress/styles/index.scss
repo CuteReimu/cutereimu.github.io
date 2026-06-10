@@ -19,10 +19,6 @@
   display: none;
 }
 
-.vp-blog-main {
-  max-width: 1160px;
-}
-
 .vp-article-title {
   font-weight: bold;
 }
@@ -30,6 +26,7 @@
 @media (min-width: 612px) {
   .vp-blog-main {
     padding-bottom: 50px;
+    max-width: 1160px;
   }
 
   .vp-article-list {
