@@ -16,6 +16,8 @@ author:
 toc: false
 ---
 
+<!-- more -->
+
 ## 降版本方法
 
 1. 按 `Win + R` ，在弹出的窗口中输入 `steam://open/console` 并确定

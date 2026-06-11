@@ -44,6 +44,7 @@ export default hopeTheme({
       Github: "https://github.com/CuteReimu",
     },
     timeline: "行到水穷处，坐看云起时",
+    articlePerPage: 20,
   },
 
   locales: {
