@@ -5,4 +5,5 @@ export default navbar([
   "/programming/",
   '/ai/',
   "/daily/",
+  "/intro.md",
 ]);

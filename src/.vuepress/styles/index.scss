@@ -15,8 +15,16 @@
   border-radius: 20px;
 }
 
-.vp-blog-info-wrapper {
+.vp-blog-home .vp-blog-info-wrapper {
   display: none;
+}
+
+.vp-page .vp-page {
+  padding-top: 0;
+}
+
+.vp-intro-page .blog-page-wrapper > .vp-page {
+  max-width: var(--content-width);
 }
 
 .vp-article-title {

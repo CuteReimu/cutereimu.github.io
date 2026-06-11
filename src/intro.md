@@ -1,6 +1,8 @@
 ---
-title: ✨ 关于我
+title: 关于我
 index: false
+icon: address-card
+layout: Intro
 article: false
 pageInfo: false
 toc: false
