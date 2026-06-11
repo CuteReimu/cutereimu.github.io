@@ -1,14 +1,6 @@
-<svg
-    width="300"
-    height="190"
-    viewBox="0 0 300 190"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    role="img"
-    aria-labelledby="descId"
->
-  <title id="titleId"></title>
-  <desc id="descId"></desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="165" viewBox="0 0 300 165" fill="none" role="img" aria-labelledby="descId">
+  <title id="titleId"/>
+  <desc id="descId"/>
   <style>
     .header {
     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -84,38 +76,17 @@
 
 
 
-  <rect
-      data-testid="card-bg"
-      x="0.5"
-      y="0.5"
-      rx="4.5"
-      height="99%"
-      stroke="#e4e2e2"
-      width="299"
-      fill="#fffefe"
-      stroke-opacity="1"
-  />
+  <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="299" fill="#fffefe" stroke-opacity="1"/>
 
 
-  <g
-      data-testid="card-title"
-      transform="translate(25, 35)"
-  >
+  <g data-testid="card-title" transform="translate(25, 35)">
     <g transform="translate(0, 0)">
-      <text
-          x="0"
-          y="0"
-          class="header"
-          data-testid="header"
-      >&#26368;&#24120;&#29992;&#30340;&#35821;&#35328;</text>
+      <text x="0" y="0" class="header" data-testid="header">常用语言</text>
     </g>
   </g>
 
 
-  <g
-      data-testid="main-card-body"
-      transform="translate(0, 55)"
-  >
+  <g data-testid="main-card-body" transform="translate(0, 55)">
 
     <svg data-testid="lang-items" x="25">
 
@@ -123,72 +94,58 @@
       <g transform="translate(0, 0)">
         <g transform="translate(0, 0)"><g transform="translate(0, 0)">
           <g class="stagger" style="animation-delay: 450ms">
-            <circle cx="5" cy="6" r="5" fill="#00ADD8" />
-            <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+            <circle cx="5" cy="6" r="5" fill="#00ADD8"/>
+            <text data-testid="lang-name" x="15" y="10" class="lang-name">
               Go
             </text>
           </g>
         </g><g transform="translate(0, 25)">
           <g class="stagger" style="animation-delay: 600ms">
-            <circle cx="5" cy="6" r="5" fill="#A97BFF" />
-            <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+            <circle cx="5" cy="6" r="5" fill="#A97BFF"/>
+            <text data-testid="lang-name" x="15" y="10" class="lang-name">
               Kotlin
             </text>
           </g>
         </g><g transform="translate(0, 50)">
           <g class="stagger" style="animation-delay: 750ms">
-            <circle cx="5" cy="6" r="5" fill="#3572A5" />
-            <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+            <circle cx="5" cy="6" r="5" fill="#3572A5"/>
+            <text data-testid="lang-name" x="15" y="10" class="lang-name">
               Python
             </text>
           </g>
         </g><g transform="translate(0, 75)">
           <g class="stagger" style="animation-delay: 900ms">
-            <circle cx="5" cy="6" r="5" fill="#41b883" />
-            <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-              Vue
-            </text>
-          </g>
-        </g><g transform="translate(0, 100)">
-          <g class="stagger" style="animation-delay: 1050ms">
-            <circle cx="5" cy="6" r="5" fill="#b07219" />
-            <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+            <circle cx="5" cy="6" r="5" fill="#b07219"/>
+            <text data-testid="lang-name" x="15" y="10" class="lang-name">
               Java
             </text>
           </g>
         </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
         <g class="stagger" style="animation-delay: 450ms">
-          <circle cx="5" cy="6" r="5" fill="#f34b7d" />
-          <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+          <circle cx="5" cy="6" r="5" fill="#f34b7d"/>
+          <text data-testid="lang-name" x="15" y="10" class="lang-name">
             C++
           </text>
         </g>
       </g><g transform="translate(0, 25)">
         <g class="stagger" style="animation-delay: 600ms">
-          <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-          <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+          <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
+          <text data-testid="lang-name" x="15" y="10" class="lang-name">
             JavaScript
           </text>
         </g>
       </g><g transform="translate(0, 50)">
         <g class="stagger" style="animation-delay: 750ms">
-          <circle cx="5" cy="6" r="5" fill="#3178c6" />
-          <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+          <circle cx="5" cy="6" r="5" fill="#3178c6"/>
+          <text data-testid="lang-name" x="15" y="10" class="lang-name">
             TypeScript
           </text>
         </g>
       </g><g transform="translate(0, 75)">
         <g class="stagger" style="animation-delay: 900ms">
-          <circle cx="5" cy="6" r="5" fill="#B83998" />
-          <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+          <circle cx="5" cy="6" r="5" fill="#B83998"/>
+          <text data-testid="lang-name" x="15" y="10" class="lang-name">
             Erlang
-          </text>
-        </g>
-      </g><g transform="translate(0, 100)">
-        <g class="stagger" style="animation-delay: 1050ms">
-          <circle cx="5" cy="6" r="5" fill="#C7D7DC" />
-          <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-            AngelScript
           </text>
         </g>
       </g></g>
@@ -198,4 +155,3 @@
 
   </g>
 </svg>
-    
