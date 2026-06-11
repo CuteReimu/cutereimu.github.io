@@ -21,7 +21,7 @@ date: 2025-04-29
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-to-file' --prune-empty --tag-name-filter cat -- --all
 ```
 
-将其中的`path-to-file`替换为你要删除的文件路径。
+将其中的`path-to-file`替换为你要删除的文件路径。如果想要删除目录，在`rm`后面加上`-r`参数即可。
 
 检查无误之后，强制推送到远程仓库：
 
