@@ -8,6 +8,7 @@ tags:
   - 丝之歌
   - LiveSplit
 date: 2025-09-15
+star: true
 ---
 
 ::: info 为什么要使用LiveSplit？

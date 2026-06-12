@@ -8,7 +8,6 @@ tags:
   - 空洞骑士
   - LiveSplit
 date: 2022-02-10
-star: true
 ---
 
 ::: info 为什么要使用LiveSplit？
