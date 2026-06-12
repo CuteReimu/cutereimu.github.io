@@ -66,13 +66,7 @@ star: true
 - 如果没有`Activate`按钮，而是有一个`Deactivate`按钮，说明你已经开启了插件，无需再做额外操作。
 - 如果`Activate`按钮可以点，点击它，变成`Deactivate`说明开启成功，然后按`OK`按钮。
     - 如果点击`Activate`按钮弹出提示`The Auto Splitter could not be activated.`，采用和下一条一样的处理方式即可。
-- 如果`Activate`按钮是灰色的不能点，首先关掉**LiveSplit**，打开**计时器生成器**，点击右上角的`更新LiveSplit`按钮，接下来自己操作，提示成功之后再重新打开**LiveSplit**，`Activate`按钮就可以点了。
-
-::: warning 注意
-
-如果你曾经使用过旧版手动加载wasm的方式，在**LiveSplit** &rarr; 右键 &rarr; Edit Layout 中添加过 `Auto Splitting Runtime` 组件，请务必将其删除，以免和新的方式产生冲突。
-
-:::
+- 如果`Activate`按钮是灰色的不能点，首先关掉**LiveSplit**，打开**计时器生成器**，点击右上角的`更新LiveSplit`按钮，找到`LiveSplit.exe`，提示成功之后再重新打开**LiveSplit**，`Activate`按钮就可以点了。
 
 ### 生成模板并导入
 
