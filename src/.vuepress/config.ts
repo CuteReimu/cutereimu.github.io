@@ -11,6 +11,7 @@ export default defineUserConfig({
   alias: {
     "@AbcNonation": path.resolve(__dirname, "components/AbcNonation.vue"),
     "@SSSplitmaker": path.resolve(__dirname, "components/SSSplitmaker.vue"),
+    "@theme-hope/components/blog/ArticleList": path.resolve(__dirname, "./components/ArticleList.vue"),
   },
   base: "/",
 

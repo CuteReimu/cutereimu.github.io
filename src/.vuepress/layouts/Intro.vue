@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Layout, PageContent } from "vuepress-theme-hope/client";
+import { Layout } from "vuepress-theme-hope/client";
+import PageContent from "@theme-hope/components/base/PageContent";
 import { InfoPanel } from "vuepress-theme-hope/blog";
 </script>
 

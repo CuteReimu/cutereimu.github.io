@@ -11,7 +11,6 @@
 }
 
 .vp-article-item {
-  break-inside: avoid;
   border-radius: 20px;
 }
 
@@ -36,17 +35,7 @@
     max-width: 1160px;
   }
 
-  .vp-article-list {
-    column-count: 2;
-    column-gap: 16px;
-  }
-
   .vp-project-card {
     width: max(calc(20% - 40px), 150px);
-  }
-
-  .vp-pagination-list {
-    column-span: all;
-    justify-content: center;
   }
 }
