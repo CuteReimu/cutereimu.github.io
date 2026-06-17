@@ -11,6 +11,8 @@ author: []
 
 <!-- more -->
 
+建议使用[丝之歌存档分析器](https://github.com/CuteReimu/ss-completion/releases)
+
 **纹章（6%）**：收割者、漫游者、野兽、巫妪、建筑师、萨满
 
 **法术（6%）**：丝之矛、灵丝风暴、十字绣、丝刃镖、符文之怒、苍白之爪
