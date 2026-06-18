@@ -11,7 +11,7 @@ author: []
 
 <!-- more -->
 
-建议使用[丝之歌存档分析器](https://github.com/CuteReimu/ss-completion/releases)
+建议使用[丝之歌存档分析器](https://gitee.com/CuteReimu/ss-completion/releases)
 
 **纹章（6%）**：收割者、漫游者、野兽、巫妪、建筑师、萨满
 

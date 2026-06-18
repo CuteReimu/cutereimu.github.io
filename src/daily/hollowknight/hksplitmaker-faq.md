@@ -39,7 +39,7 @@ date: 2022-02-10
 
 :::
 
-你可以前往[**计时器生成器**的Github仓库](https://github.com/CuteReimu/hksplitmaker)下载，你也可以下载仓库代码后自行编译。
+你可以前往[**计时器生成器**的Gitee仓库](https://gitee.com/CuteReimu/hksplitmaker)下载，你也可以下载仓库代码后自行编译。
 
 ## 如何使用
 

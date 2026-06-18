@@ -19,7 +19,7 @@ projects:
     icon: /hollow-knight/hollow-knight.png
   - name: ss-completion
     desc: 多功能、可自定义的《丝之歌》存档分析器
-    link: https://github.com/CuteReimu/ss-completion
+    link: https://gitee.com/CuteReimu/ss-completion
     icon: /hollow-knight/Hornet.png
   - name: TheMessage
     desc: 为自己热爱的游卡《风声》桌游整理的民间版规则文档
