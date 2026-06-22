@@ -62,7 +62,7 @@ $$
 那么不能使用绝对值怎么办？实际上，我们可以用各种各样的方法构造分段函数：
 
 $$
-\operatorname{sgn}=\dfrac{x}{|x|}=\dfrac{x}{\sqrt{x^2}}=x \cdot \left(x^2\right)^{i \cdot i \cdot 2^{i \cdot i}}=x|x|^{i \cdot i}
+\operatorname{sgn}(x)=\dfrac{x}{|x|}=\dfrac{x}{\sqrt{x^2}}=x \cdot \left(x^2\right)^{i \cdot i \cdot 2^{i \cdot i}}=x|x|^{i \cdot i}
 $$
 
 不过，尽管我们可以强行用这种方法进行“暴力破解”，但设计者的初衷还是希望大家找到简洁美观的“特解”，从而感受函数表达式的魅力。
