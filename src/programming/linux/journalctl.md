@@ -58,6 +58,10 @@ sudo journalctl -u nginx -b
 sudo journalctl -b
 ```
 
+### 输出成文本
+
+默认情况下，使用 `journalctl` 命令会进入 less 分页器查看日志，但有的时候我们想要直接按照文本的方式输出，只要加上 `--no-pager` 参数即可。
+
 ## 按时间筛选日志
 
 ### 查看最近一段时间的日志
@@ -107,10 +111,6 @@ sudo journalctl -u nginx -p warning
 - `notice` (5)
 - `info` (6)
 - `debug` (7)
-
-### 输出成文本
-
-默认情况下，使用 `journalctl` 命令会进入 less 分页器查看日志，但有的时候我们想要直接按照文本的方式输出，只要加上 `--no-pager` 参数即可。
 
 ## 组合使用
 
