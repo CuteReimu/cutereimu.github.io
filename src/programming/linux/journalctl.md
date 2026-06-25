@@ -58,16 +58,6 @@ sudo journalctl -u nginx -b
 sudo journalctl -b
 ```
 
-### 分页查看，并支持搜索
-
-`journalctl` 默认会调用分页器（如 `less`），你可以使用 `/` 关键字进行搜索，按 `n` 查找下一个，按 `N` 查找上一个。
-
-```bash
-sudo journalctl -u nginx
-```
-
-（进入分页器后，输入 `/error` 来搜索 "error" 关键词）
-
 ## 按时间筛选日志
 
 ### 查看最近一段时间的日志
