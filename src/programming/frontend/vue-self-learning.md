@@ -24,7 +24,7 @@ toc: false
 <el-checkbox v-model="isDefaultName" label="使用默认名字" />
 ```
 
-这里的`v-if`和`v-else`看起来是对的，但是实际上会解析报错。像<el-input/>这种**自闭合标签**写法，Vue就在解析`v-else`时，就会找不到相邻的上一个`v-if`，就会解析报错。正确的写法是不要用自闭合标签：
+这里的`v-if`和`v-else`看起来是对的，但是实际上会解析报错。像<el-input/>这种**自闭合标签**`<el-input/>`的写法，Vue就在解析`v-else`时，就会找不到相邻的上一个`v-if`，就会解析报错。正确的写法是不要用自闭合标签：
 
 ```vue {2,3}
 <el-form-item label="名字">
