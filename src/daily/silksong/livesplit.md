@@ -98,6 +98,8 @@ tags:
    ![](/hollow-knight/windows-defender-2.png)
 3. 勾选`程序` &rarr; 下一步 &rarr; 选择程序的路径 &rarr; 下一步 &rarr; 勾选`阻止连接` &rarr; 后面一直点下一步即可。
 
+**注意：所选程序的路径如果包含特殊字符，可能会设置失败。**
+
 :::
 
 ## 窗口遮挡
