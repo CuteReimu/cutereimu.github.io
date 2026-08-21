@@ -14,7 +14,7 @@ golangci-lint是一个Go语言的代码静态检查工具集，官网是[https:/
 
 ::: warning 注意
 
-以下内容截止golangci-lint的`2.7.2`版本。
+以下内容截止golangci-lint的`2.13.1`版本。
 
 :::
 
@@ -22,7 +22,7 @@ golangci-lint是一个Go语言的代码静态检查工具集，官网是[https:/
 
 ```bash :no-line-numbers
 # binary will be $(go env GOPATH)/bin/golangci-lint
-curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(go env GOPATH)/bin v2.7.2
+curl -sSfL https://golangci-lint.run/install.sh | sh -s -- -b $(go env GOPATH)/bin v2.13.1
 
 golangci-lint --version
 ```
@@ -30,7 +30,7 @@ golangci-lint --version
 当然你也不是不可以用`go install`命令安装（不推荐）：
 
 ```bash
-go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.7.2
+go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.13.1
 ```
 
 运行：
@@ -40,14 +40,9 @@ golangci-lint run ./...
 ```
 
 支持的参数说明：
-- `--default=none`用以指定默认集，有以下选项：
-  - `standard`：只启用默认的linters
-  - `none`：不启用任何linters
-  - `all`：启用所有linters
-  - `fast`：启用所有标注了`fast`的linters，可以使用`golangci-lint help linters`命令查看其后标有`fast`的linters。
-- `-E`用以指定要启用的linters，例如`-E errcheck`
-- `-D`用以指定要禁用的linters，例如`-D gosec`
 - `--fix`表示自动修复代码中的问题（如果对应的linter支持自动修复的话）
+- `--new`表示只检查变更的内容（git 中 unstage 或 untracked 的内容），可以简写为`-n`
+- `--new-from-rev=HEAD~`一般用于CI，表示只检查最近的一个提交
 
 你也可以在项目中创建一个`.golangci.yml`文件来配置，运行`golangci-lint run`时，会自动扫描当前目录以及父目录中的`.golangci.yml`文件，使用其中的配置。配置支持`yml`、`yaml`、`json`、`toml`等格式。
 
@@ -1067,7 +1062,7 @@ linters:
 
 已废弃，请使用[wsl_v5](#wsl_v5)。
 
-### wsl_v5h
+### wsl_v5
 
 <Badge text="Autofix" type="info" />
 
