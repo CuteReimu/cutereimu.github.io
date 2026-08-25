@@ -121,9 +121,15 @@ $$
 
 可见，保底机制使 5 石概率从原始 5% 提升到约 7.9%，2 石概率从 50% 下降到约 47.8%。
 
+::: note 注意
+
+值得一提的是，由于三组石头是共用保底的，因此这种把保底机制近似成一个独立的数学期望的方式并不完全准确，但用于估算是足够的。
+
+:::
+
 ## 单次洗练成功概率
 
-### 3.1 固定目标组合的成功概率
+### 固定目标组合的成功概率
 
 当第一组已经锁定某个目标组合 $c$ 后，后续两组都必须洗出至少两个 $c$。
 
@@ -394,7 +400,6 @@ func main() {
 }
 ```
 
-
 ## 结论
 
 在考虑保底机制后，完成三组同色同字非无字宠物符石所需的洗练次数期望约为：
@@ -406,3 +411,113 @@ $$
 即大约 **1420 次**。
 
 实际游戏中考虑到波动，体感通常会在 **1400～1600 次** 之间。
+
+## 更优方案
+
+实际上还有一个更优方案，就是第一组洗出任意同色同字组合后，第二组同色同字并不要求和第一组相同，如果不同，可以做为一个备选方案。第三组同色同字先匹配上哪个就用哪个。
+
+我们稍微改一下代码即可检验一下：
+
+```go {63-96}
+package main
+
+import (
+	"fmt"
+	"math/rand/v2"
+	"time"
+)
+
+func main() {
+	r := rand.New(rand.NewPCG(uint64(time.Now().UnixMilli()), 1))
+	var lessThen4, lessThen5 int
+	randOne := func() int {
+		var count int
+		switch {
+		case lessThen5 == 19:
+			count = 5
+		case lessThen4 == 9:
+			count = 4
+			if r.IntN(3) == 0 {
+				count++
+			}
+		default:
+			n := r.IntN(20)
+			switch {
+			case n < 10:
+				count = 2
+			case n < 17:
+				count = 3
+			case n < 19:
+				count = 4
+			default:
+				count = 5
+			}
+		}
+		switch count {
+		case 5:
+			lessThen5 = 0
+			lessThen4 = 0
+		case 4:
+			lessThen5++
+			lessThen4 = 0
+		default:
+			lessThen5++
+			lessThen4++
+		}
+		result := make([]int, count)
+		for i := range count {
+			v := r.IntN(45)
+			if v < 5 {
+				continue
+			}
+			for j := range i {
+				if result[j] == v {
+					return v
+				}
+			}
+			result[i] = v
+		}
+		return -1
+	}
+	result := 0
+	for range 100000 {
+		var cur [3]int
+		for {
+			result++
+			v := randOne()
+			if v > 0 {
+				cur[0] = v
+				break
+			}
+		}
+		for {
+			result++
+			v := randOne()
+			if v > 0 {
+				cur[1] = v
+				break
+			}
+		}
+		for {
+			result++
+			v := randOne()
+			if v == cur[0] || v == cur[1] {
+				cur[2] = v
+				break
+			}
+		}
+		if cur[0] != cur[1] {
+			for {
+				result++
+				v := randOne()
+				if v == cur[2] {
+					break
+				}
+			}
+		}
+	}
+	fmt.Println(float64(result) / 100000)
+}
+```
+
+最后得到的数学期望大约在 **1000～1100 次** ，大大减少了洗练次数。
