@@ -10,6 +10,17 @@ toc:
   levels: 2
 ---
 
+## Go 1.27 新特性
+
+参考[https://go.dev/doc/go1.27](https://go.dev/doc/go1.27)
+
+主要内容有：
+- 支持了**泛型方法**
+- `json/v2`包转正
+- 新增了`uuid`包
+- 优化了内存分配，特别是针对小对象（小于80字节）的分配开销最高可降低30%
+- 增加了对 goroutine 泄漏分析的支持
+
 ## Go 1.26 新特性
 
 参考[https://go.dev/doc/go1.26](https://go.dev/doc/go1.26)
