@@ -5,7 +5,7 @@ order: 3
 date: 2026-08-24
 category: 数学
 tags:
-  - Go
+  - TypeScript
 toc:
   levels: 2
 ---
@@ -416,108 +416,170 @@ $$
 
 实际上还有一个更优方案，就是第一组洗出任意同色同字组合后，第二组同色同字并不要求和第一组相同，如果不同，可以做为一个备选方案。第三组同色同字先匹配上哪个就用哪个。
 
-我们稍微改一下代码即可检验一下：
+有了这个更优方案后，所需次数大约在 **1300～1400 次** 左右。计算方式在这里就不举例出来了，留给大家思考。
 
-```go {63-96}
-package main
+## 代码检验
 
-import (
-	"fmt"
-	"math/rand/v2"
-	"time"
-)
+我们可以用代码进行模拟并统计：
 
-func main() {
-	r := rand.New(rand.NewPCG(uint64(time.Now().UnixMilli()), 1))
-	var lessThen4, lessThen5 int
-	randOne := func() int {
-		var count int
-		switch {
-		case lessThen5 == 19:
-			count = 5
-		case lessThen4 == 9:
-			count = 4
-			if r.IntN(3) == 0 {
-				count++
-			}
-		default:
-			n := r.IntN(10)
-			switch {
-			case n < 4:
-				count = 2
-			case n < 7:
-				count = 3
-			case n < 9:
-				count = 4
-			default:
-				count = 5
-			}
-		}
-		switch count {
-		case 5:
-			lessThen5 = 0
-			lessThen4 = 0
-		case 4:
-			lessThen5++
-			lessThen4 = 0
-		default:
-			lessThen5++
-			lessThen4++
-		}
-		result := make([]int, count)
-		for i := range count {
-			v := r.IntN(55)
-			if v < 15 {
-				continue
-			}
-			for j := range i {
-				if result[j] == v {
-					return v
-				}
-			}
-			result[i] = v
-		}
-		return -1
-	}
-	result := 0
-	for range 100000 {
-		var cur [3]int
-		for {
-			result++
-			v := randOne()
-			if v > 0 {
-				cur[0] = v
-				break
-			}
-		}
-		for {
-			result++
-			v := randOne()
-			if v > 0 {
-				cur[1] = v
-				break
-			}
-		}
-		for {
-			result++
-			v := randOne()
-			if v == cur[0] || v == cur[1] {
-				cur[2] = v
-				break
-			}
-		}
-		if cur[0] != cur[1] {
-			for {
-				result++
-				v := randOne()
-				if v == cur[2] {
-					break
-				}
-			}
-		}
-	}
-	fmt.Println(float64(result) / 100000)
+```typescript
+let lessThen4 = 0, lessThen5 = 0, result = 0;
+const results: number[] = [];
+
+const getColor = (v: number) => v % 5;
+const getCharacter = (v: number) => v % 8;
+
+// 随机符石的个数
+const randLine = (): number[] => {
+    result++;
+    let count: number;
+    if (lessThen5 >= 19) {
+        count = 5;
+    } else if (lessThen4 >= 9) {
+        count = 4;
+    } else {
+        const n = Math.random();
+        if (n < 0.4) count = 2;
+        else if (n < 0.7) count = 3;
+        else if (n < 0.9) count = 4;
+        else count = 5;
+    }
+    switch (count) {
+        case 5:
+            lessThen5 = 0;
+            lessThen4 = 0;
+            break;
+        case 4:
+            lessThen5++;
+            lessThen4 = 0;
+            break;
+        default:
+            lessThen5++;
+            lessThen4++;
+    }
+    return Array.from({length: count}, () => Math.floor(Math.random() * 55));
+};
+
+interface TestConfig {
+    name: string;
+    find: (result: number[], cur: [number, number][]) => [number, number] | boolean | undefined;
+    after?: (cur: [number, number][]) => void;
 }
+
+const newTest = (d: TestConfig): void => {
+    console.log(d.name);
+    lessThen4 = 0;
+    lessThen5 = 0;
+    results.length = 0;
+    for (let i = 0; i < 10000; i++) {
+        result = 0;
+        const cur: [number, number][] = [];
+        for (let j = 0; j < 3; j++) {
+            while (true) {
+                const v = d.find(randLine(), cur);
+                if (!v) continue;
+                if (typeof v === "boolean") cur.push([0, 0]);
+                else cur.push(v);
+                break;
+            }
+        }
+        d.after?.(cur);
+        results.push(result);
+    }
+    results.sort((a, b) => a - b);
+    console.log("平均值：", results.reduce((a, b) => a + b, 0) / 10000);
+    console.log("95%置信区间：", results.at(250), "~", results.at(-250));
+};
+
+const filterSame = (arr: number[]): number[] => {
+    return arr.filter((v, i, arr) => {
+        if (v >= 15) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (v === arr[j]) return true;
+            }
+        }
+        return false;
+    });
+};
+
+newTest({
+    name: "===========六个完全相同的符石===========",
+    find: (result, cur) => {
+        const same = filterSame(result);
+        if (same.length === 0) return undefined;
+        const v = same.find(v => cur.some(arr => arr[0] === v));
+        if (v) return [v, v];
+        return cur.length < 2 ? [same[0], same[0]] : undefined;
+    },
+    after: (cur) => {
+        if (cur[0][0] !== cur[1][0]) {
+            while (true) {
+                const same = filterSame(randLine());
+                if (same.some(v => v === cur[2][0])) break;
+            }
+        }
+    }
+});
+
+newTest({
+    name: "===========六金===========",
+    find: result => result.filter(v => v >= 15 && getColor(v) === 0).length >= 2
+});
+
+newTest({
+    name: "===========六乾===========",
+    find: result => result.filter(v => v >= 15 && getCharacter(v) === 0).length >= 2
+});
+
+newTest({
+    name: "===========六金乾===========",
+    find: result => result.filter(v => v === 15).length >= 2
+});
+
+newTest({
+    name: "===========六金同字===========",
+    find: (result, cur) => {
+        const same = filterSame(result).filter(v => getColor(v) === 0);
+        if (same.length === 0) return undefined;
+        const v = same.find(v => cur.some(arr => arr[0] === v));
+        if (v) return [v, v];
+        return cur.length < 2 ? [same[0], same[0]] : undefined;
+    },
+    after: (cur) => {
+        if (cur[0][0] !== cur[1][0]) {
+            while (true) {
+                const same = filterSame(randLine());
+                if (same.some(v => v === cur[2][0])) break;
+            }
+        }
+    }
+});
+
+newTest({
+    name: "===========六中庸===========",
+    find: result => result.filter(v => v < 15).length >= 2
+});
 ```
 
-最后得到的数学期望大约在 **1300～1400 次** ，大大减少了洗练次数。
+运行结果如下：
+
+```text
+===========六个完全相同的符石===========
+平均值： 1304.2537
+95%置信区间： 174 ~ 3713
+===========六金===========
+平均值： 46.4213
+95%置信区间： 11 ~ 110
+===========六乾===========
+平均值： 111.865
+95%置信区间： 24 ~ 270
+===========六金乾===========
+平均值： 2559.5173
+95%置信区间： 523 ~ 6151
+===========六金同字===========
+平均值： 1443.2518
+95%置信区间： 262 ~ 3903
+===========六中庸===========
+平均值： 15.8468
+95%置信区间： 5 ~ 36
+```
